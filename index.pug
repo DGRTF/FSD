@@ -4,7 +4,11 @@ html
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width")
         title="Стилизация таблиц в CSS3"
+        link(href="src/material-design/material-icons.css" rel="stylesheet")
+        link(href="src/montserrat/material-icons.css" rel="stylesheet")
     body
         header
-            include blockUI\button\button.pug
-            include blockUI\button-border\button-border.pug
+            include src\blockUI\button\button.pug
+            include src\blockUI\button-border\button-border.pug
+            include src\blockUI\button-arrow\button-arrow.pug
+            include src\blockUI\checkbox\checkbox.pug

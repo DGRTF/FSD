@@ -4,15 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Стилизация таблиц в CSS3</title>
+    <link href="src/iconfont/material-icons.css" rel="stylesheet">
   </head>
   <body>
     <header>
-<!--style(scoped)include button.css
--->
-<button class="button button-style button-opacity">Click Me Gena</button>
-<button class="button-border">
-  <div class="button-border__div">Click Me</div>
+<button class="button button-style button-opacity">Click Me</button>
+<button class="button-border button-opacity"><span class="button-border__span">Click Me</span></button>
+<button class="button-arrow">
+  <p class="button-arrow__content">Перейти к оплате<span class="button-arrow__span material-icons">arrow_forward</span></p>
 </button>
+<div class="checkbox__div">
+  <input class="checkbox__input" type="checkbox" id="checkbox_1">
+  <label class="checkbox__label" for="checkbox_1"> Можно с питомцами</label>
+</div>
     </header>
   <script type="text/javascript" src="main.js"></script></body>
 </html>

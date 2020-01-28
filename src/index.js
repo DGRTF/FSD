@@ -1,1 +1,1 @@
-import './blockUI/button/button.scss' 
+import './index.scss' 

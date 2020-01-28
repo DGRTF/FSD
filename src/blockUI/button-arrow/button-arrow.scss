@@ -1,0 +1,25 @@
+@import "C:/Users/User/Documents/Web/FSD/src/general-color.scss";
+//@import "C:/Users/User/Documents/Web/FSD/src/iconfont/material-icons.css";
+
+.button-arrow
+{    
+    border-radius: 22px;
+    border: 0;
+    min-width: 44px;
+    height: 44px;
+    font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+    
+/*     display: inline-flex;
+    align-items: center;
+    justify-content: flex-end; */
+    width: 320px;
+    
+    color: $color_white;
+    background: -webkit-linear-gradient(180deg, $color_purple 0%, $color_disqus-blue 100%);
+}

@@ -1,0 +1,27 @@
+.button-arrow
+{    
+    &__span
+    {   
+        right: 4px;
+        font-size: 24px;
+        line-height: 24px;
+        margin: 4px;
+        //display: flex;
+       width: 100px;
+    }
+
+     &__content
+     {
+          //display: flex;
+          content: "Перейти к оплате     ";
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 15px;
+          text-align: center;
+          text-transform: uppercase;
+          margin-right: 10px;
+          width: 100px;
+     }
+}

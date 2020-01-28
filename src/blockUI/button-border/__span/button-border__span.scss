@@ -1,0 +1,25 @@
+@import "C:/Users/User/Documents/Web/FSD/src/general-color.scss";
+
+.button-border
+{
+    &__span
+    {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    height: 100%;
+    border-radius: 22px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: $backg;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $color_purple;
+    }
+}
