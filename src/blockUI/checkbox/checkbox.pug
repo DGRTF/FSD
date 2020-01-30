@@ -1,3 +1,4 @@
-.checkbox__div
-    input.checkbox__input(type="checkbox" id="checkbox_1")
-    label.checkbox__label(for="checkbox_1")=" Можно с питомцами"
+mixin checkbox(content={label: ' Можно с питомцами'}, style={div: '', input: 'checkbox__input', label: 'checkbox__label'})
+    input(class=style.input type="checkbox" id="checkbox")
+    label(class=style.label for="checkbox")=content.label
+    

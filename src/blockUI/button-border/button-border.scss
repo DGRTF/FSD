@@ -8,7 +8,7 @@
     border: 0;
     //text-align: center;
     
-    background: -webkit-linear-gradient(180deg, $color_purple 0%, $color_disqus-blue 100%);
+    background: $gradient-color;
 }
 
 .button-opacity[disabled]
