@@ -18,9 +18,14 @@
         font-weight: normal;
         font-size: 10px;
         line-height: 9px;
-        display: flex;
         align-items: center;
         text-align: center;
+
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: 'liga';
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+
         color: $cobalt-blue; 
 
         content: "favorite_border";
