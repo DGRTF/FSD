@@ -27,12 +27,12 @@
         content: none;
         display: inline-block;
         position: absolute;
-        top: 2px;
+        top: 3px;
         left: 4px;
         height: 12px;
         width: 12px;
         border-radius: 50%;
-        background: $gradient-color;
+        background: $gradient-color; 
     }
 
     .radio__input:checked + &::after
