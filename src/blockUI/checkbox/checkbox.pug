@@ -1,4 +1,4 @@
-mixin checkbox(content={label: ' Можно с питомцами'}, style={div: '', input: 'checkbox__input', label: 'checkbox__label'})
-    input(class=style.input type="checkbox" id="checkbox")
-    label(class=style.label for="checkbox")=content.label
+mixin checkbox(content={input: 'checkbox',label: ' Можно с питомцами'}, style={div: '', input: 'checkbox__input', label: 'checkbox__label'})
+    input(class=style.input type="checkbox" id=content.input)
+    label(class=style.label for=content.input)=content.label
     
