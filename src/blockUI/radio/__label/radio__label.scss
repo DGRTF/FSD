@@ -1,4 +1,4 @@
-@import "C:/Users/User/Documents/Web/FSD/src/general-color.scss";
+//@import "./../../../general-color.scss";
 
 .radio__label
 {
@@ -8,7 +8,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    color: $cobalt-blue;
+    color: $cobalt-blue25;
 
     &::before
     {
@@ -18,7 +18,7 @@
         top: 5px;
         height: 18px;
         width: 18px;
-        border: 1px solid $cobalt-blue;
+        border: 1px solid $cobalt-blue25;
         border-radius: 50%;
     }
 

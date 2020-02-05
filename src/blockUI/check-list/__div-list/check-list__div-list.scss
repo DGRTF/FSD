@@ -1,0 +1,17 @@
+.check-list__div-list
+{
+    opacity: 0;
+    position: relative;
+}
+
+.check-list__div-list label
+{
+    position: absolute;
+    display: block;
+    transform: 2s;
+}
+
+.check-list__div-list input
+{
+    display: none;
+}

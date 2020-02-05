@@ -1,9 +1,12 @@
+@import "general-color.scss";
 @import "blockUI/button/button.scss";
 @import "blockUI/button-border/button-border.scss";
 @import "blockUI/button-arrow/button-arrow.scss";
 @import "blockUI/checkbox/checkbox.scss";
 @import "blockUI/radio/radio.scss";
 @import "blockUI/rate-stars/rate-stars.scss";
+@import "blockUI/input-field/_text/input-field_text.scss";
+@import "blockUI/check-list/check-list.scss";
 
 body
 {

@@ -1,0 +1,11 @@
+mixin check-list()
+    .check-list
+        .check-list__div-head(onclick="showCheckboxes()")
+            span.check-list__span-text="Expandeble checkbox list"
+            span.check-list__span-icons="keyboard_arrow_down"
+        .check-list__div-list
+            include .\..\checkbox\checkbox.pug
+            +checkbox({input: 'check-list', label: ' St-rt'},{label:'checkbox__label',input:'checkbox__input'})
+            +checkbox({input: 'check-list', label: ' St-rt'},{label:'checkbox__label',input:'checkbox__input'})
+            +checkbox({input: 'check-list', label: ' St-rt'},{label:'checkbox__label',input:'checkbox__input'})
+            +checkbox({input: 'check-list', label: ' St-rt'},{label:'checkbox__label',input:'checkbox__input'})

@@ -1,0 +1,10 @@
+@import "__div-list/check-list__div-list";
+@import "__span-text/check-list__span-text.scss";
+@import "__span-icons/check-list__span-icons.scss";
+@import "__div-head/check-list__div-head.scss";
+@import "__div-main/check-list__div-main.scss";
+
+.check-list
+{
+    display: inline-block;
+}

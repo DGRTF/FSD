@@ -1,11 +1,11 @@
-@import "C:/Users/User/Documents/Web/FSD/src/general-color.scss";
+//@import "./../../../../general-color.scss";
 
 
 .checkbox__label_like
 {
     height: 18px;
     width: 38px;
-    border: 1px solid $cobalt-blue; 
+    border: 1px solid $cobalt-blue25; 
     border-radius: 10px;
     position: relative;
     content: "";
@@ -26,7 +26,7 @@
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
 
-        color: $cobalt-blue; 
+        color: $cobalt-blue25; 
 
         content: "favorite_border";
         display: inline-block; 
@@ -42,7 +42,7 @@
         font-weight: normal;
         font-size: 10px;
         line-height: 12px;
-        color: $cobalt-blue;
+        color: $cobalt-blue25;
 
         content: "1";
         display: inline-block;
