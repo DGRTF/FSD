@@ -2,18 +2,20 @@
 {    
     &__span
     {   
-        right: 4px;
-        font-size: 24px;
-        line-height: 24px;
-        margin: 4px;
-        //display: flex;
-       width: 100px;
+          position: absolute;
+          top : 25%;
+          right: 10px;
+          font-size: 24px;
+          line-height: 24px;
+          //margin-left: 200px;
+          //display: flex;
+     //    width: 100px;
     }
 
      &__content
      {
           //display: flex;
-          content: "Перейти к оплате     ";
+          // content: "Перейти к оплате     ";
           font-family: Montserrat;
           font-style: normal;
           font-weight: bold;

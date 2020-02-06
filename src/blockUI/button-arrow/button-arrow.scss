@@ -1,8 +1,6 @@
-//@import "./../../general-color.scss";
-//@import "C:/Users/User/Documents/Web/FSD/src/iconfont/material-icons.css";
-
 .button-arrow
 {    
+    position: relative;
     border-radius: 22px;
     border: 0;
     min-width: 44px;
@@ -12,7 +10,7 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    text-align: center;
+    // text-align: center;
     text-transform: uppercase;
     
 /*     display: inline-flex;
@@ -23,3 +21,6 @@
     color: $color_white;
     background: $gradient-color;
 }
+
+
+@import '__span/button-arrow__span.scss';

@@ -10,12 +10,14 @@ html
     body
         header
             include src\blockUI\button\button.pug
+            +button()
             include src\blockUI\button-border\button-border.pug
             include src\blockUI\button-arrow\button-arrow.pug
             include src\blockUI\checkbox\checkbox.pug
-            +checkbox({input: 'st', label: ' St-rt'},{label:'checkbox__label',input:'checkbox__input'})
-            +checkbox({input: 'move', label: ' move'},{label:'checkbox__label_move',input:'checkbox__input'})
-            +checkbox({input: 'like', label: ' '},{label:'checkbox__label_like',input:'checkbox__input'})
+            +checkbox({input: 'st', label: 'Можно пригласить гостей', p: '(до 10 человек)'},{mod:''})
+            +checkbox({input: 'st1', label: 'Можно пригласить гостей'},{mod:''})
+            +checkbox({input: 'move', label: 'Получать спецпредложения'},{mod:'_move'})
+            +checkbox({input: 'like', label: ''},{mod:'_like'})
             include src\blockUI\radio\radio.pug
             +radio()
             include src\blockUI\rate-stars\rate-stars.pug

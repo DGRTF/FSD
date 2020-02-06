@@ -59,7 +59,7 @@ function showCheckboxes() {
 
     if (check) {
         for (var i = 0; i < listLabel.length; i++) {
-            if (listLabel[i].tagName == "LABEL") {
+            if (listLabel[i].tagName == "DIV") {
                 var he = listLabel[i].offsetHeight;
                 var top = count * he;
                 topArr[count] = top;

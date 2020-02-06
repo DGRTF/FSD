@@ -14,12 +14,18 @@
 <button class="button-arrow">
   <p class="button-arrow__content">Перейти к оплате<span class="button-arrow__span material-icons">arrow_forward</span></p>
 </button>
-            <input class="checkbox__input" type="checkbox" id="st">
-            <label class="checkbox__label" for="st"> St-rt</label>
-            <input class="checkbox__input" type="checkbox" id="move">
-            <label class="checkbox__label_move" for="move"> move</label>
-            <input class="checkbox__input" type="checkbox" id="like">
-            <label class="checkbox__label_like" for="like"> </label>
+            <div class="checkbox__div">
+              <input class="checkbox__input" type="checkbox" id="st">
+              <label class="checkbox__labelundefined" for="st"></label><span class="checkbox__span"> St-rt</span>
+            </div>
+            <div class="checkbox__div">
+              <input class="checkbox__input" type="checkbox" id="move">
+              <label class="checkbox__labelundefined" for="move"></label><span class="checkbox__span"> move</span>
+            </div>
+            <div class="checkbox__div">
+              <input class="checkbox__input" type="checkbox" id="like">
+              <label class="checkbox__labelundefined" for="like"></label><span class="checkbox__span"> </span>
+            </div>
             <input class="radio__input" type="radio" id="radio">
             <label class="radio__label" for="radio"> Gena</label>
 <div class="rate-stars__div">
@@ -38,14 +44,22 @@
             <div class="check-list">
               <div class="check-list__div-head" onclick="showCheckboxes()"><span class="check-list__span-text">Expandeble checkbox list</span><span class="check-list__span-icons">keyboard_arrow_down</span></div>
               <div class="check-list__div-list">
-                          <input class="checkbox__input" type="checkbox" id="check-list">
-                          <label class="checkbox__label" for="check-list"> St-rt</label>
-                          <input class="checkbox__input" type="checkbox" id="check-list">
-                          <label class="checkbox__label" for="check-list"> St-rt</label>
-                          <input class="checkbox__input" type="checkbox" id="check-list">
-                          <label class="checkbox__label" for="check-list"> St-rt</label>
-                          <input class="checkbox__input" type="checkbox" id="check-list">
-                          <label class="checkbox__label" for="check-list"> St-rt</label>
+                          <div class="checkbox__div">
+                            <input class="checkbox__input" type="checkbox" id="check-list">
+                            <label class="checkbox__label" for="check-list"></label><span class="checkbox__span"> St-rt</span>
+                          </div>
+                          <div class="checkbox__div">
+                            <input class="checkbox__input" type="checkbox" id="check-list1">
+                            <label class="checkbox__label" for="check-list1"></label><span class="checkbox__span"> St-rt</span>
+                          </div>
+                          <div class="checkbox__div">
+                            <input class="checkbox__input" type="checkbox" id="check-list2">
+                            <label class="checkbox__label" for="check-list2"></label><span class="checkbox__span"> St-rt</span>
+                          </div>
+                          <div class="checkbox__div">
+                            <input class="checkbox__input" type="checkbox" id="check-list3">
+                            <label class="checkbox__label" for="check-list3"></label><span class="checkbox__span"> St-rt</span>
+                          </div>
               </div>
             </div>
       <script src="./../src/blockUI/check-list/check-list.js"></script>

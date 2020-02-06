@@ -1,4 +1,7 @@
-mixin checkbox(content={input: 'checkbox',label: ' Можно с питомцами'}, style={div: '', input: 'checkbox__input', label: 'checkbox__label'})
-    input(class=style.input type="checkbox" id=content.input)
-    label(class=style.label for=content.input)=content.label
+mixin checkbox(content={input: 'checkbox',label: ' Можно с питомцами', p: '(до 10 человек'}, style={mod: ''})
+    .checkbox__div
+        input.checkbox__input(type="checkbox" id=content.input)
+        label(class='checkbox__label'+style.mod for=content.input)
+        span(class='checkbox__span'+style.mod)=content.label
+            p(class='checkbox__p')=content.p
     
