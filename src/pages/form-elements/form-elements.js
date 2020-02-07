@@ -1,4 +1,6 @@
 import './form-elements.scss';
-import './../../blockUI/check-list/check-list.js';
+import '../../blockUI/check-list/check-list.js';
+
+SearchEvenCklick();
 
 // showCheckboxes();

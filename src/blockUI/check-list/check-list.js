@@ -82,4 +82,10 @@ function showCheckboxes() {
     }
 }
 
+
+function SearchEvenCklick()
+{
+    var divListEvent = document.getElementsByClassName("check-list")[0];
+    divListEvent.onclick=showCheckboxes;
+}
 // export {showCheckboxes} ;
