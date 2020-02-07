@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width")
+        title="Стилизация таблиц в CSS3"
+    body
+        .form-elements
+            include \..\..\blockUI\button\button.pug
+            .div-button
+                +button()
+            .div-button-d
+                +button()
+            include \..\..\blockUI\button-border\button-border.pug
+            include \..\..\blockUI\button-arrow\button-arrow.pug
+            include \..\..\blockUI\checkbox\checkbox.pug
+            .div-checkbox="CHECKBOX BUTTONS"
+                p
+                div(style="height: 31px;")
+                    +checkbox({input: 'st1', label: 'Можно курить'},{mod:''})
+                +checkbox({input: 'st2', label: 'Можно с питомцами'},{mod:''})
+                +checkbox({input: 'st', label: 'Можно пригласить гостей', p: '(до 10 человек)'},{mod:''})
+                +checkbox({input: 'move', label: 'Получать спецпредложения'},{mod:'_move'})
+                +checkbox({input: 'like', label: ''},{mod:'_like'})
+            include \..\..\blockUI\radio\radio.pug
+            +radio()
+            include \..\..\blockUI\rate-stars\rate-stars.pug
+            include \..\..\blockUI\input-field\input-field.pug
+            +input-field()
+            include \..\..\blockUI\check-list\check-list.pug
+            +check-list()
+            //script(src="./../src/blockUI/check-list/check-list.js")

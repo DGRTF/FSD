@@ -1,0 +1,50 @@
+@import "./../../scss/general-colors.scss";
+
+@import "/../../src/fonts//Montserrat/material-icons.css";
+@import "/../../src/fonts/Montserrat/stylesheet.css";
+
+@import "./../../blockUI/button/button.scss";
+@import "./../../blockUI/button-border/button-border.scss";
+@import "./../../blockUI/button-arrow/button-arrow.scss";
+@import "./../../blockUI/checkbox/checkbox.scss";
+@import "./../../blockUI/radio/radio.scss";
+@import "./../../blockUI/rate-stars/rate-stars.scss";
+@import "./../../blockUI/input-field/_text/input-field_text.scss";
+@import "./../../blockUI/check-list/check-list.scss";
+
+
+.div-button
+{    
+    position: absolute;
+    width: 99px;
+    height: 44px;
+    left: 980px;
+    top: 262px;
+}
+.div-button-d
+{
+    position: absolute;
+    width: 99px;
+    height: 44px;
+    left: 1098px;
+    top: 262px;
+}
+
+.div-checkbox
+{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    position: absolute;
+    width: 222px;
+    height: 129.12px;
+    left: 587px;
+    top: 143px;
+}

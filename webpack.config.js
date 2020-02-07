@@ -5,17 +5,25 @@ let path = require('path');
 
 module.exports =
 {
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        formElements: './src/pages/form-elements/form-elements.js',
+    },
     output:
     {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js',
-                 //publicPath: './dist/'
+        filename: 'scripts/[name].js',
+        //publicPath: './dist/'
     },
     plugins: [
         new HtmlWebpackPlugin({
-        template:'./index.pug',
-        })
+            filename: 'index.html',
+            template:'./index.pug',
+            }),
+        new HtmlWebpackPlugin({
+            filename: 'pages/form-elements.html',
+            template:'./src/pages/form-elements/form-elements.pug',
+            })
         ],
     module:
     {

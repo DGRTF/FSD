@@ -7,7 +7,6 @@
 
     &-style
     {
-        text-align: center;
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
@@ -16,6 +15,10 @@
         text-transform: uppercase;
         color: $color_white;
         @include vendor-prefix-gradient($background, $gradient-color);
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
     }
 
     &[disabled]
