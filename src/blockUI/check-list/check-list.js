@@ -85,7 +85,7 @@ function showCheckboxes() {
 
 function SearchEvenCklick()
 {
-    var divListEvent = document.getElementsByClassName("check-list")[0];
-    divListEvent.onclick=showCheckboxes;
+    var divListEvent = document.getElementsByClassName("check-list")[0];//находим элемент
+    divListEvent.onclick=showCheckboxes;//вешаем обработчик события
 }
 // export {showCheckboxes} ;
