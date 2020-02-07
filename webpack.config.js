@@ -17,10 +17,14 @@ module.exports =
     },
     plugins: [
         new HtmlWebpackPlugin({
+            inject: true,
+            chunks: ['index'],
             filename: 'index.html',
             template:'./index.pug',
             }),
         new HtmlWebpackPlugin({
+            inject: true,
+            chunks: ['formElements'],
             filename: 'pages/form-elements.html',
             template:'./src/pages/form-elements/form-elements.pug',
             })

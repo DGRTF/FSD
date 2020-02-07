@@ -12,6 +12,10 @@
 @import "./../../blockUI/input-field/_text/input-field_text.scss";
 @import "./../../blockUI/check-list/check-list.scss";
 
+body
+{
+    background: $backg;
+}
 
 .div-button
 {    
