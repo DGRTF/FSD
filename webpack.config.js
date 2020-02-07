@@ -20,7 +20,7 @@ module.exports =
             inject: true,
             chunks: ['index'],
             filename: 'index.html',
-            template:'./index.pug',
+            template:'./src/index.pug',
             }),
         new HtmlWebpackPlugin({
             inject: true,
