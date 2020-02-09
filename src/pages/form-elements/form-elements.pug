@@ -1,3 +1,12 @@
+include \..\..\blockUI\button\button.pug
+include \..\..\blockUI\checkbox\checkbox.pug
+include \..\..\blockUI\button-border\button-border.pug
+include \..\..\blockUI\button-arrow\button-arrow.pug
+include \..\..\blockUI\radio\radio.pug
+include \..\..\blockUI\rate-stars\rate-stars.pug
+include \..\..\blockUI\check-list\check-list.pug
+include \..\..\blockUI\input-field\input-field.pug
+
 doctype html
 html
     head
@@ -6,27 +15,70 @@ html
         title="Стилизация таблиц в CSS3"
     body
         .form-elements
-            include \..\..\blockUI\button\button.pug
-            .div-button
+            .form-elements__div-buttons="Buttons"
+            .form-elements__div-button
                 +button()
-            .div-button-d
+            .form-elements__div-button-d
                 +button()
-            include \..\..\blockUI\button-border\button-border.pug
-            include \..\..\blockUI\button-arrow\button-arrow.pug
-            include \..\..\blockUI\checkbox\checkbox.pug
-            .div-checkbox="CHECKBOX BUTTONS"
-                p
-                div(style="height: 31px;")
-                    +checkbox({input: 'st1', label: 'Можно курить'},{mod:''})
+            .form-elements__div-button-border
+                +button-border()
+            .form-elements__div-button-border-d
+                +button-border()
+            .form-elements__div-button-arrow
+                +button-arrow()
+            
+            .form-elements__div-checkbox="CHECKBOX BUTTONS"
+
+            .form-elements__div-checkbox1
+                +checkbox({input: 'st1', label: 'Можно курить'},{mod:''})
+            .form-elements__div-checkbox2
                 +checkbox({input: 'st2', label: 'Можно с питомцами'},{mod:''})
+            .form-elements__div-checkbox3
                 +checkbox({input: 'st', label: 'Можно пригласить гостей', p: '(до 10 человек)'},{mod:''})
+
+            .form-elements__radio="Radio buttons"
+
+            .form-elements__radio1
+                +radio()
+            .form-elements__radio2
+                +radio({input: 'radio1', label:'Женщина', group: 'group'})
+
+            .form-elements__checkbox-move="toggle"
+
+            .form-elements__checkbox-move1
                 +checkbox({input: 'move', label: 'Получать спецпредложения'},{mod:'_move'})
+            .form-elements__checkbox-move2
+                +checkbox({input: 'move1', label: 'Получать спецпредложения'},{mod:'_move'})
+
+            .form-elements__checkbox-like="like button"
+
+            .form-elements__checkbox-like1
+                +checkbox({input: 'like1', label: ''},{mod:'_like'})
+            .form-elements__checkbox-like2
                 +checkbox({input: 'like', label: ''},{mod:'_like'})
-            include \..\..\blockUI\radio\radio.pug
-            +radio()
-            include \..\..\blockUI\rate-stars\rate-stars.pug
-            include \..\..\blockUI\input-field\input-field.pug
-            +input-field()
-            include \..\..\blockUI\check-list\check-list.pug
-            +check-list()
-            //script(src="./../src/blockUI/check-list/check-list.js")
+            
+            .form-elements__rate-stars="rate button"
+                
+            .form-elements__rate-stars1
+                +rate-stars()
+            .form-elements__rate-stars2
+                +rate-stars('g','h')
+
+            .form-elements__check-list
+                +check-list('1','Завтрак','Письменный стол','Стул для кормления','Кроватка','Кроватка','Шампунь','Кроватка','Шампунь')
+            .form-elements__check-list1
+                +check-list('2','Завтрак','Письменный стол','Стул для кормления','Кроватка','Кроватка','Шампунь','Кроватка','Шампунь')
+            
+            .form-elements__input-field="text field"
+            .form-elements__input-field1
+                +input-field({text: 'email', name: 'name', id: '1', value: 'Email' ,class: 'input-field__text'})
+            .form-elements__input-field2="text field"
+            .form-elements__input-field3
+                +input-field({text: 'text', name: 'name1', id: '2', value: 'This is pretty awesome' ,class: 'input-field__text'})
+            .form-elements__input-field4="subscription text field"
+            .form-elements__input-field5
+                +input-field({text: 'email', name: 'name2', id: '3', value: 'Email' ,class: 'input-field__text'},'1')
+
+
+            
+            

@@ -6,88 +6,73 @@ class LabelIn {
         this.Time = time;
     }
 
-    topAction(check) {
+    topAction() {
         var pixTime = Math.floor(this.Time / this.TopArr[this.TopArr.length - 1]);
-        console.log(pixTime);
-
-        if (check) {
-            for (var t = 0; t < this.TopArr[this.TopArr.length - 1]; t++) {
-                setTimeout(this.Action, pixTime * t, t, this.LabelArr, this.TopArr);
-            }
-        }
-        else {
-            for (var t = this.TopArr[this.TopArr.length - 1]; t >= 0; t--) {
-                setTimeout(this.Action2, pixTime * t, this.LabelArr,t,this.TopArr[this.TopArr.length - 1]);
-
-            }
+        var parr = this.LabelArr[0].parentElement;
+        parr.parentElement.getElementsByClassName("check-list__span-icons")[0].innerText = "keyboard_arrow_up";
+        for (var t = 0; t < this.TopArr[this.TopArr.length - 1]; t++) {
+            setTimeout(this.Action, pixTime * t, t, this.LabelArr, this.TopArr);
         }
     }
 
-    Action(ltop, list, size,) {
+    topActionRev() {
+        for (var i = 0; i < this.LabelArr.length; i++) {
+            this.LabelArr[i].style.top = '0px';
+        }
+        var parr = this.LabelArr[0].parentElement;
+        parr.style.opacity = '0';
+        parr.parentElement.getElementsByClassName("check-list__span-icons")[0].innerText = "keyboard_arrow_down";
+    }
+
+
+    Action(ltop, list, size, ) {
         for (var i = 0; i < list.length; i++) {
             if (ltop < size[i]) {
                 list[i].style.top = String(ltop) + 'px';
             }
         }
     }
-
-    Action2(list,iter,iterm) {
-        for (var i = 0; i < list.length; i++) {
-            if (parseInt(list[i].style.top) > 0) {
-                list[i].style.top = String((parseInt(list[i].style.top) - 1)) + 'px';
-                if (iter = iterm) {
-                    list[i].parentElement.style.opacity = '0';
-                    console.log('Genan');
-                }
-                //console.log((parseInt(list[i].style.top)-1));
-            }
-        }
-    }
 }
 
 
 
-var check = true;
-let labelIn = null;
 
-function showCheckboxes() {
-    var divList = document.getElementsByClassName("check-list__div-list")[0];
+
+
+function showCheckboxes(event) {
+    var divList = this.nextSibling.nextSibling;
     var listLabel = divList.childNodes;
     var topArr = [];
     var labelArr = [];
     var count = 0;
 
-    if (check) {
-        for (var i = 0; i < listLabel.length; i++) {
-            if (listLabel[i].tagName == "DIV") {
-                var he = listLabel[i].offsetHeight;
-                var top = count * he;
-                topArr[count] = top;
-                labelArr[count] = listLabel[i];
-                //console.log(labelArr[count].tagName);
-                count++;
-            }
+
+    for (var i = 0; i < listLabel.length; i++) {
+        if (listLabel[i].tagName == "DIV") {
+            var he = listLabel[i].offsetHeight;
+            var top = count * (he - 25);
+            topArr[count] = top;
+            labelArr[count] = listLabel[i];
+            count++;
         }
+    }
+    var labelIn = new LabelIn(labelArr, topArr, 500);
 
-
-        divList.style.opacity = '100';
-        labelIn = new LabelIn(labelArr, topArr, 500);
-        labelIn.topAction(check);
-        check = false;
+    if (divList.style.opacity === '' || divList.style.opacity === '0') {
+        divList.style.opacity = '100';        
+        labelIn.topAction();
     }
     else {
-        labelIn.topAction(check);
-        check = true;
-
+        labelIn.topActionRev();
     }
 }
 
 
-function SearchEvenCklick()
-{
-    var divListEvent = document.getElementsByClassName("check-list")[0];//находим элемент
-    divListEvent.addEventListener( "click" , showCheckboxes);//вешаем обработчик события
+function SearchEvenCklick() {
+    var divListEvent = document.querySelectorAll(".check-list__div-head");//находим элементы
+    divListEvent.forEach(ite => {
+        ite.addEventListener("click", showCheckboxes);//вешаем обработчик события
+    });
 }
-// export {showCheckboxes} ;
 
 SearchEvenCklick();

@@ -3,3 +3,4 @@
 [0131/061230.237:ERROR:crash_report_database_win.cc(428)] unexpected header
 [0131/062007.057:ERROR:crash_report_database_win.cc(428)] unexpected header
 [0131/084720.546:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0209/143037.409:ERROR:process_info.cc(359)] UncheckedAllocate

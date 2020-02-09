@@ -6,4 +6,8 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }

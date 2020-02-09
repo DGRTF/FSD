@@ -1,2 +1,7 @@
-mixin input-field(input={text: 'text', name: 'name', id: '1', value: 'Emailsend' ,class: 'input-field_text'})
-    input(class =input.class type=input.text name=input.name id=input.id value=input.value)
+mixin input-field(input={text: 'text', name: 'name', id: '1', value: 'Emailsend' ,class: 'input-field__text'},arrow='0')
+    .input-field__div
+        if(arrow=="1")
+            input(class =input.class+' '+input.class+'_short' type=input.text name=input.name id=input.id placeholder=input.value)
+            span.input-field__span="arrow_forward"
+        else
+            input(class =input.class type=input.text name=input.name id=input.id placeholder=input.value)

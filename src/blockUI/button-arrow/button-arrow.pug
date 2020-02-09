@@ -1,3 +1,4 @@
-button.button-arrow
-    span.button-arrow__content="Перейти к оплате"
-    span.button-arrow__span.material-icons="arrow_forward"
+mixin  button-arrow(content='Перейти к оплате')
+    button.button-arrow
+        span.button-arrow__span-content=content
+        span.button-arrow__span-icons="arrow_forward"

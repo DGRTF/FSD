@@ -1,6 +1,6 @@
-mixin radio(content={input: 'radio', label:'Мужчина'}, style={input:'', label: ''})
+mixin radio(content={input: 'radio', label:'Мужчина', group: 'group'})
     .radio__div
-        input(class="radio__input" + style.input type="radio" id=content.input)
-        label(class="radio__label" + style.label for=content.input)
+        input(class="radio__input" type="radio" id=content.input name=content.group)
+        label(class="radio__label" for=content.input)
             span(class="radio__span")=content.label
         

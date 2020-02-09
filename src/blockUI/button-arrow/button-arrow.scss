@@ -4,18 +4,7 @@
     border-radius: 22px;
     border: 0;
     min-width: 44px;
-    height: 44px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    // text-align: center;
-    text-transform: uppercase;
-    
-/*     display: inline-flex;
-    align-items: center;
-    justify-content: flex-end; */
+    height: 44px;    
     width: 320px;
     
     color: $color_white;
@@ -23,4 +12,5 @@
 }
 
 
-@import '__span/button-arrow__span.scss';
+@import '__span-content/button-arrow__span-content.scss';
+@import '__span-icons/button-arrow__span-icons.scss';
