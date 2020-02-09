@@ -1,20 +1,17 @@
-.information__div-content
+.information__span-head
 {
-    display: inline-flex;
-    flex-direction: column;
-    // align-content: space-between;
-    align-items: flex-start;
-    margin-left: 10px;
-
+    // margin: 2px;    
+    // height: 1em;
+    // margin-bottom: 40px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 16px;
 
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    color: rgba(31, 32, 65, 0.75);
+    color: $cobalt-blue75;
 }

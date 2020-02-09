@@ -1,4 +1,5 @@
 @import "./../../scss/general-colors.scss";
+@import "./../../scss/normalize.css";
 
 @import "/../../src/fonts//Montserrat/material-icons.css";
 @import "/../../src/fonts/Montserrat/stylesheet.css";
@@ -11,6 +12,7 @@
 @import "./../../blockUI/rate-stars/rate-stars.scss";
 @import "./../../blockUI/input-field/input-field.scss";
 @import "./../../blockUI/check-list/check-list.scss";
+@import "./../../blockUI/information/information.scss";
 
 body
 {
@@ -370,5 +372,23 @@ body
         position: absolute;
         left: 141px;
         top: 732px;
+    }
+
+
+
+    &__information
+    {
+        display: inline-block;
+        position: absolute;
+        left: 140px;
+        top: 1567px;
+    }
+
+    &__information1
+    {
+        display: inline-block;
+        position: absolute;
+        left: 140px;
+        top: 1656px;
     }
 }

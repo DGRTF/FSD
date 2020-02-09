@@ -1,17 +1,15 @@
-.information__div-icon
+.information__span-content
 {
-    display: inline-block;
-    width: 48px;
-    
-    font-family: Material Icons;
+    margin-top: 7px;
+    font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 48px;
-    line-height: 41px;
-    color:$color_disqus-blue;
+    font-size: 14px;
+    line-height: 18px;
 
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    color: $cobalt-blue75;
 }

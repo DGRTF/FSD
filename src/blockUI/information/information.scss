@@ -1,0 +1,12 @@
+@import "__div-content/information__div-content.scss";
+@import "__div-icon/information__div-icon.scss";
+@import "__div-input/information__div-input.scss";
+@import "__span-content/information__span-content.scss";
+@import "__span-head/information__span-head.scss";
+@import "__hr/information__hr.scss";
+
+$information-width-block: 280px;
+.information
+{
+    width: $information-width-block;
+}

@@ -1,0 +1,8 @@
+mixin information(content={icon:'insert_emoticon',head: 'Комфорт', content: 'Шумопоглощающие стены'})
+    .information
+        .information__div-input  
+            .information__div-icon=content.icon       
+            .information__div-content    
+                span(class="information__span-head")=content.head      
+                span(class="information__span-content")=content.content
+        hr.information__hr(noshade)

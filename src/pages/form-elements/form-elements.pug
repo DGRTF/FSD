@@ -6,6 +6,7 @@ include \..\..\blockUI\radio\radio.pug
 include \..\..\blockUI\rate-stars\rate-stars.pug
 include \..\..\blockUI\check-list\check-list.pug
 include \..\..\blockUI\input-field\input-field.pug
+include \..\..\blockUI\information\information.pug
 
 doctype html
 html
@@ -79,6 +80,10 @@ html
             .form-elements__input-field5
                 +input-field({text: 'email', name: 'name2', id: '3', value: 'Email' ,class: 'input-field__text'},'1')
 
+            .form-elements__information
+                +information()
+            .form-elements__information1
+                +information({icon: 'location_cityicon',head: 'Удобство', content: 'Окно в каждой из спален'})
 
             
             
