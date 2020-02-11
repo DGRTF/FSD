@@ -1,0 +1,20 @@
+.iteration
+{
+    
+    &__button-min
+    {
+        width: 30px;
+        height: 30px;
+        border: 1px solid $cobalt-blue50;
+        border-radius: 15px;
+        @include iteration-font;
+        color:$cobalt-blue50;
+    }
+
+    &__button-min[disabled]
+    {
+        border-color: $cobalt-blue25;
+        color:$cobalt-blue25;
+    }
+
+}

@@ -17,8 +17,8 @@
         @include vendor-prefix-gradient($background, $gradient-color);
         -moz-osx-font-smoothing: grayscale;
         font-feature-settings: 'liga';
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
     }
 
     &[disabled]

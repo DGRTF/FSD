@@ -7,6 +7,8 @@ include \..\..\blockUI\rate-stars\rate-stars.pug
 include \..\..\blockUI\check-list\check-list.pug
 include \..\..\blockUI\input-field\input-field.pug
 include \..\..\blockUI\information\information.pug
+include \..\..\blockUI\iteration\iteration.pug
+
 
 doctype html
 html
@@ -84,6 +86,8 @@ html
                 +information()
             .form-elements__information1
                 +information({icon: 'location_cityicon',head: 'Удобство', content: 'Окно в каждой из спален'})
+            
+            +iteration()
 
             
             

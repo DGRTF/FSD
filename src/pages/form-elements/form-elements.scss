@@ -1,5 +1,5 @@
 @import "./../../scss/general-colors.scss";
-@import "./../../scss/normalize.css";
+@import "./../../../node_modules/normalize.css/normalize.css";
 
 @import "/../../src/fonts//Montserrat/material-icons.css";
 @import "/../../src/fonts/Montserrat/stylesheet.css";
@@ -13,6 +13,7 @@
 @import "./../../blockUI/input-field/input-field.scss";
 @import "./../../blockUI/check-list/check-list.scss";
 @import "./../../blockUI/information/information.scss";
+@import "./../../blockUI/iteration/iteration.scss";
 
 body
 {

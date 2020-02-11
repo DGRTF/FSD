@@ -1,0 +1,23 @@
+@mixin iteration-font
+{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+
+@import "__button-min/iteration__button-min.scss";
+@import "__button-plus/iteration__button-plus.scss";
+@import "__span-name/iteration__span-name.scss";
+@import "__span-num/iteration__span-num.scss";
+
+.iteration
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
