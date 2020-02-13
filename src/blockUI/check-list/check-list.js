@@ -70,6 +70,7 @@ function showCheckboxes(event) {
 
 function SearchEvenCklick() {
     var divListEvent = document.querySelectorAll(".check-list__div-head");//находим элементы
+    divListEvent = [].slice.call(divListEvent);
     divListEvent.forEach(ite => {
         ite.addEventListener("click", showCheckboxes);//вешаем обработчик события
     });

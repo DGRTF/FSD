@@ -1,0 +1,14 @@
+include .\..\iteration\iteration.pug
+
+mixin dropdown()
+    .dropdown
+        .dropdown__div-content
+            .dropdown__div-text="Сколько гостей"
+            .dropdown__div-icon="expand_more"
+        .dropdown__div-items
+            +iteration()
+            +iteration()
+            +iteration()
+            .dropdown__div-buttons
+                .dropdown__div-cancel
+                .dropdown__div-ready="Применить"

@@ -8,6 +8,7 @@ include \..\..\blockUI\check-list\check-list.pug
 include \..\..\blockUI\input-field\input-field.pug
 include \..\..\blockUI\information\information.pug
 include \..\..\blockUI\iteration\iteration.pug
+include \..\..\blockUI\dropdown\dropdown.pug
 
 
 doctype html
@@ -88,6 +89,13 @@ html
                 +information({icon: 'location_cityicon',head: 'Удобство', content: 'Окно в каждой из спален'})
             
             +iteration()
+            .form-elements__dropdown="Dropdown"
+            .form-elements__dropdown1
+                +dropdown()
+            .form-elements__dropdown2="Dropdown"
+            .form-elements__dropdown3
+                +dropdown()
+            
 
             
             

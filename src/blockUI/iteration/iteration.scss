@@ -10,14 +10,16 @@
 
 @import "__button-min/iteration__button-min.scss";
 @import "__button-plus/iteration__button-plus.scss";
-@import "__span-name/iteration__span-name.scss";
-@import "__span-num/iteration__span-num.scss";
+@import "__div-name/iteration__div-name.scss";
+@import "__div-num/iteration__div-num.scss";
+@import "__div-content/iteration__div-content.scss";
 
 .iteration
 {
+    height: 36px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 
