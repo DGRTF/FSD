@@ -15,6 +15,7 @@
 @import "./../../blockUI/information/information.scss";
 @import "./../../blockUI/iteration/iteration.scss";
 @import "./../../blockUI/dropdown/dropdown.scss";
+@import "./../../blockUI/bullet-list/bullet-list.scss";
 
 body
 {
@@ -440,5 +441,30 @@ body
         position: absolute;
         left: 587px;
         top: 896px;
+    }
+
+
+
+    .form-elements__bullet-list
+    {
+        display: inline-block;
+        position: absolute;
+        left: 979px;
+        top: 1196px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+
+    .form-elements__bullet-list1
+    {
+        display: inline-block;
+        position: absolute;
+        left: 969px;
+        top: 1215px;
     }
 }

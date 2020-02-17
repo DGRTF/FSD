@@ -9,7 +9,7 @@ include \..\..\blockUI\input-field\input-field.pug
 include \..\..\blockUI\information\information.pug
 include \..\..\blockUI\iteration\iteration.pug
 include \..\..\blockUI\dropdown\dropdown.pug
-
+include \..\..\blockUI\bullet-list\bullet-list.pug
 
 doctype html
 html
@@ -96,6 +96,6 @@ html
             .form-elements__dropdown3
                 +dropdown()
             
-
-            
-            
+            .form-elements__bullet-list="bullet list"
+            .form-elements__bullet-list1
+                +bullet-list('Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00')

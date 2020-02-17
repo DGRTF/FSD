@@ -24,8 +24,10 @@ class Counter {
     resetValues() {
         this.numberDivArr.forEach(element => {
             element.innerText = '0';
+            element.previousSibling.previousSibling.disabled=true;
             this.dropdown__divText.innerText = 'Сколько гостей';
             this.count=0;
+            this.buttonCancel.innerText='';
         });
     }
 
@@ -98,10 +100,10 @@ function dropdown() {
 
 
 function show() {
-    if (this.nextSibling.nextSibling.style.display === "none" || this.nextSibling.nextSibling.style.display === '')
-        this.nextSibling.nextSibling.style.display = "block";
+    if (event.currentTarget.nextSibling.nextSibling.style.display === "none" || event.currentTarget.nextSibling.nextSibling.style.display === '')
+        event.currentTarget.nextSibling.nextSibling.style.display = "block";
     else
-        this.nextSibling.nextSibling.style.display = "none";
+        event.currentTarget.nextSibling.nextSibling.style.display = "none";
 
 }
 
