@@ -7,5 +7,5 @@ mixin check-list(id='', ...items)
         .check-list__div-list
             -var i=0;
             each item in items
-                +checkbox({input: id+i, label: item},{mod:''})
+                +checkbox({input: id+i, contentHead: item})
                 -i++

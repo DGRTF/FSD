@@ -1,4 +1,3 @@
-//@import "./../../../general-color.scss";
 
 .rate-stars__label
 {
@@ -10,6 +9,7 @@
     line-height: 20px;
     align-items: center;
     text-align: center;
+    margin-right: 8px;
 
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'liga';

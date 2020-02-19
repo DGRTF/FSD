@@ -1,0 +1,11 @@
+include \..\checkbox\checkbox.pug
+
+mixin comment({ name="Алексей Леонов" ,lastSeen="2 дня назад", idcheck= "like62", feedback= ""})
+    .comment
+        .comment__who
+            .comment__avatar
+            .comment__info
+                .comment__name=name
+                .comment__last-seen=lastSeen
+        .comment__content
+            +checkbox({input: idcheck, contentHead: feedback ,mode:'_like'})

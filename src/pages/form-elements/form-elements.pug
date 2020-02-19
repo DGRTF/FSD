@@ -10,6 +10,8 @@ include \..\..\blockUI\information\information.pug
 include \..\..\blockUI\iteration\iteration.pug
 include \..\..\blockUI\dropdown\dropdown.pug
 include \..\..\blockUI\bullet-list\bullet-list.pug
+include \..\..\blockUI\rich-checkbox\rich-checkbox.pug
+include \..\..\blockUI\comment\comment.pug
 
 doctype html
 html
@@ -34,11 +36,11 @@ html
             .form-elements__div-checkbox="CHECKBOX BUTTONS"
 
             .form-elements__div-checkbox1
-                +checkbox({input: 'st1', label: 'Можно курить'},{mod:''})
+                +checkbox({input: 'st1', contentHead: 'Можно курить'})
             .form-elements__div-checkbox2
-                +checkbox({input: 'st2', label: 'Можно с питомцами'},{mod:''})
+                +checkbox({input: 'st2', contentHead: 'Можно с питомцами'})
             .form-elements__div-checkbox3
-                +checkbox({input: 'st', label: 'Можно пригласить гостей', p: '(до 10 человек)'},{mod:''})
+                +checkbox({input: 'st', contentHead: 'Можно пригласить гостей (до 10 человек)'})
 
             .form-elements__radio="Radio buttons"
 
@@ -50,16 +52,16 @@ html
             .form-elements__checkbox-move="toggle"
 
             .form-elements__checkbox-move1
-                +checkbox({input: 'move', label: 'Получать спецпредложения'},{mod:'_move'})
+                +checkbox({input: 'move', contentHead: 'Получать спецпредложения',mode:'_move'})
             .form-elements__checkbox-move2
-                +checkbox({input: 'move1', label: 'Получать спецпредложения'},{mod:'_move'})
+                +checkbox({input: 'move1', contentHead: 'Получать спецпредложения',mode:'_move'})
 
             .form-elements__checkbox-like="like button"
 
             .form-elements__checkbox-like1
-                +checkbox({input: 'like1', label: ''},{mod:'_like'})
+                +checkbox({input: 'like1', contentHead: '',mode:'_like'})
             .form-elements__checkbox-like2
-                +checkbox({input: 'like', label: ''},{mod:'_like'})
+                +checkbox({input: 'like', contentHead: '',mode:'_like'})
             
             .form-elements__rate-stars="rate button"
                 
@@ -71,17 +73,20 @@ html
             .form-elements__check-list
                 +check-list('1','Завтрак','Письменный стол','Стул для кормления','Кроватка','Кроватка','Шампунь','Кроватка','Шампунь')
             .form-elements__check-list1
-                +check-list('2','Завтрак','Письменный стол','Стул для кормления','Кроватка','Кроватка','Шампунь','Кроватка','Шампунь')
+                +check-list('2n','Завтрак','Стул для кормления','Кроватка','Кроватка','Шампунь','Кроватка','Шампунь')
             
             .form-elements__input-field="text field"
             .form-elements__input-field1
-                +input-field({text: 'email', name: 'name', id: '1', value: 'Email' ,class: 'input-field__text'})
+                +input-field({text: 'email', name: 'name', idi: '1', value: 'Email' ,classIn: 'input-field__text'})
             .form-elements__input-field2="text field"
             .form-elements__input-field3
-                +input-field({text: 'text', name: 'name1', id: '2', value: 'This is pretty awesome' ,class: 'input-field__text'})
+                +input-field({text: 'text', name: 'name1', idi: '2', value: 'This is pretty awesome' ,classIn: 'input-field__text'})
             .form-elements__input-field4="subscription text field"
             .form-elements__input-field5
-                +input-field({text: 'email', name: 'name2', id: '3', value: 'Email' ,class: 'input-field__text'},'1')
+                +input-field({text: 'email', name: 'name2', idi: '3', value: 'Email' ,classIn: 'input-field__text', arrow: '1'})
+            .form-elements__input-field6="masked text field"
+            .form-elements__input-field7
+                +input-field({text: 'text', name: 'name3', idi: '4', value: 'ДД.ММ.ГГГГ' ,classIn: 'input-field__text'})
 
             .form-elements__information
                 +information()
@@ -95,7 +100,19 @@ html
             .form-elements__dropdown2="Dropdown"
             .form-elements__dropdown3
                 +dropdown()
+            .form-elements__dropdown4="Dropdown"
+            .form-elements__dropdown5
+                +dropdown()
             
             .form-elements__bullet-list="bullet list"
             .form-elements__bullet-list1
                 +bullet-list('Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00')
+
+            .form-elements__checkbox-rich="rich Checkbox Buttons"
+            .form-elements__checkbox-rich1
+                +rich-checkbox({input: 'rich', contentHead: 'Широкий коридор', content: 'Ширина коридоров в номере не менее 91 см.'})
+            .form-elements__checkbox-rich2
+                +rich-checkbox({input: 'rich1', contentHead: 'Помощник для инвалидов' ,content: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
+            
+            .form-elements__comment
+                +comment({feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})

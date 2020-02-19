@@ -16,6 +16,8 @@
 @import "./../../blockUI/iteration/iteration.scss";
 @import "./../../blockUI/dropdown/dropdown.scss";
 @import "./../../blockUI/bullet-list/bullet-list.scss";
+@import "./../../blockUI/rich-checkbox/rich-checkbox.scss";
+@import "./../../blockUI/comment/comment.scss";
 
 body
 {
@@ -120,7 +122,7 @@ body
         display: inline-block;
         position: absolute;
         left: 587px;
-        top: 168.56px;
+        top: 174.56px;
     }
 
     &__div-checkbox2
@@ -128,7 +130,7 @@ body
         display: inline-block;
         position: absolute;
         left: 587px;
-        top: 199.12px;
+        top: 205.12px;
     }
 
     &__div-checkbox3
@@ -136,8 +138,9 @@ body
         display: inline-block;
         display: inline-block;
         position: absolute;
+        width: 230px;
         left: 587px;
-        top: 229.12px;  
+        top: 235.12px;
     }
 
 
@@ -203,7 +206,7 @@ body
         display: inline-block;
         position: absolute;
         left: 587px;
-        top: 430.56px;
+        top: 435.56px;
     }
 
     &__checkbox-move2
@@ -211,7 +214,7 @@ body
         display: inline-block;
         position: absolute;
         left: 587px;
-        top: 464.56px;
+        top: 469.56px;
     }
 
 
@@ -377,6 +380,29 @@ body
         top: 732px;
     }
 
+    &__input-field6
+    {
+        display: inline-block;
+        position: absolute;
+        left: 141px;
+        top: 398px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+
+    &__input-field7
+    {
+        display: inline-block;
+        position: absolute;
+        left: 141px;
+        top: 418px;
+    }
+
 
 
     &__information
@@ -397,7 +423,7 @@ body
 
 
 
-    .form-elements__dropdown
+    &__dropdown
     {
         display: inline-block;
         position: absolute;
@@ -412,7 +438,7 @@ body
         text-transform: uppercase;
     }
 
-    .form-elements__dropdown1
+    &__dropdown1
     {
         display: inline-block;
         position: absolute;
@@ -420,7 +446,7 @@ body
         top: 896px;
     }
 
-    .form-elements__dropdown2
+    &__dropdown2
     {
         display: inline-block;
         position: absolute;
@@ -435,7 +461,7 @@ body
         text-transform: uppercase;
     }
 
-    .form-elements__dropdown3
+    &__dropdown3
     {
         display: inline-block;
         position: absolute;
@@ -443,9 +469,32 @@ body
         top: 896px;
     }
 
+    &__dropdown4
+    {
+        display: inline-block;
+        position: absolute;
+        left: 141px;
+        top: 311.44px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+
+    &__dropdown5
+    {
+        display: inline-block;
+        position: absolute;
+        left: 141px;
+        top: 331.44px;
+    }
 
 
-    .form-elements__bullet-list
+
+    &__bullet-list
     {
         display: inline-block;
         position: absolute;
@@ -460,11 +509,56 @@ body
         text-transform: uppercase;
     }
 
-    .form-elements__bullet-list1
+    &__bullet-list1
     {
         display: inline-block;
         position: absolute;
         left: 969px;
         top: 1215px;
+    }
+
+
+
+
+    &__checkbox-rich
+    {
+        display: inline-block;
+        position: absolute;
+        left: 587px;
+        top: 1196px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+
+    &__checkbox-rich1
+    {
+        display: inline-block;
+        position: absolute;
+        width: 230px;
+        left: 587px;
+        top: 1227px;
+    }
+
+    &__checkbox-rich2
+    {
+        display: inline-block;
+        position: absolute;
+        width: 260px;
+        left: 587px;
+        top: 1289px;
+    }
+
+    &__comment
+    {
+        display: inline-block;
+        position: absolute;
+        width: 710px;
+        left: 587px;
+        top: 1573px;
     }
 }

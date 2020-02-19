@@ -1,0 +1,7 @@
+mixin rich-checkbox({input= 'checkbox',contentHead= 'Можно с питомцами', content=''})
+    .rich-checkbox
+        input.rich-checkbox__input(type="checkbox" id=input)
+        label(class='rich-checkbox__label' for=input)
+        .rich-checkbox__div-content
+            span(class='rich-checkbox__span-head')=contentHead
+            span(class='rich-checkbox__span-content')=content
