@@ -12,6 +12,8 @@ include \..\..\blockUI\dropdown\dropdown.pug
 include \..\..\blockUI\bullet-list\bullet-list.pug
 include \..\..\blockUI\rich-checkbox\rich-checkbox.pug
 include \..\..\blockUI\comment\comment.pug
+include \..\..\blockUI\pagination\pagination.pug
+include \..\..\blockUI\slider\slider.pug
 
 doctype html
 html
@@ -116,3 +118,12 @@ html
             
             .form-elements__comment
                 +comment({feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+
+            .form-elements__pagination="pagination"
+            .form-elements__pagination1
+                +pagination()
+
+            .form-elements__slider="range slider"
+            .form-elements__slider1 
+                +slider()
+            //- +slider()

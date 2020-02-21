@@ -1,0 +1,55 @@
+@import "./../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
+
+.slider
+{
+    display: inline-flex;
+    flex-direction: column;
+    width: 262px;
+    // justify-content: flex-end;
+    align-items: flex-end;
+
+    &__range-number
+    {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.irs--flat .irs-line
+{
+    height: 4px;
+    width: 265px;
+    border: 1px solid $cobalt-blue25;
+    top: 26px;
+
+}
+
+.irs--flat .irs-bar
+{
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    height: 6px;
+    top: 26px;
+}
+
+.irs--flat .irs-handle > i:first-child
+{
+    width: 8px;
+    height: 8px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    top: 0;
+    left: 0;
+    margin-left: 0;
+}
+
+.irs--flat .irs-handle
+{
+    width: 12px;
+    height: 12px;
+}

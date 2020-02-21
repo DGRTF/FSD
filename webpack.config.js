@@ -16,6 +16,10 @@ module.exports =
         //publicPath: './dist/'
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+          }),
         new HtmlWebpackPlugin({
             inject: true,
             chunks: ['index'],
