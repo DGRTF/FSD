@@ -1,0 +1,35 @@
+@import "./../../scss/general-colors.scss";
+@import "./../../../node_modules/normalize.css/normalize.css";
+//fonts
+@import "./../../fonts/Montserrat/stylesheet.css";
+@import "./../../fonts/Montserrat/material-icons.css";
+//blocks
+
+// @import "./../../blockUI/calendar/calendar.scss";
+
+
+
+.input1
+{
+    min-width: 40px;
+    max-width: 740px;
+    // margin: 20px;
+}
+
+.input2
+{
+    min-width: 40px;
+    width: 740px;
+}
+
+.input3
+{
+    min-width: 40px;
+    width: 400px;
+    min-width: 740px;
+}
+
+.input4
+{
+    max-width: 740px;
+}

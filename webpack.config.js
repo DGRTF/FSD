@@ -2,6 +2,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const webpack = require('webpack');
 let path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports =
 {
@@ -9,6 +10,7 @@ module.exports =
         index: './src/index.js',
         formElements: './src/pages/form-elements/form-elements.js',
         cards: './src/pages/cards/cards.js',
+        test: './src/pages/test/test.js'
     },
     output:
     {
@@ -39,78 +41,101 @@ module.exports =
             chunks: ['cards'],
             filename: 'pages/cards.html',
             template: './src/pages/cards/cards.pug',
-        })
+        }),
+        new HtmlWebpackPlugin({
+            inject: true,
+            chunks: ['test'],
+            filename: 'pages/test.html',
+            template: './src/pages/test/test.pug',
+        }),
+
+        new CopyPlugin([
+            { from: 'src/img/favicon.ico', to: ''}
+          ]),
     ],
     module:
     {
         rules:
-        [
-            {
-                test: /\.m?js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            '@babel/preset-env'
-                        ]
-                    }
-                }
-            },
-
-            {
-                test: /\.css$/,
-                use: [
-                    // 'style-loader',
-                    'css-loader',
-                    // 'postcss-loader'
-                ]
-            },
-
-            {
-                test: /\.(ttf|woff|woff2|eot)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]',
-                    outputPath: 'fonts12'
-                }
-            },
-
-            {
-                test: /\.s[ac]ss$/,
-                use: [
-                    // Creates `style` nodes from JS strings
-                    { loader: 'style-loader',options: {}},
-                    // Translates CSS into CommonJS
-                    { loader: 'css-loader',options: {}},
-                    { loader: 'resolve-url-loader'},
-                    {
-                        // Compiles Sass to CSS
-                        loader: 'sass-loader',
+            [
+                {
+                    test: /\.m?js$/,
+                    exclude: /(node_modules|bower_components)/,
+                    use: {
+                        loader: 'babel-loader',
                         options: {
-                            sourceMap: true,
-                            // sourceMapContents: false
-                            // sourceMapContents: false
-                            // implementation: require('sass'),
-                            // sassOptions:{
-                            //     sourceMap: true,
-                            //     sourceMapContents: false
-                            // }
+                            presets: [
+                                '@babel/preset-env'
+                            ]
                         }
                     }
-                ]
-            },
+                },
 
-            {
-                test: /\.pug$/,
-                loader: 'pug-loader',
-                options:
                 {
-                    pretty: true
-                }
-            }
+                    test: /\.css$/,
+                    use: [
+                        // 'style-loader',
+                        'css-loader',
+                        // 'postcss-loader'
+                    ]
+                },
 
-        ],
+                {
+                    test: /\.(ttf|woff|woff2|eot)$/,
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts',
+                        publicPath: "./../fonts"
+                    }
+                },
+
+                {
+                    test: /\.svg$/,
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'img',
+                        publicPath: "/img"
+                    }
+                },
+
+                // {
+                //     test: /\.ico$/,
+                //     loader: 'file-loader',
+                //     options: {
+                //         name: '[name].[ext]',
+                //         outputPath: '/'
+                //     }
+                // },
+
+                {
+                    test: /\.s[ac]ss$/,
+                    use: [
+                        // Creates `style` nodes from JS strings
+                        { loader: 'style-loader' },
+                        // Translates CSS into CommonJS
+                        { loader: 'css-loader' },
+                        { loader: 'resolve-url-loader' },
+                        {
+                            // Compiles Sass to CSS
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    test: /\.pug$/,
+                    loader: 'pug-loader',
+                    options:
+                    {
+                        pretty: true
+                    }
+                }
+
+            ],
     },
 };
 

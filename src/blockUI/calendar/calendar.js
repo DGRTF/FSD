@@ -5,6 +5,7 @@ class Calendar {
     constructor() {
         this.initialize();
         this.calendar;
+        // this.calendar1;
     }
 
     initialize() {
@@ -21,36 +22,37 @@ class Calendar {
         })
         this.calendar = this.calendar1.data("datepicker");
         // document.querySelector(".datepicker--button").style.display = "none";
-        document.querySelector(".datepicker--buttons").innerHTML = "<div class='calendar__clear'>Очистить</div><div class='calendar__celect'>Применить</div>";
+        document.querySelector(".datepicker--buttons").innerHTML = "<div class='calendar__button'>Очистить</div><div class='calendar__button calendar__button-select'>Применить</div>";
         // document.querySelector(".datepicker--buttons").innerHTML = "<button class='calendar__clear'>Очистить</button>";
-        document.querySelector(".calendar__celect").addEventListener("click", this.setValue.bind(this));
-        document.querySelector(".calendar__clear").addEventListener("click", this.clearDate.bind(this));
-        document.querySelector(".calendar__from").addEventListener("click", this.showCalendar.bind(this));
-        document.querySelector(".calendar__to").addEventListener("click", this.showCalendar.bind(this));
+        document.querySelectorAll(".calendar__button")[1].addEventListener("click", this.setValue.bind(this));
+        document.querySelectorAll(".calendar__button")[0].addEventListener("click", this.clearDate.bind(this));
+        document.querySelector(".calendar__date").addEventListener("click", this.showCalendar.bind(this));
+        document.querySelectorAll(".calendar__date")[1].addEventListener("click", this.showCalendar.bind(this));
+        // document.querySelector(".calendar__to").addEventListener("click", this.showCalendar.bind(this));
         this.calendar1.hide();
     }
 
     setValue() {
         if (typeof (this.calendar.selectedDates[0]) == "undefined") {
             let currentDate = new Date().getDate() + "." + new Date().getMonth() + "." + new Date().getFullYear();
-            document.querySelector(".calendar__from").value = currentDate;
-            document.querySelector(".calendar__to").value = currentDate;
+            document.querySelector(".calendar__date").value = currentDate;
+            document.querySelectorAll(".calendar__date")[1].value = currentDate;
         }
         else {
             let start = this.calendar.selectedDates[0];
             let startStr = start.getDate() + "." + start.getMonth() + "." + start.getFullYear();
             let end = this.calendar.selectedDates[this.calendar.selectedDates.length - 1];
             let endStr = end.getDate() + "." + end.getMonth() + "." + end.getFullYear();
-            document.querySelector(".calendar__from").value = startStr;
-            document.querySelector(".calendar__to").value = endStr;
+            document.querySelector(".calendar__date").value = startStr;
+            document.querySelectorAll(".calendar__date")[1].value = endStr;
         }
         this.calendar1.hide();
     }
 
     clearDate() {
         this.calendar.clear();
-        document.querySelector(".calendar__from").value = "";
-        document.querySelector(".calendar__to").value = "";
+        document.querySelector(".calendar__date").value = "ДД.ММ.ГГГГ";
+        document.querySelectorAll(".calendar__date")[1].value = "ДД.ММ.ГГГГ";
     }
 
     showCalendar() {
