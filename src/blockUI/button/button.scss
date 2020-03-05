@@ -1,24 +1,21 @@
 .button
 {
     min-width: 99px;
+    width: 100%;
     height: 44px;
     border-radius: 22px;
     border: 0;
 
     &-style
     {
-        font-family: Montserrat;
+        font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
         text-transform: uppercase;
         color: $color_white;
-        @include vendor-prefix-gradient($background, $gradient-color);
-        -moz-osx-font-smoothing: grayscale;
-        font-feature-settings: 'liga';
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
+        background: $gradient-color;
     }
 
     &[disabled]

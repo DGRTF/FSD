@@ -2,7 +2,7 @@
 {
     display: inline-flex;
     flex-direction: column;
-    font-family: Montserrat;
+    font-family: Montserrat, OpenSans, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -20,8 +20,9 @@
         width: 48px;
         height: 48px;
         border-radius: 50%;
-        // background-image: url(619860.png);
-        background-color: red;
+        background-image: url(619860.png);
+        background-color: rgb(95, 199, 199);
+        background-size: 48px 48px;
     }
 
     &__info

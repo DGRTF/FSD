@@ -1,7 +1,7 @@
 .pagination
 {
     width: 241px; 
-    font-family: Montserrat;
+    font-family: Montserrat, OpenSans, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -56,11 +56,15 @@
             font-style: normal;
             font-weight: normal;
             font-size: 24px;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: 'liga';
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
             background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
             &-a
             {
-                color: #FFFFFF;
+                color: $color_white;
                 text-decoration: none;
             }
         }

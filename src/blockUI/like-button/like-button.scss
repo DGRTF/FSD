@@ -1,0 +1,64 @@
+.like-button
+{
+
+    &__button
+    {
+        height: 20px;
+        width: 40px;
+        min-width: 40px;
+        border: 1px solid $cobalt-blue25; 
+        border-radius: 10px;
+        position: relative;
+        margin-right: 3px;
+        background-color: $backg;
+
+        &::before
+        {
+            font-family: Material Icons;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            align-items: center;
+            text-align: center;
+            
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: 'liga';
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+
+            color: $cobalt-blue25; 
+
+            content: "favorite_border";
+            display: inline-block; 
+            position: absolute;
+            top: 4px;  
+            left: 4px;
+        }
+
+        &::after 
+        {
+            font-family: Montserrat, OpenSans, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 12px;
+            color: $cobalt-blue25;
+    
+            content: "1";
+            display: inline-block;
+            position: absolute;
+            left: 22px;
+            top: 3px;
+        }
+    }
+
+    // &__like
+    // {
+
+    // }
+
+    // &__number
+    // {
+
+    // }
+}

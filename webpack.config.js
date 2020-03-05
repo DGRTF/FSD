@@ -80,6 +80,16 @@ module.exports =
                 },
 
                 {
+                    test: /\.(jpeg|jpg|png)$/,
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'img',
+                        publicPath: "./../img"
+                    }
+                },
+
+                {
                     test: /\.(ttf|woff|woff2|eot)$/,
                     loader: 'file-loader',
                     options: {
@@ -88,25 +98,16 @@ module.exports =
                         publicPath: "./../fonts"
                     }
                 },
-
+                
                 {
                     test: /\.svg$/,
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
                         outputPath: 'img',
-                        publicPath: "/img"
+                        publicPath: "./../img"
                     }
                 },
-
-                // {
-                //     test: /\.ico$/,
-                //     loader: 'file-loader',
-                //     options: {
-                //         name: '[name].[ext]',
-                //         outputPath: '/'
-                //     }
-                // },
 
                 {
                     test: /\.s[ac]ss$/,

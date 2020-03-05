@@ -1,4 +1,28 @@
-@import "__span/input-field__span.scss";
-@import "__dev/input-field__dev.scss";
-@import "__text/input-field__text.scss";
-@import "__text/_short/input-field__text_short.scss";
+
+ .input-field
+{
+
+    &__text
+    {
+        width: 304px;
+        height: 40px;
+        border: 1px solid $cobalt-blue25;
+        border-radius: 4px;
+        background: $backg;
+        padding-left: 14px;
+
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: $cobalt-blue25;
+
+        &:focus
+        {
+            border-color: $cobalt-blue50;
+            color: $cobalt-blue75;
+        }
+
+    }
+}

@@ -2,19 +2,12 @@
 {
     display: inline-flex;
     flex-direction: column;
-    // align-content: space-between;
     align-items: flex-start;
     margin-left: 10px;
 
-    font-family: Montserrat;
+    font-family: Montserrat, OpenSans, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    line-height: 24px;
-
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
     color: rgba(31, 32, 65, 0.75);
 }

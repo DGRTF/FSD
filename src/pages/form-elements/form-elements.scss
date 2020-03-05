@@ -21,6 +21,8 @@
 @import "./../../blockUI/pagination/pagination.scss";
 @import "./../../blockUI/slider/slider.scss";
 @import "./../../scss/label.scss";
+@import "./../../blockUI/subscribe-mail/subscribe-mail.scss";
+@import "./../../blockUI/like-button/like-button.scss";
 
 
 
@@ -74,8 +76,8 @@ body
     {
         display: inline-block;
         position: absolute;
-        width: 99px;
-        height: 44px;
+        // width: 99px;
+        // height: 44px;
         left: 979px;
         top: 336px;
     }
@@ -382,6 +384,8 @@ body
     {
         display: inline-block;
         position: absolute;
+        width: 265px;
+        height: 44px;
         left: 141px;
         top: 732px;
     }
@@ -507,7 +511,7 @@ body
         left: 979px;
         top: 1196px;
 
-        font-family: Montserrat;
+        font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 12px;
@@ -518,7 +522,8 @@ body
     &__bullet-list1
     {
         display: inline-block;
-        position: absolute;
+        position: absolute;        
+        width: 280px;
         left: 969px;
         top: 1215px;
     }

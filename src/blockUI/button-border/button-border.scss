@@ -1,8 +1,10 @@
 
-.button-border {
+.button-border 
+{
     padding: 2px;
     height: 44px;
     min-width: 99px;
+    width: 100%;
     border-radius: 22px;
     border: 0;
     background: $gradient-color;
