@@ -21,7 +21,7 @@
         <button class="button-border button-opacity"><span class="button-border__span">CKLICK ME</span></button>
       </div>
       <div class="form-elements__div-button-arrow">
-        <button class="button-arrow"><span class="button-arrow__span-content">Перейти к оплате</span><span class="button-arrow__span-icons">arrow_forward</span></button>
+        <button class="button-arrow">Перейти к оплате<span class="button-arrow__span-icons">arrow_forward</span></button>
       </div>
       <div class="form-elements__div-checkbox">CHECKBOX BUTTONS</div>
       <div class="form-elements__div-checkbox1">
@@ -47,15 +47,15 @@
       </div>
       <div class="form-elements__radio">Radio buttons</div>
       <div class="form-elements__radio1">
-        <div class="radio__div">
+        <div class="radio">
           <input class="radio__input" type="radio" id="radio" name="group">
-          <label class="radio__label" for="radio"><span class="radio__span">Мужчина</span></label>
+          <label class="radio__label" for="radio"></label><span class="radio__span">Мужчина</span>
         </div>
       </div>
       <div class="form-elements__radio2">
-        <div class="radio__div">
+        <div class="radio">
           <input class="radio__input" type="radio" id="radio1" name="group">
-          <label class="radio__label" for="radio1"><span class="radio__span">Женщина</span></label>
+          <label class="radio__label" for="radio1"></label><span class="radio__span">Женщина</span>
         </div>
       </div>
       <div class="form-elements__checkbox-move">toggle</div>
@@ -75,6 +75,9 @@
       </div>
       <div class="form-elements__checkbox-like">like button</div>
       <div class="form-elements__checkbox-like1">
+        <form class="like-button" onsubmit="alert('submit!');retutn false;">
+          <button class="like-button__button" type="submit"></button>
+        </form>
         <div class="checkbox">
           <input class="checkbox__input" type="checkbox" id="like1">
           <label class="checkbox__label_like" for="like1"></label>
@@ -90,7 +93,7 @@
       </div>
       <div class="form-elements__rate-stars">rate button</div>
       <div class="form-elements__rate-stars1">
-        <div class="rate-stars__div">
+        <div class="rate-stars">
           <input class="rate-stars__input" name="rating" value="5" id="rating_5" type="radio">
           <label class="rate-stars__label" for="rating_5"></label>
           <input class="rate-stars__input" name="rating" value="4" id="rating_4" type="radio">
@@ -104,16 +107,16 @@
         </div>
       </div>
       <div class="form-elements__rate-stars2">
-        <div class="rate-stars__div">
-          <input class="rate-stars__input" name="ratingh" value="5" id="rating_5g" type="radio">
+        <div class="rate-stars">
+          <input class="rate-stars__input" name="ratingg" value="5" id="rating_5g" type="radio">
           <label class="rate-stars__label" for="rating_5g"></label>
-          <input class="rate-stars__input" name="ratingh" value="4" id="rating_4g" type="radio">
+          <input class="rate-stars__input" name="ratingg" value="4" id="rating_4g" type="radio">
           <label class="rate-stars__label" for="rating_4g"></label>
-          <input class="rate-stars__input" name="ratingh" value="3" id="rating_3g" type="radio">
+          <input class="rate-stars__input" name="ratingg" value="3" id="rating_3g" type="radio">
           <label class="rate-stars__label" for="rating_3g"></label>
-          <input class="rate-stars__input" name="ratingh" value="2" id="rating_2g" type="radio">
+          <input class="rate-stars__input" name="ratingg" value="2" id="rating_2g" type="radio">
           <label class="rate-stars__label" for="rating_2g"></label>
-          <input class="rate-stars__input" name="ratingh" value="1" id="rating_1g" type="radio">
+          <input class="rate-stars__input" name="ratingg" value="1" id="rating_1g" type="radio">
           <label class="rate-stars__label" for="rating_1g"></label>
         </div>
       </div>
@@ -208,25 +211,26 @@
       </div>
       <div class="form-elements__input-field">text field</div>
       <div class="form-elements__input-field1">
-        <div class="input-field__div">
+        <div class="input-field">
           <input class="input-field__text" type="email" name="name" id="1" placeholder="Email">
         </div>
       </div>
       <div class="form-elements__input-field2">text field</div>
       <div class="form-elements__input-field3">
-        <div class="input-field__div">
+        <div class="input-field">
           <input class="input-field__text" type="text" name="name1" id="2" placeholder="This is pretty awesome">
         </div>
       </div>
       <div class="form-elements__input-field4">subscription text field</div>
       <div class="form-elements__input-field5">
-        <div class="input-field__div">
-          <input class="input-field__text input-field__text_short" type="email" name="name2" id="3" placeholder="Email"><span class="input-field__span">arrow_forward</span>
-        </div>
+        <form class="subscribe-mail" method="post" action="#1" onsubmit="method">
+          <input class="subscribe-mail__text" type="email" placeholder="Email">
+          <button class="subscribe-mail__button" type="submit">arrow_forward</button>
+        </form>
       </div>
       <div class="form-elements__input-field6">masked text field</div>
       <div class="form-elements__input-field7">
-        <div class="input-field__div">
+        <div class="input-field">
           <input class="input-field__text" type="text" name="name3" id="4" placeholder="ДД.ММ.ГГГГ">
         </div>
       </div>
