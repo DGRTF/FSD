@@ -1,7 +1,7 @@
-mixin iteration()
+mixin iteration({content= "Итератор"})
     .iteration
-            div(class="iteration__div-name")="Количество гостей"
-            .iteration__div-content
-                button(class="iteration__button-min" disabled)="-"
-                div(class="iteration__div-num")="0"
-                button(class="iteration__button-plus")="+"
+        div(class="iteration__div-name")=content
+        .iteration__div-content
+            button(class="iteration__button-min" disabled)="-"
+            div(class="iteration__div-num")="0"
+            button(class="iteration__button-plus")="+"

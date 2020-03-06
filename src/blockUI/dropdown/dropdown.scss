@@ -1,14 +1,89 @@
-@import "__div-content/dropdown__div-content.scss";
-@import "__div-items/dropdown__div-items.scss";
-@import "__div-text/dropdown__div-text.scss";
-@import "__div-icon/dropdown__div-icon.scss";
-@import "__div-buttons/dropdown__div-buttons.scss";
-@import "__div-cancel/dropdown__div-cancel.scss";
-@import "__div-ready/dropdown__div-ready.scss";
-
-
 
 .dropdown
 {
     width: 320px;
+
+    &__div-buttons
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 37px;
+        margin-top: 12px;
+    }
+
+    &__div-cancel
+    {
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $color_purple;
+        margin-left: 14px;
+    }
+
+    &__div-content
+    {
+        height: 42px;
+        border: 1px solid $cobalt-blue50;
+        border-radius: 4px 4px 0px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__div-icon
+    {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 44px;
+    
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;  
+        color: $cobalt-blue75; 
+
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: 'liga';
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    &__div-items
+    {
+        display:none;
+        border-left: 1px solid $cobalt-blue50;
+        border-right: 1px solid $cobalt-blue50;
+        border-bottom: 1px solid $cobalt-blue50;
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__div-ready
+    {
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $cobalt-blue50;
+        margin-right: 6px;
+    }
+
+    &__div-text
+    {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: $cobalt-blue75;
+        margin-left: 14px;
+    }
 }

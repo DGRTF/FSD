@@ -2,12 +2,13 @@
 {
     opacity: 0;
     position: relative;
-    margin-top: 8px;
+    margin-top: 4px;
     display: flex;
     flex-direction: column;
+
+    & > div
+    {
+        margin-top: 10px;
+    }
 }
 
-.check-list__div-list > div
-{
-    margin-top: 10px;
-}

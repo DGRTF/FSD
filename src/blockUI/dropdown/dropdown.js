@@ -3,7 +3,7 @@ import { Iteration } from "./../iteration/iteration.js"
 
 
 class Counter {
-    constructor(dropdown__divText, buttonCancel, numberDivArr) {
+    constructor({ dropdown__divText, buttonCancel, numberDivArr }) {
         this.dropdown__divText = dropdown__divText;
         this.numberDivArr = numberDivArr;
         this.buttonCancel = buttonCancel;
@@ -24,10 +24,10 @@ class Counter {
     resetValues() {
         this.numberDivArr.forEach(element => {
             element.innerText = '0';
-            element.previousSibling.previousSibling.disabled=true;
+            element.previousSibling.previousSibling.disabled = true;
             this.dropdown__divText.innerText = 'Сколько гостей';
-            this.count=0;
-            this.buttonCancel.innerText='';
+            this.count = 0;
+            this.buttonCancel.innerText = '';
         });
     }
 
@@ -79,36 +79,53 @@ class Counter {
 }
 
 
+class Dropdown {
+    constructor() {
+        this._initialize();
+        this.dropdown;
+    }
 
-function dropdown() {
-    let dropdown = document.querySelectorAll('.dropdown');
-    dropdown = [].slice.call(dropdown);
+    _initialize() {
+        this.dropdown = document.querySelectorAll('.dropdown');
+        this.dropdown = [].slice.call(this.dropdown);
+        this.dropdown.forEach(element => {
+            this._element(element);
+        });
+    }
 
-    dropdown.forEach(element => {
-        let iteration = new Iteration(element);
-        let ev = iteration.eventIter;    // объект класса с событием
-        let divCancel = element.querySelector('.dropdown__div-cancel');
-        let number_div = element.querySelectorAll('.iteration__div-num');
-        let dropdown__divText = element.querySelector('.dropdown__div-text');
-        let counter = new Counter(dropdown__divText, divCancel,number_div);
-        ev.handlerPlus(counter.counterPlus.bind(counter));
-        ev.handlerMin(counter.counterMin.bind(counter));
-        let content = element.querySelector('.dropdown__div-content');
-        content.addEventListener("click", show);
-    });
+
+    _element(element) {
+        this.iteration = new Iteration(element);
+        let search = this._searchElement(element);
+        this._addHandlers(search);
+        search.contentHeader.addEventListener("click", this.show);
+    }
+
+    _searchElement(element) {
+        return {
+            buttonCancel: element.querySelector('.dropdown__div-cancel'),
+            numberDivArr: element.querySelectorAll('.iteration__div-num'),
+            dropdown__divText: element.querySelector('.dropdown__div-text'),
+            contentHeader: element.querySelector('.dropdown__div-content'),
+        }
+    }
+
+    _addHandlers(searchElement) {
+        let counter = new Counter(searchElement);
+        this.iteration.eventIter.handlerPlus(counter.counterPlus.bind(counter));
+        this.iteration.eventIter.handlerMin(counter.counterMin.bind(counter));
+    }
+
+    show() {
+        const displayNone = event.currentTarget.nextSibling.nextSibling.style.display;
+        const displayEmpty = event.currentTarget.nextSibling.nextSibling.style.display;
+        if (displayNone === "none" || displayEmpty === '')
+            event.currentTarget.nextSibling.nextSibling.style.display = "block";
+        else
+            event.currentTarget.nextSibling.nextSibling.style.display = "none";
+    }
 }
 
 
-function show() {
-    if (event.currentTarget.nextSibling.nextSibling.style.display === "none" || event.currentTarget.nextSibling.nextSibling.style.display === '')
-        event.currentTarget.nextSibling.nextSibling.style.display = "block";
-    else
-        event.currentTarget.nextSibling.nextSibling.style.display = "none";
-
-}
-
-
-
-
-
-dropdown();
+// let dropdown = new Dropdown();
+export { Dropdown };

@@ -35,9 +35,14 @@
         margin-bottom: 7px;
     }
 
+    &__feedback
+    {
+        margin-left: 10px;
+    }
+
     &__content
     {
-        display: inline-block;
+        display: flex;
         margin-top: 12px;
         margin-left: 4px;
     }

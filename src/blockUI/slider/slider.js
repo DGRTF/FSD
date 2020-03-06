@@ -19,12 +19,12 @@ class Slider {
             to: this.to,
             hide_min_max: true,
             hide_from_to: true,
-            onChange: this.Gena.bind(this),
-            onStart: this.Gena.bind(this)
+            onChange: this._price.bind(this),
+            onStart: this._price.bind(this)
         });
     }
 
-    Gena(data) {
+    _price(data) {
         this.slider.innerText = data.from_pretty + '₽ - ' + data.to_pretty + '₽';
     }
 }

@@ -1,10 +1,56 @@
 @import "__div-list/check-list__div-list";
-@import "__span-text/check-list__span-text.scss";
-@import "__span-icons/check-list__span-icons.scss";
-@import "__div-head/check-list__div-head.scss";
-@import "__div-main/check-list__div-main.scss";
 
 .check-list
 {
-    display: inline-block;
+    // display: inline-flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    width: 100%;
+
+    &__checkbox
+    {
+        display: none;
+    }
+
+    &__label
+    {
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #1F2041;
+
+        &::after
+        {
+            position: absolute;
+            content: 'keyboard_arrow_down';
+            display: inline-block;
+            font-family: Material Icons;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            text-transform: none;
+            color: $cobalt-blue50;
+            margin-left: 42px;
+
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: 'liga';
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .check-list__checkbox:checked + &::after
+        {
+            content: "keyboard_arrow_up";
+        }
+
+        
+    }
+    .check-list__checkbox:checked ~ .check-list__div-list
+    {
+        // display: flex;
+        opacity: 1;
+    }
 }
