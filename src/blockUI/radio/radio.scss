@@ -4,12 +4,14 @@
 
 .radio
 {
-    display: inline-block;
+    display: inline-flex;
+    line-height: 0px;
 
     &__span
     {
-        position: relative;
-        font-family: Montserrat;
+        display: inline-flex;
+        align-items: center;
+        font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
