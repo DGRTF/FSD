@@ -17,10 +17,10 @@
 @import "./../../blockUI/dropdown/dropdown.scss";
 @import "./../../blockUI/bullet-list/bullet-list.scss";
 @import "./../../blockUI/rich-checkbox/rich-checkbox.scss";
-@import "./../../blockUI/comment/comment.scss";
+// @import "./../../blockUI/comment/comment.scss";
 @import "./../../blockUI/pagination/pagination.scss";
 @import "./../../blockUI/slider/slider.scss";
-@import "./../../scss/label.scss";
+// @import "./../../scss/label.scss";
 @import "./../../blockUI/subscribe-mail/subscribe-mail.scss";
 @import "./../../blockUI/like-button/like-button.scss";
 
@@ -628,14 +628,14 @@ body
 
     
 
-    &__label
-    {
-        display: inline-block;
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        left: 30px;
-        top: 30px;
-        @include label;
-    }
+    // &__label
+    // {
+    //     display: inline-block;
+    //     position: absolute;
+    //     width: 40px;
+    //     height: 40px;
+    //     left: 30px;
+    //     top: 30px;
+    //     @include label;
+    // }
 }

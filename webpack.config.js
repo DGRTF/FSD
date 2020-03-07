@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const webpack = require('webpack');
 let path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports =
 {
@@ -24,12 +25,17 @@ module.exports =
             jQuery: 'jquery',
             "window.jQuery": "jquery",
         }),
+
+
         new HtmlWebpackPlugin({
             inject: true,
             chunks: ['index'],
             filename: 'index.html',
             template: './src/index.pug',
         }),
+        new MiniCssExtractPlugin(),
+
+
         new HtmlWebpackPlugin({
             inject: true,
             chunks: ['formElements'],
@@ -50,8 +56,8 @@ module.exports =
         }),
 
         new CopyPlugin([
-            { from: 'src/img/favicon.ico', to: ''}
-          ]),
+            { from: 'src/img/favicon.ico', to: '' }
+        ]),
     ],
     module:
     {
@@ -74,8 +80,9 @@ module.exports =
                     test: /\.css$/,
                     use: [
                         // 'style-loader',
+                        MiniCssExtractPlugin.loader,
                         'css-loader',
-                        // 'postcss-loader'
+                        'postcss-loader'
                     ]
                 },
 
@@ -98,7 +105,7 @@ module.exports =
                         publicPath: "./../fonts"
                     }
                 },
-                
+
                 {
                     test: /\.svg$/,
                     loader: 'file-loader',
@@ -110,20 +117,17 @@ module.exports =
                 },
 
                 {
-                    test: /\.s[ac]ss$/,
+                    test: /\.scss$/,
                     use: [
                         // Creates `style` nodes from JS strings
-                        { loader: 'style-loader' },
+                        'style-loader',
+                        MiniCssExtractPlugin.loader,
                         // Translates CSS into CommonJS
-                        { loader: 'css-loader' },
-                        { loader: 'resolve-url-loader' },
-                        {
+                          'css-loader' ,
+                          'postcss-loader' ,
+                        //   'resolve-url-loader' ,
                             // Compiles Sass to CSS
-                            loader: 'sass-loader',
-                            options: {
-                                sourceMap: true
-                            }
-                        }
+                             'sass-loader'
                     ]
                 },
 
