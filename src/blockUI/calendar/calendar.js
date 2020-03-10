@@ -5,11 +5,13 @@ class Calendar {
     constructor() {
         this.initialize();
         this.calendar;
-        // this.calendar1;
+        this.calendar1;
+        this.jsCalendarFrom;
+        this.jsCalendarTo;
     }
 
     initialize() {
-        this.calendar1 = $('#minMaxExample').datepicker({
+        this.calendar1 = $('.js-calendar__plugin').datepicker({
             minDate: new Date(),
             clearButton: true,
             prevHtml: "<div>arrow_back</div>",
@@ -21,38 +23,38 @@ class Calendar {
             },
         })
         this.calendar = this.calendar1.data("datepicker");
-        // document.querySelector(".datepicker--button").style.display = "none";
-        document.querySelector(".datepicker--buttons").innerHTML = "<div class='calendar__button'>Очистить</div><div class='calendar__button calendar__button-select'>Применить</div>";
-        // document.querySelector(".datepicker--buttons").innerHTML = "<button class='calendar__clear'>Очистить</button>";
-        document.querySelectorAll(".calendar__button")[1].addEventListener("click", this.setValue.bind(this));
-        document.querySelectorAll(".calendar__button")[0].addEventListener("click", this.clearDate.bind(this));
-        document.querySelector(".calendar__date").addEventListener("click", this.showCalendar.bind(this));
-        document.querySelectorAll(".calendar__date")[1].addEventListener("click", this.showCalendar.bind(this));
-        // document.querySelector(".calendar__to").addEventListener("click", this.showCalendar.bind(this));
+        document.querySelector(".datepicker--buttons").innerHTML = "<div class='calendar__button calendar__button-clear js-calendar__button-clear'>Очистить</div><div class='calendar__button calendar__button-select js-calendar__button-select'>Применить</div>";
+        document.querySelector(".js-calendar__button-select").addEventListener("click", this.setValue.bind(this));
+        document.querySelector(".js-calendar__button-clear").addEventListener("click", this.clearDate.bind(this));
+        this.jsCalendarFrom = document.querySelector(".js-calendar__from");
+        this.jsCalendarFrom.addEventListener("click", this.showCalendar.bind(this));
+        this.jsCalendarTo = document.querySelector(".js-calendar__to");
+        this.jsCalendarTo.addEventListener("click", this.showCalendar.bind(this));
         this.calendar1.hide();
     }
 
     setValue() {
         if (typeof (this.calendar.selectedDates[0]) == "undefined") {
-            let currentDate = new Date().getDate() + "." + new Date().getMonth() + "." + new Date().getFullYear();
-            document.querySelector(".calendar__date").value = currentDate;
-            document.querySelectorAll(".calendar__date")[1].value = currentDate;
+            let date = new Date();
+            let currentDate = date.getDate() + "." + (date.getMonth()+1) + "." + date.getFullYear();
+            this.jsCalendarFrom.value = currentDate;
+            this.jsCalendarTo.value = currentDate;
         }
         else {
             let start = this.calendar.selectedDates[0];
-            let startStr = start.getDate() + "." + start.getMonth() + "." + start.getFullYear();
+            let startStr = start.getDate() + "." + (start.getMonth()+1) + "." + start.getFullYear();
             let end = this.calendar.selectedDates[this.calendar.selectedDates.length - 1];
-            let endStr = end.getDate() + "." + end.getMonth() + "." + end.getFullYear();
-            document.querySelector(".calendar__date").value = startStr;
-            document.querySelectorAll(".calendar__date")[1].value = endStr;
+            let endStr = end.getDate() + "." + (end.getMonth()+1) + "." + end.getFullYear();
+            this.jsCalendarFrom.value = startStr;
+            this.jsCalendarTo.value = endStr;
         }
         this.calendar1.hide();
     }
 
     clearDate() {
         this.calendar.clear();
-        document.querySelector(".calendar__date").value = "ДД.ММ.ГГГГ";
-        document.querySelectorAll(".calendar__date")[1].value = "ДД.ММ.ГГГГ";
+        this.jsCalendarFrom.value = "ДД.ММ.ГГГГ";
+        this.jsCalendarTo.value = "ДД.ММ.ГГГГ";
     }
 
     showCalendar() {

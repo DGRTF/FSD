@@ -79,7 +79,7 @@ module.exports =
                 {
                     test: /\.css$/,
                     use: [
-                        // 'style-loader',
+                        'style-loader',
                         MiniCssExtractPlugin.loader,
                         'css-loader',
                         'postcss-loader'
@@ -120,14 +120,19 @@ module.exports =
                     test: /\.scss$/,
                     use: [
                         // Creates `style` nodes from JS strings
-                        'style-loader',
+                        { loader: 'style-loader' },
                         MiniCssExtractPlugin.loader,
                         // Translates CSS into CommonJS
-                          'css-loader' ,
-                          'postcss-loader' ,
-                        //   'resolve-url-loader' ,
+                        { loader: 'css-loader' },
+                        { loader: 'postcss-loader' },
+                        { loader: 'resolve-url-loader' },
+                        {
                             // Compiles Sass to CSS
-                             'sass-loader'
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        }
                     ]
                 },
 

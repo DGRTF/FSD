@@ -15,4 +15,9 @@
     opacity: 0.5;
 }
 
+.button-opacity[disabled] .button-border__span
+{
+    color: red;
+}
+
 @import "src/blockUI/button-border/__span/button-border__span.scss";

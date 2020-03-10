@@ -86,7 +86,7 @@ class Dropdown {
     }
 
     _initialize() {
-        this.dropdown = document.querySelectorAll('.dropdown');
+        this.dropdown = document.querySelectorAll('.js-dropdown');
         this.dropdown = [].slice.call(this.dropdown);
         this.dropdown.forEach(element => {
             this._element(element);
@@ -103,10 +103,10 @@ class Dropdown {
 
     _searchElement(element) {
         return {
-            buttonCancel: element.querySelector('.dropdown__div-cancel'),
-            numberDivArr: element.querySelectorAll('.iteration__div-num'),
-            dropdown__divText: element.querySelector('.dropdown__div-text'),
-            contentHeader: element.querySelector('.dropdown__div-content'),
+            buttonCancel: element.querySelector('.js-dropdown__div-cancel'),
+            numberDivArr: element.querySelectorAll('.js-iteration__div-num'),
+            dropdown__divText: element.querySelector('.js-dropdown__div-text'),
+            contentHeader: element.querySelector('.js-dropdown__div-content'),
         }
     }
 
@@ -117,15 +117,10 @@ class Dropdown {
     }
 
     show() {
-        const displayNone = event.currentTarget.nextSibling.nextSibling.style.display;
-        const displayEmpty = event.currentTarget.nextSibling.nextSibling.style.display;
-        if (displayNone === "none" || displayEmpty === '')
-            event.currentTarget.nextSibling.nextSibling.style.display = "block";
-        else
-            event.currentTarget.nextSibling.nextSibling.style.display = "none";
+        event.currentTarget.nextSibling.nextSibling.classList.toggle("dropdown__div-items-display");
     }
 }
 
 
-// let dropdown = new Dropdown();
+
 export { Dropdown };

@@ -1,8 +1,8 @@
 @import "./../../scss/general-colors.scss";
-@import "./../../../node_modules/normalize.css/normalize.css";
+@import "./../../scss/normalize.scss";
 //fonts
-@import "./../../fonts/Montserrat/stylesheet.css";
-@import "./../../fonts/Montserrat/material-icons.css";
+@import "./../../fonts/Montserrat/stylesheet.scss";
+@import "./../../fonts/Montserrat/material-icons.scss";
 //blocks
 
 // @import "./../../blockUI/calendar/calendar.scss";
@@ -32,4 +32,10 @@
 .input4
 {
     max-width: 740px;
+}
+
+button{
+    width: 100px;
+    height: 44px;
+    border-radius: 22px;
 }

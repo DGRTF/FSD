@@ -1,13 +1,13 @@
 include .\..\iteration\iteration.pug
 
 mixin dropdown({items=[]})
-    .dropdown
-        .dropdown__div-content
-            .dropdown__div-text="Сколько гостей"
+    .dropdown.js-dropdown
+        .dropdown__div-content.js-dropdown__div-content
+            .dropdown__div-text.js-dropdown__div-text="Сколько гостей"
             .dropdown__div-icon="expand_more"
         .dropdown__div-items
             each item in items
                 +iteration({content: item})
             .dropdown__div-buttons
-                .dropdown__div-cancel
+                .dropdown__div-cancel.js-dropdown__div-cancel
                 .dropdown__div-ready="Применить"

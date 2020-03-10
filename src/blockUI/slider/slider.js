@@ -10,7 +10,7 @@ class Slider {
     }
 
     initialize() {
-        this.slider = document.querySelector('.slider__range-number');
+        this.slider = document.querySelector('.js-slider__range-number');
         jQuery(".js-range-slider").ionRangeSlider({
             type: "double",
             min: 0,

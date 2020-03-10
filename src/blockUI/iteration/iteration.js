@@ -48,8 +48,8 @@ class Iteration {
         this.eventIter;
     }
     iteration() {
-        let buttonsPlus = this.container.querySelectorAll('.iteration__button-plus');
-        let buttonsMin = this.container.querySelectorAll('.iteration__button-min');
+        let buttonsPlus = this.container.querySelectorAll('.js-iteration__button-plus');
+        let buttonsMin = this.container.querySelectorAll('.js-iteration__button-min');
 
         let parent = buttonsMin[0].parentNode.parentNode;
         this.eventIter = new EventIter(parent);

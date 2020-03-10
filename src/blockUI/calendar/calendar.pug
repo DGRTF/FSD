@@ -1,9 +1,9 @@
 mixin calendar({id='cards'})
     .calendar
         .calendar__div-date
-            input.calendar__date(type="text" id=id placeholder="ДД.ММ.ГГГГ")
+            input.calendar__date.calendar__from.js-calendar__from(type="text" id=id placeholder="ДД.ММ.ГГГГ")
             label(class="calendar__label" for=id)="expand_more"
         .calendar__div-date
-            input.calendar__date.calendar__to(type="text" id=id+"1" placeholder="ДД.ММ.ГГГГ")
+            input.calendar__date.calendar__to.js-calendar__to(type="text" id=id+"1" placeholder="ДД.ММ.ГГГГ")
             label(class="calendar__label" for=id+"1")="expand_more"
-        div(type="text" id="minMaxExample" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
+        div.js-calendar__plugin(type="text" id="minMaxExample" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
