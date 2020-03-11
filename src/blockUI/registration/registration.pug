@@ -1,0 +1,30 @@
+include .\..\input-field\input-field.pug
+include .\..\button-arrow\button-arrow.pug
+include .\..\button-border\button-border.pug
+include .\..\radio\radio.pug
+include .\..\checkbox\checkbox.pug
+
+mixin registration
+    .registration
+        .registration__header="Регистрация аккаунта"
+        form
+            +input-field({type: 'text', name: 'name', value: 'Имя'})
+            .registration__surname
+                +input-field({type: 'text', name: 'surname', value: 'Фамилия'})
+            +radio({id: 'radio1', content: 'Мужчина', name: 'group'})
+            span.registration__woman
+                +radio({id: 'radio2', content: 'Женщина', name: 'group'})
+            .registration__date="Дата рождения"
+            +input-field({type: 'text', name: 'born', value: 'ДД.ММ.ГГГГ'})
+            .registration__data-entry="Данные для входа в сервис"
+            .registration__email
+                +input-field({type: 'text', name: 'email', value: 'Email'})
+            .registration__pass
+                +input-field({type: 'text', name: 'pass',value: 'Пароль'})
+            +checkbox({input: 'checkbox',contentHead: 'Получать спецпредложения', mode: '_move'})
+            .registration__button
+                +button-arrow({content: "Перейти к оплате"})
+            .registration__create-account
+                span="Уже есть аккаунт на Toxin?"
+                .registration__create-button
+                    +button-border({content: "Войти"})

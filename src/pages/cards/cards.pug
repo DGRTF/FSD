@@ -1,4 +1,7 @@
 include \..\..\blockUI\calendar\calendar.pug
+include \..\..\blockUI\search-room\search-room.pug
+include .\..\..\blockUI\entry-form\entry-form.pug
+include .\..\..\blockUI\registration\registration.pug
 
 doctype html
 html
@@ -9,3 +12,10 @@ html
     body
         .cards
             +calendar(1)
+            .cards__search-room
+                +search-room({})
+            .cards__entry-form
+                +entry-form({})
+            .cards__registration
+                +registration({})
+            

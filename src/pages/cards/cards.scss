@@ -5,3 +5,30 @@
 @import "./../../fonts/Montserrat/material-icons.scss";
 
 @import "./../../blockUI/calendar/calendar.scss";
+@import "./../../blockUI/search-room/search-room.scss";
+@import "./../../blockUI/entry-form/entry-form.scss";
+@import "./../../blockUI/registration/registration.scss";
+
+
+.cards
+{
+    background: $backg;
+
+    &__search-room
+    {
+        display: inline-block;
+        width: 380px;
+    }
+
+    &__entry-form
+    {
+        width: 380px;
+        min-width: 325px;
+    }
+
+    &__registration
+    {
+        width: 380px;
+        min-width: 325px;
+    }
+}

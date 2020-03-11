@@ -1,7 +1,21 @@
+@import "./../iteration/iteration.scss";
 
 .dropdown
 {
-    width: 320px;
+    min-width: 320px;
+    width: 100%;
+    position: relative;
+
+    &__header
+    {
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        color: $color_dark-shade;
+    }
 
     &__div-buttons
     {
@@ -59,10 +73,15 @@
         border-right: 1px solid $cobalt-blue50;
         border-bottom: 1px solid $cobalt-blue50;
         border-radius: 0px 0px 4px 4px;
+        background-color: $color-white;
+        box-sizing: border-box;
+        width: 100%;
     }
 
     &__div-items-display
     {
+        position: absolute;
+        z-index: 1;
         display: block;
     }
 

@@ -51,7 +51,7 @@ html
             .form-elements__radio1
                 +radio({})
             .form-elements__radio2
-                +radio({input: 'radio1', label:'Женщина', group: 'group'})
+                +radio({id: 'radio1', content:'Женщина', name: 'group'})
 
             .form-elements__checkbox-move="toggle"
 
@@ -81,16 +81,16 @@ html
             
             .form-elements__input-field="text field"
             .form-elements__input-field1
-                +input-field({text: 'email', name: 'name', idi: '1', value: 'Email' })
+                +input-field({type: 'email', name: 'name', idi: '1', value: 'Email' })
             .form-elements__input-field2="text field"
             .form-elements__input-field3
-                +input-field({text: 'text', name: 'name1', idi: '2', value: 'This is pretty awesome' })
+                +input-field({type: 'text', name: 'name1', idi: '2', value: 'This is pretty awesome' })
             .form-elements__input-field4="subscription text field"
             .form-elements__input-field5
                 +subscribe-mail
             .form-elements__input-field6="masked text field"
             .form-elements__input-field7
-                +input-field({text: 'text', name: 'name3', idi: '4', value: 'ДД.ММ.ГГГГ' })
+                +input-field({type: 'text', name: 'name3', idi: '4', value: 'ДД.ММ.ГГГГ' })
 
             .form-elements__information
                 +information({})

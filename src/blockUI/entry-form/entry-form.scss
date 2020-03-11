@@ -1,0 +1,50 @@
+@import "./../input-field/input-field.scss";
+@import "./../button-arrow/button-arrow.scss";
+@import "./../button-border/button-border.scss";
+
+.entry-form
+{
+    padding: 40px 30px 32px 30px;
+    background-color: $color_white;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    &__header
+    {
+        font-family: Quicksand, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        color: $color_dark-shade;
+        margin-bottom: 22px;
+    }
+
+    &__email
+    {
+        margin-bottom: 10px;
+    }
+
+    &__button
+    {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__create-account
+    {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: #000000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__create-button
+    {
+        display: inline-block;
+        width: 99px;
+    }
+}

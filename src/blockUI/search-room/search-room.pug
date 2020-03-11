@@ -1,0 +1,13 @@
+include ./../calendar/calendar.pug
+include .\..\dropdown\dropdown.pug
+include .\..\button-arrow\button-arrow.pug
+
+mixin search-room({nameEelements })
+    .search-room
+        .search-room__header="Найдём номера под ваши пожелания"
+        form
+            .search-room__calendar
+                +calendar({id: "search-room", nameHeaderFrom: "Прибытие", nameHeaderTo: "Выезд"})
+            .search-room__dropdown
+                +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "Гости"})
+            +button-arrow({content: "Подобрать номер"})

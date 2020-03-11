@@ -131,7 +131,7 @@
 
 .datepicker--nav-title
 {
-  font-family: Quicksand;
+  font-family: Quicksand, OpenSans, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 19px;
@@ -162,12 +162,21 @@
 }
 
 //Custom HTML
-.calendar
+@mixin calendar-font
 {
-  font-family: Montserrat;
+  font-family: Montserrat, OpenSans, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
+  text-transform: uppercase;
+} 
+  
+
+.calendar
+{
+  display: inline-block;
+  @include calendar-font();
+  text-transform: none;
   min-width: 320px;
   
   &__div-date
@@ -178,11 +187,7 @@
 
   &__button
   {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
+    @include calendar-font();
     color: $cobalt-blue50;
     margin: 15px;
     margin-bottom: 16px;
@@ -191,6 +196,20 @@
   &__button-select
   {
     color: $color_purple;
+  }
+
+  &__from-name
+  {
+    @include calendar-font();
+    color: $color_dark-shade;
+    margin-bottom: 5px;
+  }
+
+  &__to-name
+  {
+    @include calendar-font();
+    color: $color_dark-shade;
+    margin-bottom: 5px;
   }
 
   &__date
@@ -219,7 +238,7 @@
     font-size: 24px;
     position: absolute;
     left: 116px;
-    top: 9px;
+    bottom: 9px;
     color:$color_purple;
   }
 

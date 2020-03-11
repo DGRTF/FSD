@@ -1,7 +1,8 @@
 include .\..\iteration\iteration.pug
 
-mixin dropdown({items=[]})
+mixin dropdown({items=[], nameHeader = ""})
     .dropdown.js-dropdown
+        .dropdown__header=nameHeader
         .dropdown__div-content.js-dropdown__div-content
             .dropdown__div-text.js-dropdown__div-text="Сколько гостей"
             .dropdown__div-icon="expand_more"

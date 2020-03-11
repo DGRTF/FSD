@@ -1,0 +1,94 @@
+@import "./../input-field/input-field.scss";
+@import "./../button-arrow/button-arrow.scss";
+@import "./../button-border/button-border.scss";
+@import "./../radio/radio.scss";
+@import "./../checkbox/checkbox.scss";
+
+
+@mixin registration-font
+{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $color_dark-shade;
+}
+
+
+.registration
+{
+    padding: 40px 30px 32px 30px;
+    background-color: $color_white;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    &__header
+    {
+        font-family: Quicksand, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        color: $color_dark-shade;
+        margin-bottom: 22px;
+    }
+
+    &__surname
+    {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__woman
+    {
+        margin-left: 16px;
+    }
+
+    &__date
+    {
+        @include registration-font();
+        margin-top: 22px;
+        margin-bottom: 5px;
+    }
+
+    &__data-entry
+    {
+        margin-top: 22px;
+        margin-bottom: 5px;
+        @include registration-font();
+    }
+
+    &__email
+    {
+        margin-bottom: 10px;
+    }
+
+    &__pass
+    {
+        margin-bottom: 10px;
+    }
+
+    &__button
+    {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__create-account
+    {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: #000000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__create-button
+    {
+        display: inline-block;
+        width: 99px;
+    }
+}

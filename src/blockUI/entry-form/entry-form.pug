@@ -1,0 +1,17 @@
+include .\..\input-field\input-field.pug
+include .\..\button-arrow\button-arrow.pug
+include .\..\button-border\button-border.pug
+
+mixin entry-form
+    .entry-form
+        form
+            .entry-form__header="Войти"
+            .entry-form__email
+                +input-field({type: 'text', name: 'email', value: 'Email'})
+            +input-field({type: 'text', name: 'pass',value: 'Пароль'})
+            .entry-form__button
+                +button-arrow({content: "Войти"})
+        .entry-form__create-account
+            span="Нет аккаунта на Toxin?"
+            .entry-form__create-button
+                +button-border({content: "Создать"})
