@@ -11,7 +11,8 @@ module.exports =
         index: './src/index.js',
         formElements: './src/pages/form-elements/form-elements.js',
         cards: './src/pages/cards/cards.js',
-        test: './src/pages/test/test.js'
+        test: './src/pages/test/test.js',
+        headersAndFooters: './src/pages/headersAndFooters/headersAndFooters.js',
     },
     output:
     {
@@ -53,6 +54,14 @@ module.exports =
             chunks: ['test'],
             filename: 'pages/test.html',
             template: './src/pages/test/test.pug',
+        }),
+
+        
+        new HtmlWebpackPlugin({
+            inject: true,
+            chunks: ['headersAndFooters'],
+            filename: 'pages/headersAndFooters.html',
+            template: './src/pages/headersAndFooters/headersAndFooters.pug',
         }),
 
         new CopyPlugin([

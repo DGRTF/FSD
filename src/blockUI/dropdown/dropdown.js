@@ -3,10 +3,12 @@ import { Iteration } from "./../iteration/iteration.js"
 
 
 class Counter {
-    constructor({ dropdown__divText, buttonCancel, numberDivArr }) {
+    constructor({ dropdown__divText, buttonCancel, buttonEnter, numberDivArr, dropdown__divItems }) {
         this.dropdown__divText = dropdown__divText;
         this.numberDivArr = numberDivArr;
+        this.dropdown__divItems = dropdown__divItems;
         this.buttonCancel = buttonCancel;
+        this.buttonEnter = buttonEnter;
         this.count = 0;
         this._addHandler();
     }
@@ -25,7 +27,7 @@ class Counter {
         this.numberDivArr.forEach(element => {
             element.innerText = '0';
             element.previousSibling.previousSibling.disabled = true;
-            this.dropdown__divText.innerText = 'Сколько гостей';
+            this.dropdown__divText.value = 'Сколько гостей';
             this.count = 0;
             this.buttonCancel.innerText = '';
         });
@@ -34,6 +36,11 @@ class Counter {
     _addHandler() {
         this.numberDivArr = [].slice.call(this.numberDivArr);
         this.buttonCancel.addEventListener('click', this.resetValues.bind(this));
+        this.buttonEnter.addEventListener("click", this._hideBlock.bind(this))
+    }
+
+    _hideBlock() {
+        this.dropdown__divItems.classList.toggle("dropdown__div-items-display");
     }
 
     _equal() {
@@ -45,35 +52,35 @@ class Counter {
                         if (this.count % 10 > 0) {
                             if (this.count % 10 > 1) {
                                 if (this.count % 10 > 4) {
-                                    this.dropdown__divText.innerText = String(this.count) + ' гостей'
+                                    this.dropdown__divText.value = String(this.count) + ' гостей'
                                 }
                                 else {
-                                    this.dropdown__divText.innerText = String(this.count) + ' гостя';
+                                    this.dropdown__divText.value = String(this.count) + ' гостя';
                                 }
                             }
                             else {
-                                this.dropdown__divText.innerText = String(this.count) + ' гость';
+                                this.dropdown__divText.value = String(this.count) + ' гость';
                             }
                         }
                         else {
-                            this.dropdown__divText.innerText = String(this.count) + ' гостей';
+                            this.dropdown__divText.value = String(this.count) + ' гостей';
                         }
                     }
                     else {
-                        this.dropdown__divText.innerText = String(this.count) + ' гостей';
+                        this.dropdown__divText.value = String(this.count) + ' гостей';
                     }
                 }
                 else {
-                    this.dropdown__divText.innerText = String(this.count) + ' гостя';
+                    this.dropdown__divText.value = String(this.count) + ' гостя';
                 }
             }
             else {
-                this.dropdown__divText.innerText = String(this.count) + " гость";
+                this.dropdown__divText.value = String(this.count) + " гость";
             }
         }
         else {
-            this.dropdown__divText.innerText = 'Сколько гостей';
-            this.buttonCancel.innerText = ""
+            this.dropdown__divText.value = 'Сколько гостей';
+            this.buttonCancel.value = ""
         }
     }
 }
@@ -99,14 +106,17 @@ class Dropdown {
         let search = this._searchElement(element);
         this._addHandlers(search);
         search.contentHeader.addEventListener("click", this.show);
+
     }
 
     _searchElement(element) {
         return {
             buttonCancel: element.querySelector('.js-dropdown__div-cancel'),
+            buttonEnter: element.querySelector('.js-dropdown__ready'),
             numberDivArr: element.querySelectorAll('.js-iteration__div-num'),
             dropdown__divText: element.querySelector('.js-dropdown__div-text'),
             contentHeader: element.querySelector('.js-dropdown__div-content'),
+            dropdown__divItems: element.querySelector('.js-dropdown__div-items'),
         }
     }
 

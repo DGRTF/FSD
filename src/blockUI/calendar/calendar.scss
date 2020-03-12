@@ -242,5 +242,14 @@
     color:$color_purple;
   }
 
+  &__plugin
+  {
+    margin-top: 5px;
+    z-index: 2;
+    // &-position
+    // {
+      position: absolute;
+    // }
+  }
 
 }

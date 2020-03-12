@@ -4,3 +4,11 @@
 
     background-size: 40px 40px;
 }
+
+@mixin label-text
+{
+    background-image: url('./../img/label-text.svg');
+    width: 106px;
+    min-width: 106px;
+    height: 40px;
+}

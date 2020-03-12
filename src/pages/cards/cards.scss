@@ -8,6 +8,7 @@
 @import "./../../blockUI/search-room/search-room.scss";
 @import "./../../blockUI/entry-form/entry-form.scss";
 @import "./../../blockUI/registration/registration.scss";
+@import "./../../blockUI/calculate-price/calculate-price.scss";
 
 
 .cards
@@ -27,6 +28,12 @@
     }
 
     &__registration
+    {
+        width: 380px;
+        min-width: 325px;
+    }
+
+    &__calculate-price
     {
         width: 380px;
         min-width: 325px;

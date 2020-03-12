@@ -2,6 +2,7 @@ include \..\..\blockUI\calendar\calendar.pug
 include \..\..\blockUI\search-room\search-room.pug
 include .\..\..\blockUI\entry-form\entry-form.pug
 include .\..\..\blockUI\registration\registration.pug
+include  .\..\..\blockUI\calculate-price\calculate-price.pug
 
 doctype html
 html
@@ -18,4 +19,5 @@ html
                 +entry-form({})
             .cards__registration
                 +registration({})
-            
+            .cards__calculate-price
+                +calculate-price({})

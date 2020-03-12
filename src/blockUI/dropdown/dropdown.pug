@@ -4,11 +4,11 @@ mixin dropdown({items=[], nameHeader = ""})
     .dropdown.js-dropdown
         .dropdown__header=nameHeader
         .dropdown__div-content.js-dropdown__div-content
-            .dropdown__div-text.js-dropdown__div-text="Сколько гостей"
+            input.dropdown__div-text.js-dropdown__div-text(value="Сколько гостей", readonly)
             .dropdown__div-icon="expand_more"
-        .dropdown__div-items
+        .dropdown__div-items.js-dropdown__div-items
             each item in items
                 +iteration({content: item})
             .dropdown__div-buttons
                 .dropdown__div-cancel.js-dropdown__div-cancel
-                .dropdown__div-ready="Применить"
+                .dropdown__ready.js-dropdown__ready="Применить"

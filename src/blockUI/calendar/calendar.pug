@@ -1,5 +1,5 @@
 mixin calendar({id='cards', nameHeaderFrom = "", nameHeaderTo = ""})
-    .calendar
+    .calendar.js-calendar
         .calendar__div-date
             .calendar__from-name=nameHeaderFrom
             input.calendar__date.calendar__from.js-calendar__from(type="text" id=id placeholder="ДД.ММ.ГГГГ")
@@ -8,4 +8,4 @@ mixin calendar({id='cards', nameHeaderFrom = "", nameHeaderTo = ""})
             .calendar__to-name=nameHeaderTo
             input.calendar__date.calendar__to.js-calendar__to(type="text" id=id+"1" placeholder="ДД.ММ.ГГГГ")
             label(class="calendar__label" for=id+"1")="expand_more"
-        div.js-calendar__plugin(type="text" id="minMaxExample" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
+        div.calendar__plugin.js-calendar__plugin(type="text" id="minMaxExample" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
