@@ -1,8 +1,9 @@
-include \..\..\blockUI\calendar\calendar.pug
-include \..\..\blockUI\search-room\search-room.pug
-include .\..\..\blockUI\entry-form\entry-form.pug
-include .\..\..\blockUI\registration\registration.pug
-include  .\..\..\blockUI\calculate-price\calculate-price.pug
+include .\..\..\blockUI\calendar\calendar
+include .\..\..\blockUI\search-room\search-room
+include .\..\..\blockUI\entry-form\entry-form
+include .\..\..\blockUI\registration-form\registration-form
+include .\..\..\blockUI\calculate-price\calculate-price
+include .\..\..\blockUI\present-room\present-room
 
 doctype html
 html
@@ -21,3 +22,5 @@ html
                 +registration({})
             .cards__calculate-price
                 +calculate-price({})
+            .cards__present-room
+                //- +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", id: "1"})

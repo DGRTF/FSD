@@ -7,8 +7,9 @@
 @import "./../../blockUI/calendar/calendar.scss";
 @import "./../../blockUI/search-room/search-room.scss";
 @import "./../../blockUI/entry-form/entry-form.scss";
-@import "./../../blockUI/registration/registration.scss";
+@import "./../../blockUI/registration-form/registration-form.scss";
 @import "./../../blockUI/calculate-price/calculate-price.scss";
+@import "./../../blockUI/present-room/present-room.scss";
 
 
 .cards
@@ -17,25 +18,29 @@
 
     &__search-room
     {
-        display: inline-block;
-        width: 380px;
+        display: block;
+        max-width: 380px;
+        min-width: 320px;
     }
 
     &__entry-form
     {
-        width: 380px;
-        min-width: 325px;
+        // display: none;
+        max-width: 380px;
+        min-width: 320px;
     }
 
     &__registration
     {
-        width: 380px;
-        min-width: 325px;
+        // display: none;
+        max-width: 380px;
+        min-width: 320px;
     }
 
     &__calculate-price
     {
-        width: 380px;
-        min-width: 325px;
+        // display: none;
+        max-width: 380px;
+        min-width: 320px;
     }
 }

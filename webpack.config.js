@@ -13,6 +13,8 @@ module.exports =
         cards: './src/pages/cards/cards.js',
         test: './src/pages/test/test.js',
         headersAndFooters: './src/pages/headersAndFooters/headersAndFooters.js',
+        landing: './src/pages/landing/landing.js',
+        registration: './src/pages/registration/registration.js',
     },
     output:
     {
@@ -34,7 +36,9 @@ module.exports =
             filename: 'index.html',
             template: './src/index.pug',
         }),
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "css/[name].css",
+        }),
 
 
         new HtmlWebpackPlugin({
@@ -56,12 +60,26 @@ module.exports =
             template: './src/pages/test/test.pug',
         }),
 
-        
+
         new HtmlWebpackPlugin({
             inject: true,
             chunks: ['headersAndFooters'],
             filename: 'pages/headersAndFooters.html',
             template: './src/pages/headersAndFooters/headersAndFooters.pug',
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: true,
+            chunks: ['landing'],
+            filename: 'pages/landing.html',
+            template: './src/pages/landing/landing.pug',
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: true,
+            chunks: ['registration'],
+            filename: 'pages/registration.html',
+            template: './src/pages/registration/registration.pug',
         }),
 
         new CopyPlugin([
@@ -89,7 +107,9 @@ module.exports =
                     test: /\.css$/,
                     use: [
                         'style-loader',
-                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                        },
                         'css-loader',
                         'postcss-loader'
                     ]
@@ -130,7 +150,9 @@ module.exports =
                     use: [
                         // Creates `style` nodes from JS strings
                         { loader: 'style-loader' },
-                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                        },
                         // Translates CSS into CommonJS
                         { loader: 'css-loader' },
                         { loader: 'postcss-loader' },

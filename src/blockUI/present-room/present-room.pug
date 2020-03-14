@@ -1,0 +1,17 @@
+include .\..\rate-stars\rate-stars
+
+mixin present-room({img = [], price, number, comment, id})
+    .present-room
+        .present-room__img
+            each item in img
+                -let i = "./img/"+item+".jpg"
+                img.present-room__slide(src=require(i))
+        .present-room__information
+            .present-room__number=number
+            .present-room__price=price
+        hr.present-room__line
+        .present-room__rate
+            .present-room__stars
+                -let idrate = "present-room"+id
+                +rate-stars({id: idrate})
+            .present-room__comment=comment

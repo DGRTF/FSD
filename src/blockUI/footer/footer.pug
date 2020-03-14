@@ -1,0 +1,44 @@
+include .\..\subscribe-mail\subscribe-mail.pug
+
+mixin footer({footer= "end"})
+        if footer == "end"
+            footer.footer_end
+                .footer_end__label
+                    .footer_end__label-label
+                    .footer_end__label-text="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+                    .footer_end__socialize
+                        a.footer_end__tvitter
+                        a.footer_end__facebook
+                        a.footer_end__instagram
+        else
+            footer.footer
+                -let items = ["home", "about", "services", "careers", "news", "documentation"]
+                .footer__top
+                    .footer__label
+                        .footer__label-label
+                        .footer__label-text="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+                    nav.footer__navigation
+                        span.footer__headers="Navigation"
+                        each item in items
+                            a(class="footer__items footer__"+item)=item
+                    .footer__about
+                        span.footer__headers="About Us"
+                        a.footer__who="Who we are"
+                        a.footer__team="Our team"
+                        a.footer__careers="Careers"
+                        a.footer__investors="Investors"
+                    .footer__support
+                        span.footer__headers="Support"
+                        a.footer__doc="Documentation"
+                        a.footer__community="Community"
+                        a.footer__get="Get in Touch"
+                    .footer__subscribe
+                        span.footer__headers="Subscribe to our newsletter"
+                        span.footer__text="Receive our latest news and promotions in your inbox!"
+                        +subscribe-mail()
+                .footer__bottom
+                    .footer__bottom-left="Copyright © 2018 Toxin UI Kit. All rights reserved."
+                    .footer__bottom-right
+                        a.footer__tvitter
+                        a.footer__facebook
+                        a.footer__instagram

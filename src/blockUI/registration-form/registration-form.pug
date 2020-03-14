@@ -5,26 +5,26 @@ include .\..\radio\radio.pug
 include .\..\checkbox\checkbox.pug
 
 mixin registration
-    .registration
-        .registration__header="Регистрация аккаунта"
-        form
+    .registration-form
+        form.registration-form__form
+            .registration-form__header="Регистрация аккаунта"
             +input-field({type: 'text', name: 'name', value: 'Имя'})
-            .registration__surname
+            .registration-form__surname
                 +input-field({type: 'text', name: 'surname', value: 'Фамилия'})
             +radio({id: 'radio1', content: 'Мужчина', name: 'group'})
-            span.registration__woman
+            span.registration-form__woman
                 +radio({id: 'radio2', content: 'Женщина', name: 'group'})
-            .registration__date="Дата рождения"
+            .registration-form__date="Дата рождения"
             +input-field({type: 'text', name: 'born', value: 'ДД.ММ.ГГГГ'})
-            .registration__data-entry="Данные для входа в сервис"
-            .registration__email
+            .registration-form__data-entry="Данные для входа в сервис"
+            .registration-form__email
                 +input-field({type: 'text', name: 'email', value: 'Email'})
-            .registration__pass
+            .registration-form__pass
                 +input-field({type: 'text', name: 'pass',value: 'Пароль'})
             +checkbox({input: 'checkbox',contentHead: 'Получать спецпредложения', mode: '_move'})
-            .registration__button
+            .registration-form__button
                 +button-arrow({content: "Перейти к оплате"})
-        .registration__create-account
+        .registration-form__create-account
             span="Уже есть аккаунт на Toxin?"
-            .registration__create-button
+            .registration-form__create-button
                 +button-border({content: "Войти"})

@@ -1,5 +1,5 @@
-include .\..\..\blockUI\header-login\header-login.pug
-
+include .\..\..\blockUI\header\header.pug
+include .\..\..\blockUI\footer\footer.pug
 
 doctype html
 html
@@ -9,5 +9,12 @@ html
         title="Cards"
     body
         .headers-footers
-            .headers-footers__header-login
-                +header-login()
+            .headers-footers__header
+                +header({profile: "no"})
+            .headers-footers__header1
+                +header({profile: "yes"})
+            .headers-footers__footer
+                +footer({footer: "g"})
+            .headers-footers__footer1
+                +footer({})
+

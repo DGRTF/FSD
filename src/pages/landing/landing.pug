@@ -1,0 +1,17 @@
+include .\..\..\blockUI\header\header.pug
+include .\..\..\blockUI\search-room\search-room
+include .\..\..\blockUI\footer\footer.pug
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width")
+        title="Landing"
+    body
+        .landing
+            +header({profile: "no"})
+            .landing__background
+                .landing__search-room
+                    +search-room({})
+            +footer({footer: "g"})
