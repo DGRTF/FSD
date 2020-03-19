@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Стилизация таблиц в CSS3</title>
-  <link href="../css/formElements.css" rel="stylesheet"></head>
+  <link href="../css/form-elements.css" rel="stylesheet"></head>
   <body>
     <div class="form-elements">
       <div class="form-elements__div-buttons">Buttons</div>
@@ -207,13 +207,13 @@
       <div class="form-elements__input-field">text field</div>
       <div class="form-elements__input-field1">
         <div class="input-field">
-          <input class="input-field__text" name="name" placeholder="Email">
+          <input class="input-field__text" type="email" name="name" placeholder="Email">
         </div>
       </div>
       <div class="form-elements__input-field2">text field</div>
       <div class="form-elements__input-field3">
         <div class="input-field">
-          <input class="input-field__text" name="name1" placeholder="This is pretty awesome">
+          <input class="input-field__text" type="text" name="name1" placeholder="This is pretty awesome">
         </div>
       </div>
       <div class="form-elements__input-field4">subscription text field</div>
@@ -226,7 +226,7 @@
       <div class="form-elements__input-field6">masked text field</div>
       <div class="form-elements__input-field7">
         <div class="input-field">
-          <input class="input-field__text" name="name3" placeholder="ДД.ММ.ГГГГ">
+          <input class="input-field__text" type="text" name="name3" placeholder="ДД.ММ.ГГГГ">
         </div>
       </div>
       <div class="form-elements__information">
@@ -250,7 +250,7 @@
       <div class="form-elements__dropdown">Dropdown</div>
       <div class="form-elements__dropdown1">
         <div class="dropdown js-dropdown">
-          <div class="dropdown__header"></div>
+          <div class="dropdown__header">Сколько гостей</div>
           <div class="dropdown__div-content js-dropdown__div-content">
             <input class="dropdown__div-text js-dropdown__div-text" value="Сколько гостей" readonly>
             <div class="dropdown__div-icon">expand_more</div>
@@ -290,7 +290,7 @@
       <div class="form-elements__dropdown2">Dropdown</div>
       <div class="form-elements__dropdown3">
         <div class="dropdown js-dropdown">
-          <div class="dropdown__header"></div>
+          <div class="dropdown__header">Сколько гостей</div>
           <div class="dropdown__div-content js-dropdown__div-content">
             <input class="dropdown__div-text js-dropdown__div-text" value="Сколько гостей" readonly>
             <div class="dropdown__div-icon">expand_more</div>
@@ -330,7 +330,7 @@
       <div class="form-elements__dropdown4">Dropdown</div>
       <div class="form-elements__dropdown5">
         <div class="dropdown js-dropdown">
-          <div class="dropdown__header"></div>
+          <div class="dropdown__header">Сколько гостей</div>
           <div class="dropdown__div-content js-dropdown__div-content">
             <input class="dropdown__div-text js-dropdown__div-text" value="Сколько гостей" readonly>
             <div class="dropdown__div-icon">expand_more</div>
@@ -432,14 +432,16 @@
           <div class="pagination__variant"></div>
         </div>
       </div>
-      <div class="form-elements__slider">range slider</div>
       <div class="form-elements__slider1"> 
-        <div class="slider">
-          <div class="slider__range-number js-slider__range-number"></div>
+        <div class="slider js-slider">
+          <div class="slider__head">
+            <div class="slider__header">Range slider</div>
+            <div class="slider__range-number js-slider__range-number"></div>
+          </div>
           <input class="js-range-slider" type="text" name="my_range" value="">
         </div>
       </div>
       <div class="form-elements__label"></div>
     </div>
-  <script type="text/javascript" src="../scripts/formElements.js"></script></body>
+  <script type="text/javascript" src="../scripts/form-elements.js"></script></body>
 </html>
