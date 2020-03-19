@@ -20,7 +20,7 @@ mixin registration
             .registration-form__email
                 +input-field({type: 'text', name: 'email', value: 'Email'})
             .registration-form__pass
-                +input-field({type: 'text', name: 'pass',value: 'Пароль'})
+                +input-field({type: 'password', name: 'pass',value: 'Пароль'})
             +checkbox({input: 'checkbox',contentHead: 'Получать спецпредложения', mode: '_move'})
             .registration-form__button
                 +button-arrow({content: "Перейти к оплате"})

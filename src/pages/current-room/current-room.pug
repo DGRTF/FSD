@@ -1,0 +1,38 @@
+extends .\..\..\templates\common-temp\common-temp
+
+block variables
+    -title="Current-room"
+block content
+    .current-room
+        .current-room__foto
+            .current-room__foto-big
+            .current-room__foto-mini
+                .current-room__foto-top
+                .current-room__foto-bottom
+        .current-room__description
+            .current-room__left
+                .current-room__info
+                    .current-room__info-inf
+                        .current-room__info-header.current-room__headers="Сведения о номере"
+                        +information({})
+                        +information({icon: 'location_cityicon',head: 'Удобство', content: 'Окно в каждой из спален'})
+                        +information({icon: 'whatshot',head: 'Уют', content: 'Номер оснащён камином'})
+                    .current-room__impressions
+                        .current-room__impressions-header.current-room__headers="Впечатления от номера"
+                .current-room__comment
+                    span.current-room__comment-header="Сведения о номере"
+                    +comment({feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+                    +comment({name: "Патрисия Стёклышкова", when: "Неделю назад", feedback: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
+                .current-room__add-info
+                    .current-room__rules
+                        .current-room__rules-header.current-room__headers="Парвила"
+                        +bullet-list({items: ['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})
+                    .current-room__cancel
+                        .current-room__cancel-header.current-room__headers="Отмена"
+                        .current-room__cancel-text="Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
+            .current-room__right
+                +calculate-price({})
+
+
+
+

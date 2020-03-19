@@ -1,23 +1,13 @@
-@import "./../../scss/general-colors.scss";
-@import "./../../scss/normalize.scss";
-
-@import "./../../fonts/Montserrat/stylesheet.scss";
-@import "./../../fonts/Montserrat/material-icons.scss";
-
+@import "./../../templates/common-temp/common-temp.scss";
 @import "./../../blockUI/search-room/search-room.scss";
-@import "./../../blockUI/header/header.scss";
-@import "./../../blockUI/footer/footer.scss";
 
 .landing
 {
-    &__background
-    {
-        background-image: url("./img/landing.jpg");
-        background-size: cover;
-        height: 900px;
-        padding-top: 70px;
-        padding-left: 10%;
-    }
+    background-image: url("./img/landing.jpg");
+    background-size: cover;
+    height: 900px;
+    padding-top: 70px;
+    padding-left: 10%;
 
     &__search-room
     {
@@ -27,7 +17,7 @@
 
     @media(max-width: 495px)
     {
-        &__background
+        &
         {
             padding-left: 0;
         }

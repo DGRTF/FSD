@@ -1,0 +1,146 @@
+@import "./../../templates/common-temp/common-temp";
+@import "./../../blockUI/information/information";
+@import "./../../blockUI/comment/comment";
+@import "./../../blockUI/bullet-list/bullet-list";
+@import "./../../blockUI/comment/comment";
+@import "./../../blockUI/calculate-price/calculate-price";
+
+
+
+.current-room
+{
+    &__foto
+    {
+        display: flex;
+        
+        &-big
+        {
+            background-image: url("./img/big.jpg");
+            background-size: cover;
+            height: 488px;
+            width: 981px;
+        }
+
+        &-mini
+        {
+            // display: flex;
+            // flex-direction: column;
+        }
+
+        &-top
+        {
+            background-image: url("./img/top.jpg");
+            background-size: cover;
+            height: 244px;
+            width: 459px;
+        }
+
+        &-bottom
+        {
+            background-image: url("./img/bottom.jpg");
+            background-size: cover;
+            height: 244px;
+            width: 459px;
+        }
+    }
+
+    &__description
+    {
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        color: $color_dark-shade;
+        padding: 5% 5%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__info
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__add-info
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__add-info > div
+    {
+        margin-right: 70px;
+    }
+
+    &__comment
+    {
+        max-width: 650px;
+
+        & > div
+        {
+            margin-bottom: 30px;
+        }
+
+        &-header
+        {
+            line-height: 50px;
+        }
+    }
+
+    &__cancel
+    {
+        max-width: 300px;
+
+        &-text
+        {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: $cobalt-blue75;
+        }
+    }
+
+    &__left > div
+    {
+        margin-bottom: 30px;
+    }
+
+    &__right
+    {
+        min-width: 380px;
+    }
+
+    &__headers
+    {
+        margin-bottom: 20px;
+    }
+
+    @media(max-width: 440px)
+    {
+        &__description
+        {
+            display: block;
+            padding: 0;
+        }
+
+        &__left
+        {
+            margin: auto;
+            max-width: 380px;
+        }
+
+        &__right
+        {
+            margin: auto;
+            min-width: 320px;
+            max-width: 380px;
+        }
+
+        &__add-info > div
+        {
+            margin-right: 0;
+        }
+    }
+}

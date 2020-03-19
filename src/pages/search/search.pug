@@ -1,0 +1,25 @@
+extends .\..\..\templates\common-temp\common-temp
+
+block variables
+    -title="Search"
+block content
+    .search
+        form.search__parameters
+            .search__dropdowns
+                span.search__dropdowns-header="Даты пребывания в отеле"
+                +input-field({type: 'text', name: 'namedate', value: 'ДД.ММ.ГГГГ'})
+                +dropdown({})
+            .search__range
+                +slider({header: "Диапазон цены"})
+                .search__range-description="Стоимость за сутки пребывания в номере"
+            .search__checkbox
+                .search__checkbox-header="Выберите условия"
+                +checkbox({input: 'st1', contentHead: 'Можно курить'})
+                +checkbox({input: 'st2', contentHead: 'Можно с питомцами'})
+                +checkbox({input: 'st', contentHead: 'Можно пригласить гостей (до 10 человек)'})
+            .search__rich
+                .search__rich-header="Доступность"
+                +rich-checkbox({input: 'rich', contentHead: 'Широкий коридор', content: 'Ширина коридоров в номере не менее 91 см.'})
+                +rich-checkbox({input: 'rich1', contentHead: 'Помощник для инвалидов' ,content: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
+            .search__drop-list
+                +check-list({name: "Дополнительные удобства", id: "1", items:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Кроватка','Шампунь','Кроватка','Шампунь']})

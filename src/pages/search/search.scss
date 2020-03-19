@@ -1,0 +1,95 @@
+@import "./../../templates/common-temp/common-temp";
+@import "./../../blockUI/calendar/calendar";
+@import "./../../blockUI/dropdown/dropdown";
+@import  "./../../blockUI/slider/slider";
+@import  "./../../blockUI/input-field/input-field";
+@import  "./../../blockUI/checkbox/checkbox";
+@import  "./../../blockUI/rich-checkbox/rich-checkbox";
+@import  "./../../blockUI/check-list/check-list";
+
+.search
+{
+    padding: 30px 5%;
+    color: $cobalt-blue50;
+    width: 266px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    
+    color: $color_dark-shade;
+
+    &__parameters
+    {
+        display: flex;
+        flex-direction: column;
+
+        & > div
+        {
+            margin-bottom: 30px;
+        }
+    }
+
+    
+
+    &__dropdowns
+    {
+        &-header
+        {
+            text-transform: uppercase;
+            line-height: 27px;
+        }
+
+        & > div
+        {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__range
+    {
+        &-description
+        {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            color: $cobalt-blue50;
+        }
+    }
+
+    &__checkbox
+    {
+        & > div
+        {
+            margin-bottom: 10px;
+        }
+
+        &-header
+        {
+            text-transform: uppercase;
+        }
+    }
+
+    &__rich
+    {
+        & > div
+        {
+            margin-bottom: 15px;
+        }
+
+        &-header
+        {
+            text-transform: uppercase;
+        }
+    }
+
+    &__drop-list
+    {
+        & > div
+        {
+            margin-bottom: 15px;
+        }
+    }
+}

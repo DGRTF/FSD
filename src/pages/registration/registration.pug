@@ -1,20 +1,14 @@
-include .\..\..\blockUI\header\header.pug
+extends .\..\..\templates\common-temp\common-temp
+
 include .\..\..\blockUI\registration-form\registration-form
 include .\..\..\blockUI\entry-form\entry-form
-include .\..\..\blockUI\footer\footer.pug
 
-doctype html
-html
-    head
-        meta(charset="utf-8")
-        meta(name="viewport" content="width=device-width")
-        title="Landing"
-    body
-        .registration
-            +header({profile: "no"})
-            .registration__background
-                .registration__registration
-                    +registration({})
-                .registration__entry-form
-                    +entry-form({})
-            +footer({footer: "g"})
+block variables
+    -title="Registration"
+block content
+    .registration
+        .registration__background
+                    .registration__registration
+                        +registration({})
+                    .registration__entry-form
+                        +entry-form({})

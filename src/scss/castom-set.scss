@@ -1,0 +1,11 @@
+button,
+input,
+optgroup,
+select,
+textarea 
+{
+    &:focus
+    {
+        outline: none;
+    }
+}

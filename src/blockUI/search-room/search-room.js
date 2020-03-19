@@ -1,5 +1,2 @@
-import { Dropdown } from "./../dropdown/dropdown.js";
-let dropdown = new Dropdown();
-
+import "./../dropdown/dropdown.js";
 import "./../calendar/calendar.js";
-

@@ -1,20 +1,21 @@
-
 import 'ion-rangeslider';
 
 class Slider {
-    constructor() {
-        this.from = 5000;
-        this.to = 10000;
+    constructor({ element, from, to, max }) {
+        this.element = element;
+        this.from = from;
+        this.to = to;
+        this.max = max;
         this.slider;
-        this.initialize();
+        this._initialize();
     }
 
-    initialize() {
-        this.slider = document.querySelector('.js-slider__range-number');
-        jQuery(".js-range-slider").ionRangeSlider({
+    _initialize() {
+        this.slider = this.element.querySelector('.js-slider__range-number');
+        $(this.element).find(".js-range-slider").ionRangeSlider({
             type: "double",
             min: 0,
-            max: 16000,
+            max: this.max,
             from: this.from,
             to: this.to,
             hide_min_max: true,
@@ -29,4 +30,23 @@ class Slider {
     }
 }
 
-let l = new Slider();
+
+class SliderInit {
+    constructor({ from = 5000, to = 10000, max = 16000 }) {
+        this.from = from;
+        this.to = to;
+        this.max = max;
+        this._initialize();
+
+    }
+
+    _initialize() {
+        let calendarArr = $(".js-slider");
+        calendarArr.each((index, element1) => {
+            new Slider({ element: element1, from: this.from, to: this.to, max: this.max });
+        })
+    }
+}
+
+
+export { SliderInit };

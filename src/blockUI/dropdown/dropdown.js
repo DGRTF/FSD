@@ -127,10 +127,11 @@ class Dropdown {
     }
 
     show() {
+        event.currentTarget.classList.toggle("dropdown__div-content-border");
         event.currentTarget.nextSibling.nextSibling.classList.toggle("dropdown__div-items-display");
     }
 }
 
 
 
-export { Dropdown };
+new Dropdown();

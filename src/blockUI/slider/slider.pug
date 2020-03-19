@@ -1,4 +1,6 @@
-mixin slider()
-    .slider
-        .slider__range-number.js-slider__range-number
+mixin slider({header})
+    .slider.js-slider
+        .slider__head
+            .slider__header=header
+            .slider__range-number.js-slider__range-number
         input(type="text" class="js-range-slider" name="my_range" value="")

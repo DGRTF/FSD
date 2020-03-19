@@ -30,10 +30,15 @@
         min-height: 12px;
         min-width: 12px;
         border-radius: 50%;
-        background: $gradient-color; 
+        background: $gradient-color;
     }
 
     .radio__input:checked + &::after
+    {
+        content: "";
+    }
+
+    &:hover::after
     {
         content: "";
     }
@@ -42,4 +47,19 @@
     {
         border-color: $color_purple;
     }
+
+    &:hover::before
+    {
+        border-color: $color_purple;
+    }
+
+    &:hover + .radio__span
+    {
+        color: $cobalt-blue75;
+    }
+}
+
+.radio__input:checked ~ .radio__span
+{
+    color: $cobalt-blue75;
 }

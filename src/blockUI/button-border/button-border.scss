@@ -8,6 +8,11 @@
     border-radius: 22px;
     border: 0;
     background: $gradient-color;
+
+    &:focus
+    {
+        outline: none;
+    }
 }
 
 .button-opacity[disabled]

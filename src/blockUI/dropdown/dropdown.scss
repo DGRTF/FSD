@@ -2,7 +2,7 @@
 
 .dropdown
 {
-    min-width: 320px;
+    min-width: 150px;
     width: 100%;
     position: relative;
 
@@ -40,11 +40,23 @@
     &__div-content
     {
         height: 42px;
-        border: 1px solid $cobalt-blue50;
-        border-radius: 4px 4px 0px 0px;
+        border: 1px solid $cobalt-blue25;
+        border-radius: 4px 4px 4px 4px;
         display: flex;
         justify-content: space-between;
     }
+
+    &__div-content-border
+    {
+        border-radius: 4px 4px 0px 0px;
+        border-color: $cobalt-blue50;
+    }
+
+    &__div-content:hover
+    {
+        border-color: $cobalt-blue50;
+    }
+
 
     &__div-icon
     {
@@ -101,7 +113,6 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        // height: 100%;
         border: 0;
     
         font-family: Montserrat, OpenSans, sans-serif;

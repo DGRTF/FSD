@@ -1,0 +1,42 @@
+include \..\..\blockUI\button\button.pug
+include \..\..\blockUI\checkbox\checkbox.pug
+include \..\..\blockUI\button-border\button-border.pug
+include \..\..\blockUI\button-arrow\button-arrow.pug
+include \..\..\blockUI\radio\radio.pug
+include \..\..\blockUI\rate-stars\rate-stars.pug
+include \..\..\blockUI\check-list\check-list.pug
+include \..\..\blockUI\input-field\input-field.pug
+include \..\..\blockUI\information\information.pug
+include \..\..\blockUI\iteration\iteration.pug
+include \..\..\blockUI\dropdown\dropdown.pug
+include \..\..\blockUI\bullet-list\bullet-list.pug
+include \..\..\blockUI\rich-checkbox\rich-checkbox.pug
+include \..\..\blockUI\comment\comment.pug
+include \..\..\blockUI\pagination\pagination.pug
+include \..\..\blockUI\slider\slider.pug
+include \..\..\blockUI\subscribe-mail\subscribe-mail.pug
+include \..\..\blockUI\like-button\like-button.pug
+include .\..\..\blockUI\calendar\calendar
+
+include .\..\..\blockUI\search-room\search-room
+include .\..\..\blockUI\entry-form\entry-form
+include .\..\..\blockUI\registration-form\registration-form
+include .\..\..\blockUI\calculate-price\calculate-price
+include .\..\..\blockUI\present-room\present-room
+
+include .\..\..\blockUI\header\header
+include .\..\..\blockUI\footer\footer
+
+block variables
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width")
+        title #{title}
+    body
+        block header
+            +header({profile: "no"})
+        block content
+        block footer
+            +footer({footer: "g"})

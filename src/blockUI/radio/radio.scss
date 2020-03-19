@@ -15,7 +15,12 @@
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
-        color: $cobalt-blue25;
+        color: $cobalt-blue50;
         margin-left: 10px;
+
+        &:hover
+        {
+            color: $cobalt-blue75;
+        }
     }
 }

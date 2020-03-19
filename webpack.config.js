@@ -1,28 +1,27 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const webpack = require('webpack');
-let path = require('path');
+const path = require('path');
+const fs = require('fs');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const merge = require('webpack-merge');
+const SearchEntry = require("./searchEntry.js");
+
+
+let pagesPath = path.resolve(__dirname, "./src/pages");
+let searchEntry = new SearchEntry(pagesPath);
 
 module.exports =
 {
-    entry: {
-        index: './src/index.js',
-        formElements: './src/pages/form-elements/form-elements.js',
-        cards: './src/pages/cards/cards.js',
-        test: './src/pages/test/test.js',
-        headersAndFooters: './src/pages/headersAndFooters/headersAndFooters.js',
-        landing: './src/pages/landing/landing.js',
-        registration: './src/pages/registration/registration.js',
-    },
+    entry: merge([searchEntry.entry, { index: './src/index.js' }]),
     output:
     {
         path: path.resolve(__dirname, 'dist'),
         filename: 'scripts/[name].js',
         //publicPath: './dist/'
     },
-    plugins: [
+    plugins: searchEntry.HWPluginObjectArr.concat([
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
@@ -40,52 +39,10 @@ module.exports =
             filename: "css/[name].css",
         }),
 
-
-        new HtmlWebpackPlugin({
-            inject: true,
-            chunks: ['formElements'],
-            filename: 'pages/form-elements.html',
-            template: './src/pages/form-elements/form-elements.pug',
-        }),
-        new HtmlWebpackPlugin({
-            inject: true,
-            chunks: ['cards'],
-            filename: 'pages/cards.html',
-            template: './src/pages/cards/cards.pug',
-        }),
-        new HtmlWebpackPlugin({
-            inject: true,
-            chunks: ['test'],
-            filename: 'pages/test.html',
-            template: './src/pages/test/test.pug',
-        }),
-
-
-        new HtmlWebpackPlugin({
-            inject: true,
-            chunks: ['headersAndFooters'],
-            filename: 'pages/headersAndFooters.html',
-            template: './src/pages/headersAndFooters/headersAndFooters.pug',
-        }),
-
-        new HtmlWebpackPlugin({
-            inject: true,
-            chunks: ['landing'],
-            filename: 'pages/landing.html',
-            template: './src/pages/landing/landing.pug',
-        }),
-
-        new HtmlWebpackPlugin({
-            inject: true,
-            chunks: ['registration'],
-            filename: 'pages/registration.html',
-            template: './src/pages/registration/registration.pug',
-        }),
-
         new CopyPlugin([
             { from: 'src/img/favicon.ico', to: '' }
         ]),
-    ],
+    ]),
     module:
     {
         rules:
@@ -179,8 +136,3 @@ module.exports =
             ],
     },
 };
-
-
-
-
-//module.exports = conf;
