@@ -6,6 +6,7 @@
 @import  "./../../blockUI/checkbox/checkbox";
 @import  "./../../blockUI/rich-checkbox/rich-checkbox";
 @import  "./../../blockUI/check-list/check-list";
+@import "./../../blockUI/comfort/comfort";
 
 .search
 {
@@ -89,7 +90,7 @@
     {
         & > div
         {
-            margin-bottom: 15px;
+            margin-bottom: 30px;
         }
     }
 }

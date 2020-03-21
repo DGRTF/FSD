@@ -1,4 +1,6 @@
 @import "./../rate-stars/rate-stars";
+@import "./../../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "./../../../node_modules/slick-carousel/slick/slick.scss";
 
 .present-room
 {
@@ -69,4 +71,78 @@
     {
 
     }
+
+    &__slick-next 
+    {
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        color: $color_white;
+        border: none;
+        background-color: transparent;
+
+        position: absolute;
+        top: 0px;
+        left: 235px;
+        height: 100%;
+
+        &:focus
+        {
+            outline: none;
+        }
+    }
+
+    &__slick-prev
+    {
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        color: $color_white;
+        border: none;
+        background-color: transparent;
+        z-index: 1;
+
+        position: absolute;
+        top: 0px;
+        height: 100%;
+
+        &:focus
+        {
+            outline: none;
+        }
+    }
+}
+
+//override
+
+.slick-dots
+{
+    bottom: 0;
+    display: inline-block;
+    width: auto;
+    left: 180px;
+}
+
+.slick-dots li
+{
+    margin: 0;
+}
+
+.slick-dots li.slick-active button:before
+{
+    background-color: $color_white;
+    opacity: 1;
+}
+
+.slick-dots li button:before
+{
+    content: "";
+    border-radius: 50%;
+    border: 2px solid $color_white;
+    height: 8px;
+    width: 8px;
+    box-sizing: border-box;
+    opacity: 1;
 }

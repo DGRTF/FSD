@@ -15,32 +15,32 @@
         
         &-big
         {
-            background-image: url("./img/big.jpg");
-            background-size: cover;
-            height: 488px;
-            width: 981px;
-        }
-
-        &-mini
-        {
-            // display: flex;
-            // flex-direction: column;
+            &-img
+            {
+                width: 100%;
+                max-width: 981px;
+                vertical-align: bottom;
+            }
         }
 
         &-top
         {
-            background-image: url("./img/top.jpg");
-            background-size: cover;
-            height: 244px;
-            width: 459px;
+            &-img
+            {
+                width: 100%;
+                max-width: 459px;
+                vertical-align: bottom;
+            }
         }
 
         &-bottom
         {
-            background-image: url("./img/bottom.jpg");
-            background-size: cover;
-            height: 244px;
-            width: 459px;
+            &-img
+            {
+                width: 100%;
+                max-width: 459px;
+                vertical-align: bottom;
+            }
         }
     }
 

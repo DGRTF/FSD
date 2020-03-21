@@ -3,12 +3,12 @@ include .\..\iteration\iteration.pug
 mixin dropdown({items=["Взрослые", "Дети", "Младенцы"], nameHeader = "Сколько гостей"})
     .dropdown.js-dropdown
         .dropdown__header=nameHeader
-        .dropdown__div-content.js-dropdown__div-content
-            input.dropdown__div-text.js-dropdown__div-text(value="Сколько гостей", readonly)
-            .dropdown__div-icon="expand_more"
-        .dropdown__div-items.js-dropdown__div-items
+        .dropdown__content.js-dropdown__content
+            input.dropdown__text.js-dropdown__text(value="Сколько гостей", readonly)
+            .dropdown__icon="expand_more"
+        .dropdown__items.js-dropdown__items
             each item in items
                 +iteration({content: item})
-            .dropdown__div-buttons
-                .dropdown__div-cancel.js-dropdown__div-cancel
+            .dropdown__buttons
+                .dropdown__cancel.js-dropdown__cancel
                 .dropdown__ready.js-dropdown__ready="Применить"

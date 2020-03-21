@@ -1,6 +1,6 @@
 @import "./../iteration/iteration.scss";
 
-.dropdown
+.comfort
 {
     min-width: 150px;
     width: 100%;
@@ -15,26 +15,6 @@
         text-transform: uppercase;
         margin-bottom: 5px;
         color: $color_dark-shade;
-    }
-
-    &__buttons
-    {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 37px;
-        margin-top: 12px;
-    }
-
-    &__cancel
-    {
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        text-transform: uppercase;
-        color: $color_purple;
-        margin-left: 14px;
     }
 
     &__content
@@ -88,6 +68,7 @@
         background-color: $color-white;
         box-sizing: border-box;
         width: 100%;
+        padding-bottom: 20px;
     }
 
     &__items-display

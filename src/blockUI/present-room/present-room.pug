@@ -4,8 +4,9 @@ mixin present-room({img = [], price, number, comment, id})
     .present-room
         .present-room__img
             each item in img
-                -let i = "./img/"+item+".jpg"
-                img.present-room__slide(src=require(i))
+                -let i = item+".jpg"
+                .present-room__img-div
+                    img.present-room__slide(src=require("./../../blockUI/present-room/img/"+i).default)
         .present-room__information
             .present-room__number=number
             .present-room__price=price

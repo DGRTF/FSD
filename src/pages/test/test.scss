@@ -5,37 +5,16 @@
 @import "./../../fonts/Montserrat/material-icons.scss";
 //blocks
 
-// @import "./../../blockUI/calendar/calendar.scss";
+@import "./../../blockUI/comfort/comfort";
 
-
-
-.input1
-{
-    min-width: 40px;
-    max-width: 740px;
-    // margin: 20px;
+img{
+    width: 100%;
 }
 
-.input2
+.test
 {
-    min-width: 40px;
-    width: 740px;
-}
-
-.input3
-{
-    min-width: 40px;
-    width: 400px;
-    min-width: 740px;
-}
-
-.input4
-{
-    max-width: 740px;
-}
-
-button{
-    width: 100px;
-    height: 44px;
-    border-radius: 22px;
+    &__mode
+    {
+        display: inline;
+    }
 }

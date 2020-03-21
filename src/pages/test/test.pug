@@ -1,4 +1,5 @@
-include \..\..\blockUI\calendar\calendar.pug
+include \..\..\blockUI\comfort\comfort
+
 
 doctype html
 html
@@ -8,11 +9,7 @@ html
         title="Cards"
     body
         .cards
-            input.input1(type="text")
-            
-            input.input2(type="text")
-            
-            input.input3(type="text")
-            form(onsubmit="alert('submit!');return false")
-                input.input3(type="text")
-            button.button="gena"
+            +comfort({})
+        .cards__mode
+            img(src=require("./img/big.jpg").default)
+        +comfort({})

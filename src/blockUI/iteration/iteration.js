@@ -5,36 +5,40 @@ class EventIter {
         this.parentContainer = parentContainer;
         this.eventPlus = null;
         this.eventMin = null;
+        this.parameter;
     }
 
-    plus() {
+    _plus() {
         let content = event.currentTarget.previousSibling.previousSibling;
         let text = String(parseInt(content.innerText) + 1);
         content.innerText = text;
-
-        this.eventPlus(); // вызываем событие
+        if (this.eventPlus !== null)
+            this.eventPlus(this.parameter); // вызываем событие
         if (text !== '0') {
             content.previousSibling.previousSibling.disabled = false;
         }
     }
 
 
-    min() {
+    _min() {
         let content = event.currentTarget.nextSibling.nextSibling;
         let text = String(parseInt(content.innerText) - 1);
         content.innerText = text;
-        this.eventMin(); // вызываем событие
+        if (this.eventMin !== null)
+            this.eventMin(this.parameter); // вызываем событие
         if (text === '0') {
             event.currentTarget.disabled = true;
         }
     }
 
-    handlerPlus(handler) {
-        this.eventPlus = handler;
+    _handlerPlus(func, a) {
+        this.parameter = a;
+        this.eventPlus = func;
     }
 
-    handlerMin(handler) {
-        this.eventMin = handler;
+    _handlerMin(func, a) {
+        this.parameter = a;
+        this.eventMin = func;
     }
 }
 
@@ -44,24 +48,30 @@ class Iteration {
 
     constructor(container) {
         this.container = container;
-        this.iteration();
-        this.eventIter;
+        this.eventIter = [3];
+        this.count = 0;
+        this._iteration();
     }
-    iteration() {
+
+    _iteration() {
         let buttonsPlus = this.container.querySelectorAll('.js-iteration__button-plus');
         let buttonsMin = this.container.querySelectorAll('.js-iteration__button-min');
 
         let parent = buttonsMin[0].parentNode.parentNode;
-        this.eventIter = new EventIter(parent);
 
         buttonsPlus = [].slice.call(buttonsPlus);
         buttonsPlus.forEach(element => {
-            element.addEventListener("click", this.eventIter.plus.bind(this.eventIter));
+            this.eventIter[this.count] = new EventIter(parent);
+            element.addEventListener("click", this.eventIter[this.count]._plus.bind(this.eventIter[this.count]));
+            this.count++;
         });
+
+        this.count = 0;
 
         buttonsMin = [].slice.call(buttonsMin);
         buttonsMin.forEach(element => {
-            element.addEventListener("click", this.eventIter.min.bind(this.eventIter));
+            element.addEventListener("click", this.eventIter[this.count]._min.bind(this.eventIter[this.count]));
+            this.count++;
         });
     }
 }

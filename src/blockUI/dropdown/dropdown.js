@@ -40,7 +40,7 @@ class Counter {
     }
 
     _hideBlock() {
-        this.dropdown__divItems.classList.toggle("dropdown__div-items-display");
+        this.dropdown__divItems.classList.toggle("dropdown__items-display");
     }
 
     _equal() {
@@ -111,24 +111,27 @@ class Dropdown {
 
     _searchElement(element) {
         return {
-            buttonCancel: element.querySelector('.js-dropdown__div-cancel'),
+            buttonCancel: element.querySelector('.js-dropdown__cancel'),
             buttonEnter: element.querySelector('.js-dropdown__ready'),
             numberDivArr: element.querySelectorAll('.js-iteration__div-num'),
-            dropdown__divText: element.querySelector('.js-dropdown__div-text'),
-            contentHeader: element.querySelector('.js-dropdown__div-content'),
-            dropdown__divItems: element.querySelector('.js-dropdown__div-items'),
+            dropdown__divText: element.querySelector('.js-dropdown__text'),
+            contentHeader: element.querySelector('.js-dropdown__content'),
+            dropdown__divItems: element.querySelector('.js-dropdown__items'),
         }
     }
 
     _addHandlers(searchElement) {
         let counter = new Counter(searchElement);
-        this.iteration.eventIter.handlerPlus(counter.counterPlus.bind(counter));
-        this.iteration.eventIter.handlerMin(counter.counterMin.bind(counter));
+        console.log(this.iteration.eventIter);
+        this.iteration.eventIter.map(el =>{
+            el._handlerPlus(counter.counterPlus.bind(counter));
+            el._handlerMin(counter.counterMin.bind(counter));
+        });
     }
 
     show() {
-        event.currentTarget.classList.toggle("dropdown__div-content-border");
-        event.currentTarget.nextSibling.nextSibling.classList.toggle("dropdown__div-items-display");
+        event.currentTarget.classList.toggle("dropdown__content-border");
+        event.currentTarget.nextSibling.nextSibling.classList.toggle("dropdown__items-display");
     }
 }
 
