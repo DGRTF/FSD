@@ -13,8 +13,12 @@
         <label class="header__menu-compact-label" for="header">Menu</label>
         <div class="header__menu-dropdown">
           <div class="header__menu-dropdown-buttons">
-            <button class="button-border button-opacity"><span class="button-border__span">login</span></button>
-            <button class="button button-style">register</button>
+            <div class="header__menu-dropdown-login">
+              <button class="button-border button-opacity"><span class="button-border__span">login</span></button>
+            </div>
+            <div class="header__menu-dropdown-register">
+              <button class="button button-style">register</button>
+            </div>
           </div>
           <div class="header__menu-dropdown-item header__dropdown-home">home</div>
           <div class="header__menu-dropdown-item header__dropdown-about">about</div>
@@ -202,7 +206,9 @@
               <div class="calculate-price__sale"><span class="calculate-price__sale-left">Сбор за услуги: скидка 2 179₽</span><span class="calculate-price__sale-right">0₽</span></div>
               <div class="calculate-price__collect"><span class="calculate-price__collect-left">Сбор за дополнительные услуги</span><span class="calculate-price__collect-right">300₽</span></div>
               <div class="calculate-price__result"><span class="calculate-price__result-left">Итого</span><span class="calculate-price__result-right">30 081₽</span></div>
-              <button class="button-arrow">Забронировать<span class="button-arrow__span-icons">arrow_forward</span></button>
+              <div class="calculate-price__button">
+                <button class="button-arrow">Забронировать<span class="button-arrow__span-icons">arrow_forward</span></button>
+              </div>
             </form>
           </div>
         </div>

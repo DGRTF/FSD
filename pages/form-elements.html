@@ -86,31 +86,11 @@
       </div>
       <div class="form-elements__rate-stars">rate button</div>
       <div class="form-elements__rate-stars1">
-        <div class="rate-stars">
-          <input class="rate-stars__input" name="rating" value="5" id="rating_5" type="radio">
-          <label class="rate-stars__label" for="rating_5"></label>
-          <input class="rate-stars__input" name="rating" value="4" id="rating_4" type="radio">
-          <label class="rate-stars__label" for="rating_4"></label>
-          <input class="rate-stars__input" name="rating" value="3" id="rating_3" type="radio">
-          <label class="rate-stars__label" for="rating_3"></label>
-          <input class="rate-stars__input" name="rating" value="2" id="rating_2" type="radio">
-          <label class="rate-stars__label" for="rating_2"></label>
-          <input class="rate-stars__input" name="rating" value="1" id="rating_1" type="radio">
-          <label class="rate-stars__label" for="rating_1"></label>
+        <div class="rate-stars"><span class="rate-stars__item">star</span><span class="rate-stars__item">star</span><span class="rate-stars__item">star</span><span class="rate-stars__item">star</span><span class="rate-stars__item">star_border</span>
         </div>
       </div>
       <div class="form-elements__rate-stars2">
-        <div class="rate-stars">
-          <input class="rate-stars__input" name="ratingg" value="5" id="rating_5g" type="radio">
-          <label class="rate-stars__label" for="rating_5g"></label>
-          <input class="rate-stars__input" name="ratingg" value="4" id="rating_4g" type="radio">
-          <label class="rate-stars__label" for="rating_4g"></label>
-          <input class="rate-stars__input" name="ratingg" value="3" id="rating_3g" type="radio">
-          <label class="rate-stars__label" for="rating_3g"></label>
-          <input class="rate-stars__input" name="ratingg" value="2" id="rating_2g" type="radio">
-          <label class="rate-stars__label" for="rating_2g"></label>
-          <input class="rate-stars__input" name="ratingg" value="1" id="rating_1g" type="radio">
-          <label class="rate-stars__label" for="rating_1g"></label>
+        <div class="rate-stars"><span class="rate-stars__item">star</span><span class="rate-stars__item">star</span><span class="rate-stars__item">star</span><span class="rate-stars__item">star</span><span class="rate-stars__item">star</span>
         </div>
       </div>
       <div class="form-elements__check-list">
@@ -247,10 +227,9 @@
           <hr class="information__hr" noshade>
         </div>
       </div>
-      <div class="form-elements__dropdown">Dropdown</div>
       <div class="form-elements__dropdown1">
         <div class="dropdown js-dropdown">
-          <div class="dropdown__header">Сколько гостей</div>
+          <div class="dropdown__header">dropdown</div>
           <div class="dropdown__content js-dropdown__content">
             <input class="dropdown__text js-dropdown__text" value="Сколько гостей" readonly>
             <div class="dropdown__icon">expand_more</div>
@@ -287,10 +266,9 @@
           </div>
         </div>
       </div>
-      <div class="form-elements__dropdown2">Dropdown</div>
       <div class="form-elements__dropdown3">
         <div class="dropdown js-dropdown">
-          <div class="dropdown__header">Сколько гостей</div>
+          <div class="dropdown__header">dropdown</div>
           <div class="dropdown__content js-dropdown__content">
             <input class="dropdown__text js-dropdown__text" value="Сколько гостей" readonly>
             <div class="dropdown__icon">expand_more</div>
@@ -327,10 +305,9 @@
           </div>
         </div>
       </div>
-      <div class="form-elements__dropdown4">Dropdown</div>
       <div class="form-elements__dropdown5">
         <div class="dropdown js-dropdown">
-          <div class="dropdown__header">Сколько гостей</div>
+          <div class="dropdown__header">dropdown</div>
           <div class="dropdown__content js-dropdown__content">
             <input class="dropdown__text js-dropdown__text" value="Сколько гостей" readonly>
             <div class="dropdown__icon">expand_more</div>
@@ -442,6 +419,91 @@
         </div>
       </div>
       <div class="form-elements__label"></div>
+      <div class="form-elements__calendar">
+        <div class="calendar js-calendar">
+          <div class="calendar__div-date">
+            <div class="calendar__from-name">date Dropdown</div>
+            <input class="calendar__date calendar__from js-calendar__from" type="text" id="cards" placeholder="ДД.ММ.ГГГГ">
+            <label class="calendar__label" for="cards">expand_more</label>
+          </div>
+          <div class="calendar__div-date">
+            <div class="calendar__to-name">date Dropdown</div>
+            <input class="calendar__date calendar__to js-calendar__to" type="text" id="cards1" placeholder="ДД.ММ.ГГГГ">
+            <label class="calendar__label" for="cards1">expand_more</label>
+          </div>
+          <div class="calendar__plugin js-calendar__plugin datepicker-here" type="text" id="minMaxExample" data-range="true" data-multiple-dates-separator=" - "></div>
+        </div>
+      </div>
+      <div class="form-elements__comfort">
+        <div class="comfort js-comfort">
+          <div class="comfort__header">Удобства номера</div>
+          <div class="comfort__content js-comfort__content">
+            <input class="comfort__text js-comfort__text" value="Удобства" readonly>
+            <div class="comfort__icon">expand_more</div>
+          </div>
+          <div class="comfort__items js-comfort__items">
+            <div class="iteration">
+              <div class="iteration__div-name">Спальни</div>
+              <div class="iteration__div-content">
+                <button class="iteration__button-min js-iteration__button-min" type="button" disabled>-</button>
+                <div class="iteration__div-num js-iteration__div-num">0</div>
+                <button class="iteration__button-plus js-iteration__button-plus" type="button">+</button>
+              </div>
+            </div>
+            <div class="iteration">
+              <div class="iteration__div-name">Кровати</div>
+              <div class="iteration__div-content">
+                <button class="iteration__button-min js-iteration__button-min" type="button" disabled>-</button>
+                <div class="iteration__div-num js-iteration__div-num">0</div>
+                <button class="iteration__button-plus js-iteration__button-plus" type="button">+</button>
+              </div>
+            </div>
+            <div class="iteration">
+              <div class="iteration__div-name">Ванные комнаты</div>
+              <div class="iteration__div-content">
+                <button class="iteration__button-min js-iteration__button-min" type="button" disabled>-</button>
+                <div class="iteration__div-num js-iteration__div-num">0</div>
+                <button class="iteration__button-plus js-iteration__button-plus" type="button">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__comfort1">
+        <div class="comfort js-comfort">
+          <div class="comfort__header">Удобства номера</div>
+          <div class="comfort__content js-comfort__content">
+            <input class="comfort__text js-comfort__text" value="Удобства" readonly>
+            <div class="comfort__icon">expand_more</div>
+          </div>
+          <div class="comfort__items js-comfort__items">
+            <div class="iteration">
+              <div class="iteration__div-name">Спальни</div>
+              <div class="iteration__div-content">
+                <button class="iteration__button-min js-iteration__button-min" type="button" disabled>-</button>
+                <div class="iteration__div-num js-iteration__div-num">0</div>
+                <button class="iteration__button-plus js-iteration__button-plus" type="button">+</button>
+              </div>
+            </div>
+            <div class="iteration">
+              <div class="iteration__div-name">Кровати</div>
+              <div class="iteration__div-content">
+                <button class="iteration__button-min js-iteration__button-min" type="button" disabled>-</button>
+                <div class="iteration__div-num js-iteration__div-num">0</div>
+                <button class="iteration__button-plus js-iteration__button-plus" type="button">+</button>
+              </div>
+            </div>
+            <div class="iteration">
+              <div class="iteration__div-name">Ванные комнаты</div>
+              <div class="iteration__div-content">
+                <button class="iteration__button-min js-iteration__button-min" type="button" disabled>-</button>
+                <div class="iteration__div-num js-iteration__div-num">0</div>
+                <button class="iteration__button-plus js-iteration__button-plus" type="button">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   <script type="text/javascript" src="../scripts/form-elements.js"></script></body>
 </html>
