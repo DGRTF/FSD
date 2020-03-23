@@ -44,6 +44,7 @@
         border-radius: 4px 4px 4px 4px;
         display: flex;
         justify-content: space-between;
+        background-color: $color_white;
     }
 
     &__content-border
@@ -93,7 +94,7 @@
     &__items-display
     {
         position: absolute;
-        z-index: 1;
+        z-index: 10;
         display: block;
     }
 

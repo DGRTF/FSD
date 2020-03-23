@@ -1,18 +1,18 @@
 include .\..\rate-stars\rate-stars
 
-mixin present-room({img = [], price, number, comment, id})
+mixin present-room({img = [], price, number, category="", comment, countStar= 4})
     .present-room
         .present-room__img
             each item in img
                 -let i = item+".jpg"
                 .present-room__img-div
                     img.present-room__slide(src=require("./../../blockUI/present-room/img/"+i).default)
-        .present-room__information
-            .present-room__number=number
-            .present-room__price=price
-        hr.present-room__line
-        .present-room__rate
-            .present-room__stars
-                -let idrate = "present-room"+id
-                +rate-stars({id: idrate})
-            .present-room__comment=comment
+        .present-room__inform
+            .present-room__information
+                .present-room__number="№ "+number+" "+category
+                .present-room__price=price+" в сутки"
+            hr.present-room__line
+            .present-room__rate
+                .present-room__stars
+                    +rate-stars({count: countStar})
+                .present-room__comment=comment+" отзывов"

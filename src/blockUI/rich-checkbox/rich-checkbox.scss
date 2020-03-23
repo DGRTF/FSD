@@ -62,12 +62,11 @@
             display: inline-block;
             position: absolute;
             left: 6px;
-            top: 5px;
-            height: 5px;
-            width: 7px;
-            border-left: 2px solid;
-            border-bottom: 2px solid;
-            border-color: $gradient-color;
+            top: 6px;
+            height: 4px;
+            width: 6px;
+            border-left: 2px solid $color_purple;
+            border-bottom: 2px solid $color_purple;
             transform: rotate(-45deg);
         }
 

@@ -1,7 +1,10 @@
-mixin rate-stars({id=''})
+mixin rate-stars({count='4'})
     .rate-stars
-        - var n = 5
+        - var n = count
         while n > 0
-            input.rate-stars__input(name="rating"+id value=n id="rating_"+n+id type="radio")
-            label.rate-stars__label(for="rating_"+n+id)
+            span.rate-stars__item="star"
+            - n--
+        - n = 5-count
+        while n > 0
+            span.rate-stars__item="star_border"
             - n--

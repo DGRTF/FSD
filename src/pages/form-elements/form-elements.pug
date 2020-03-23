@@ -16,6 +16,9 @@ include \..\..\blockUI\pagination\pagination.pug
 include \..\..\blockUI\slider\slider.pug
 include \..\..\blockUI\subscribe-mail\subscribe-mail.pug
 include \..\..\blockUI\like-button\like-button.pug
+include \..\..\blockUI\calendar\calendar.pug
+include \..\..\blockUI\comfort\comfort.pug
+
 
 doctype html
 html
@@ -72,7 +75,7 @@ html
             .form-elements__rate-stars1
                 +rate-stars({})
             .form-elements__rate-stars2
-                +rate-stars({id:'g'})
+                +rate-stars({count:'5'})
 
             .form-elements__check-list
                 +check-list({id: "1", items:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Кроватка','Шампунь','Кроватка','Шампунь']})
@@ -97,15 +100,12 @@ html
             .form-elements__information1
                 +information({icon: 'location_cityicon',head: 'Удобство', content: 'Окно в каждой из спален'})
             
-            .form-elements__dropdown="Dropdown"
             .form-elements__dropdown1
-                +dropdown({items:["Взрослые", "Дети", "Младенцы"]})
-            .form-elements__dropdown2="Dropdown"
+                +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "dropdown"})
             .form-elements__dropdown3
-                +dropdown({items:["Взрослые", "Дети", "Младенцы"]})
-            .form-elements__dropdown4="Dropdown"
+                +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "dropdown"})
             .form-elements__dropdown5
-                +dropdown({items:["Взрослые", "Дети", "Младенцы"]})
+                +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "dropdown"})
             
             .form-elements__bullet-list="bullet list"
             .form-elements__bullet-list1
@@ -128,3 +128,10 @@ html
                 +slider({header: "Range slider"})
             
             .form-elements__label
+
+            .form-elements__calendar
+                +calendar({nameHeaderFrom: "date Dropdown", nameHeaderTo: "date Dropdown"})
+            .form-elements__comfort
+                +comfort()
+            .form-elements__comfort1
+                +comfort()

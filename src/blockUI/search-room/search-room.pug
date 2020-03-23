@@ -10,4 +10,5 @@ mixin search-room({nameEelements })
                 +calendar({id: "search-room", nameHeaderFrom: "Прибытие", nameHeaderTo: "Выезд"})
             .search-room__dropdown
                 +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "Гости"})
-            +button-arrow({content: "Подобрать номер"})
+            .search-room__button
+                +button-arrow({content: "Подобрать номер"})

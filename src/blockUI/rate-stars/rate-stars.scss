@@ -1,55 +1,78 @@
 
 
 
+// .rate-stars
+
+// {
+    // display: inline-flex;
+    // flex-direction: row-reverse;
+
+    // &__input
+    // {
+    //     width: 0px;
+    //     opacity: 0;
+    // }
+
+    // &__label
+    // {
+    //     width: 16px;
+    //     font-family: Material Icons;
+    //     font-style: normal;
+    //     font-weight: normal;
+    //     font-size: 24px;
+    //     line-height: 20px;
+    //     align-items: center;
+    //     text-align: center;
+    //     margin-right: 8px;
+
+    //     -moz-osx-font-smoothing: grayscale;
+    //     font-feature-settings: 'liga';
+    //     text-rendering: optimizeLegibility;
+    //     -webkit-font-smoothing: antialiased;
+
+    //     cursor: pointer;
+
+    //     color: $color_purple;
+
+    //     &::before
+    //     {
+    //         content: 'star_border';
+    //     }
+    //     &:hover::before
+    //     {
+    //         content: "star";
+    //     }
+
+    //     &:hover~&::before
+    //     {
+    //         content: "star";
+    //     }
+
+    //     .rate-stars__input:checked~&::before
+    //     {
+    //         content: "star";
+    //     }
+    // }
+
+// }
+
+
 .rate-stars
 {
-    display: inline-flex;
-    flex-direction: row-reverse;
+    display: flex;
 
-    &__input
+    &__item
     {
-        width: 0px;
-        opacity: 0;
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: 'liga';
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+
+        color: $color_purple;
     }
-
-    &__label
-{
-    width: 16px;
-    font-family: Material Icons;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 20px;
-    align-items: center;
-    text-align: center;
-    margin-right: 8px;
-
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-
-    cursor: pointer;
-
-    color: $color_purple;
-
-    &::before
-    {
-        content: 'star_border';
-    }
-    &:hover::before
-    {
-        content: "star";
-    }
-
-    &:hover~&::before
-    {
-        content: "star";
-    }
-
-    .rate-stars__input:checked~&::before
-    {
-        content: "star";
-    }
-}
 }

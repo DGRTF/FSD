@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 40px 0px 32px 0px;
+    padding: 40px 0px 30px 0px;
     background-color: $color_white;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -79,6 +79,7 @@
 
     &__button
     {
+        height: 44px;
         margin-top: 20px;
         margin-bottom: 30px;
     }
@@ -100,5 +101,6 @@
     {
         display: inline-block;
         width: 99px;
+        height: 44px;
     }
 }

@@ -20,8 +20,10 @@ mixin header({profile = "no"})
 
                 else
                     .header__menu-dropdown-buttons
-                        +button-border({content: "login"})
-                        +button({content: "register"})
+                        .header__menu-dropdown-login
+                            +button-border({content: "login"})
+                        .header__menu-dropdown-register
+                            +button({content: "register"})
 
                 each item in items
                     div(class="header__menu-dropdown-item header__dropdown-"+item)=item

@@ -1,5 +1,6 @@
 @import "./../../scss/general-colors.scss";
 @import "./../../scss/normalize.scss";
+@import "./../../scss/custom-set.scss";
 
 @import "./../../fonts/Montserrat/stylesheet.scss";
 @import "./../../fonts/Montserrat/material-icons.scss";
@@ -19,28 +20,54 @@
     &__search-room
     {
         display: block;
-        max-width: 380px;
+        width: 380px;
         min-width: 320px;
+        position: absolute;
+        left: 140px;
+        top: 150px;
     }
 
     &__entry-form
     {
         // display: none;
-        max-width: 380px;
+        width: 380px;
         min-width: 320px;
+        left: 560px;
+        top: 701px;
+        position: absolute;
     }
 
     &__registration
     {
         // display: none;
-        max-width: 380px;
+        width: 380px;
         min-width: 320px;
+        left: 140px;
+        top: 564px;
+        position: absolute;
     }
 
     &__calculate-price
     {
         // display: none;
-        max-width: 380px;
+        width: 380px;
         min-width: 320px;
+        left: 560px;
+        top: 150px;
+        position: absolute;
+    }
+
+    &__present-room
+    {
+        left: 980px;
+        top: 559.5px;
+        position: absolute;
+    }
+
+    &__present-room1
+    {
+        left: 980px;
+        top: 856.5px;
+        position: absolute;
     }
 }

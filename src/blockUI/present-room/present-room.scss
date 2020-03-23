@@ -4,6 +4,7 @@
 
 .present-room
 {
+    // display: inline;
     width: 270px;
     height: 257px;
     border-radius: 4px;
@@ -27,6 +28,16 @@
 
     }
 
+    &__inform
+    {
+        padding: 0 20px;
+
+        & > *
+        {
+            margin-bottom: 12px;
+        }
+    }
+
     &__information
     {
         display: flex;
@@ -35,7 +46,8 @@
 
     &__number
     {
-
+        text-transform: none;
+        color: $color_dark-shade;
     }
 
     &__price
@@ -55,6 +67,7 @@
     {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__stars
@@ -122,11 +135,14 @@
     bottom: 0;
     display: inline-block;
     width: auto;
-    left: 180px;
+    left: 214px;
+    top: 125px;
 }
 
 .slick-dots li
 {
+    
+    width: 11px;
     margin: 0;
 }
 
@@ -140,9 +156,19 @@
 {
     content: "";
     border-radius: 50%;
-    border: 2px solid $color_white;
+    border: 1px solid $color_white;
     height: 8px;
     width: 8px;
     box-sizing: border-box;
     opacity: 1;
+}
+
+.slick-dots li button
+{
+    padding: 0;
+    width: 5px;
+}
+.slick-dotted.slick-slider
+{
+    margin-bottom: 20px;
 }

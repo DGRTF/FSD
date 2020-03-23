@@ -37,8 +37,21 @@
             display: none;
             text-align: center;
         }
+    }
 
-        
+    &__button-login
+    {
+        width: 79px;
+    }
+    &__button-login > button
+    {
+        height: 34px;
+        width: 79px;
+    }
+
+    &__button-register > button
+    {
+        height: 34px;
     }
 
     &__line
@@ -53,11 +66,17 @@
     &__menu-dropdown
     {
         display: none;
+        z-index: 10;
 
         &-buttons
         {
             display: none;
             width: 99px;
+
+            & > div
+            {
+                height: 44px;
+            }
         }
     }
 
