@@ -1,9 +1,8 @@
 .check-list__div-list
 {
-    opacity: 0;
+    display: none;
     position: relative;
     margin-top: 4px;
-    display: flex;
     flex-direction: column;
 
     & > div
