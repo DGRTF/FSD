@@ -1,6 +1,7 @@
-mixin checkbox({input= 'checkbox',contentHead= 'Можно с питомцами', mode= ''})
+mixin checkbox({contentHead= 'Можно с питомцами', mode= ''})
     .checkbox
-        input.checkbox__input(type="checkbox" id=input)
-        label(class='checkbox__label'+mode for=input)
+        label(class='checkbox__label-container'+mode)
+            input.checkbox__input(type="checkbox")
+            span(class='checkbox__label'+mode)
         .checkbox__div-content
             span(class='checkbox__span-head')=contentHead

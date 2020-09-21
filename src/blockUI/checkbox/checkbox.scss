@@ -1,21 +1,17 @@
-
 @import "__label/checkbox__label.scss";
 @import "__label/_move/checkbox__label_move.scss";
 
-.checkbox
-{
+.checkbox {
     position: relative;
     display: inline-flex;
     justify-content: flex-start;
     align-items: flex-start;
-    
-    &__input
-    {
+
+    &__input {
         display: none;
     }
 
-    &__div-content
-    {
+    &__div-content {
         display: inline-block;
         margin-left: 10px;
 

@@ -2,7 +2,7 @@ include .\..\calendar\calendar.pug
 include .\..\dropdown\dropdown.pug
 include .\..\button-arrow\button-arrow.pug
 
-mixin calculate-price({id })
+mixin calculate-price()
     .calculate-price
         form.calculate-price__form
             .calculate-price__header
@@ -11,7 +11,7 @@ mixin calculate-price({id })
                     span.calculate-price__lux="Люкс"
                 .calculate-price__header-right="9 990₽ в сутки"
             .calculate-price__calendar
-                +calendar({id: "calculate-price", nameHeaderFrom: "Прибытие", nameHeaderTo: "Выезд"})
+                +calendar({nameHeaderFrom: "Прибытие", nameHeaderTo: "Выезд"})
             .calculate-price__dropdown
                 +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "Гости"})
             .calculate-price__days

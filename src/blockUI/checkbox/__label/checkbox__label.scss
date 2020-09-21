@@ -1,11 +1,9 @@
-.checkbox__label 
-{
+.checkbox__label {
     position: relative;
     color: $cobalt-blue25;
     line-height: 0px;
 
-    &::before
-    {
+    &::before {
         content: "";
         display: inline-block;
         position: relative;
@@ -17,13 +15,12 @@
         border: 1px solid $cobalt-blue25;
     }
 
-    &::after 
-    {
+    &::after {
         content: none;
         display: inline-block;
         position: absolute;
         left: 6px;
-        top: 6px;
+        top: 0px;
         height: 4px;
         width: 6px;
         border-left: 2px solid $color_purple;
@@ -31,13 +28,11 @@
         transform: rotate(-45deg);
     }
 
-    .checkbox__input:checked + &::after
-    {
+    .checkbox__input:checked + &::after {
         content: "";
     }
 
-    .checkbox__input:checked + &::before
-    {
+    .checkbox__input:checked + &::before {
         border-color: $color_purple;
     }
 }

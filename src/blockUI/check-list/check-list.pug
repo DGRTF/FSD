@@ -1,10 +1,9 @@
 include .\..\checkbox\checkbox.pug
-mixin check-list({name= "Expandeble checkbox list", id='', items=[]})
+mixin check-list({name= "Expandeble checkbox list", items=[]})
     .check-list
-        input.check-list__checkbox(type="checkbox" id="input"+id)
-        label.check-list__label(for="input"+id)=name
-        .check-list__div-list
-            -var i=0;
-            each item in items
-                +checkbox({input: id+i, contentHead: item})
-                -i++
+        label.check-list__label-container
+            input.check-list__checkbox(type="checkbox")
+            span.check-list__label=name
+            .check-list__div-list
+                each item in items
+                    +checkbox({contentHead: item})
