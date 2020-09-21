@@ -1,11 +1,11 @@
-mixin calendar({id='cards', nameHeaderFrom = "", nameHeaderTo = ""})
+mixin calendar({nameHeaderFrom = "", nameHeaderTo = ""})
     .calendar.js-calendar
         .calendar__div-date
             .calendar__from-name=nameHeaderFrom
-            input.calendar__date.calendar__from.js-calendar__from(type="text" id=id placeholder="ДД.ММ.ГГГГ")
-            label(class="calendar__label" for=id)="expand_more"
+            .span.calendar__label="expand_more"
+            input.calendar__date.calendar__from.js-calendar__from(type="text" placeholder="ДД.ММ.ГГГГ")
         .calendar__div-date
             .calendar__to-name=nameHeaderTo
-            input.calendar__date.calendar__to.js-calendar__to(type="text" id=id+"1" placeholder="ДД.ММ.ГГГГ")
-            label(class="calendar__label" for=id+"1")="expand_more"
+            span.calendar__label="expand_more"
+            input.calendar__date.calendar__to.js-calendar__to(type="text" placeholder="ДД.ММ.ГГГГ")
         div.calendar__plugin.js-calendar__plugin(type="text" id="minMaxExample" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
