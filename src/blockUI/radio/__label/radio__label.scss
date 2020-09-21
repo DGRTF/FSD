@@ -7,7 +7,6 @@
         content: "";
         display: inline-block;
         position: relative;
-        // top: 5px;
         height: 18px;
         width: 18px;
         min-height: 18px;
@@ -21,8 +20,7 @@
         content: none;
         display: inline-block;
         position: absolute;
-        // top: 0px;
-        top: 50%;
+        top: 4px;
         transform: translateY(-50%);
         left: 4px;
         height: 12px;

@@ -7,7 +7,7 @@ mixin search-room({nameEelements })
         form.search-room__form
             .search-room__header="Найдём номера под ваши пожелания"
             .search-room__calendar
-                +calendar({id: "search-room", nameHeaderFrom: "Прибытие", nameHeaderTo: "Выезд"})
+                +calendar({nameHeaderFrom: "Прибытие", nameHeaderTo: "Выезд"})
             .search-room__dropdown
                 +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "Гости"})
             .search-room__button
