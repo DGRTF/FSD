@@ -43,7 +43,7 @@
         }
 
         .checkbox__input:checked + &::after {
-            left: 24px;
+            left: 23px;
             background: $gradient-color;
         }
         .checkbox__input:checked + & {
@@ -65,7 +65,7 @@
             content: none;
             display: inline-block;
             position: absolute;
-            left: 6px;
+            left: 5px;
             top: 5px;
             height: 4px;
             width: 6px;
