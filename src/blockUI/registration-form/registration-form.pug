@@ -8,20 +8,20 @@ mixin registration
     .registration-form
         form.registration-form__form
             .registration-form__header="Регистрация аккаунта"
-            +input-field({type: 'text', name: 'name', value: 'Имя'})
+            +input-field({type: "text", name: "name", value: "Имя"})
             .registration-form__surname
-                +input-field({type: 'text', name: 'surname', value: 'Фамилия'})
-            +radio({content: 'Мужчина', name: 'group'})
+                +input-field({type: "text", name: "surname", value: "Фамилия"})
+            +radio({content: "Мужчина", name: "group"})
             span.registration-form__woman
-                +radio({content: 'Женщина', name: 'group'})
+                +radio({content: "Женщина", name: "group"})
             .registration-form__date="Дата рождения"
-            +input-field({type: 'text', name: 'born', value: 'ДД.ММ.ГГГГ'})
+            +input-field({type: "text", name: "born", value: "ДД.ММ.ГГГГ"})
             .registration-form__data-entry="Данные для входа в сервис"
             .registration-form__email
-                +input-field({type: 'text', name: 'email', value: 'Email'})
+                +input-field({type: "text", name: "email", value: "Email"})
             .registration-form__pass
-                +input-field({type: 'password', name: 'pass',value: 'Пароль'})
-            +checkbox({contentHead: 'Получать спецпредложения', mode: '_move'})
+                +input-field({type: "password", name: "pass",value: "Пароль"})
+            +checkbox({contentHead: "Получать спецпредложения", mode: "_move"})
             .registration-form__button
                 +button-arrow({content: "Перейти к оплате"})
         .registration-form__create-account
