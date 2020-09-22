@@ -1,5 +1,4 @@
-.bullet-list
-{
+.bullet-list {
     display: inline-block;
     min-width: 50px;
     font-family: Montserrat, OpenSans, sans-serif;
@@ -9,15 +8,13 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
 
-    &__li
-    {
-        margin: 10px; 
+    &__li {
+        margin: 10px;
         display: flex;
     }
 
-    &__before
-    {
-        display: inline-block; 
+    &__before {
+        display: inline-block;
         width: 10px;
         height: 10px;
         border-radius: 50%;

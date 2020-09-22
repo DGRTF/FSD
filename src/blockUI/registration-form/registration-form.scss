@@ -4,9 +4,7 @@
 @import "./../radio/radio.scss";
 @import "./../checkbox/checkbox.scss";
 
-
-@mixin registration-form-font
-{
+@mixin registration-form-font {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -15,9 +13,7 @@
     color: $color_dark-shade;
 }
 
-
-.registration-form
-{
+.registration-form {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -26,14 +22,11 @@
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    &__form
-    {
+    &__form {
         width: 320px;
     }
 
-
-    &__header
-    {
+    &__header {
         font-family: Quicksand, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -42,50 +35,42 @@
         margin-bottom: 22px;
     }
 
-    &__surname
-    {
+    &__surname {
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
-    &__woman
-    {
+    &__woman {
         margin-left: 16px;
     }
 
-    &__date
-    {
+    &__date {
         @include registration-form-font();
         margin-top: 22px;
         margin-bottom: 5px;
     }
 
-    &__data-entry
-    {
+    &__data-entry {
         margin-top: 22px;
         margin-bottom: 5px;
         @include registration-form-font();
     }
 
-    &__email
-    {
+    &__email {
         margin-bottom: 10px;
     }
 
-    &__pass
-    {
+    &__pass {
         margin-bottom: 10px;
     }
 
-    &__button
-    {
+    &__button {
         height: 44px;
         margin-top: 20px;
         margin-bottom: 30px;
     }
 
-    &__create-account
-    {
+    &__create-account {
         width: 320px;
         font-family: Montserrat;
         font-style: normal;
@@ -97,8 +82,7 @@
         align-items: center;
     }
 
-    &__create-button
-    {
+    &__create-button {
         display: inline-block;
         width: 99px;
         height: 44px;

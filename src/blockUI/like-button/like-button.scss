@@ -1,56 +1,49 @@
-.like-button
-{
+.like-button {
     font-family: Material Icons;
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
     align-items: center;
     text-align: center;
-    
+
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
+    font-feature-settings: "liga";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 
     display: inline-block;
-    
-    &__button
-    {
+
+    &__button {
         height: 20px;
         min-height: 20px;
         width: 40px;
         min-width: 40px;
-        border: 1px solid $cobalt-blue25; 
+        border: 1px solid $cobalt-blue25;
         border-radius: 10px;
         position: relative;
         margin-right: 3px;
         background-color: transparent;
 
-        &::before
-        {       
-            color: $cobalt-blue25; 
+        &::before {
+            color: $cobalt-blue25;
             content: "favorite_border";
-            display: inline-block; 
+            display: inline-block;
             position: absolute;
-            top: 4px;  
+            top: 4px;
             left: 4px;
         }
 
-        &-like::before
-        {
-            color: $color_purple; 
+        &-like::before {
+            color: $color_purple;
             content: "favorite";
-            display: inline-block; 
+            display: inline-block;
             position: absolute;
-            top: 4px;  
+            top: 4px;
             left: 4px;
         }
     }
 
-    
-
-    &__number
-    {
+    &__number {
         font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: normal;

@@ -1,12 +1,61 @@
-@import "__div-content/information__div-content.scss";
-@import "__div-icon/information__div-icon.scss";
-@import "__div-input/information__div-input.scss";
-@import "__span-content/information__span-content.scss";
-@import "__span-head/information__span-head.scss";
-@import "__hr/information__hr.scss";
-
 $information-width-block: 280px;
-.information
-{
+.information {
     width: $information-width-block;
+
+    &__div-content {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 10px;
+
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+
+    &__div-icon {
+        display: inline-block;
+        width: 48px;
+
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 41px;
+        color: $color_disqus-blue;
+
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: "liga";
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    &__div-input {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__hr {
+        margin-top: 23px;
+        height: 1px;
+        border: 0px;
+        background: $cobalt-blue10;
+    }
+
+    &__span-content {
+        margin-top: 7px;
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    &__span-head {
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+    }
 }

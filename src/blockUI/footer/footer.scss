@@ -1,8 +1,6 @@
 @import "./../subscribe-mail/subscribe-mail.scss";
 
-
-.footer
-{
+.footer {
     background-color: $color_white;
     font-family: Montserrat;
     font-style: normal;
@@ -11,8 +9,7 @@
     color: $cobalt-blue50;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
-    &__top
-    {
+    &__top {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -21,56 +18,55 @@
         padding-top: 104px;
     }
 
-    &__label, &__navigation, &__about, &__support, &__subscribe
-    {
+    &__label,
+    &__navigation,
+    &__about,
+    &__support,
+    &__subscribe {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    &__label > *, &__navigation > *, &__about > *, &__support > *, &__subscribe > *
-    {
+    &__label > *,
+    &__navigation > *,
+    &__about > *,
+    &__support > *,
+    &__subscribe > * {
         margin-bottom: 20px;
     }
 
-    &__label
-    {
+    &__label {
         min-width: 260px;
         width: 260px;
         line-height: 30px;
 
-        &-label
-        {
+        &-label {
             @include label-text();
         }
     }
 
-    &__support
-    {
+    &__support {
         margin: 0 20px;
     }
 
-    &__subscribe
-    {
+    &__subscribe {
         min-width: 260px;
         width: 260px;
     }
 
-    &__text
-    {
+    &__text {
         line-height: 30px;
     }
 
-    &__headers
-    {
+    &__headers {
         font-weight: bold;
         font-size: 12px;
         color: $color_dark-shade;
         text-transform: uppercase;
     }
 
-    &__bottom
-    {
+    &__bottom {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -78,14 +74,14 @@
         height: 69px;
         border-top: 1px solid $cobalt-blue10;
 
-        &-right
-        {
+        &-right {
             display: flex;
         }
     }
 
-    &__tvitter, &__facebook, &__instagram
-    {
+    &__tvitter,
+    &__facebook,
+    &__instagram {
         display: block;
         background-size: 24px 24px;
         width: 24px;
@@ -94,34 +90,26 @@
         margin-left: 20px;
     }
 
-    &__tvitter
-    {
-        background-image: url('./tvitter.svg');
+    &__tvitter {
+        background-image: url("./tvitter.svg");
     }
 
-    &__facebook
-    {
-        background-image: url('./facebook.svg');
+    &__facebook {
+        background-image: url("./facebook.svg");
     }
 
-    &__instagram
-    {
-        background-image: url('./instagram.svg');
+    &__instagram {
+        background-image: url("./instagram.svg");
     }
 
-
-    @media(max-width: 1050px)
-    {
-        &__navigation
-        {
+    @media (max-width: 1050px) {
+        &__navigation {
             display: none;
         }
     }
 
-    @media(max-width: 950px)
-    {
-        &__label
-        {
+    @media (max-width: 950px) {
+        &__label {
             display: none;
         }
     }

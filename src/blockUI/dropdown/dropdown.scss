@@ -1,13 +1,11 @@
 @import "./../iteration/iteration.scss";
 
-.dropdown
-{
+.dropdown {
     min-width: 150px;
     width: 100%;
     position: relative;
 
-    &__header
-    {
+    &__header {
         font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -17,8 +15,7 @@
         color: $color_dark-shade;
     }
 
-    &__buttons
-    {
+    &__buttons {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -26,8 +23,7 @@
         margin-top: 12px;
     }
 
-    &__cancel
-    {
+    &__cancel {
         font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -37,8 +33,7 @@
         margin-left: 14px;
     }
 
-    &__content
-    {
+    &__content {
         height: 42px;
         border: 1px solid $cobalt-blue25;
         border-radius: 4px 4px 4px 4px;
@@ -47,41 +42,36 @@
         background-color: $color_white;
     }
 
-    &__content-border
-    {
+    &__content-border {
         border-radius: 4px 4px 0px 0px;
         border-color: $cobalt-blue50;
     }
 
-    &__content:hover
-    {
+    &__content:hover {
         border-color: $cobalt-blue50;
     }
 
-
-    &__icon
-    {
+    &__icon {
         display: inline-flex;
         justify-content: center;
         align-items: center;
         height: 100%;
         width: 44px;
-    
+
         font-family: Material Icons;
         font-style: normal;
         font-weight: normal;
-        font-size: 24px;  
-        color: $cobalt-blue75; 
+        font-size: 24px;
+        color: $cobalt-blue75;
 
         -moz-osx-font-smoothing: grayscale;
-        font-feature-settings: 'liga';
+        font-feature-settings: "liga";
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
     }
 
-    &__items
-    {
-        display:none;
+    &__items {
+        display: none;
         border-left: 1px solid $cobalt-blue50;
         border-right: 1px solid $cobalt-blue50;
         border-bottom: 1px solid $cobalt-blue50;
@@ -91,15 +81,13 @@
         width: 100%;
     }
 
-    &__items-display
-    {
+    &__items-display {
         position: absolute;
         z-index: 10;
         display: block;
     }
 
-    &__ready
-    {
+    &__ready {
         font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -109,13 +97,12 @@
         margin-right: 6px;
     }
 
-    &__text
-    {
+    &__text {
         display: inline-flex;
         justify-content: center;
         align-items: center;
         border: 0;
-    
+
         font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -123,8 +110,7 @@
         color: $cobalt-blue75;
         margin-left: 14px;
 
-        &:focus
-        {
+        &:focus {
             outline: none;
         }
     }

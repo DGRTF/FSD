@@ -2,9 +2,7 @@
 @import "./../button-arrow/button-arrow";
 @import "./../calendar/calendar";
 
-
-@mixin calculate-price-font
-{
+@mixin calculate-price-font {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -16,9 +14,7 @@
     color: $cobalt-blue75;
 }
 
-
-.calculate-price
-{
+.calculate-price {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -30,21 +26,18 @@
     background-color: $color_white;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 
-    &__form
-    {
+    &__form {
         width: 320px;
     }
 
-    &__header
-    {
-        display:flex;
+    &__header {
+        display: flex;
         justify-content: space-between;
         color: $color_dark-shade;
         margin-bottom: 28px;
     }
 
-    &__number
-    {
+    &__number {
         font-family: Quicksand, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -52,14 +45,12 @@
         width: 60px;
         border: 0;
 
-        &:focus
-        {
+        &:focus {
             outline: none;
         }
     }
-    
-    &__lux
-    {
+
+    &__lux {
         font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -68,8 +59,7 @@
         color: $color_purple;
     }
 
-    &__header-right
-    {
+    &__header-right {
         font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -77,34 +67,27 @@
         color: $cobalt-blue50;
     }
 
-
-    &__calendar
-    {
+    &__calendar {
         margin-bottom: 22px;
     }
 
-    &__dropdown
-    {
+    &__dropdown {
         margin-bottom: 18px;
     }
 
-    &__days
-    {
+    &__days {
         @include calculate-price-font();
     }
 
-    &__sale
-    {
+    &__sale {
         @include calculate-price-font();
     }
 
-    &__collect
-    {
+    &__collect {
         @include calculate-price-font();
     }
 
-    &__result
-    {
+    &__result {
         display: flex;
         justify-content: space-between;
         font-family: Quicksand, OpenSans, sans-serif;
@@ -117,8 +100,7 @@
         margin-bottom: 20px;
     }
 
-    &__button
-    {
+    &__button {
         height: 44px;
     }
 }

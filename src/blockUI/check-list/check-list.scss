@@ -1,10 +1,19 @@
-@import "__div-list/check-list__div-list";
-
 .check-list {
     width: 100%;
 
     &__checkbox {
         display: none;
+    }
+
+    &__div-list {
+        display: none;
+        position: relative;
+        margin-top: 4px;
+        flex-direction: column;
+
+        & > div {
+            margin-top: 10px;
+        }
     }
 
     &__label {
