@@ -1,4 +1,4 @@
-@import "./../like-button/like-button";
+@import './../like-button/like-button';
 
 .comment {
     display: inline-flex;
@@ -19,7 +19,7 @@
         width: 48px;
         height: 48px;
         border-radius: 50%;
-        background-image: url(619860.png);
+        background-image: url('./619860.png');
         background-color: rgb(95, 199, 199);
         background-size: 48px 48px;
     }

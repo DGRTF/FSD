@@ -1,4 +1,4 @@
-@import "./datepicker.scss";
+@import './datepicker.scss';
 
 .datepicker--cell.-selected-.-focus- {
   background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
@@ -102,7 +102,7 @@
   height: 24px;
   width: 24px;
   margin: 20px;
-  font-family: Material Icons;
+  font-family: 'Material Icons';
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -197,7 +197,7 @@
   }
 
   &__label {
-    font-family: Material Icons;
+    font-family: 'Material Icons';
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -210,9 +210,6 @@
   &__plugin {
     margin-top: 5px;
     z-index: 2;
-    // &-position
-    // {
     position: absolute;
-    // }
   }
 }

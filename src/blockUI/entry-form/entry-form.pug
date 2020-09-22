@@ -7,11 +7,11 @@ mixin entry-form
         form.entry-form__form
             .entry-form__header="Войти"
             .entry-form__email
-                +input-field({type: 'text', name: 'email', value: 'Email'})
-            +input-field({type: 'password', name: 'pass',value: 'Пароль'})
+                +input-field({type: "text", name: "email", value: "Email"})
+            +input-field({type: "password", name: "pass",value: "Пароль"})
             .entry-form__button
                 +button-arrow({content: "Войти"})
         .entry-form__create-account
-            span="Нет аккаунта на Toxin?"
+            span.entry-form__question="Нет аккаунта на Toxin?"
             .entry-form__create-button
                 +button-border({content: "Создать"})

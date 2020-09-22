@@ -6,7 +6,7 @@ mixin present-room({img = [], price, number, category="", comment, countStar= 4}
             each item in img
                 -let i = item+".jpg"
                 .present-room__img-div
-                    img.present-room__slide(src=require("./../../blockUI/present-room/img/"+i).default)
+                    img.present-room__slide(alt="Фото комнаты" src=require("./../../blockUI/present-room/img/"+i).default)
         .present-room__inform
             .present-room__information
                 .present-room__number="№ "+number+" "+category

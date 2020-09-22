@@ -30,7 +30,7 @@
         border: 1px solid $cobalt-blue25;
 
         &::after {
-            content: "";
+            content: '';
             display: inline-block;
             position: absolute;
             left: 4px;
@@ -75,7 +75,7 @@
         }
 
         .checkbox__input:checked + &::after {
-            content: "";
+            content: '';
         }
 
         .checkbox__input:checked + & {

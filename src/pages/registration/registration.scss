@@ -1,12 +1,12 @@
-@import "./../../templates/common-temp/common-temp.scss";
-@import "./../../blockUI/registration-form/registration-form.scss";
-@import "./../../blockUI/entry-form/entry-form.scss";
+@import './../../templates/common-temp/common-temp.scss';
+@import './../../blockUI/registration-form/registration-form.scss';
+@import './../../blockUI/entry-form/entry-form.scss';
 
 .registration
 {
     &__background
     {
-        background-image: url("./img/registration.jpg");
+        background-image: url('./img/registration.jpg');
         background-size: cover;
         height: 900px;
         padding-top: 30px;

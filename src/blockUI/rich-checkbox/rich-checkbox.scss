@@ -39,7 +39,7 @@
         color: $cobalt-blue25;
 
         &::before {
-            content: "";
+            content:'';
             display: inline-block;
             position: relative;
             height: 18px;
@@ -62,7 +62,7 @@
         }
 
         .rich-checkbox__input:checked + &::after {
-            content: "";
+            content: '';
         }
 
         .rich-checkbox__input:checked + &::before {

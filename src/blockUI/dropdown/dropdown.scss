@@ -1,4 +1,4 @@
-@import "./../iteration/iteration.scss";
+@import './../iteration/iteration.scss';
 
 .dropdown {
     min-width: 150px;
@@ -58,14 +58,14 @@
         height: 100%;
         width: 44px;
 
-        font-family: Material Icons;
+        font-family: 'Material Icons';
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
         color: $cobalt-blue75;
 
         -moz-osx-font-smoothing: grayscale;
-        font-feature-settings: "liga";
+        font-feature-settings: 'liga';
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
     }

@@ -1,6 +1,6 @@
-@import "./../dropdown/dropdown";
-@import "./../button-arrow/button-arrow";
-@import "./../calendar/calendar";
+@import './../dropdown/dropdown';
+@import './../button-arrow/button-arrow';
+@import './../calendar/calendar';
 
 @mixin calculate-price-font {
     display: flex;

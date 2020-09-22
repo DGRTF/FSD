@@ -1,4 +1,4 @@
-@import "./../subscribe-mail/subscribe-mail.scss";
+@import './../subscribe-mail/subscribe-mail.scss';
 
 .footer {
     background-color: $color_white;
@@ -91,15 +91,15 @@
     }
 
     &__tvitter {
-        background-image: url("./tvitter.svg");
+        background-image: url('./tvitter.svg');
     }
 
     &__facebook {
-        background-image: url("./facebook.svg");
+        background-image: url('./facebook.svg');
     }
 
     &__instagram {
-        background-image: url("./instagram.svg");
+        background-image: url('./instagram.svg');
     }
 
     @media (max-width: 1050px) {

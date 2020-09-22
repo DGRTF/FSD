@@ -1,9 +1,9 @@
-@import "./../../templates/common-temp/common-temp.scss";
-@import "./../../blockUI/search-room/search-room.scss";
+@import './../../templates/common-temp/common-temp.scss';
+@import './../../blockUI/search-room/search-room.scss';
 
 .landing
 {
-    background-image: url("./img/landing.jpg");
+    background-image: url('./img/landing.jpg');
     background-size: cover;
     height: 900px;
     padding-top: 70px;
