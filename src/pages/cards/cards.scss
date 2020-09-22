@@ -12,13 +12,18 @@
 @import "./../../blockUI/calculate-price/calculate-price.scss";
 @import "./../../blockUI/present-room/present-room.scss";
 
-
-.cards
-{
+.cards {
     background: $backg;
 
-    &__search-room
-    {
+    .cards__calendar {
+        width: 380px;
+        min-width: 320px;
+        position: absolute;
+        left: 980px;
+        top: 96px;
+    }
+
+    &__search-room {
         display: block;
         width: 380px;
         min-width: 320px;
@@ -27,9 +32,7 @@
         top: 150px;
     }
 
-    &__entry-form
-    {
-        // display: none;
+    &__entry-form {
         width: 380px;
         min-width: 320px;
         left: 560px;
@@ -37,9 +40,7 @@
         position: absolute;
     }
 
-    &__registration
-    {
-        // display: none;
+    &__registration {
         width: 380px;
         min-width: 320px;
         left: 140px;
@@ -47,9 +48,7 @@
         position: absolute;
     }
 
-    &__calculate-price
-    {
-        // display: none;
+    &__calculate-price {
         width: 380px;
         min-width: 320px;
         left: 560px;
@@ -57,15 +56,13 @@
         position: absolute;
     }
 
-    &__present-room
-    {
+    &__present-room {
         left: 980px;
         top: 559.5px;
         position: absolute;
     }
 
-    &__present-room1
-    {
+    &__present-room1 {
         left: 980px;
         top: 856.5px;
         position: absolute;
