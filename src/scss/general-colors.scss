@@ -9,7 +9,7 @@ $cobalt-blue50: rgba(31, 32, 65, 0.5);
 $cobalt-blue75: rgba(31, 32, 65, 0.75);
 $cobalt-blue10: rgba(31, 32, 65, 0.1);
 $gradient-color: linear-gradient(180deg, $color_purple 0%, $color_disqus-blue 100%);
-$background: "background";
+$background: 'background';
 
 @mixin vendor-prefix-gradient($prop, $val)
 {
