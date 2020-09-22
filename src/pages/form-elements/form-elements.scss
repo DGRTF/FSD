@@ -1,50 +1,45 @@
-@import "./../../scss/general-colors.scss";
-@import "./../../scss/normalize.scss";
-@import "./../../scss/custom-set.scss";
+@import './../../scss/general-colors.scss';
+@import './../../scss/normalize.scss';
+@import './../../scss/custom-set.scss';
 //fonts
-@import "./../../fonts/Montserrat/stylesheet.scss";
-@import "./../../fonts/Montserrat/material-icons.scss";
+@import './../../fonts/Montserrat/stylesheet.scss';
+@import './../../fonts/Montserrat/material-icons.scss';
 //blocks
-@import "./../../blockUI/button/button.scss";
-@import "./../../blockUI/button-border/button-border.scss";
-@import "./../../blockUI/button-arrow/button-arrow.scss";
-@import "./../../blockUI/checkbox/checkbox.scss";
-@import "./../../blockUI/radio/radio.scss";
-@import "./../../blockUI/rate-stars/rate-stars.scss";
-@import "./../../blockUI/input-field/input-field.scss";
-@import "./../../blockUI/check-list/check-list.scss";
-@import "./../../blockUI/information/information.scss";
-@import "./../../blockUI/iteration/iteration.scss";
-@import "./../../blockUI/dropdown/dropdown.scss";
-@import "./../../blockUI/bullet-list/bullet-list.scss";
-@import "./../../blockUI/rich-checkbox/rich-checkbox.scss";
-@import "./../../blockUI/comment/comment.scss";
-@import "./../../blockUI/pagination/pagination.scss";
-@import "./../../blockUI/slider/slider.scss";
-@import "./../../scss/label.scss";
-@import "./../../blockUI/subscribe-mail/subscribe-mail.scss";
-@import "./../../blockUI/like-button/like-button.scss";
-@import "./../../blockUI/calendar/calendar.scss";
-@import "./../../blockUI/comfort/comfort.scss";
+@import './../../blockUI/button/button.scss';
+@import './../../blockUI/button-border/button-border.scss';
+@import './../../blockUI/button-arrow/button-arrow.scss';
+@import './../../blockUI/checkbox/checkbox.scss';
+@import './../../blockUI/radio/radio.scss';
+@import './../../blockUI/rate-stars/rate-stars.scss';
+@import './../../blockUI/input-field/input-field.scss';
+@import './../../blockUI/check-list/check-list.scss';
+@import './../../blockUI/information/information.scss';
+@import './../../blockUI/iteration/iteration.scss';
+@import './../../blockUI/dropdown/dropdown.scss';
+@import './../../blockUI/bullet-list/bullet-list.scss';
+@import './../../blockUI/rich-checkbox/rich-checkbox.scss';
+@import './../../blockUI/comment/comment.scss';
+@import './../../blockUI/pagination/pagination.scss';
+@import './../../blockUI/slider/slider.scss';
+@import './../../scss/label.scss';
+@import './../../blockUI/subscribe-mail/subscribe-mail.scss';
+@import './../../blockUI/like-button/like-button.scss';
+@import './../../blockUI/calendar/calendar.scss';
+@import './../../blockUI/comfort/comfort.scss';
 
-
-
-body
-{
+body {
     background: $color-white;
 }
 
-.form-elements
-{
-    &__div-buttons
-    {
+.form-elements {
+    &__div-buttons {
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
         text-transform: uppercase;
-        
+
         display: inline-block;
         position: absolute;
         width: 218px;
@@ -53,8 +48,7 @@ body
         top: 231px;
     }
 
-    &__div-button
-    {    
+    &__div-button {
         display: inline-block;
         position: absolute;
         width: 99px;
@@ -62,8 +56,7 @@ body
         left: 980px;
         top: 262px;
     }
-    &__div-button-d
-    {
+    &__div-button-d {
         display: inline-block;
         position: absolute;
         width: 99px;
@@ -74,8 +67,7 @@ body
         opacity: 0.5;
     }
 
-    &__div-button-border
-    {
+    &__div-button-border {
         display: inline-block;
         position: absolute;
         width: 99px;
@@ -84,20 +76,18 @@ body
         top: 336px;
     }
 
-    &__div-button-border-d
-    {
+    &__div-button-border-d {
         display: inline-block;
         position: absolute;
         width: 99px;
         height: 44px;
         left: 1098px;
         top: 336px;
-        
+
         opacity: 0.5;
     }
 
-    &__div-button-arrow
-    {
+    &__div-button-arrow {
         display: inline-block;
         position: absolute;
         width: 320px;
@@ -106,10 +96,7 @@ body
         top: 456px;
     }
 
-
-
-    &__div-checkbox
-    {
+    &__div-checkbox {
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
@@ -127,24 +114,21 @@ body
         top: 143px;
     }
 
-    &__div-checkbox1
-    {
+    &__div-checkbox1 {
         display: inline-block;
         position: absolute;
         left: 587px;
         top: 174.56px;
     }
 
-    &__div-checkbox2
-    {
+    &__div-checkbox2 {
         display: inline-block;
         position: absolute;
         left: 587px;
         top: 205.12px;
     }
 
-    &__div-checkbox3
-    {
+    &__div-checkbox3 {
         display: inline-block;
         display: inline-block;
         position: absolute;
@@ -153,10 +137,7 @@ body
         top: 235.12px;
     }
 
-
-
-    &__radio
-    {
+    &__radio {
         display: inline-block;
         position: absolute;
         left: 587px;
@@ -174,26 +155,21 @@ body
         -webkit-font-smoothing: antialiased;
     }
 
-    &__radio1
-    {
+    &__radio1 {
         display: inline-block;
         position: absolute;
         left: 587px;
         top: 339px;
     }
 
-    &__radio2
-    {
+    &__radio2 {
         display: inline-block;
         position: absolute;
         left: 705px;
         top: 339px;
     }
 
-
-
-    &__checkbox-move
-    {
+    &__checkbox-move {
         display: inline-block;
         position: absolute;
         left: 587px;
@@ -211,26 +187,21 @@ body
         -webkit-font-smoothing: antialiased;
     }
 
-    &__checkbox-move1
-    {
+    &__checkbox-move1 {
         display: inline-block;
         position: absolute;
         left: 587px;
         top: 435.56px;
     }
 
-    &__checkbox-move2
-    {
+    &__checkbox-move2 {
         display: inline-block;
         position: absolute;
         left: 587px;
         top: 469.56px;
     }
 
-
-
-    &__checkbox-like
-    {
+    &__checkbox-like {
         display: inline-block;
         position: absolute;
         left: 587px;
@@ -248,26 +219,21 @@ body
         -webkit-font-smoothing: antialiased;
     }
 
-    &__checkbox-like1
-    {
+    &__checkbox-like1 {
         display: inline-block;
         position: absolute;
         left: 587px;
         top: 565px;
     }
 
-    &__checkbox-like2
-    {
+    &__checkbox-like2 {
         display: inline-block;
         position: absolute;
         left: 637px;
         top: 565px;
     }
 
-
-
-    &__rate-stars
-    {
+    &__rate-stars {
         display: inline-block;
         position: absolute;
         left: 587px;
@@ -285,26 +251,21 @@ body
         -webkit-font-smoothing: antialiased;
     }
 
-    &__rate-stars1
-    {
+    &__rate-stars1 {
         display: inline-block;
         position: absolute;
         left: 587px;
         top: 658px;
     }
 
-    &__rate-stars2
-    {
+    &__rate-stars2 {
         display: inline-block;
         position: absolute;
         left: 727px;
         top: 658px;
     }
 
-
-
-    &__check-list
-    {
+    &__check-list {
         display: inline-block;
         position: absolute;
         width: 255px;
@@ -312,8 +273,7 @@ body
         top: 1194px;
     }
 
-    &__check-list1
-    {
+    &__check-list1 {
         display: inline-block;
         position: absolute;
         width: 255px;
@@ -321,10 +281,7 @@ body
         top: 1258px;
     }
 
-
-
-    &__input-field
-    {
+    &__input-field {
         display: inline-block;
         position: absolute;
         left: 141px;
@@ -338,8 +295,7 @@ body
         text-transform: uppercase;
     }
 
-    &__input-field1
-    {
+    &__input-field1 {
         display: inline-block;
         position: absolute;
         width: 320px;
@@ -347,8 +303,7 @@ body
         top: 163px;
     }
 
-    &__input-field2
-    {
+    &__input-field2 {
         display: inline-block;
         position: absolute;
         left: 141px;
@@ -362,8 +317,7 @@ body
         text-transform: uppercase;
     }
 
-    &__input-field3
-    {
+    &__input-field3 {
         display: inline-block;
         position: absolute;
         width: 320px;
@@ -371,12 +325,11 @@ body
         top: 247.44px;
     }
 
-    &__input-field4
-    {
+    &__input-field4 {
         display: inline-block;
         position: absolute;
         left: 141px;
-        top: 712px;;
+        top: 712px;
 
         font-family: Montserrat;
         font-style: normal;
@@ -386,8 +339,7 @@ body
         text-transform: uppercase;
     }
 
-    &__input-field5
-    {
+    &__input-field5 {
         display: inline-block;
         position: absolute;
         width: 265px;
@@ -396,8 +348,7 @@ body
         top: 732px;
     }
 
-    &__input-field6
-    {
+    &__input-field6 {
         display: inline-block;
         position: absolute;
         left: 141px;
@@ -411,8 +362,7 @@ body
         text-transform: uppercase;
     }
 
-    &__input-field7
-    {
+    &__input-field7 {
         display: inline-block;
         position: absolute;
         width: 320px;
@@ -420,26 +370,21 @@ body
         top: 418px;
     }
 
-
-
-    &__information
-    {
+    &__information {
         display: inline-block;
         position: absolute;
         left: 140px;
         top: 1567px;
     }
 
-    &__information1
-    {
+    &__information1 {
         display: inline-block;
         position: absolute;
         left: 140px;
         top: 1656px;
     }
 
-    &__dropdown1
-    {
+    &__dropdown1 {
         display: inline-block;
         position: absolute;
         width: 320px;
@@ -447,8 +392,7 @@ body
         top: 876px;
     }
 
-    &__dropdown3
-    {
+    &__dropdown3 {
         display: inline-block;
         position: absolute;
         width: 320px;
@@ -456,8 +400,7 @@ body
         top: 876px;
     }
 
-    &__dropdown5
-    {
+    &__dropdown5 {
         display: inline-block;
         position: absolute;
         width: 320px;
@@ -465,10 +408,7 @@ body
         top: 311.44px;
     }
 
-
-
-    &__bullet-list
-    {
+    &__bullet-list {
         display: inline-block;
         position: absolute;
         left: 979px;
@@ -482,20 +422,15 @@ body
         text-transform: uppercase;
     }
 
-    &__bullet-list1
-    {
+    &__bullet-list1 {
         display: inline-block;
-        position: absolute;        
+        position: absolute;
         width: 280px;
         left: 969px;
         top: 1215px;
     }
 
-
-
-
-    &__checkbox-rich
-    {
+    &__checkbox-rich {
         display: inline-block;
         position: absolute;
         left: 587px;
@@ -509,8 +444,7 @@ body
         text-transform: uppercase;
     }
 
-    &__checkbox-rich1
-    {
+    &__checkbox-rich1 {
         display: inline-block;
         position: absolute;
         width: 230px;
@@ -518,8 +452,7 @@ body
         top: 1227px;
     }
 
-    &__checkbox-rich2
-    {
+    &__checkbox-rich2 {
         display: inline-block;
         position: absolute;
         width: 260px;
@@ -527,8 +460,7 @@ body
         top: 1289px;
     }
 
-    &__comment
-    {
+    &__comment {
         display: inline-block;
         position: absolute;
         width: 710px;
@@ -536,10 +468,7 @@ body
         top: 1573px;
     }
 
-    
-    
-    &__pagination
-    {
+    &__pagination {
         display: inline-block;
         position: absolute;
         left: 980px;
@@ -553,18 +482,14 @@ body
         text-transform: uppercase;
     }
 
-    &__pagination1
-    {
+    &__pagination1 {
         display: inline-block;
         position: absolute;
         left: 980px;
         top: 571.44px;
     }
 
-
-
-    &__slider
-    {
+    &__slider {
         display: inline-block;
         position: absolute;
         left: 979px;
@@ -578,8 +503,7 @@ body
         text-transform: uppercase;
     }
 
-    &__slider1
-    {
+    &__slider1 {
         display: inline-block;
         position: absolute;
         width: 265px;
@@ -587,36 +511,20 @@ body
         top: 140.44px;
     }
 
-    
-
-    // &__label
-    // {
-    //     display: inline-block;
-    //     position: absolute;
-    //     width: 40px;
-    //     height: 40px;
-    //     left: 30px;
-    //     top: 30px;
-    //     @include label;
-    // }
-
-    &__calendar
-    {
+    &__calendar {
         position: absolute;
         left: 141px;
         top: 502px;
     }
 
-    &__comfort
-    {
+    &__comfort {
         position: absolute;
         width: 266px;
         left: 140px;
         top: 876px;
     }
 
-    &__comfort1
-    {
+    &__comfort1 {
         position: absolute;
         width: 266px;
         left: 140px;

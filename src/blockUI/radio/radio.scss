@@ -32,11 +32,11 @@
         }
 
         .radio__input:checked + &::after {
-            content: "";
+            content: '';
         }
 
         &:hover::after {
-            content: "";
+            content: '';
         }
 
         .radio__input:checked + & {

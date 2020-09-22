@@ -602,13 +602,13 @@
 .datepicker--time-current-minutes {
   line-height: 1;
   font-size: 19px;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   position: relative;
   z-index: 1;
 }
 .datepicker--time-current-hours:after,
 .datepicker--time-current-minutes:after {
-  content: "";
+  content: '';
   background: #f0f0f0;
   border-radius: 4px;
   position: absolute;
@@ -649,7 +649,7 @@
 .datepicker--time-row:first-child {
   margin-bottom: 4px;
 }
-.datepicker--time-row input[type="range"] {
+.datepicker--time-row input[type='range'] {
   background: none;
   cursor: pointer;
   -webkit-flex: 1;
@@ -660,37 +660,37 @@
   margin: 0;
   -webkit-appearance: none;
 }
-.datepicker--time-row input[type="range"]::-webkit-slider-thumb {
+.datepicker--time-row input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
-.datepicker--time-row input[type="range"]::-ms-tooltip {
+.datepicker--time-row input[type='range']::-ms-tooltip {
   display: none;
 }
-.datepicker--time-row input[type="range"]:hover::-webkit-slider-thumb {
+.datepicker--time-row input[type='range']:hover::-webkit-slider-thumb {
   border-color: #b8b8b8;
 }
-.datepicker--time-row input[type="range"]:hover::-moz-range-thumb {
+.datepicker--time-row input[type='range']:hover::-moz-range-thumb {
   border-color: #b8b8b8;
 }
-.datepicker--time-row input[type="range"]:hover::-ms-thumb {
+.datepicker--time-row input[type='range']:hover::-ms-thumb {
   border-color: #b8b8b8;
 }
-.datepicker--time-row input[type="range"]:focus {
+.datepicker--time-row input[type='range']:focus {
   outline: none;
 }
-.datepicker--time-row input[type="range"]:focus::-webkit-slider-thumb {
+.datepicker--time-row input[type='range']:focus::-webkit-slider-thumb {
   background: #5cc4ef;
   border-color: #5cc4ef;
 }
-.datepicker--time-row input[type="range"]:focus::-moz-range-thumb {
+.datepicker--time-row input[type='range']:focus::-moz-range-thumb {
   background: #5cc4ef;
   border-color: #5cc4ef;
 }
-.datepicker--time-row input[type="range"]:focus::-ms-thumb {
+.datepicker--time-row input[type='range']:focus::-ms-thumb {
   background: #5cc4ef;
   border-color: #5cc4ef;
 }
-.datepicker--time-row input[type="range"]::-webkit-slider-thumb {
+.datepicker--time-row input[type='range']::-webkit-slider-thumb {
   box-sizing: border-box;
   height: 12px;
   width: 12px;
@@ -700,7 +700,7 @@
   cursor: pointer;
   transition: background 0.2s;
 }
-.datepicker--time-row input[type="range"]::-moz-range-thumb {
+.datepicker--time-row input[type='range']::-moz-range-thumb {
   box-sizing: border-box;
   height: 12px;
   width: 12px;
@@ -710,7 +710,7 @@
   cursor: pointer;
   transition: background 0.2s;
 }
-.datepicker--time-row input[type="range"]::-ms-thumb {
+.datepicker--time-row input[type='range']::-ms-thumb {
   box-sizing: border-box;
   height: 12px;
   width: 12px;
@@ -720,34 +720,34 @@
   cursor: pointer;
   transition: background 0.2s;
 }
-.datepicker--time-row input[type="range"]::-webkit-slider-thumb {
+.datepicker--time-row input[type='range']::-webkit-slider-thumb {
   margin-top: -6px;
 }
-.datepicker--time-row input[type="range"]::-webkit-slider-runnable-track {
+.datepicker--time-row input[type='range']::-webkit-slider-runnable-track {
   border: none;
   height: 1px;
   cursor: pointer;
   color: transparent;
   background: transparent;
 }
-.datepicker--time-row input[type="range"]::-moz-range-track {
+.datepicker--time-row input[type='range']::-moz-range-track {
   border: none;
   height: 1px;
   cursor: pointer;
   color: transparent;
   background: transparent;
 }
-.datepicker--time-row input[type="range"]::-ms-track {
+.datepicker--time-row input[type='range']::-ms-track {
   border: none;
   height: 1px;
   cursor: pointer;
   color: transparent;
   background: transparent;
 }
-.datepicker--time-row input[type="range"]::-ms-fill-lower {
+.datepicker--time-row input[type='range']::-ms-fill-lower {
   background: transparent;
 }
-.datepicker--time-row input[type="range"]::-ms-fill-upper {
+.datepicker--time-row input[type='range']::-ms-fill-upper {
   background: transparent;
 }
 .datepicker--time-row span {
@@ -766,7 +766,7 @@
 }
 .datepicker--time-icon:after,
 .datepicker--time-icon:before {
-  content: "";
+  content: '';
   background: currentColor;
   position: absolute;
 }

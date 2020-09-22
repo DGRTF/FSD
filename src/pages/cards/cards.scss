@@ -1,16 +1,16 @@
-@import "./../../scss/general-colors.scss";
-@import "./../../scss/normalize.scss";
-@import "./../../scss/custom-set.scss";
+@import './../../scss/general-colors.scss';
+@import './../../scss/normalize.scss';
+@import './../../scss/custom-set.scss';
 
-@import "./../../fonts/Montserrat/stylesheet.scss";
-@import "./../../fonts/Montserrat/material-icons.scss";
+@import './../../fonts/Montserrat/stylesheet.scss';
+@import './../../fonts/Montserrat/material-icons.scss';
 
-@import "./../../blockUI/calendar/calendar.scss";
-@import "./../../blockUI/search-room/search-room.scss";
-@import "./../../blockUI/entry-form/entry-form.scss";
-@import "./../../blockUI/registration-form/registration-form.scss";
-@import "./../../blockUI/calculate-price/calculate-price.scss";
-@import "./../../blockUI/present-room/present-room.scss";
+@import './../../blockUI/calendar/calendar.scss';
+@import './../../blockUI/search-room/search-room.scss';
+@import './../../blockUI/entry-form/entry-form.scss';
+@import './../../blockUI/registration-form/registration-form.scss';
+@import './../../blockUI/calculate-price/calculate-price.scss';
+@import './../../blockUI/present-room/present-room.scss';
 
 .cards {
     background: $backg;

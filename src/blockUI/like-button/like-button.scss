@@ -1,5 +1,5 @@
 .like-button {
-    font-family: Material Icons;
+    font-family: 'Material Icons';
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
@@ -7,7 +7,7 @@
     text-align: center;
 
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: "liga";
+    font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 
@@ -26,7 +26,7 @@
 
         &::before {
             color: $cobalt-blue25;
-            content: "favorite_border";
+            content: 'favorite_border';
             display: inline-block;
             position: absolute;
             top: 4px;
@@ -35,7 +35,7 @@
 
         &-like::before {
             color: $color_purple;
-            content: "favorite";
+            content: 'favorite';
             display: inline-block;
             position: absolute;
             top: 4px;
