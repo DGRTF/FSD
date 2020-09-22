@@ -1,5 +1,4 @@
-.subscribe-mail
-{
+.subscribe-mail {
     border: 1px solid $cobalt-blue50;
     border-radius: 4px;
     display: flex;
@@ -9,8 +8,7 @@
     box-sizing: border-box;
     color: $cobalt-blue50;
 
-    &__text
-    {
+    &__text {
         font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -24,15 +22,12 @@
         padding-left: 14px;
         background-color: transparent;
 
-        &:focus
-        {
+        &:focus {
             outline: none;
         }
     }
 
-    &__button
-    {
-
+    &__button {
         font-family: Material Icons;
         font-style: normal;
         font-weight: normal;
@@ -45,12 +40,11 @@
         background: transparent;
 
         -moz-osx-font-smoothing: grayscale;
-        font-feature-settings: 'liga';
+        font-feature-settings: "liga";
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
 
-        &:focus
-        {
+        &:focus {
             outline: none;
         }
     }

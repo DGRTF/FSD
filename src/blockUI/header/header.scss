@@ -2,24 +2,21 @@
 @import "./../button-border/button-border.scss";
 @import "./../../scss/label.scss";
 
-.header
-{
+.header {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 70px;    
+    min-height: 70px;
     background: $color_white;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     padding: 0 5%;
 
-    &__label
-    {        
+    &__label {
         @include label-text;
     }
 
-    &__menu
-    {
+    &__menu {
         display: flex;
         width: 700px;
         align-items: center;
@@ -31,31 +28,26 @@
         color: $cobalt-blue50;
         text-transform: capitalize;
 
-        &-compact
-        {
+        &-compact {
             width: 100%;
             display: none;
             text-align: center;
         }
     }
 
-    &__button-login
-    {
+    &__button-login {
         width: 79px;
     }
-    &__button-login > button
-    {
+    &__button-login > button {
         height: 34px;
         width: 79px;
     }
 
-    &__button-register > button
-    {
+    &__button-register > button {
         height: 34px;
     }
 
-    &__line
-    {
+    &__line {
         width: 1px;
         height: 30px;
         border: none;
@@ -63,39 +55,30 @@
         margin: 0;
     }
 
-    &__menu-dropdown
-    {
+    &__menu-dropdown {
         display: none;
         z-index: 10;
 
-        &-buttons
-        {
+        &-buttons {
             display: none;
             width: 99px;
 
-            & > div
-            {
+            & > div {
                 height: 44px;
             }
         }
     }
 
-    &__name-profile
-    {
+    &__name-profile {
         display: none;
     }
 
-
-
-    @media (max-width: 940px)
-    {
-        &__item 
-        {
+    @media (max-width: 940px) {
+        &__item {
             display: none;
         }
 
-        &__menu-compact
-        {
+        &__menu-compact {
             display: block;
             font-family: Montserrat;
             font-style: normal;
@@ -104,12 +87,10 @@
             color: $cobalt-blue50;
             text-transform: capitalize;
 
-            &-check
-            {
-                display:none;
+            &-check {
+                display: none;
 
-                &:checked ~ .header__menu-dropdown
-                {
+                &:checked ~ .header__menu-dropdown {
                     position: absolute;
                     display: flex;
                     flex-direction: column;
@@ -120,45 +101,31 @@
             }
         }
 
-        &__menu
-        {
+        &__menu {
             justify-content: flex-end;
-            // width: 230px;
-            // min-width: 230px;
         }
 
-        &__line
-        {
+        &__line {
             display: none;
         }
-        
-        &__button-login
-        {
+
+        &__button-login {
             margin-right: 30px;
         }
-        
-        
     }
 
-    @media (max-width: 500px)
-    {
-        
-
-        &__menu
-        {
+    @media (max-width: 500px) {
+        &__menu {
             display: none;
         }
 
-        &__menu-dropdown
-        {
-            &-buttons
-            {
+        &__menu-dropdown {
+            &-buttons {
                 display: block;
                 width: 99px;
             }
         }
-        &__name-profile
-        {
+        &__name-profile {
             display: block;
         }
     }

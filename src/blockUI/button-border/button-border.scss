@@ -1,6 +1,4 @@
-
-.button-border 
-{
+.button-border {
     padding: 2px;
     height: 100%;
     min-width: 20px;
@@ -9,20 +7,34 @@
     border: 0;
     background: $gradient-color;
 
-    &:focus
-    {
+    &__span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        height: 100%;
+        border-radius: 22px;
+        padding-left: 4px;
+        padding-right: 4px;
+        background: $color_white;
+
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $color_purple;
+    }
+
+    &:focus {
         outline: none;
     }
 }
 
-.button-opacity[disabled]
-{
+.button-opacity[disabled] {
     opacity: 0.5;
 }
 
-.button-opacity[disabled] .button-border__span
-{
+.button-opacity[disabled] .button-border__span {
     color: red;
 }
-
-@import "src/blockUI/button-border/__span/button-border__span.scss";

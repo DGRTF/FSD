@@ -1,5 +1,4 @@
-@mixin iteration-font
-{
+@mixin iteration-font {
     font-family: Montserrat, OpenSans, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -7,8 +6,7 @@
     line-height: 22px;
 }
 
-@mixin iteration-button
-{
+@mixin iteration-button {
     width: 30px;
     height: 30px;
     border: 1px solid $cobalt-blue50;
@@ -17,22 +15,19 @@
     color: $cobalt-blue50;
     background-color: transparent;
 
-    &[disabled]
-    {
+    &[disabled] {
         border-color: $cobalt-blue25;
-        color:$cobalt-blue25;
+        color: $cobalt-blue25;
     }
 }
 
-.iteration
-{
+.iteration {
     height: 36px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 
-    &__div-num
-    {
+    &__div-num {
         vertical-align: top;
         display: inline-flex;
         justify-content: center;
@@ -48,13 +43,12 @@
         color: $color_dark-shade;
     }
 
-    &__div-name
-    {
+    &__div-name {
         display: inline-flex;
         align-items: center;
         height: 30px;
         margin-left: 14px;
-    
+
         font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -64,20 +58,15 @@
         color: $color_dark-shade;
     }
 
-    &__div-content
-    {
+    &__div-content {
         margin-right: 6px;
     }
 
-    &__button-plus
-    {
+    &__button-plus {
         @include iteration-button;
     }
 
-    &__button-min
-    {
+    &__button-min {
         @include iteration-button;
     }
 }
-
-

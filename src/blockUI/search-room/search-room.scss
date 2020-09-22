@@ -2,8 +2,7 @@
 @import "./../button-arrow/button-arrow.scss";
 @import "./../calendar/calendar.scss";
 
-.search-room
-{
+.search-room {
     min-width: 100px;
     padding: 40px 0px 30px 0px;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -14,13 +13,11 @@
     display: flex;
     justify-content: center;
 
-    &__form
-    {
+    &__form {
         width: 320px;
     }
 
-    &__header
-    {
+    &__header {
         font-family: Quicksand, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -28,19 +25,16 @@
         color: $color_dark-shade;
         margin-bottom: 26px;
     }
-    
-    &__calendar
-    {
+
+    &__calendar {
         margin-bottom: 22px;
     }
 
-    &__dropdown
-    {
+    &__dropdown {
         margin-bottom: 30px;
     }
 
-    &__button
-    {
+    &__button {
         height: 44px;
     }
 }

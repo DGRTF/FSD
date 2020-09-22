@@ -1,16 +1,15 @@
 @import "./../../templates/common-temp/common-temp";
 @import "./../../blockUI/calendar/calendar";
 @import "./../../blockUI/dropdown/dropdown";
-@import  "./../../blockUI/slider/slider";
-@import  "./../../blockUI/input-field/input-field";
-@import  "./../../blockUI/checkbox/checkbox";
-@import  "./../../blockUI/rich-checkbox/rich-checkbox";
-@import  "./../../blockUI/check-list/check-list";
+@import "./../../blockUI/slider/slider";
+@import "./../../blockUI/input-field/input-field";
+@import "./../../blockUI/checkbox/checkbox";
+@import "./../../blockUI/rich-checkbox/rich-checkbox";
+@import "./../../blockUI/check-list/check-list";
 @import "./../../blockUI/comfort/comfort";
 @import "./../../blockUI/present-room/present-room";
 
-.search
-{
+.search {
     display: flex;
     justify-content: space-between;
     padding: 30px 5%;
@@ -20,41 +19,33 @@
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-    
+
     color: $color_dark-shade;
 
-    &__parameters
-    {
+    &__parameters {
         display: flex;
         flex-direction: column;
         width: 266px;
+        min-width: 266px;
 
-        & > div
-        {
+        & > div {
             margin-bottom: 30px;
         }
     }
 
-    
-
-    &__dropdowns
-    {
-        &-header
-        {
+    &__dropdowns {
+        &-header {
             text-transform: uppercase;
             line-height: 27px;
         }
 
-        & > div
-        {
+        & > div {
             margin-bottom: 15px;
         }
     }
 
-    &__range
-    {
-        &-description
-        {
+    &__range {
+        &-description {
             font-family: Montserrat;
             font-style: normal;
             font-weight: normal;
@@ -63,68 +54,53 @@
         }
     }
 
-    &__checkbox
-    {
-        & > div
-        {
+    &__checkbox {
+        & > div {
             margin-bottom: 10px;
         }
 
-        &-header
-        {
+        &-header {
             text-transform: uppercase;
         }
     }
 
-    &__rich
-    {
-        & > div
-        {
+    &__rich {
+        & > div {
             margin-bottom: 15px;
         }
 
-        &-header
-        {
+        &-header {
             text-transform: uppercase;
         }
     }
 
-    &__drop-list
-    {
-        & > div
-        {
+    &__drop-list {
+        & > div {
             margin-bottom: 30px;
         }
     }
-    
-    &__content
-    {
+
+    &__content {
         display: inline-flex;
         justify-content: center;
         flex-wrap: wrap;
-        
-        & > div
-        {
+
+        & > div {
             margin: 20px;
             margin-right: 0px;
         }
     }
 
-
-    @media (max-width: 600px)
-    {
-        &
-        {
+    @media (max-width: 600px) {
+        & {
             flex-wrap: wrap;
             justify-content: center;
         }
 
-        &__content
-        {
+        &__content {
             justify-content: center;
-            
-            & > div
-            {
+
+            & > div {
                 margin-left: 0px;
             }
         }

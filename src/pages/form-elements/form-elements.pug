@@ -43,25 +43,25 @@ html
             .form-elements__div-checkbox="CHECKBOX BUTTONS"
 
             .form-elements__div-checkbox1
-                +checkbox({input: 'st1', contentHead: 'Можно курить'})
+                +checkbox({contentHead: 'Можно курить'})
             .form-elements__div-checkbox2
-                +checkbox({input: 'st2', contentHead: 'Можно с питомцами'})
+                +checkbox({contentHead: 'Можно с питомцами'})
             .form-elements__div-checkbox3
-                +checkbox({input: 'st', contentHead: 'Можно пригласить гостей (до 10 человек)'})
+                +checkbox({contentHead: 'Можно пригласить гостей (до 10 человек)'})
 
             .form-elements__radio="Radio buttons"
 
             .form-elements__radio1
                 +radio({})
             .form-elements__radio2
-                +radio({id: 'radio1', content:'Женщина', name: 'group'})
+                +radio({content:'Женщина', name: 'group'})
 
             .form-elements__checkbox-move="toggle"
 
             .form-elements__checkbox-move1
-                +checkbox({input: 'move', contentHead: 'Получать спецпредложения',mode:'_move'})
+                +checkbox({contentHead: 'Получать спецпредложения',mode:'_move'})
             .form-elements__checkbox-move2
-                +checkbox({input: 'move1', contentHead: 'Получать спецпредложения',mode:'_move'})
+                +checkbox({contentHead: 'Получать спецпредложения',mode:'_move'})
 
             .form-elements__checkbox-like="like button"
 
@@ -78,9 +78,9 @@ html
                 +rate-stars({count:'5'})
 
             .form-elements__check-list
-                +check-list({id: "1", items:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Кроватка','Шампунь','Кроватка','Шампунь']})
+                +check-list({items:['Завтрак','Письменный стол','Стул для кормления','Кроватка','Кроватка','Шампунь','Кроватка','Шампунь']})
             .form-elements__check-list1
-                +check-list({id: "2n", items:['Завтрак','Стул для кормления','Кроватка','Кроватка','Шампунь','Кроватка','Шампунь']})
+                +check-list({items:['Завтрак','Стул для кормления','Кроватка','Кроватка','Шампунь','Кроватка','Шампунь']})
             
             .form-elements__input-field="text field"
             .form-elements__input-field1
@@ -113,9 +113,9 @@ html
 
             .form-elements__checkbox-rich="rich Checkbox Buttons"
             .form-elements__checkbox-rich1
-                +rich-checkbox({input: 'rich', contentHead: 'Широкий коридор', content: 'Ширина коридоров в номере не менее 91 см.'})
+                +rich-checkbox({contentHead: 'Широкий коридор', content: 'Ширина коридоров в номере не менее 91 см.'})
             .form-elements__checkbox-rich2
-                +rich-checkbox({input: 'rich1', contentHead: 'Помощник для инвалидов' ,content: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
+                +rich-checkbox({contentHead: 'Помощник для инвалидов' ,content: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
             
             .form-elements__comment
                 +comment({feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})

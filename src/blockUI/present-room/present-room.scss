@@ -2,9 +2,7 @@
 @import "./../../../node_modules/slick-carousel/slick/slick-theme.scss";
 @import "./../../../node_modules/slick-carousel/slick/slick.scss";
 
-.present-room
-{
-    // display: inline;
+.present-room {
     width: 270px;
     height: 257px;
     border-radius: 4px;
@@ -17,76 +15,38 @@
     font-weight: bold;
     font-size: 14px;
 
-
-    &__img
-    {
-
-    }
-
-    &__slide
-    {
-
-    }
-
-    &__inform
-    {
+    &__inform {
         padding: 0 20px;
 
-        & > *
-        {
+        & > * {
             margin-bottom: 12px;
         }
     }
 
-    &__information
-    {
+    &__information {
         display: flex;
         justify-content: space-between;
     }
 
-    &__number
-    {
+    &__number {
         text-transform: none;
         color: $color_dark-shade;
     }
 
-    &__price
-    {
-
-    }
-
-    &__line
-    {
+    &__line {
         border: none;
         height: 1px;
         width: 230;
         background-color: rgba(31, 32, 65, 0.1);
     }
 
-    &__rate
-    {
+    &__rate {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    &__stars
-    {
-
-    }
-
-    &__comment
-    {
-
-    }
-
-    &__number
-    {
-
-    }
-
-    &__slick-next 
-    {
+    &__slick-next {
         font-family: Material Icons;
         font-style: normal;
         font-weight: normal;
@@ -100,14 +60,12 @@
         left: 235px;
         height: 100%;
 
-        &:focus
-        {
+        &:focus {
             outline: none;
         }
     }
 
-    &__slick-prev
-    {
+    &__slick-prev {
         font-family: Material Icons;
         font-style: normal;
         font-weight: normal;
@@ -121,8 +79,7 @@
         top: 0px;
         height: 100%;
 
-        &:focus
-        {
+        &:focus {
             outline: none;
         }
     }
@@ -130,8 +87,7 @@
 
 //override
 
-.slick-dots
-{
+.slick-dots {
     bottom: 0;
     display: inline-block;
     width: auto;
@@ -139,21 +95,17 @@
     top: 125px;
 }
 
-.slick-dots li
-{
-    
+.slick-dots li {
     width: 11px;
     margin: 0;
 }
 
-.slick-dots li.slick-active button:before
-{
+.slick-dots li.slick-active button:before {
     background-color: $color_white;
     opacity: 1;
 }
 
-.slick-dots li button:before
-{
+.slick-dots li button:before {
     content: "";
     border-radius: 50%;
     border: 1px solid $color_white;
@@ -163,12 +115,10 @@
     opacity: 1;
 }
 
-.slick-dots li button
-{
+.slick-dots li button {
     padding: 0;
     width: 5px;
 }
-.slick-dotted.slick-slider
-{
+.slick-dotted.slick-slider {
     margin-bottom: 20px;
 }

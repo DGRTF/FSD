@@ -18,4 +18,4 @@
 - ion-rangeslider ([документация](http://ionden.com/a/plugins/ion.rangeSlider/))
 
 ## Проект
-[Fonts & Type](https://dgrtf.github.io/FSD/)
+[FSD](https://dgrtf.github.io/FSD/)

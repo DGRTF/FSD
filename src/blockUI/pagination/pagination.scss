@@ -1,34 +1,29 @@
-.pagination
-{
-    width: 241px; 
+.pagination {
+    width: 241px;
     font-family: Montserrat, OpenSans, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     color: $cobalt-blue50;
 
-    &__page
-    {
+    &__page {
         display: inline-flex;
         justify-content: flex-start;
 
-        &-all
-        {
+        &-all {
             width: 40px;
             height: 40px;
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            
-            &-a
-            {
+
+            &-a {
                 color: $cobalt-blue50;
                 text-decoration: none;
             }
         }
 
-        &-1
-        {
+        &-1 {
             border-radius: 50%;
             background: $gradient-color;
             width: 40px;
@@ -36,16 +31,14 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            
-            &-a
-            {
-                color: #FFFFFF;
+
+            &-a {
+                color: #ffffff;
                 text-decoration: none;
             }
         }
 
-        &-6
-        {
+        &-6 {
             width: 40px;
             height: 40px;
             display: inline-flex;
@@ -57,24 +50,20 @@
             font-weight: normal;
             font-size: 24px;
             -moz-osx-font-smoothing: grayscale;
-            font-feature-settings: 'liga';
+            font-feature-settings: "liga";
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
-            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 
-            &-a
-            {
+            &-a {
                 color: $color_white;
                 text-decoration: none;
             }
         }
     }
 
-    &__variant
-    {
+    &__variant {
         font-size: 14px;
         color: $cobalt-blue75;
     }
-    
 }
-
