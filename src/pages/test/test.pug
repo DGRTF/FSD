@@ -1,4 +1,4 @@
-include \..\..\blockUI\comfort\comfort
+include \..\..\blockUI\statistic-votes\statistic-votes
 
 
 doctype html
@@ -9,7 +9,4 @@ html
         title="Cards"
     body
         .cards
-            +comfort({})
-        .cards__mode
-            img(alt="Фото комнаты" src=require("./img/big.jpg").default)
-        +comfort({})
+            +statistic-votes
