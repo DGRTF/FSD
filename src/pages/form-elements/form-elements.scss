@@ -26,6 +26,7 @@
 @import './../../blockUI/like-button/like-button.scss';
 @import './../../blockUI/calendar/calendar.scss';
 @import './../../blockUI/comfort/comfort.scss';
+@import './../../blockUI/filter-date/filter-date.scss';
 
 body {
     background: $color-white;
@@ -390,6 +391,15 @@ body {
         width: 320px;
         left: 979px;
         top: 876px;
+
+        & .dropdown__content{
+            border-color: rgba(31,32,65,.5);
+            border-radius: 4px 4px 0 0;
+        }
+
+        & .dropdown__items{
+            display: block;
+        }
     }
 
     &__dropdown3 {
@@ -398,6 +408,15 @@ body {
         width: 320px;
         left: 587px;
         top: 876px;
+
+        & .dropdown__content{
+            border-color: rgba(31,32,65,.5);
+            border-radius: 4px 4px 0 0;
+        }
+
+        & .dropdown__items{
+            display: block;
+        }
     }
 
     &__dropdown5 {
@@ -529,5 +548,37 @@ body {
         width: 266px;
         left: 140px;
         top: 960px;
+
+        & .comfort__content {
+            border-radius: 4px 4px 0 0;
+            border-color: rgba(31,32,65,.5);
+        }
+
+        & .comfort__items {
+            display: block;
+        }
+    }
+
+    &__filter-date-text {
+        display: inline-block;
+        position: absolute;
+        left: 141px;
+        top: 606px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+
+    &__filter-date {
+        width: 265px;
+        height: 44px;
+        display: inline-block;
+        position: absolute;
+        left: 141px;
+        top: 626px;
     }
 }
