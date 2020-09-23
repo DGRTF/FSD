@@ -32,6 +32,12 @@ class Calendar {
         this.jsCalendarFrom.addEventListener("click", this._showCalendar.bind(this));
         this.jsCalendarTo = this.element.querySelector(".js-calendar__to");
         this.jsCalendarTo.addEventListener("click", this._showCalendar.bind(this));
+
+        this.jsCalendarLabelFrom = this.element.querySelector(".js-calendar__label-from");
+        this.jsCalendarLabelFrom.addEventListener("click", this._showCalendar.bind(this));
+        this.jsCalendarLabelTo = this.element.querySelector(".js-calendar__label-to");
+        this.jsCalendarLabelTo.addEventListener("click", this._showCalendar.bind(this));
+
         this.calendar1.hide();
     }
     setValue() {

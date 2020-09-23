@@ -122,7 +122,6 @@ class Dropdown {
 
     _addHandlers(searchElement) {
         let counter = new Counter(searchElement);
-        console.log(this.iteration.eventIter);
         this.iteration.eventIter.map(el =>{
             el._handlerPlus(counter.counterPlus.bind(counter));
             el._handlerMin(counter.counterMin.bind(counter));
