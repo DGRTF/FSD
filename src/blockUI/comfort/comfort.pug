@@ -1,9 +1,9 @@
 include .\..\iteration\iteration.pug
 
-mixin comfort()
+mixin comfort(headerText="Удобства номера")
     -items=["Спальни", "Кровати", "Ванные комнаты"]
     .comfort.js-comfort
-        .comfort__header="Удобства номера"
+        .comfort__header=headerText
         .comfort__content.js-comfort__content
             input.comfort__text.js-comfort__text(value="Удобства" readonly)
             .comfort__icon="expand_more"
