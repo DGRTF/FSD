@@ -1,0 +1,81 @@
+@import "./Chart.scss";
+
+.statistic-votes {
+  display: flex;
+  position: relative;
+  min-width: 320px;
+
+  &__draw{
+    // width: 120px;
+    // height: 120px;
+  }
+
+  &__colors {
+    display: inline-block;
+    min-width: 50px;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+
+  &__li {
+    margin: 10px;
+    display: flex;
+  }
+
+  &__before {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 11px;
+  }
+
+  &__item-1 {
+    background: rgb(255, 227, 156);
+  }
+
+  &__item-2 {
+    background: rgb(111, 207, 151);
+  }
+
+  &__item-3 {
+    background: rgb(188, 156, 255);
+  }
+
+  &__item-4 {
+    background: rgb(144, 144, 144);
+  }
+
+  &__votes-number{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+    width: 80px;
+    top: 50px;
+    left: 27px;
+  }
+
+  &__number{
+    font-family: Quicksand, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: $color_purple;
+  }
+
+  &__text{
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color_purple;
+  }
+}
