@@ -22,11 +22,11 @@ mixin header({profile = "no"})
                                 +button({content: "register"})
 
                     each item in items
-                        div(class="header__menu-dropdown-item header__dropdown-"+item)=item
+                        a(href="pages/form-elements.html" class="header__menu-dropdown-item header__dropdown-"+item)=item
 
         .header__menu
             each item in items
-                div(class="header__item header-login__"+item)=item
+                a(href="pages/form-elements.html" class="header__item header-login__"+item)=item
 
             if profile=="yes"
                 hr.header__line

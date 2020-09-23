@@ -59,6 +59,16 @@
         display: none;
         z-index: 10;
 
+        &-item {
+            text-decoration: none;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: $cobalt-blue50;
+            text-transform: capitalize;
+        }
+
         &-buttons {
             display: none;
             width: 99px;
@@ -67,6 +77,16 @@
                 height: 44px;
             }
         }
+    }
+
+    &__item {
+        text-decoration: none;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: $cobalt-blue50;
+        text-transform: capitalize;
     }
 
     &__name-profile {
