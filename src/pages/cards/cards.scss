@@ -15,12 +15,20 @@
 .cards {
     background: $backg;
 
-    .cards__calendar {
+    &__calendar {
         width: 380px;
         min-width: 320px;
         position: absolute;
         left: 980px;
-        top: 96px;
+        top: 132px;
+
+        & .datepicker-here{
+            display: block !important;
+        }
+
+        & .calendar__div-date{
+            display: none !important;
+        }
     }
 
     &__search-room {
