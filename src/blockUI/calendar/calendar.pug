@@ -2,10 +2,10 @@ mixin calendar({nameHeaderFrom = "", nameHeaderTo = ""})
     .calendar.js-calendar
         .calendar__div-date
             .calendar__from-name=nameHeaderFrom
-            .span.calendar__label="expand_more"
+            .span.calendar__label.js-calendar__label-from="expand_more"
             input.calendar__date.calendar__from.js-calendar__from(type="text" placeholder="ДД.ММ.ГГГГ")
         .calendar__div-date
             .calendar__to-name=nameHeaderTo
-            span.calendar__label="expand_more"
+            span.calendar__label.js-calendar__label-to="expand_more"
             input.calendar__date.calendar__to.js-calendar__to(type="text" placeholder="ДД.ММ.ГГГГ")
         div.calendar__plugin.js-calendar__plugin(type="text" id="minMaxExample" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
