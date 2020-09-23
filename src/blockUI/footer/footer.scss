@@ -2,7 +2,7 @@
 
 .footer {
     background-color: $color_white;
-    font-family: Montserrat;
+    font-family: Montserrat, OpenSans, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -100,6 +100,15 @@
 
     &__instagram {
         background-image: url('../../img/instagram.svg');
+    }
+
+    & a {
+        text-decoration: none;
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: $cobalt-blue50;
     }
 
     @media (max-width: 1050px) {

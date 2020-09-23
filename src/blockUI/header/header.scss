@@ -21,7 +21,7 @@
         width: 700px;
         align-items: center;
         justify-content: space-between;
-        font-family: Montserrat;
+        font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -61,7 +61,7 @@
 
         &-item {
             text-decoration: none;
-            font-family: Montserrat;
+            font-family: Montserrat, OpenSans, sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 14px;
@@ -81,7 +81,7 @@
 
     &__item {
         text-decoration: none;
-        font-family: Montserrat;
+        font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -100,7 +100,7 @@
 
         &__menu-compact {
             display: block;
-            font-family: Montserrat;
+            font-family: Montserrat, OpenSans, sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 14px;

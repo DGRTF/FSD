@@ -15,7 +15,7 @@
     padding: 30px 5%;
     color: $cobalt-blue50;
 
-    font-family: Montserrat;
+    font-family: Montserrat, OpenSans, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -46,7 +46,7 @@
 
     &__range {
         &-description {
-            font-family: Montserrat;
+            font-family: Montserrat, OpenSans, sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 12px;
