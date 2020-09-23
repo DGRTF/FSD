@@ -18,6 +18,7 @@ include \..\..\blockUI\subscribe-mail\subscribe-mail.pug
 include \..\..\blockUI\like-button\like-button.pug
 include \..\..\blockUI\calendar\calendar.pug
 include \..\..\blockUI\comfort\comfort.pug
+include \..\..\blockUI\filter-date\filter-date.pug
 
 
 doctype html
@@ -134,6 +135,11 @@ html
             .form-elements__calendar
                 +calendar({nameHeaderFrom: "date Dropdown", nameHeaderTo: "date Dropdown"})
             .form-elements__comfort
-                +comfort()
+                +comfort("Dropdown")
             .form-elements__comfort1
-                +comfort()
+                +comfort("Dropdown")
+
+            .form-elements__filter-date-text="filter date dropdown"
+
+            .form-elements__filter-date
+                +filter-date

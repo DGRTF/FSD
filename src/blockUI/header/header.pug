@@ -7,30 +7,26 @@ mixin header({profile = "no"})
         .header__label
 
         .header__menu-compact
-            if profile=="yes"
-                input.header__menu-compact-check(type="checkbox", id="header-profile")
-                label.header__menu-compact-label(for="header-profile")="Menu"
-            else
-                input.header__menu-compact-check(type="checkbox", id="header")
-                label.header__menu-compact-label(for="header")="Menu"
+            label.header__menu-compact-label="Menu"
+                input.header__menu-compact-check(type="checkbox")
 
-            .header__menu-dropdown
-                if profile=="yes"
-                    .header__name-profile="Gena Petukhov"
+                .header__menu-dropdown
+                    if profile=="yes"
+                        .header__name-profile="Gena Petukhov"
 
-                else
-                    .header__menu-dropdown-buttons
-                        .header__menu-dropdown-login
-                            +button-border({content: "login"})
-                        .header__menu-dropdown-register
-                            +button({content: "register"})
+                    else
+                        .header__menu-dropdown-buttons
+                            .header__menu-dropdown-login
+                                +button-border({content: "login"})
+                            .header__menu-dropdown-register
+                                +button({content: "register"})
 
-                each item in items
-                    div(class="header__menu-dropdown-item header__dropdown-"+item)=item
+                    each item in items
+                        a(href="pages/form-elements.html" class="header__menu-dropdown-item header__dropdown-"+item)=item
 
         .header__menu
             each item in items
-                div(class="header__item header-login__"+item)=item
+                a(href="pages/form-elements.html" class="header__item header-login__"+item)=item
 
             if profile=="yes"
                 hr.header__line

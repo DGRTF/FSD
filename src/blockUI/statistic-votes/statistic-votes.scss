@@ -1,14 +1,9 @@
-@import "./Chart.scss";
+@import './Chart.scss';
 
 .statistic-votes {
   display: flex;
   position: relative;
   min-width: 320px;
-
-  &__draw{
-    // width: 120px;
-    // height: 120px;
-  }
 
   &__colors {
     display: inline-block;
