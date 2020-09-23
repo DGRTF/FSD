@@ -102,7 +102,7 @@
   height: 24px;
   width: 24px;
   margin: 20px;
-  font-family: 'Material Icons';
+  font-family: 'Material Icons', OpenSans, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -120,7 +120,7 @@
   width: 318px;
   border-radius: 4px;
   border: 1px solid $cobalt-blue25;
-  font-family: Montserrat;
+  font-family: Montserrat, OpenSans, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -197,7 +197,7 @@
   }
 
   &__label {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', OpenSans, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
