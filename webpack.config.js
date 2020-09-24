@@ -34,6 +34,7 @@ module.exports =
             chunks: ['index'],
             filename: 'index.html',
             template: './src/index.pug',
+            favicon: './src/img/favicon.ico',
         }),
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
