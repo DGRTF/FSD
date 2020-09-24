@@ -70,18 +70,19 @@
     }
 
     &__add-info > section {
-        margin: 40px;
+        margin-left: 40px;
     }
 
     &__comment {
         max-width: 650px;
 
-        & > * {
+        & > article {
             margin: 40px;
+            margin-top: 10px;
         }
 
         &-header {
-            line-height: 50px;
+            margin-left: 40px;
         }
     }
 
