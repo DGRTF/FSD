@@ -18,6 +18,8 @@
         display: inline-block;
         width: 48px;
         height: 48px;
+        min-width: 48px;
+        min-height: 48px;
         border-radius: 50%;
         background-image: url('../../img/avatar-comment.png');
         background-color: rgb(95, 199, 199);
