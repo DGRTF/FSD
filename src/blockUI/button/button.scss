@@ -4,6 +4,7 @@
     height: 100%;
     border-radius: 22px;
     border: 0;
+    cursor: pointer;
 
     &-style {
         font-family: Montserrat, OpenSans, sans-serif;
@@ -18,6 +19,7 @@
 
     &[disabled] {
         opacity: 0.5;
+        cursor: auto;
     }
 
     &:focus {
