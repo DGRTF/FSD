@@ -31,6 +31,7 @@
         text-transform: uppercase;
         color: $color_purple;
         margin-left: 14px;
+        cursor: pointer;
     }
 
     &__content {
@@ -40,6 +41,7 @@
         display: flex;
         justify-content: space-between;
         background-color: $color_white;
+        cursor: pointer;
     }
 
     &__content-border {
@@ -63,6 +65,7 @@
         font-weight: normal;
         font-size: 24px;
         color: $cobalt-blue75;
+        cursor: pointer;
 
         -moz-osx-font-smoothing: grayscale;
         font-feature-settings: 'liga';
@@ -95,6 +98,7 @@
         text-transform: uppercase;
         color: $cobalt-blue50;
         margin-right: 6px;
+        cursor: pointer;
     }
 
     &__text {
@@ -102,6 +106,7 @@
         justify-content: center;
         align-items: center;
         border: 0;
+        cursor: pointer;
 
         font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;

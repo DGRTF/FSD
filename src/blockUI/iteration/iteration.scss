@@ -14,10 +14,12 @@
     @include iteration-font;
     color: $cobalt-blue50;
     background-color: transparent;
+    cursor: pointer;
 
     &[disabled] {
         border-color: $cobalt-blue25;
         color: $cobalt-blue25;
+        cursor: auto;
     }
 }
 
@@ -34,7 +36,6 @@
         align-items: center;
         height: 30px;
         width: 30px;
-        margin: -4px;
         font-family: Montserrat, OpenSans, sans-serif;
         font-style: normal;
         font-weight: bold;

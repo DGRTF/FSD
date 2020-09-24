@@ -107,6 +107,10 @@
             color: $cobalt-blue50;
             text-transform: capitalize;
 
+            &-label{
+                cursor: pointer;
+            }
+
             &-check {
                 display: none;
 

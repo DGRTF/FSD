@@ -37,8 +37,9 @@ html
         meta(name="Keywords" content="FSD")
         title #{title}
     body
-        block header
-            +header({profile: "no"})
-        block content
-        block footer
-            +footer({footer: "g"})
+        .main-content
+            block header
+                +header({profile: "no"})
+            block content
+            block footer
+                +footer({footer: "g"})
