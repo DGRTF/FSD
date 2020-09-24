@@ -4,36 +4,37 @@ include .\..\button-border\button-border.pug
 mixin header({profile = "no"})
     -let items = ["home", "about", "services", "careers", "news", "documentation"]
     header.header
-        .header__label
+        nav.header__nav-bar
+            a.header__label(href="/mock-address/change-me")
 
-        .header__menu-compact
-            label.header__menu-compact-label="Menu"
-                input.header__menu-compact-check(type="checkbox")
+            .header__menu-compact
+                label.header__menu-compact-label="Menu"
+                    input.header__menu-compact-check(type="checkbox")
 
-                .header__menu-dropdown
-                    if profile=="yes"
-                        .header__name-profile="Gena Petukhov"
+                    .header__menu-dropdown
+                        if profile=="yes"
+                            .header__name-profile="Gena Petukhov"
 
-                    else
-                        .header__menu-dropdown-buttons
-                            .header__menu-dropdown-login
-                                +button-border({content: "login"})
-                            .header__menu-dropdown-register
-                                +button({content: "register"})
+                        else
+                            .header__menu-dropdown-buttons
+                                .header__menu-dropdown-login
+                                    +button-border({content: "login"})
+                                .header__menu-dropdown-register
+                                    +button({content: "register"})
 
-                    each item in items
-                        a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-"+item)=item
+                        each item in items
+                            a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-"+item)=item
 
-        .header__menu
-            each item in items
-                a(href="/mock-address/change-me" class="header__item header-login__"+item)=item
+            .header__menu
+                each item in items
+                    a(href="/mock-address/change-me" class="header__item header-login__"+item)=item
 
-            if profile=="yes"
-                hr.header__line
-                .header__name-top="Gena Petukhov"
+                if profile=="yes"
+                    hr.header__line
+                    .header__name-top="Gena Petukhov"
 
-            else
-                .header__button-login
-                    +button-border({content: "login"})
-                .header__button-register
-                    +button({content: "register"})
+                else
+                    .header__button-login
+                        +button-border({content: "login"})
+                    .header__button-register
+                        +button({content: "register"})
