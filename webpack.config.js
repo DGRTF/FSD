@@ -2,11 +2,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const webpack = require('webpack');
 const path = require('path');
-const fs = require('fs');
-const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
 const SearchEntry = require("./searchEntry.js");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 
 let pagesPath = path.resolve(__dirname, "./src/pages");
@@ -19,7 +18,6 @@ module.exports =
     {
         path: path.resolve(__dirname, 'dist'),
         filename: 'scripts/[name].js',
-        //publicPath: './dist/'
     },
     plugins: searchEntry.HWPluginObjectArr.concat([
         new webpack.ProvidePlugin({
@@ -36,13 +34,13 @@ module.exports =
             template: './src/index.pug',
             favicon: './src/img/favicon.ico',
         }),
+
+        new FaviconsWebpackPlugin('./src/img/label.svg'),
+
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
         }),
 
-        new CopyPlugin([
-            { from: 'src/img/favicon.ico', to: '' }
-        ]),
     ]),
     module:
     {
