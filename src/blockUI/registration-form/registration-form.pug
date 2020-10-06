@@ -6,7 +6,7 @@ include .\..\checkbox\checkbox.pug
 
 mixin registration
     .registration-form
-        form.registration-form__form
+        form.registration-form__form(action="/mock-address/change-me")
             .registration-form__header="Регистрация аккаунта"
             +input-field({type: "text", name: "name", value: "Имя"})
             .registration-form__surname

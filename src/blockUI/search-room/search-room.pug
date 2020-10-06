@@ -4,7 +4,7 @@ include .\..\button-arrow\button-arrow.pug
 
 mixin search-room({nameEelements })
     .search-room
-        form.search-room__form
+        form.search-room__form(action="/mock-address/change-me")
             .search-room__header="Найдём номера под ваши пожелания"
             .search-room__calendar
                 +calendar({nameHeaderFrom: "Прибытие", nameHeaderTo: "Выезд"})

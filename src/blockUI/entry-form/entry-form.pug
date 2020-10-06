@@ -4,7 +4,7 @@ include .\..\button-border\button-border.pug
 
 mixin entry-form
     .entry-form
-        form.entry-form__form
+        form.entry-form__form(action="/mock-address/change-me")
             .entry-form__header="Войти"
             .entry-form__email
                 +input-field({type: "text", name: "email", value: "Email"})
