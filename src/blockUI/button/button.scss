@@ -17,12 +17,8 @@
         background: $gradient-color;
     }
 
-    &[disabled] {
+    &:disabled {
         opacity: 0.5;
         cursor: auto;
-    }
-
-    &:focus {
-        outline: none;
     }
 }
