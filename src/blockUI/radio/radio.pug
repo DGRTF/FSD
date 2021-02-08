@@ -1,6 +1,5 @@
 mixin radio({content="Мужчина", name= "group"})
-    .radio
-        label(class="radio__label-container")
+        label(class="radio")
             input(class="radio__input" type="radio" name=name)
             .radio__label
-        span(class="radio__span")=content
+            span(class="radio__span")=content

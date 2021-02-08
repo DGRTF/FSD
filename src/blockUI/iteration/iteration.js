@@ -13,7 +13,7 @@ class EventIter {
         let text = String(parseInt(content.innerText) + 1);
         content.innerText = text;
         if (this.eventPlus !== null)
-            this.eventPlus(this.parameter); // вызываем событие
+            this.eventPlus(this.parameter);
         if (text !== '0') {
             content.previousSibling.previousSibling.disabled = false;
         }
@@ -25,7 +25,7 @@ class EventIter {
         let text = String(parseInt(content.innerText) - 1);
         content.innerText = text;
         if (this.eventMin !== null)
-            this.eventMin(this.parameter); // вызываем событие
+            this.eventMin(this.parameter);
         if (text === '0') {
             event.currentTarget.disabled = true;
         }
