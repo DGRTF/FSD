@@ -1,5 +1,6 @@
 .radio {
     display: flex;
+    cursor: pointer;
     
     &:hover &__label:after {
         content: '';
@@ -22,7 +23,6 @@
         min-width: 18px;
         border: 1px solid $cobalt-blue25;
         border-radius: 50%;
-        cursor: pointer;
 
         &::after {
             content: none;

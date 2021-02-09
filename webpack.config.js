@@ -11,6 +11,8 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 let pagesPath = path.resolve(__dirname, "./src/pages");
 let searchEntry = new SearchEntry(pagesPath);
 
+const rootDirectory = '/FSD';
+
 module.exports =
 {
     entry: merge([searchEntry.entry, { index: './src/index.js' }]),
@@ -26,7 +28,6 @@ module.exports =
             "window.jQuery": "jquery",
         }),
 
-
         new HtmlWebpackPlugin({
             inject: true,
             chunks: ['index'],
@@ -35,7 +36,10 @@ module.exports =
             favicon: './src/img/favicon.ico',
         }),
 
-        new FaviconsWebpackPlugin('./src/img/label.svg'),
+        new FaviconsWebpackPlugin({
+            publicPath: './',
+            logo: './src/img/label.svg',
+        }),
 
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
@@ -79,7 +83,7 @@ module.exports =
                             options: {
                                 name: '[name].[ext]',
                                 outputPath: 'img',
-                                publicPath: "./../img"
+                                publicPath: rootDirectory + "/img"
                             }
                         },
                         {
@@ -114,7 +118,7 @@ module.exports =
                     options: {
                         name: '[name].[ext]',
                         outputPath: 'fonts',
-                        publicPath: "./../fonts"
+                        publicPath: rootDirectory + "/fonts"
                     }
                 },
 
@@ -124,7 +128,7 @@ module.exports =
                     options: {
                         name: '[name].[ext]',
                         outputPath: 'img',
-                        publicPath: "./../img"
+                        publicPath: rootDirectory + "/img"
                     }
                 },
 

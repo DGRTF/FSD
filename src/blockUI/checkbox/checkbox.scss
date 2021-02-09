@@ -5,6 +5,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         color: $cobalt-blue50;
+        cursor: pointer;
 
         &:hover {
             color: $cobalt-blue75;
@@ -55,7 +56,6 @@
         min-width: 38px;
         border-radius: 10px;
         border: 1px solid $cobalt-blue25;
-        cursor: pointer;
 
         &::after {
             content: '';

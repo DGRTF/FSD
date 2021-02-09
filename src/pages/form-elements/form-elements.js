@@ -15,5 +15,4 @@ new SliderInit({});
   const containerButtonBorder = document.querySelector('.form-elements__div-button-border-d');
   const buttonBorder = containerButtonBorder.querySelector('.button-border');
   buttonBorder.disabled = true;
-})
-  ();
+})();
