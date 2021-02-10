@@ -1,6 +1,14 @@
 .radio {
-    display: inline-flex;
-    line-height: 0px;
+    display: flex;
+    cursor: pointer;
+    
+    &:hover &__label:after {
+        content: '';
+    }
+
+    &:hover &label {
+        border-color: $color_purple;
+    }
 
     &__input {
         display: none;
@@ -15,7 +23,6 @@
         min-width: 18px;
         border: 1px solid $cobalt-blue25;
         border-radius: 50%;
-        cursor: pointer;
 
         &::after {
             content: none;

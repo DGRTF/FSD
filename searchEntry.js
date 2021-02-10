@@ -73,7 +73,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 class SearchEntry {
-    constructor(path, outPath = "pages/") {
+    constructor(path, outPath = "./") {
         this.path = path;
         this.outPath = outPath;
         this.entryArr;

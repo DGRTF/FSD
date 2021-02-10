@@ -5,7 +5,7 @@ block variables
     -title="Search"
 block content
     .search
-        form.search__parameters
+        form.search__parameters(action="/mock-address/change-me")
             .search__dropdowns
                 span.search__dropdowns-header="Даты пребывания в отеле"
                 +input-field({type: "text", name: "namedate", value: "ДД.ММ.ГГГГ"})

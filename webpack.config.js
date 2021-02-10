@@ -2,15 +2,16 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const webpack = require('webpack');
 const path = require('path');
-const fs = require('fs');
-const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
 const SearchEntry = require("./searchEntry.js");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 
 let pagesPath = path.resolve(__dirname, "./src/pages");
 let searchEntry = new SearchEntry(pagesPath);
+
+const rootDirectory = '/FSD';
 
 module.exports =
 {
@@ -19,7 +20,6 @@ module.exports =
     {
         path: path.resolve(__dirname, 'dist'),
         filename: 'scripts/[name].js',
-        //publicPath: './dist/'
     },
     plugins: searchEntry.HWPluginObjectArr.concat([
         new webpack.ProvidePlugin({
@@ -28,20 +28,23 @@ module.exports =
             "window.jQuery": "jquery",
         }),
 
-
         new HtmlWebpackPlugin({
             inject: true,
             chunks: ['index'],
             filename: 'index.html',
             template: './src/index.pug',
+            favicon: './src/img/favicon.ico',
         }),
+
+        new FaviconsWebpackPlugin({
+            publicPath: './',
+            logo: './src/img/label.svg',
+        }),
+
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
         }),
 
-        new CopyPlugin([
-            { from: 'src/img/favicon.ico', to: '' }
-        ]),
     ]),
     module:
     {
@@ -74,12 +77,39 @@ module.exports =
 
                 {
                     test: /\.(jpeg|jpg|png|gif)$/,
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: 'img',
-                        publicPath: "./../img"
-                    }
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                name: '[name].[ext]',
+                                outputPath: 'img',
+                                publicPath: rootDirectory + "/img"
+                            }
+                        },
+                        {
+                            loader: 'image-webpack-loader',
+                            options: {
+                                mozjpeg: {
+                                    progressive: true,
+                                },
+                                // optipng.enabled: false will disable optipng
+                                optipng: {
+                                    enabled: false,
+                                },
+                                pngquant: {
+                                    quality: [0.65, 0.90],
+                                    speed: 4
+                                },
+                                gifsicle: {
+                                    interlaced: false,
+                                },
+                                // the webp option will enable WEBP
+                                webp: {
+                                    quality: 75
+                                }
+                            }
+                        },
+                    ],
                 },
 
                 {
@@ -88,7 +118,7 @@ module.exports =
                     options: {
                         name: '[name].[ext]',
                         outputPath: 'fonts',
-                        publicPath: "./../fonts"
+                        publicPath: rootDirectory + "/fonts"
                     }
                 },
 
@@ -98,7 +128,7 @@ module.exports =
                     options: {
                         name: '[name].[ext]',
                         outputPath: 'img',
-                        publicPath: "./../img"
+                        publicPath: rootDirectory + "/img"
                     }
                 },
 

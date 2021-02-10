@@ -4,7 +4,7 @@ include .\..\button-arrow\button-arrow.pug
 
 mixin calculate-price()
     .calculate-price
-        form.calculate-price__form
+        form.calculate-price__form(action="/mock-address/change-me")
             .calculate-price__header
                 .calculate-price__header-left
                     input.calculate-price__number(type="text", value="№ 888", readonly)

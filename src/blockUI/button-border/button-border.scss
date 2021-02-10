@@ -27,16 +27,9 @@
         color: $color_purple;
     }
 
-    &:focus {
-        outline: none;
+    &:disabled {
+        opacity: 0.5;
+        cursor: auto;
     }
-}
-
-.button-opacity[disabled] {
-    opacity: 0.5;
-    cursor: auto;
-}
-
-.button-opacity[disabled] .button-border__span {
-    color: red;
+    
 }

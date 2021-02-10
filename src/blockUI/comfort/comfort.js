@@ -89,7 +89,7 @@ class Comfort {
         this.comfortItemsArr.forEach((item) => {
             this.commonStr += item.resultStr;
         });
-        // this.dropdown__divText.value = this.commonStr;
+
         if (this.commonStr.length > 20)
             this.dropdown__divText.value = this.commonStr.substring(0, 20) + "...";
         else
@@ -103,6 +103,7 @@ class Comfort {
         this.comfortItemsArr.forEach((item) => {
             this.commonStr += item.resultStr;
         });
+        
         if (this.commonStr === "")
             this.dropdown__divText.value = "Удобства";
         else
