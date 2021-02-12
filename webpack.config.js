@@ -8,8 +8,8 @@ const SearchEntry = require("./searchEntry.js");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 
-let pagesPath = path.resolve(__dirname, "./src/pages");
-let searchEntry = new SearchEntry(pagesPath);
+const pagesPath = path.resolve(__dirname, "./src/pages");
+const searchEntry = new SearchEntry(pagesPath);
 
 let rootDirectory = '';
 
