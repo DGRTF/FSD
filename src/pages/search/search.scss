@@ -81,7 +81,7 @@
     }
   }
 
-  &__content-wrapper{
+  &__content-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,20 +96,22 @@
       margin: 20px;
       margin-right: 0px;
     }
+
+    @media (max-width: 600px) {
+      &__content {
+        justify-content: center;
+
+        & > div {
+          margin-left: 0px;
+        }
+      }
+    }
   }
 
   @media (max-width: 600px) {
     & {
       flex-wrap: wrap;
       justify-content: center;
-    }
-
-    &__content {
-      justify-content: center;
-
-      & > div {
-        margin-left: 0px;
-      }
     }
   }
 }

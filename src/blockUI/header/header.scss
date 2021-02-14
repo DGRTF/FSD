@@ -30,16 +30,64 @@
     color: $cobalt-blue50;
     text-transform: capitalize;
 
+    @media (max-width: 500px) {
+      & {
+        display: none;
+      }
+    }
+
+    @media (max-width: 940px) {
+      & {
+        justify-content: flex-end;
+      }
+    }
+
     &-compact {
       width: 100%;
       display: none;
       text-align: center;
+
+      @media (max-width: 940px) {
+        & {
+          display: block;
+          font-family: Montserrat, OpenSans, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          color: $cobalt-blue50;
+          text-transform: capitalize;
+
+          &-label {
+            cursor: pointer;
+          }
+
+          &-check {
+            display: none;
+
+            &:checked ~ .header__menu-dropdown {
+              position: absolute;
+              display: flex;
+              flex-direction: column;
+              background-color: $color_white;
+              left: 0;
+              top: 70px;
+            }
+          }
+        }
+      }
     }
   }
 
   &__button-login {
     width: 79px;
+
+    @media (max-width: 940px) {
+      & {
+        margin-right: 30px;
+      }
+    }
   }
+  
   &__button-login > button {
     height: 34px;
     width: 79px;
@@ -55,6 +103,12 @@
     border: none;
     background-color: $cobalt-blue10;
     margin: 0;
+
+    @media (max-width: 940px) {
+      & {
+        display: none;
+      }
+    }
   }
 
   &__menu-dropdown {
@@ -78,6 +132,13 @@
       & > div {
         height: 44px;
       }
+
+      @media (max-width: 500px) {
+        & {
+          display: block;
+          width: 99px;
+        }
+      }
     }
   }
 
@@ -89,70 +150,21 @@
     font-size: 14px;
     color: $cobalt-blue50;
     text-transform: capitalize;
+
+    @media (max-width: 940px) {
+      & {
+        display: none;
+      }
+    }
   }
 
   &__name-profile {
     display: none;
-  }
 
-  @media (max-width: 940px) {
-    &__item {
-      display: none;
-    }
-
-    &__menu-compact {
-      display: block;
-      font-family: Montserrat, OpenSans, sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      color: $cobalt-blue50;
-      text-transform: capitalize;
-
-      &-label {
-        cursor: pointer;
-      }
-
-      &-check {
-        display: none;
-
-        &:checked ~ .header__menu-dropdown {
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-          background-color: $color_white;
-          left: 0;
-          top: 70px;
-        }
-      }
-    }
-
-    &__menu {
-      justify-content: flex-end;
-    }
-
-    &__line {
-      display: none;
-    }
-
-    &__button-login {
-      margin-right: 30px;
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__menu {
-      display: none;
-    }
-
-    &__menu-dropdown {
-      &-buttons {
+    @media (max-width: 500px) {
+      & {
         display: block;
-        width: 99px;
       }
-    }
-    &__name-profile {
-      display: block;
     }
   }
 }

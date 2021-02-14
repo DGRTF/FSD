@@ -59,6 +59,13 @@
     & > * {
       margin: 20px;
     }
+
+    @media (max-width: 450px) {
+      & > * {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 
   &__add-info {
@@ -102,22 +109,17 @@
 
   &__right {
     min-width: 380px;
+
+    @media (max-width: 450px) {
+      & {
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 100%;
+      }
+    }
   }
 
   &__headers {
     margin-bottom: 20px;
-  }
-
-  @media (max-width: 450px) {
-    &__right {
-      margin-left: auto;
-      margin-right: auto;
-      min-width: 100%;
-    }
-
-    &__info > * {
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
 }

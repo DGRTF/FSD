@@ -1,30 +1,27 @@
 @import './../../templates/common-temp/common-temp.scss';
 @import './../../blockUI/search-room/search-room.scss';
 
-.landing
-{
+.landing {
   background-image: url('../../img/landing.jpg');
   background-size: cover;
   height: 900px;
   padding-top: 70px;
   padding-left: 10%;
 
-  &__search-room
-  {
+  &__search-room {
     min-width: 320px;
     max-width: 380px;
+
+    @media (max-width: 495px) {
+      & {
+        margin: 0 auto;
+      }
+    }
   }
 
-  @media(max-width: 495px)
-  {
-    &
-    {
+  @media (max-width: 495px) {
+    & {
       padding-left: 0;
-    }
-
-    &__search-room
-    {
-      margin: 0 auto;
     }
   }
 }

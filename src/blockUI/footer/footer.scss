@@ -41,8 +41,22 @@
     width: 260px;
     line-height: 30px;
 
+    @media (max-width: 950px) {
+      & {
+        display: none;
+      }
+    }
+
     &-label {
       @include label-text();
+    }
+  }
+
+  &__navigation{
+    @media (max-width: 1050px) {
+      & {
+        display: none;
+      }
     }
   }
 
@@ -109,17 +123,5 @@
     font-weight: normal;
     font-size: 14px;
     color: $cobalt-blue50;
-  }
-
-  @media (max-width: 1050px) {
-    &__navigation {
-      display: none;
-    }
-  }
-
-  @media (max-width: 950px) {
-    &__label {
-      display: none;
-    }
   }
 }
