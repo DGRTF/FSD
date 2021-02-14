@@ -2,11 +2,15 @@
 
 Установка проекта ```npm i```
 
-Запуск сервера ```npm run start```
+Запуск сервера ```npm run dev```
 
 Сборка проекта ```npm run build```
 
-Деплой на github pages ```npm run deploy```
+Деплой на github pages (только после сборки на продакшн)Ж
+```
+npm run build:prod
+npm run deploy
+```
 
 Используемые библиотеки:
 - webpack
