@@ -1,10 +1,10 @@
 mixin rate-stars({count="4"})
-    .rate-stars
-        - var n = count
-        while n > 0
-            span.rate-stars__item="star"
-            - n--
-        - n = 5-count
-        while n > 0
-            span.rate-stars__item="star_border"
-            - n--
+  .rate-stars
+    - var n = count
+    while n > 0
+      span.rate-stars__item="star"
+      - n--
+    - n = 5-count
+    while n > 0
+      span.rate-stars__item="star_border"
+      - n--

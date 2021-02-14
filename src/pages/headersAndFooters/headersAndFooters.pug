@@ -3,20 +3,20 @@ include ./../../blockUI/footer/footer.pug
 
 doctype html
 html
-    head
-        meta(charset="utf-8")
-        meta(name="viewport" content="initial-scale=1.0, width=device-width")
-        meta(name="description" content="Пример верстки")
-        meta(name="Keywords" content="FSD")
-        title="Headers and Footers"
-    body
-        .headers-footers
-            .headers-footers__header
-                +header({profile: "no"})
-            .headers-footers__header1
-                +header({profile: "yes"})
-            .headers-footers__footer
-                +footer({footer: "g"})
-            .headers-footers__footer1
-                +footer({})
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="description" content="Пример верстки")
+    meta(name="Keywords" content="FSD")
+    title="Headers and Footers"
+  body
+    .headers-footers
+      .headers-footers__header
+        +header({profile: "no"})
+      .headers-footers__header1
+        +header({profile: "yes"})
+      .headers-footers__footer
+        +footer({footer: "g"})
+      .headers-footers__footer1
+        +footer({})
 

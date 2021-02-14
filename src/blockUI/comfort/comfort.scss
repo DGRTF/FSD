@@ -1,102 +1,102 @@
 @import './../iteration/iteration.scss';
 
 .comfort {
-    min-width: 150px;
+  min-width: 150px;
+  width: 100%;
+  position: relative;
+
+  &__header {
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: $color_dark-shade;
+  }
+
+  &__content {
+    height: 42px;
+    border: 1px solid $cobalt-blue25;
+    border-radius: 4px 4px 4px 4px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-white;
+    cursor: pointer;
+  }
+
+  &__content-border {
+    border-radius: 4px 4px 0px 0px;
+    border-color: $cobalt-blue50;
+  }
+
+  &__content:hover {
+    border-color: $cobalt-blue50;
+  }
+
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 44px;
+
+    font-family: 'Material Icons', OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: $cobalt-blue75;
+
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &__items {
+    display: none;
+    border-left: 1px solid $cobalt-blue50;
+    border-right: 1px solid $cobalt-blue50;
+    border-bottom: 1px solid $cobalt-blue50;
+    border-radius: 0px 0px 4px 4px;
+    background-color: $color-white;
+    box-sizing: border-box;
     width: 100%;
-    position: relative;
+    padding-bottom: 20px;
+  }
 
-    &__header {
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        text-transform: uppercase;
-        margin-bottom: 5px;
-        color: $color_dark-shade;
+  &__items-display {
+    position: absolute;
+    z-index: 1;
+    display: block;
+  }
+
+  &__ready {
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $cobalt-blue50;
+    margin-right: 6px;
+  }
+
+  &__text {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: $cobalt-blue75;
+    margin-left: 14px;
+
+    &:focus {
+      outline: none;
     }
-
-    &__content {
-        height: 42px;
-        border: 1px solid $cobalt-blue25;
-        border-radius: 4px 4px 4px 4px;
-        display: flex;
-        justify-content: space-between;
-        background-color: $color-white;
-        cursor: pointer;
-    }
-
-    &__content-border {
-        border-radius: 4px 4px 0px 0px;
-        border-color: $cobalt-blue50;
-    }
-
-    &__content:hover {
-        border-color: $cobalt-blue50;
-    }
-
-    &__icon {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 44px;
-
-        font-family: 'Material Icons', OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        color: $cobalt-blue75;
-
-        -moz-osx-font-smoothing: grayscale;
-        font-feature-settings: 'liga';
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    &__items {
-        display: none;
-        border-left: 1px solid $cobalt-blue50;
-        border-right: 1px solid $cobalt-blue50;
-        border-bottom: 1px solid $cobalt-blue50;
-        border-radius: 0px 0px 4px 4px;
-        background-color: $color-white;
-        box-sizing: border-box;
-        width: 100%;
-        padding-bottom: 20px;
-    }
-
-    &__items-display {
-        position: absolute;
-        z-index: 1;
-        display: block;
-    }
-
-    &__ready {
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        text-transform: uppercase;
-        color: $cobalt-blue50;
-        margin-right: 6px;
-    }
-
-    &__text {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        border: 0;
-        cursor: pointer;
-
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        color: $cobalt-blue75;
-        margin-left: 14px;
-
-        &:focus {
-            outline: none;
-        }
-    }
+  }
 }

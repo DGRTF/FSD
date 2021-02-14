@@ -7,25 +7,25 @@ include ./../../blockUI/present-room/present-room
 
 doctype html
 html
-    head
-        meta(charset="utf-8")
-        meta(name="viewport" content="initial-scale=1.0, width=device-width")
-        meta(name="description" content="Пример верстки")
-        meta(name="Keywords" content="FSD")
-        title="Cards"
-    body
-        .cards
-            .cards__calendar
-                +calendar({})
-            .cards__search-room
-                +search-room({})
-            .cards__entry-form
-                +entry-form({})
-            .cards__registration
-                +registration({})
-            .cards__calculate-price
-                +calculate-price()
-            .cards__present-room
-                +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 4})
-            .cards__present-room1
-                +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="description" content="Пример верстки")
+    meta(name="Keywords" content="FSD")
+    title="Cards"
+  body
+    .cards
+      .cards__calendar
+        +calendar({})
+      .cards__search-room
+        +search-room({})
+      .cards__entry-form
+        +entry-form({})
+      .cards__registration
+        +registration({})
+      .cards__calculate-price
+        +calculate-price()
+      .cards__present-room
+        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 4})
+      .cards__present-room1
+        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})

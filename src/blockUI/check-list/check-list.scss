@@ -1,54 +1,54 @@
 .check-list {
-    width: 100%;
+  width: 100%;
 
-    &__checkbox {
-        display: none;
+  &__checkbox {
+    display: none;
+  }
+
+  &__div-list {
+    display: none;
+    position: relative;
+    margin-top: 4px;
+    flex-direction: column;
+
+    & > * {
+      margin-top: 10px;
+    }
+  }
+
+  &__label {
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1f2041;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      content: 'keyboard_arrow_down';
+      display: inline-block;
+      font-family: 'Material Icons', OpenSans, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      text-transform: none;
+      color: $cobalt-blue50;
+      margin-left: 22px;
+
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: 'liga';
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
 
-    &__div-list {
-        display: none;
-        position: relative;
-        margin-top: 4px;
-        flex-direction: column;
-
-        & > * {
-            margin-top: 10px;
-        }
+    .check-list__checkbox:checked + &::after {
+      content: 'keyboard_arrow_up';
     }
-
-    &__label {
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-        color: #1f2041;
-        cursor: pointer;
-
-        &::after {
-            position: absolute;
-            content: 'keyboard_arrow_down';
-            display: inline-block;
-            font-family: 'Material Icons', OpenSans, sans-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            text-transform: none;
-            color: $cobalt-blue50;
-            margin-left: 22px;
-
-            -moz-osx-font-smoothing: grayscale;
-            font-feature-settings: 'liga';
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .check-list__checkbox:checked + &::after {
-            content: 'keyboard_arrow_up';
-        }
-    }
-    .check-list__checkbox:checked ~ .check-list__div-list {
-        display: flex;
-    }
+  }
+  .check-list__checkbox:checked ~ .check-list__div-list {
+    display: flex;
+  }
 }

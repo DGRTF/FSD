@@ -23,123 +23,123 @@ include /../../blockUI/filter-date/filter-date.pug
 
 doctype html
 html
-    head
-        meta(charset="utf-8")
-        meta(name="viewport" content="initial-scale=1.0, width=device-width")
-        meta(name="description" content="Пример верстки")
-        meta(name="Keywords" content="FSD")
-        title="Form elements"
-    body
-        .form-elements
-            .form-elements__div-buttons="Buttons"
-            .form-elements__div-button
-                +button({})
-            .form-elements__div-button-d
-                +button({})
-            .form-elements__div-button-border
-                +button-border({})
-            .form-elements__div-button-border-d
-                +button-border({})
-            .form-elements__div-button-arrow
-                +button-arrow({})
-            
-            .form-elements__div-checkbox="CHECKBOX BUTTONS"
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="description" content="Пример верстки")
+    meta(name="Keywords" content="FSD")
+    title="Form elements"
+  body
+    .form-elements
+      .form-elements__div-buttons="Buttons"
+      .form-elements__div-button
+        +button({})
+      .form-elements__div-button-d
+        +button({})
+      .form-elements__div-button-border
+        +button-border({})
+      .form-elements__div-button-border-d
+        +button-border({})
+      .form-elements__div-button-arrow
+        +button-arrow({})
+      
+      .form-elements__div-checkbox="CHECKBOX BUTTONS"
 
-            .form-elements__div-checkbox1
-                +checkbox({contentHead: "Можно курить"})
-            .form-elements__div-checkbox2
-                +checkbox({contentHead: "Можно с питомцами"})
-            .form-elements__div-checkbox3
-                +checkbox({contentHead: "Можно пригласить гостей (до 10 человек)"})
+      .form-elements__div-checkbox1
+        +checkbox({contentHead: "Можно курить"})
+      .form-elements__div-checkbox2
+        +checkbox({contentHead: "Можно с питомцами"})
+      .form-elements__div-checkbox3
+        +checkbox({contentHead: "Можно пригласить гостей (до 10 человек)"})
 
-            .form-elements__radio="Radio buttons"
+      .form-elements__radio="Radio buttons"
 
-            .form-elements__radio1
-                +radio({})
-            .form-elements__radio2
-                +radio({content:"Женщина", name: "group"})
+      .form-elements__radio1
+        +radio({})
+      .form-elements__radio2
+        +radio({content:"Женщина", name: "group"})
 
-            .form-elements__checkbox-move="toggle"
+      .form-elements__checkbox-move="toggle"
 
-            .form-elements__checkbox-move1
-                +checkbox({contentHead: "Получать спецпредложения",mode:"_move"})
-            .form-elements__checkbox-move2
-                +checkbox({contentHead: "Получать спецпредложения",mode:"_move"})
+      .form-elements__checkbox-move1
+        +checkbox({contentHead: "Получать спецпредложения",mode:"_move"})
+      .form-elements__checkbox-move2
+        +checkbox({contentHead: "Получать спецпредложения",mode:"_move"})
 
-            .form-elements__checkbox-like="like button"
+      .form-elements__checkbox-like="like button"
 
-            .form-elements__checkbox-like1
-                +like-button
-            .form-elements__checkbox-like2
-                +like-button
-            
-            .form-elements__rate-stars="rate button"
-                
-            .form-elements__rate-stars1
-                +rate-stars({})
-            .form-elements__rate-stars2
-                +rate-stars({count:"5"})
+      .form-elements__checkbox-like1
+        +like-button
+      .form-elements__checkbox-like2
+        +like-button
+      
+      .form-elements__rate-stars="rate button"
+        
+      .form-elements__rate-stars1
+        +rate-stars({})
+      .form-elements__rate-stars2
+        +rate-stars({count:"5"})
 
-            .form-elements__check-list
-                +check-list({items:["Завтрак","Письменный стол","Стул для кормления","Кроватка","Кроватка","Шампунь","Кроватка","Шампунь"]})
-            .form-elements__check-list1
-                +check-list({items:["Завтрак","Стул для кормления","Кроватка","Кроватка","Шампунь","Кроватка","Шампунь"]})
-            
-            .form-elements__input-field="text field"
-            .form-elements__input-field1
-                +input-field({type: "email", name: "name", idi: "1", value: "Email" })
-            .form-elements__input-field2="text field"
-            .form-elements__input-field3
-                +input-field({type: "text", name: "name1", idi: "2", value: "This is pretty awesome" })
-            .form-elements__input-field4="subscription text field"
-            .form-elements__input-field5
-                +subscribe-mail
-            .form-elements__input-field6="masked text field"
-            .form-elements__input-field7
-                +input-field({type: "text", name: "name3", idi: "4", value: "ДД.ММ.ГГГГ" })
+      .form-elements__check-list
+        +check-list({items:["Завтрак","Письменный стол","Стул для кормления","Кроватка","Кроватка","Шампунь","Кроватка","Шампунь"]})
+      .form-elements__check-list1
+        +check-list({items:["Завтрак","Стул для кормления","Кроватка","Кроватка","Шампунь","Кроватка","Шампунь"]})
+      
+      .form-elements__input-field="text field"
+      .form-elements__input-field1
+        +input-field({type: "email", name: "name", idi: "1", value: "Email" })
+      .form-elements__input-field2="text field"
+      .form-elements__input-field3
+        +input-field({type: "text", name: "name1", idi: "2", value: "This is pretty awesome" })
+      .form-elements__input-field4="subscription text field"
+      .form-elements__input-field5
+        +subscribe-mail
+      .form-elements__input-field6="masked text field"
+      .form-elements__input-field7
+        +input-field({type: "text", name: "name3", idi: "4", value: "ДД.ММ.ГГГГ" })
 
-            .form-elements__information
-                +information({})
-            .form-elements__information1
-                +information({icon: "location_cityicon",head: "Удобство", content: "Окно в каждой из спален"})
-            
-            .form-elements__dropdown1
-                +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "dropdown"})
-            .form-elements__dropdown3
-                +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "dropdown"})
-            .form-elements__dropdown5
-                +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "dropdown"})
-            
-            .form-elements__bullet-list="bullet list"
-            .form-elements__bullet-list1
-                +bullet-list({items: ["Нельзя с питомцами","Без вечеринок и мероприятий","Время прибытия — после 13:00, а выезд до 12:00"]})
+      .form-elements__information
+        +information({})
+      .form-elements__information1
+        +information({icon: "location_cityicon",head: "Удобство", content: "Окно в каждой из спален"})
+      
+      .form-elements__dropdown1
+        +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "dropdown"})
+      .form-elements__dropdown3
+        +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "dropdown"})
+      .form-elements__dropdown5
+        +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "dropdown"})
+      
+      .form-elements__bullet-list="bullet list"
+      .form-elements__bullet-list1
+        +bullet-list({items: ["Нельзя с питомцами","Без вечеринок и мероприятий","Время прибытия — после 13:00, а выезд до 12:00"]})
 
-            .form-elements__checkbox-rich="rich Checkbox Buttons"
-            .form-elements__checkbox-rich1
-                +rich-checkbox({contentHead: "Широкий коридор", content: "Ширина коридоров в номере не менее 91 см."})
-            .form-elements__checkbox-rich2
-                +rich-checkbox({contentHead: "Помощник для инвалидов" ,content: "На 1 этаже вас встретит специалист  и проводит до номера."})
-            
-            .form-elements__comment
-                +comment({feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+      .form-elements__checkbox-rich="rich Checkbox Buttons"
+      .form-elements__checkbox-rich1
+        +rich-checkbox({contentHead: "Широкий коридор", content: "Ширина коридоров в номере не менее 91 см."})
+      .form-elements__checkbox-rich2
+        +rich-checkbox({contentHead: "Помощник для инвалидов" ,content: "На 1 этаже вас встретит специалист  и проводит до номера."})
+      
+      .form-elements__comment
+        +comment({feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
 
-            .form-elements__pagination="pagination"
-            .form-elements__pagination1
-                +pagination()
+      .form-elements__pagination="pagination"
+      .form-elements__pagination1
+        +pagination()
 
-            .form-elements__slider1 
-                +slider({header: "Range slider"})
-            
-            .form-elements__label
+      .form-elements__slider1 
+        +slider({header: "Range slider"})
+      
+      .form-elements__label
 
-            .form-elements__calendar
-                +calendar({nameHeaderFrom: "date Dropdown", nameHeaderTo: "date Dropdown"})
-            .form-elements__comfort
-                +comfort("Dropdown")
-            .form-elements__comfort1
-                +comfort("Dropdown")
+      .form-elements__calendar
+        +calendar({nameHeaderFrom: "date Dropdown", nameHeaderTo: "date Dropdown"})
+      .form-elements__comfort
+        +comfort("Dropdown")
+      .form-elements__comfort1
+        +comfort("Dropdown")
 
-            .form-elements__filter-date-text="filter date dropdown"
+      .form-elements__filter-date-text="filter date dropdown"
 
-            .form-elements__filter-date
-                +filter-date
+      .form-elements__filter-date
+        +filter-date

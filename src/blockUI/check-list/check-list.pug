@@ -1,9 +1,9 @@
 include ./../checkbox/checkbox.pug
 mixin check-list({name= "Expandeble checkbox list", items=[]})
-    .check-list
-        label.check-list__label-container
-            input.check-list__checkbox(type="checkbox")
-            span.check-list__label=name
-            .check-list__div-list
-                each item in items
-                    +checkbox({contentHead: item})
+  .check-list
+    label.check-list__label-container
+      input.check-list__checkbox(type="checkbox")
+      span.check-list__label=name
+      .check-list__div-list
+        each item in items
+          +checkbox({contentHead: item})

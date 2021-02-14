@@ -1,12 +1,12 @@
 include /../like-button/like-button.pug
 
 mixin comment({ name="Константин Константинович Константинопольский" ,when="2 дня назад", feedback= ""})
-    article.comment
-        .comment__who
-            .comment__avatar
-            .comment__info
-                .comment__name=name
-                .comment__last-seen=when
-        .comment__content
-            +like-button
-            span.comment__feedback=feedback
+  article.comment
+    .comment__who
+      .comment__avatar
+      .comment__info
+        .comment__name=name
+        .comment__last-seen=when
+    .comment__content
+      +like-button
+      span.comment__feedback=feedback

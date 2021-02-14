@@ -3,38 +3,38 @@
 @import './../calendar/calendar.scss';
 
 .search-room {
-    min-width: 100px;
-    padding: 40px 0px 30px 0px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    border-radius: 4px;
-    background-color: $color_white;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
+  min-width: 100px;
+  padding: 40px 0px 30px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: $color_white;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
 
-    &__form {
-        width: 320px;
-    }
+  &__form {
+    width: 320px;
+  }
 
-    &__header {
-        font-family: Quicksand, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        color: $color_dark-shade;
-        margin-bottom: 26px;
-    }
+  &__header {
+    font-family: Quicksand, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    color: $color_dark-shade;
+    margin-bottom: 26px;
+  }
 
-    &__calendar {
-        margin-bottom: 22px;
-    }
+  &__calendar {
+    margin-bottom: 22px;
+  }
 
-    &__dropdown {
-        margin-bottom: 30px;
-    }
+  &__dropdown {
+    margin-bottom: 30px;
+  }
 
-    &__button {
-        height: 44px;
-    }
+  &__button {
+    height: 44px;
+  }
 }

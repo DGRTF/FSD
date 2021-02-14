@@ -1,39 +1,39 @@
 .button-arrow {
-    position: relative;
-    border-radius: 22px;
-    border: 0;
-    min-width: 44px;
-    height: 100%;
-    min-width: 320px;
-    width: 100%;
-    cursor: pointer;
+  position: relative;
+  border-radius: 22px;
+  border: 0;
+  min-width: 44px;
+  height: 100%;
+  min-width: 320px;
+  width: 100%;
+  cursor: pointer;
 
-    font-family: Montserrat, OpenSans, sans-serif;
+  font-family: Montserrat, OpenSans, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  color: $color_white;
+  background: $gradient-color;
+
+  &__span-icons {
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    font-size: 24px;
+    line-height: 24px;
+
+    font-family: 'Material Icons', OpenSans, sans-serif;
     font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 24px;
+    text-transform: none;
 
-    color: $color_white;
-    background: $gradient-color;
-
-    &__span-icons {
-        position: absolute;
-        top: 25%;
-        right: 10px;
-        font-size: 24px;
-        line-height: 24px;
-
-        font-family: 'Material Icons', OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        text-transform: none;
-
-        -moz-osx-font-smoothing: grayscale;
-        font-feature-settings: 'liga';
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-    }
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
 
 }

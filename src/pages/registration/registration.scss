@@ -4,36 +4,36 @@
 
 .registration
 {
-    &__background
-    {
-        background-image: url('../../img/registration.jpg');
-        background-size: cover;
-        height: 900px;
-        padding-top: 30px;
-    }
+  &__background
+  {
+    background-image: url('../../img/registration.jpg');
+    background-size: cover;
+    height: 900px;
+    padding-top: 30px;
+  }
 
-    &__registration
-    {
-        min-width: 320px;
-        max-width: 380px;
-        margin: 0 auto;
-    }
+  &__registration
+  {
+    min-width: 320px;
+    max-width: 380px;
+    margin: 0 auto;
+  }
 
-    &__registration-display
-    {
-        display: none;
-    }
+  &__registration-display
+  {
+    display: none;
+  }
 
-    &__entry-form
-    {
-        display: none;
-        margin: 0 auto;
-        min-width: 320px;
-        max-width: 380px;
-    }
+  &__entry-form
+  {
+    display: none;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 380px;
+  }
 
-    &__entry-form-display
-    {
-        display: block;
-    }
+  &__entry-form-display
+  {
+    display: block;
+  }
 }

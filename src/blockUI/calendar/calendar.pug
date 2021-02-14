@@ -1,11 +1,11 @@
 mixin calendar({nameHeaderFrom = "", nameHeaderTo = ""})
-    .calendar.js-calendar
-        .calendar__div-date
-            .calendar__from-name=nameHeaderFrom
-            input.calendar__date.calendar__from.js-calendar__from(type="text" placeholder="ДД.ММ.ГГГГ")
-            .span.calendar__label.js-calendar__label-from="expand_more"
-        .calendar__div-date
-            .calendar__to-name=nameHeaderTo
-            input.calendar__date.calendar__to.js-calendar__to(type="text" placeholder="ДД.ММ.ГГГГ")
-            span.calendar__label.js-calendar__label-to="expand_more"
-        div.calendar__plugin.js-calendar__plugin(type="text" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
+  .calendar.js-calendar
+    .calendar__div-date
+      .calendar__from-name=nameHeaderFrom
+      input.calendar__date.calendar__from.js-calendar__from(type="text" placeholder="ДД.ММ.ГГГГ")
+      .span.calendar__label.js-calendar__label-from="expand_more"
+    .calendar__div-date
+      .calendar__to-name=nameHeaderTo
+      input.calendar__date.calendar__to.js-calendar__to(type="text" placeholder="ДД.ММ.ГГГГ")
+      span.calendar__label.js-calendar__label-to="expand_more"
+    div.calendar__plugin.js-calendar__plugin(type="text" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")

@@ -14,66 +14,66 @@
 @import './../../blockUI/present-room/present-room.scss';
 
 .cards {
-    background: $background-color;
+  background: $background-color;
 
-    &__calendar {
-        width: 380px;
-        min-width: 320px;
-        position: absolute;
-        left: 980px;
-        top: 132px;
+  &__calendar {
+    width: 380px;
+    min-width: 320px;
+    position: absolute;
+    left: 980px;
+    top: 132px;
 
-        & .datepicker-here{
-            display: block !important;
-        }
-
-        & .calendar__div-date{
-            display: none !important;
-        }
+    & .datepicker-here{
+      display: block !important;
     }
 
-    &__search-room {
-        display: block;
-        width: 380px;
-        min-width: 320px;
-        position: absolute;
-        left: 140px;
-        top: 150px;
+    & .calendar__div-date{
+      display: none !important;
     }
+  }
 
-    &__entry-form {
-        width: 380px;
-        min-width: 320px;
-        left: 560px;
-        top: 701px;
-        position: absolute;
-    }
+  &__search-room {
+    display: block;
+    width: 380px;
+    min-width: 320px;
+    position: absolute;
+    left: 140px;
+    top: 150px;
+  }
 
-    &__registration {
-        width: 380px;
-        min-width: 320px;
-        left: 140px;
-        top: 564px;
-        position: absolute;
-    }
+  &__entry-form {
+    width: 380px;
+    min-width: 320px;
+    left: 560px;
+    top: 701px;
+    position: absolute;
+  }
 
-    &__calculate-price {
-        width: 380px;
-        min-width: 320px;
-        left: 560px;
-        top: 150px;
-        position: absolute;
-    }
+  &__registration {
+    width: 380px;
+    min-width: 320px;
+    left: 140px;
+    top: 564px;
+    position: absolute;
+  }
 
-    &__present-room {
-        left: 980px;
-        top: 559.5px;
-        position: absolute;
-    }
+  &__calculate-price {
+    width: 380px;
+    min-width: 320px;
+    left: 560px;
+    top: 150px;
+    position: absolute;
+  }
 
-    &__present-room1 {
-        left: 980px;
-        top: 856.5px;
-        position: absolute;
-    }
+  &__present-room {
+    left: 980px;
+    top: 559.5px;
+    position: absolute;
+  }
+
+  &__present-room1 {
+    left: 980px;
+    top: 856.5px;
+    position: absolute;
+  }
 }

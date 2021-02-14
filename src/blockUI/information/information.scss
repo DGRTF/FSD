@@ -1,61 +1,61 @@
 $information-width-block: 280px;
 .information {
-    width: $information-width-block;
+  width: $information-width-block;
 
-    &__div-content {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 10px;
+  &__div-content {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
 
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-        color: rgba(31, 32, 65, 0.75);
-    }
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+  }
 
-    &__div-icon {
-        display: inline-block;
-        width: 48px;
+  &__div-icon {
+    display: inline-block;
+    width: 48px;
 
-        font-family: 'Material Icons', OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 48px;
-        line-height: 41px;
-        color: $color-blue;
+    font-family: 'Material Icons', OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 41px;
+    color: $color-blue;
 
-        -moz-osx-font-smoothing: grayscale;
-        font-feature-settings: 'liga';
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-    }
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    &__div-input {
-        display: flex;
-        align-items: flex-start;
-    }
+  &__div-input {
+    display: flex;
+    align-items: flex-start;
+  }
 
-    &__hr {
-        margin-top: 23px;
-        height: 1px;
-        border: 0px;
-        background: $cobalt-blue10;
-    }
+  &__hr {
+    margin-top: 23px;
+    height: 1px;
+    border: 0px;
+    background: $cobalt-blue10;
+  }
 
-    &__span-content {
-        margin-top: 7px;
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-    }
+  &__span-content {
+    margin-top: 7px;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+  }
 
-    &__span-head {
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-    }
+  &__span-head {
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+  }
 }

@@ -1,17 +1,17 @@
 .rate-stars {
-    display: flex;
+  display: flex;
 
-    &__item {
-        font-family: 'Material Icons', OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
+  &__item {
+    font-family: 'Material Icons', OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
 
-        -moz-osx-font-smoothing: grayscale;
-        font-feature-settings: 'liga';
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 
-        color: $color_purple;
-    }
+    color: $color_purple;
+  }
 }

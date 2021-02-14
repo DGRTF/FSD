@@ -10,30 +10,19 @@
 @import './../../blockUI/footer/footer.scss';
 @import './../../blockUI/footer/footer_end.scss';
 
+.headers-footers {
+  background-color: $background-color;
+  height: 1350px;
 
+  &__header {
+    margin-bottom: 30px;
+  }
 
+  &__header1 {
+    margin-bottom: 30px;
+  }
 
-.headers-footers
-{
-    background-color: $background-color;
-    height: 1350px;
-
-    &__header
-    {
-        margin-bottom: 30px;
-    }
-
-    &__header1
-    {
-        margin-bottom: 30px;
-    }
-
-    &__footer
-    {
-        margin-bottom: 30px;
-    }
+  &__footer {
+    margin-bottom: 30px;
+  }
 }
-
-
-
-

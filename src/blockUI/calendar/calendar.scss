@@ -195,18 +195,17 @@
 
     &:focus {
       border-color: $cobalt-blue50;
-
     }
 
     &:hover {
       border-color: $cobalt-blue50;
     }
-    
-    &:focus + .calendar__label{
+
+    &:focus + .calendar__label {
       color: $cobalt-blue75;
     }
 
-    &:hover + .calendar__label{
+    &:hover + .calendar__label {
       color: $cobalt-blue75;
     }
   }

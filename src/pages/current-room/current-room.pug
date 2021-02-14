@@ -1,42 +1,42 @@
 extends ./../../templates/common-temp/common-temp
 
 block variables
-    -title="Current-room"
+  -title="Current-room"
 block content
-    .current-room
-        .current-room__photo
-            .current-room__photo-big
-                img.current-room__photo-big-img(alt="Фото комнаты" src=require("../../img/big.jpg").default)
-            .current-room__photo-mini
-                .current-room__photo-top
-                    img.current-room__photo-top-img(alt="Фото комнаты" src=require("../../img/top.jpg").default)
-                .current-room__photo-bottom
-                    img.current-room__photo-bottom-img(alt="Фото комнаты" src=require("../../img/bottom.jpg").default)
-        .current-room__description
-            .current-room__left
-                .current-room__info
-                    section.current-room__info-inf
-                        h3.current-room__info-header.current-room__headers="Сведения о номере"
-                        +information({})
-                        +information({icon: "location_cityicon",head: "Удобство", content: "Окно в каждой из спален"})
-                        +information({icon: "whatshot",head: "Уют", content: "Номер оснащён камином"})
-                    section.current-room__impressions.js-current-room__impressions
-                        h3.current-room__impressions-header.current-room__headers="Впечатления от номера"
-                        +statistic-votes
-                    .current-room__right
-                        +calculate-price({})
-                section.current-room__comment
-                    h3.current-room__comment-header="Отзывы посетителей номера"
-                    +comment({feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
-                    +comment({name: "Патрисия Стёклышкова", when: "Неделю назад", feedback: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
-                .current-room__add-info
-                    section.current-room__rules
-                        h3.current-room__rules-header.current-room__headers="Парвила"
-                        +bullet-list({items: ["Нельзя с питомцами","Без вечеринок и мероприятий","Время прибытия — после 13:00, а выезд до 12:00"]})
-                    section.current-room__cancel
-                        h3.current-room__cancel-header.current-room__headers="Отмена"
-                        .current-room__cancel-text="Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
-            
+  .current-room
+    .current-room__photo
+      .current-room__photo-big
+        img.current-room__photo-big-img(alt="Фото комнаты" src=require("../../img/big.jpg").default)
+      .current-room__photo-mini
+        .current-room__photo-top
+          img.current-room__photo-top-img(alt="Фото комнаты" src=require("../../img/top.jpg").default)
+        .current-room__photo-bottom
+          img.current-room__photo-bottom-img(alt="Фото комнаты" src=require("../../img/bottom.jpg").default)
+    .current-room__description
+      .current-room__left
+        .current-room__info
+          section.current-room__info-inf
+            h3.current-room__info-header.current-room__headers="Сведения о номере"
+            +information({})
+            +information({icon: "location_cityicon",head: "Удобство", content: "Окно в каждой из спален"})
+            +information({icon: "whatshot",head: "Уют", content: "Номер оснащён камином"})
+          section.current-room__impressions.js-current-room__impressions
+            h3.current-room__impressions-header.current-room__headers="Впечатления от номера"
+            +statistic-votes
+          .current-room__right
+            +calculate-price({})
+        section.current-room__comment
+          h3.current-room__comment-header="Отзывы посетителей номера"
+          +comment({feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+          +comment({name: "Патрисия Стёклышкова", when: "Неделю назад", feedback: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
+        .current-room__add-info
+          section.current-room__rules
+            h3.current-room__rules-header.current-room__headers="Парвила"
+            +bullet-list({items: ["Нельзя с питомцами","Без вечеринок и мероприятий","Время прибытия — после 13:00, а выезд до 12:00"]})
+          section.current-room__cancel
+            h3.current-room__cancel-header.current-room__headers="Отмена"
+            .current-room__cancel-text="Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
+      
 
 
 

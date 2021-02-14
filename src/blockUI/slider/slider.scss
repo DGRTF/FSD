@@ -1,68 +1,68 @@
 @import './ion.rangeSlider.scss';
 
 .js-slider {
+  display: flex;
+  flex-direction: column;
+
+  .slider__head {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 
-    .slider__head {
-        display: flex;
-        justify-content: space-between;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $color_dark-shade;
+  }
 
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        text-transform: uppercase;
-        color: $color_dark-shade;
-    }
-
-    &__range-number {
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 12px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-    }
+  &__range-number {
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .irs--flat .irs-line {
-    height: 4px;
-    width: 100%;
-    border: 1px solid $cobalt-blue25;
-    top: 25px;
-    background-color: transparent;
-    box-sizing: border-box;
-    cursor: pointer;
+  height: 4px;
+  width: 100%;
+  border: 1px solid $cobalt-blue25;
+  top: 25px;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .irs--flat .irs-bar {
-    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-    height: 6px;
-    top: 24px;
-    cursor: pointer;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  height: 6px;
+  top: 24px;
+  cursor: pointer;
 }
 
 .irs--flat .irs-handle > i:first-child {
-    width: 8px;
-    height: 8px;
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-    top: 0;
-    left: 0;
-    margin-left: 0;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  top: 0;
+  left: 0;
+  margin-left: 0;
 }
 
 .irs--flat .irs-handle {
-    width: 12px;
-    height: 12px;
-    top: 21px;
-    cursor: pointer;
+  width: 12px;
+  height: 12px;
+  top: 21px;
+  cursor: pointer;
 }
 
 .irs,
 .irs-line {
-    width: 100%;
+  width: 100%;
 }

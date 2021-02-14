@@ -1,12 +1,12 @@
 include ./../iteration/iteration.pug
 
 mixin comfort(headerText="Удобства номера")
-    -items=["Спальни", "Кровати", "Ванные комнаты"]
-    .comfort.js-comfort
-        .comfort__header=headerText
-        .comfort__content.js-comfort__content
-            input.comfort__text.js-comfort__text(value="Удобства" readonly)
-            .comfort__icon="expand_more"
-        .comfort__items.js-comfort__items
-            each item in items
-                +iteration({content: item})
+  -items=["Спальни", "Кровати", "Ванные комнаты"]
+  .comfort.js-comfort
+    .comfort__header=headerText
+    .comfort__content.js-comfort__content
+      input.comfort__text.js-comfort__text(value="Удобства" readonly)
+      .comfort__icon="expand_more"
+    .comfort__items.js-comfort__items
+      each item in items
+        +iteration({content: item})

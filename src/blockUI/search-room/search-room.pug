@@ -3,12 +3,12 @@ include ./../dropdown/dropdown.pug
 include ./../button-arrow/button-arrow.pug
 
 mixin search-room()
-    .search-room
-        form.search-room__form(action="/mock-address/change-me")
-            .search-room__header="Найдём номера под ваши пожелания"
-            .search-room__calendar
-                +calendar({nameHeaderFrom: "Прибытие", nameHeaderTo: "Выезд"})
-            .search-room__dropdown
-                +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "Гости"})
-            .search-room__button
-                +button-arrow({content: "Подобрать номер"})
+  .search-room
+    form.search-room__form(action="/mock-address/change-me")
+      .search-room__header="Найдём номера под ваши пожелания"
+      .search-room__calendar
+        +calendar({nameHeaderFrom: "Прибытие", nameHeaderTo: "Выезд"})
+      .search-room__dropdown
+        +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "Гости"})
+      .search-room__button
+        +button-arrow({content: "Подобрать номер"})

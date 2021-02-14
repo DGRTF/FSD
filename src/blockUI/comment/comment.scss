@@ -1,46 +1,46 @@
 @import './../like-button/like-button';
 
 .comment {
+  display: inline-flex;
+  flex-direction: column;
+  font-family: Montserrat, OpenSans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: $cobalt-blue75;
+
+  &__who {
     display: inline-flex;
-    flex-direction: column;
-    font-family: Montserrat, OpenSans, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    color: $cobalt-blue75;
+    align-items: center;
+  }
 
-    &__who {
-        display: inline-flex;
-        align-items: center;
-    }
+  &__avatar {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 50%;
+    background-image: url('../../img/avatar-comment.png');
+    background-color: rgb(95, 199, 199);
+    background-size: 48px 48px;
+  }
 
-    &__avatar {
-        display: inline-block;
-        width: 48px;
-        height: 48px;
-        min-width: 48px;
-        min-height: 48px;
-        border-radius: 50%;
-        background-image: url('../../img/avatar-comment.png');
-        background-color: rgb(95, 199, 199);
-        background-size: 48px 48px;
-    }
+  &__info {
+    margin-left: 10px;
+  }
+  &__name {
+    font-weight: bold;
+    margin-bottom: 7px;
+  }
 
-    &__info {
-        margin-left: 10px;
-    }
-    &__name {
-        font-weight: bold;
-        margin-bottom: 7px;
-    }
+  &__feedback {
+    margin-left: 10px;
+  }
 
-    &__feedback {
-        margin-left: 10px;
-    }
-
-    &__content {
-        display: flex;
-        margin-top: 12px;
-        margin-left: 4px;
-    }
+  &__content {
+    display: flex;
+    margin-top: 12px;
+    margin-left: 4px;
+  }
 }

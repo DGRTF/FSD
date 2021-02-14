@@ -3,28 +3,28 @@ include ./../dropdown/dropdown.pug
 include ./../button-arrow/button-arrow.pug
 
 mixin calculate-price()
-    .calculate-price
-        form.calculate-price__form(action="/mock-address/change-me")
-            .calculate-price__header
-                .calculate-price__header-left
-                    input.calculate-price__number(type="text", value="№ 888", readonly)
-                    span.calculate-price__lux="Люкс"
-                .calculate-price__header-right="9 990₽ в сутки"
-            .calculate-price__calendar
-                +calendar({nameHeaderFrom: "Прибытие", nameHeaderTo: "Выезд"})
-            .calculate-price__dropdown
-                +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "Гости"})
-            .calculate-price__days
-                span.calculate-price__days-left="9 990₽ х 4 суток"
-                span.calculate-price__days-right="39 960₽"
-            .calculate-price__sale
-                span.calculate-price__sale-left="Сбор за услуги: скидка 2 179₽"
-                span.calculate-price__sale-right="0₽"
-            .calculate-price__collect
-                span.calculate-price__collect-left="Сбор за дополнительные услуги"
-                span.calculate-price__collect-right="300₽"
-            .calculate-price__result
-                span.calculate-price__result-left="Итого"
-                span.calculate-price__result-right="30 081₽"
-            .calculate-price__button
-                +button-arrow({content: "Забронировать"})
+  .calculate-price
+    form.calculate-price__form(action="/mock-address/change-me")
+      .calculate-price__header
+        .calculate-price__header-left
+          input.calculate-price__number(type="text", value="№ 888", readonly)
+          span.calculate-price__lux="Люкс"
+        .calculate-price__header-right="9 990₽ в сутки"
+      .calculate-price__calendar
+        +calendar({nameHeaderFrom: "Прибытие", nameHeaderTo: "Выезд"})
+      .calculate-price__dropdown
+        +dropdown({items:["Взрослые", "Дети", "Младенцы"], nameHeader: "Гости"})
+      .calculate-price__days
+        span.calculate-price__days-left="9 990₽ х 4 суток"
+        span.calculate-price__days-right="39 960₽"
+      .calculate-price__sale
+        span.calculate-price__sale-left="Сбор за услуги: скидка 2 179₽"
+        span.calculate-price__sale-right="0₽"
+      .calculate-price__collect
+        span.calculate-price__collect-left="Сбор за дополнительные услуги"
+        span.calculate-price__collect-right="300₽"
+      .calculate-price__result
+        span.calculate-price__result-left="Итого"
+        span.calculate-price__result-right="30 081₽"
+      .calculate-price__button
+        +button-arrow({content: "Забронировать"})

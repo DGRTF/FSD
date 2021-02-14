@@ -1,73 +1,73 @@
 .rich-checkbox {
-    position: relative;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__input {
+    display: none;
+  }
+
+  &__div-content {
     display: inline-flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 10px;
 
-    &__input {
-        display: none;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: $cobalt-blue75;
+  }
+
+  &__span-head {
+    font-weight: bold;
+  }
+
+  &__span-content {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  &__label {
+    position: relative;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: $cobalt-blue25;
+    cursor: pointer;
+
+    &::before {
+      content:'';
+      display: inline-block;
+      position: relative;
+      height: 18px;
+      width: 18px;
+      border-radius: 4px;
+      border: 1px solid $cobalt-blue25;
     }
 
-    &__div-content {
-        display: inline-flex;
-        flex-direction: column;
-        margin-left: 10px;
-
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        color: $cobalt-blue75;
+    &::after {
+      content: none;
+      display: inline-block;
+      position: absolute;
+      left: 6px;
+      top: 1px;
+      height: 4px;
+      width: 6px;
+      border-left: 2px solid $color_purple;
+      border-bottom: 2px solid $color_purple;
+      transform: rotate(-45deg);
     }
 
-    &__span-head {
-        font-weight: bold;
+    .rich-checkbox__input:checked + &::after {
+      content: '';
     }
 
-    &__span-content {
-        font-size: 12px;
-        margin-top: 8px;
+    .rich-checkbox__input:checked + &::before {
+      border-color: $color_purple;
     }
-
-    &__label {
-        position: relative;
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 18px;
-        color: $cobalt-blue25;
-        cursor: pointer;
-
-        &::before {
-            content:'';
-            display: inline-block;
-            position: relative;
-            height: 18px;
-            width: 18px;
-            border-radius: 4px;
-            border: 1px solid $cobalt-blue25;
-        }
-
-        &::after {
-            content: none;
-            display: inline-block;
-            position: absolute;
-            left: 6px;
-            top: 1px;
-            height: 4px;
-            width: 6px;
-            border-left: 2px solid $color_purple;
-            border-bottom: 2px solid $color_purple;
-            transform: rotate(-45deg);
-        }
-
-        .rich-checkbox__input:checked + &::after {
-            content: '';
-        }
-
-        .rich-checkbox__input:checked + &::before {
-            border-color: $color_purple;
-        }
-    }
+  }
 }

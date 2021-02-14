@@ -3,28 +3,28 @@
 
 .landing
 {
-    background-image: url('../../img/landing.jpg');
-    background-size: cover;
-    height: 900px;
-    padding-top: 70px;
-    padding-left: 10%;
+  background-image: url('../../img/landing.jpg');
+  background-size: cover;
+  height: 900px;
+  padding-top: 70px;
+  padding-left: 10%;
+
+  &__search-room
+  {
+    min-width: 320px;
+    max-width: 380px;
+  }
+
+  @media(max-width: 495px)
+  {
+    &
+    {
+      padding-left: 0;
+    }
 
     &__search-room
     {
-        min-width: 320px;
-        max-width: 380px;
+      margin: 0 auto;
     }
-
-    @media(max-width: 495px)
-    {
-        &
-        {
-            padding-left: 0;
-        }
-
-        &__search-room
-        {
-            margin: 0 auto;
-        }
-    }
+  }
 }

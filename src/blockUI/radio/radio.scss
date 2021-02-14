@@ -1,69 +1,69 @@
 .radio {
-    display: flex;
-    cursor: pointer;
+  display: flex;
+  cursor: pointer;
 
-    &:hover &__label {
-        border-color: $color_purple;
+  &:hover &__label {
+    border-color: $color_purple;
+  }
+
+  &:hover &__span {
+    color: $cobalt-blue75;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    position: relative;
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    min-height: 18px;
+    min-width: 18px;
+    border: 1px solid $cobalt-blue25;
+    border-radius: 50%;
+
+    &::after {
+      content: none;
+      display: inline-block;
+      position: absolute;
+      top: 9px;
+      transform: translateY(-50%);
+      left: 3px;
+      height: 12px;
+      width: 12px;
+      min-height: 12px;
+      min-width: 12px;
+      border-radius: 50%;
+      background: $gradient-color;
     }
 
-    &:hover &__span {
-        color: $cobalt-blue75;
+    .radio__input:checked + &::after {
+      content: '';
+    }
+    .radio__input:checked + & {
+      border-color: $color_purple;
     }
 
-    &__input {
-        display: none;
+    &:hover + .radio__span {
+      color: $cobalt-blue75;
     }
+  }
 
-    &__label {
-        position: relative;
-        display: inline-block;
-        height: 18px;
-        width: 18px;
-        min-height: 18px;
-        min-width: 18px;
-        border: 1px solid $cobalt-blue25;
-        border-radius: 50%;
+  .radio__input:checked ~ .radio__span {
+    color: $cobalt-blue75;
+  }
 
-        &::after {
-            content: none;
-            display: inline-block;
-            position: absolute;
-            top: 9px;
-            transform: translateY(-50%);
-            left: 3px;
-            height: 12px;
-            width: 12px;
-            min-height: 12px;
-            min-width: 12px;
-            border-radius: 50%;
-            background: $gradient-color;
-        }
+  &__span {
+    display: inline-flex;
+    align-items: center;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: $cobalt-blue50;
+    margin-left: 10px;
 
-        .radio__input:checked + &::after {
-            content: '';
-        }
-        .radio__input:checked + & {
-            border-color: $color_purple;
-        }
-
-        &:hover + .radio__span {
-            color: $cobalt-blue75;
-        }
-    }
-
-    .radio__input:checked ~ .radio__span {
-        color: $cobalt-blue75;
-    }
-
-    &__span {
-        display: inline-flex;
-        align-items: center;
-        font-family: Montserrat, OpenSans, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        color: $cobalt-blue50;
-        margin-left: 10px;
-
-    }
+  }
 }
