@@ -13,7 +13,6 @@
         &-big {
             &-img {
                 width: 100%;
-                max-width: 981px;
                 vertical-align: bottom;
             }
         }
@@ -21,7 +20,6 @@
         &-top {
             &-img {
                 width: 100%;
-                max-width: 459px;
                 vertical-align: bottom;
             }
         }
@@ -29,7 +27,6 @@
         &-bottom {
             &-img {
                 width: 100%;
-                max-width: 459px;
                 vertical-align: bottom;
             }
         }
@@ -54,6 +51,7 @@
     }
 
     &__info {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
