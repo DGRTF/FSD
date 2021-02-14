@@ -2,12 +2,12 @@ import "./registration.scss"
 
 class Account {
     constructor() {
-        this._intitialize();
+        this._initialize();
         this.registration;
         this.logIn;
     }
 
-    _intitialize() {
+    _initialize() {
         let buttonMenu = document.querySelector(".header__menu");
         buttonMenu.querySelector(".button-border").addEventListener("click", this._openLogIn.bind(this));
         buttonMenu.querySelector(".button").addEventListener("click", this._openRegistration.bind(this));

@@ -1,7 +1,9 @@
-button,input,optgroup,select,textarea
-{
-    &:focus
-    {
+button,
+input,
+optgroup,
+select,
+textarea {
+    &:focus {
         outline: none;
     }
 }
