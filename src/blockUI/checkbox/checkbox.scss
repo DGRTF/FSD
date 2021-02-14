@@ -1,32 +1,25 @@
 .checkbox {
-    & {
-        position: relative;
-        display: inline-flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        color: $cobalt-blue50;
-        cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: $cobalt-blue50;
+    cursor: pointer;
 
-        &:hover {
-            color: $cobalt-blue75;
-        }
+    &:hover {
+        color: $cobalt-blue75;
+    }
 
-        &:hover .checkbox__label_move::after {
-            left: 23px;
-            background: $gradient-color;
-        }
+    &:hover .checkbox__label_move::after {
+        background: $gradient-color;
+    }
 
-        &:hover .checkbox__label_move {
-            border-color: $color_purple;
-        }
+    &:hover .checkbox__label_move {
+        border-color: $color_purple;
+    }
 
-        &:hover .checkbox__label_ {
-            border-color: $color_purple;
-        }
-
-        &:hover .checkbox__label::after {
-            content: '';
-        }
+    &:hover .checkbox__label {
+        border-color: $color_purple;
     }
 
     &__input {

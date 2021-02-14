@@ -1,13 +1,13 @@
 .radio {
     display: flex;
     cursor: pointer;
-    
-    &:hover &__label:after {
-        content: '';
+
+    &:hover &__label {
+        border-color: $color_purple;
     }
 
-    &:hover &label {
-        border-color: $color_purple;
+    &:hover &__span {
+        color: $cobalt-blue75;
     }
 
     &__input {
@@ -42,16 +42,7 @@
         .radio__input:checked + &::after {
             content: '';
         }
-
-        &:hover::after {
-            content: '';
-        }
-
         .radio__input:checked + & {
-            border-color: $color_purple;
-        }
-
-        &:hover {
             border-color: $color_purple;
         }
 
@@ -74,8 +65,5 @@
         color: $cobalt-blue50;
         margin-left: 10px;
 
-        &:hover {
-            color: $cobalt-blue75;
-        }
     }
 }
