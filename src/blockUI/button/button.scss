@@ -17,7 +17,8 @@
         background: $gradient-color;
     }
 
-    &:disabled {
+    &:hover,
+    &:focus {
         opacity: 0.5;
         cursor: auto;
     }
