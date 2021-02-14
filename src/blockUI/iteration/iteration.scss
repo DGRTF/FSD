@@ -16,7 +16,7 @@
   background-color: transparent;
   cursor: pointer;
 
-  &[disabled] {
+  &:disabled {
     border-color: $cobalt-blue25;
     color: $cobalt-blue25;
     cursor: auto;
