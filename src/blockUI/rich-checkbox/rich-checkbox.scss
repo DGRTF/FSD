@@ -3,6 +3,7 @@
   display: inline-flex;
   justify-content: flex-start;
   align-items: flex-start;
+  cursor: pointer;
 
   &__input {
     display: none;
@@ -37,7 +38,6 @@
     font-size: 16px;
     line-height: 18px;
     color: $cobalt-blue25;
-    cursor: pointer;
 
     &::before {
       content:'';
