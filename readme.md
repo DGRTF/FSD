@@ -1,12 +1,15 @@
 Верстка шаблона ([Figma](https://www.figma.com/file/MumYcKVk9RkKZEG6dR5E3A/FSD-education-program.-The-2nd-task)) и UIKit в рамках тестового задания.
 
-Установка проекта ```npm i```
+Установка проекта:
+```npm i```
 
-Запуск сервера ```npm run dev```
+Запуск сервера:
+```npm run dev```
 
-Сборка проекта ```npm run build```
+Сборка проекта:
+```npm run build```
 
-Деплой на github pages (только после сборки на продакшн)Ж
+Деплой на github pages (только после сборки на продакшн):
 ```
 npm run build:prod
 npm run deploy
