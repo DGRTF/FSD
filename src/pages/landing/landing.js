@@ -1,3 +1,3 @@
-import "./landing.scss"
+import './landing.scss';
 
-import "./../../blockUI/search-room/search-room.js"
+import '../../blockUI/search-room/search-room';

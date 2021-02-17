@@ -1,19 +1,22 @@
-import "slick-carousel";
+import 'slick-carousel';
 
 class PresentRoom {
   constructor() {
-    this._init();
+    PresentRoom._init();
   }
 
-  _init() {
-    $(document).ready(function () {
+  static _init() {
+    // eslint-disable-next-line no-undef
+    $(document).ready(() => {
+      // eslint-disable-next-line no-undef
       $('.present-room__img').slick({
         dots: true,
         nextArrow: "<button class='present-room__slick-next'>chevron_right</button>",
-        prevArrow: '<button type = "button" class = "present-room__slick-prev">chevron_left</button>' ,
+        prevArrow: '<button type = "button" class = "present-room__slick-prev">chevron_left</button>',
       });
     });
   }
 }
 
+// eslint-disable-next-line no-new
 new PresentRoom();

@@ -13,9 +13,11 @@ class LikeButton {
   static _changeContent(event) {
     event.preventDefault();
     const number = parseInt(event.currentTarget.querySelector('.like-button__number').innerText, 10) + 1;
-    event.currentTarget.querySelector('.like-button__number').parentElement.classList.toggle('like-button__button-like');
-    event.currentTarget.querySelector('.like-button__number').innerText = String(number);
+    const numberElement = event.currentTarget.querySelector('.like-button__number');
+    numberElement.parentElement.classList.toggle('like-button__button-like');
+    numberElement.innerText = String(number);
   }
 }
 
-const likeButton = new LikeButton();
+// eslint-disable-next-line no-new
+new LikeButton();

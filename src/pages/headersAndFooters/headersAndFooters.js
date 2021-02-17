@@ -1,1 +1,1 @@
-import "./headersAndFooters.scss";
+import './headersAndFooters.scss';

@@ -1,9 +1,10 @@
-import "./current-room.scss"
-import "./../../blockUI/comment/comment.js";
-import "./../../blockUI/calculate-price/calculate-price";
-import { StatisticVotes } from "./../../blockUI/statistic-votes/statistic-votes.js";
+import './current-room.scss';
+import '../../blockUI/comment/comment';
+import '../../blockUI/calculate-price/calculate-price';
+import StatisticVotes from '../../blockUI/statistic-votes/statistic-votes';
 
-let parentVotes = document.querySelector('.js-current-room__impressions');
+const parentVotes = document.querySelector('.js-current-room__impressions');
 
-let data = [0, 15, 15, 30];
-let statisticVotes = new StatisticVotes(parentVotes, data);
+const data = [0, 15, 15, 30];
+// eslint-disable-next-line no-new
+new StatisticVotes(parentVotes, data);

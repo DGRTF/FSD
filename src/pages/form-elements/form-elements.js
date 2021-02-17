@@ -1,13 +1,14 @@
 import './form-elements.scss';
-import '../../blockUI/dropdown/dropdown.js';
-import { SliderInit } from '../../blockUI/slider/slider.js';
-import "../../blockUI/like-button/like-button.js";
-import "./../../blockUI/comfort/comfort.js";
-import './../../blockUI/calendar/calendar.js';
+import '../../blockUI/dropdown/dropdown';
+import SliderInit from '../../blockUI/slider/sliderInit';
+import '../../blockUI/like-button/like-button';
+import '../../blockUI/comfort/comfort';
+import '../../blockUI/calendar/calendar';
 
+// eslint-disable-next-line no-new
 new SliderInit({});
 
-(function buttonDisable(){
+(function buttonDisable() {
   const containerButton = document.querySelector('.form-elements__div-button-d');
   const button = containerButton.querySelector('.button');
   button.disabled = true;
@@ -15,4 +16,4 @@ new SliderInit({});
   const containerButtonBorder = document.querySelector('.form-elements__div-button-border-d');
   const buttonBorder = containerButtonBorder.querySelector('.button-border');
   buttonBorder.disabled = true;
-})();
+}());

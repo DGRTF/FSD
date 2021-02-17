@@ -1,6 +1,6 @@
 import 'chart.js';
 
-class StatisticVotes {
+export default class StatisticVotes {
   constructor(parentHTMLElement, data) {
     this.parentHTMLElement = parentHTMLElement;
     this.data = data;
@@ -9,9 +9,10 @@ class StatisticVotes {
   }
 
   _init() {
-    let ctx = this.parentHTMLElement.querySelector('.statistic-votes__canvas').getContext('2d');
+    const ctx = this.parentHTMLElement.querySelector('.statistic-votes__canvas').getContext('2d');
 
-    let myChart = new Chart(ctx, {
+    // eslint-disable-next-line no-new
+    new Chart(ctx, {
       type: 'doughnut',
       data: {
         datasets: [{
@@ -28,20 +29,18 @@ class StatisticVotes {
       },
       options: {
         cutoutPercentage: 90,
-      }
+      },
     });
   }
 
   _setNumberVotes() {
-    let numberVotes = this.parentHTMLElement.querySelector('.statistic-votes__number');
+    const numberVotes = this.parentHTMLElement.querySelector('.statistic-votes__number');
     let votes = 0;
 
-    this.data.forEach(el => {
+    this.data.forEach((el) => {
       votes += el;
     });
 
     numberVotes.innerText = votes;
   }
 }
-
-export { StatisticVotes };

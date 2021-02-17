@@ -1,2 +1,2 @@
-import "./../calendar/calendar";
-import "./../dropdown/dropdown";
+import '../calendar/calendar';
+import '../dropdown/dropdown';
