@@ -3,14 +3,14 @@
     Например для страницы page.pug будет созданна точка входа page.js.
 
     Следовательно, для каждого pug-файла должен быть одноимённый файл js в этом же каталоге, в противном случае
-    возможны ошибки сборки. 
+    возможны ошибки сборки.
 
     Во входном каталоге не должно быть файлов pug, не имеющих отношения к точкам входа.
-    
+
     Основное использование:
 
         webpack.config.js
-        
+
             const SearchEntry = require("./searchEntry.js");
             const merge = require('webpack-merge');
 
@@ -19,7 +19,7 @@
 
             module.exports ={
                 entry: merge([searchEntry.entry, { index: './src/index.js' }]),
-                
+
                 output:{...},
 
                 plugins: searchEntry.HWPluginObjectArr.concat([
@@ -38,12 +38,12 @@
 
                 module:{...},
             }
-            
-            В данном конфиге ,по пути "./src/pages" нет первой точки входа ({ index: './src/index.js' }), 
+
+            В данном конфиге ,по пути "./src/pages" нет первой точки входа ({ index: './src/index.js' }),
             поэтому она подключена отдельно.
 
             Свойство "searchEntry.entry" возвращает объект со всеми точками входа в виде свойств этого объекта,
-            "searchEntry.HWPluginObjectArr" - массив объектов HtmlWebpackPlugin, в каждом из которых свойство 
+            "searchEntry.HWPluginObjectArr" - массив объектов HtmlWebpackPlugin, в каждом из которых свойство
             "chuncks" имеет значение одноимённой точки входа, например:
 
             new HtmlWebpackPlugin({
@@ -53,86 +53,77 @@
                         template: '....../page.pug',
                     }),
 
-            Выходная директория для html по умолчанию: "pages/". Её можно переопределить ,задав второй 
+            Выходная директория для html по умолчанию: "pages/". Её можно переопределить ,задав второй
             необязательный параметр, например:
-                    
+
                     let pagesPath = path.resolve(__dirname, "./src/pages");
                     let searchEntry = new SearchEntry(pagesPath, "myPages/pages/");
                     Обязателен "/" в конце пути необязательного параметра.
 
             Что бы использовать "merge" установите плагин "webpack-merge" (npm i webpack-merge --save-dev).
             Вместо "merge" можно использовать Object.assign (читайте использование в офф документации).
-            
-    */
 
+    */
 
 const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
-
 class SearchEntry {
-    constructor(path, outPath = "./") {
-        this.path = path;
-        this.outPath = outPath;
-        this.entryArr;
-        this.HWPluginObjectArr = [];
-        this.entry = {};
-        this._search();
+  constructor(directoryPath, outPath = './') {
+    this.path = directoryPath;
+    this.outPath = outPath;
+    this.entryArr;
+    this.HWPluginObjectArr = [];
+    this.entry = {};
+    this._search();
+  }
 
-    }
+  _search() {
+    this.entryArr = this._searchPath(this.path);
+    this._HWPluginObject();
+    this._propertiesEntry();
+  }
 
-    _search() {
-        this.entryArr = this._searchPath(this.path);
-        this._HWPluginObject();
-        this._propertiesEntry();
-    }
+  _searchPath(p) {
+    let jsArr = [];
 
-    _searchPath(p) {
+    fs.readdirSync(p).forEach((el) => {
+      const file = fs.lstatSync(path.join(p, el)).isFile();
+      if (file) {
+        if (el.substr(el.length - 3) === 'pug') {
+          const pathJ = path.join(p, el);
 
-        let jsArr = [];
+          jsArr.push({
+            name: el.substr(0, el.length - 4),
+            pathJs: `${pathJ.substr(0, pathJ.length - 3)}js`,
+            pathPug: pathJ,
+          });
+        }
+      } else {
+        const i = this._searchPath(path.join(p, el));
+        jsArr = jsArr.concat(i);
+      }
+    });
+    return jsArr;
+  }
 
-        fs.readdirSync(p).map(el => {
+  _HWPluginObject() {
+    this.entryArr.forEach((el) => {
+      this.HWPluginObjectArr.push(new HtmlWebpackPlugin({
+        inject: true,
+        chunks: [el.name],
+        filename: `${this.outPath + el.name}.html`,
+        template: el.pathPug,
+      }));
+    });
+  }
 
-            let file = fs.lstatSync(path.join(p, el)).isFile();
-            if (file) {
-
-                if (el.substr(el.length - 3) === "pug") {
-                    let pathJ = path.join(p, el);
-
-                    jsArr.push({
-                        name: el.substr(0, el.length - 4),
-                        pathJs: pathJ.substr(0, pathJ.length - 3) + "js",
-                        pathPug: pathJ,
-                    })
-
-                }
-            }
-            else {
-                let i = this._searchPath(path.join(p, el));
-                jsArr = jsArr.concat(i);
-            }
-        })
-        return jsArr;
-    };
-
-    _HWPluginObject() {
-        this.entryArr.map(el => {
-            this.HWPluginObjectArr.push(new HtmlWebpackPlugin({
-                inject: true,
-                chunks: [el.name],
-                filename: this.outPath + el.name + ".html",
-                template: el.pathPug,
-            }));
-        })
-    };
-
-    _propertiesEntry() {
-        this.entryArr.map(el => {
-            Object.assign(this.entry, { [el.name]: el.pathJs });
-        })
-    };
+  _propertiesEntry() {
+    this.entryArr.forEach((el) => {
+      Object.assign(this.entry, { [el.name]: el.pathJs });
+    });
+  }
 }
 
 module.exports = SearchEntry;
