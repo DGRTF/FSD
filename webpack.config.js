@@ -1,24 +1,26 @@
-
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // installed via npm
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
-const SearchEntry = require("./searchEntry.js");
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const SearchEntry = require('./searchEntry.js');
 
-
-const pagesPath = path.resolve(__dirname, "./src/pages");
+const pagesPath = path.resolve(__dirname, './src/pages');
 const searchEntry = new SearchEntry(pagesPath);
 
 let rootDirectory = '';
+let devTool = 'source-map';
 
 module.exports = (env, options) => {
-  if (options.mode === 'production')
+  if (options.mode === 'production') {
     rootDirectory = '/FSD';
+    devTool = '';
+  }
 
   return {
-    entry: merge([searchEntry.entry, {  }]),
+    entry: merge([searchEntry.entry, { }]),
+    devtool: devTool,
     output:
     {
       path: path.resolve(__dirname, 'dist'),
@@ -28,7 +30,7 @@ module.exports = (env, options) => {
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
-        "window.jQuery": "jquery",
+        'window.jQuery': 'jquery',
       }),
 
       new HtmlWebpackPlugin({
@@ -40,12 +42,12 @@ module.exports = (env, options) => {
       }),
 
       new FaviconsWebpackPlugin({
-        publicPath: './',
+        publicPath: `${rootDirectory}/`,
         logo: './src/img/label.svg',
       }),
 
       new MiniCssExtractPlugin({
-        filename: "css/[name].css",
+        filename: 'css/[name].css',
       }),
 
     ]),
@@ -60,10 +62,10 @@ module.exports = (env, options) => {
               loader: 'babel-loader',
               options: {
                 presets: [
-                  '@babel/preset-env'
-                ]
-              }
-            }
+                  '@babel/preset-env',
+                ],
+              },
+            },
           },
 
           {
@@ -74,8 +76,8 @@ module.exports = (env, options) => {
                 loader: MiniCssExtractPlugin.loader,
               },
               'css-loader',
-              'postcss-loader'
-            ]
+              'postcss-loader',
+            ],
           },
 
           {
@@ -86,8 +88,8 @@ module.exports = (env, options) => {
                 options: {
                   name: '[name].[ext]',
                   outputPath: 'img',
-                  publicPath: rootDirectory + "/img"
-                }
+                  publicPath: `${rootDirectory}/img`,
+                },
               },
               {
                 loader: 'image-webpack-loader',
@@ -101,16 +103,16 @@ module.exports = (env, options) => {
                   },
                   pngquant: {
                     quality: [0.65, 0.90],
-                    speed: 4
+                    speed: 4,
                   },
                   gifsicle: {
                     interlaced: false,
                   },
                   // the webp option will enable WEBP
                   webp: {
-                    quality: 75
-                  }
-                }
+                    quality: 75,
+                  },
+                },
               },
             ],
           },
@@ -121,8 +123,8 @@ module.exports = (env, options) => {
             options: {
               name: '[name].[ext]',
               outputPath: 'fonts',
-              publicPath: rootDirectory + "/fonts"
-            }
+              publicPath: `${rootDirectory}/fonts`,
+            },
           },
 
           {
@@ -131,8 +133,8 @@ module.exports = (env, options) => {
             options: {
               name: '[name].[ext]',
               outputPath: 'img',
-              publicPath: rootDirectory + "/img"
-            }
+              publicPath: `${rootDirectory}/img`,
+            },
           },
 
           {
@@ -151,10 +153,10 @@ module.exports = (env, options) => {
                 // Compiles Sass to CSS
                 loader: 'sass-loader',
                 options: {
-                  sourceMap: true
-                }
-              }
-            ]
+                  sourceMap: true,
+                },
+              },
+            ],
           },
 
           {
@@ -162,11 +164,11 @@ module.exports = (env, options) => {
             loader: 'pug-loader',
             options:
             {
-              pretty: true
-            }
-          }
+              pretty: true,
+            },
+          },
 
         ],
     },
   };
-}
+};

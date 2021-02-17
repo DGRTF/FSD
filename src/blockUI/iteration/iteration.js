@@ -9,19 +9,19 @@ class EventIter {
   }
 
   _plus() {
-    let content = event.currentTarget.previousSibling.previousSibling;
+    let content = event.currentTarget.previousElementSibling;
     let text = String(parseInt(content.innerText) + 1);
     content.innerText = text;
     if (this.eventPlus !== null)
       this.eventPlus(this.parameter);
     if (text !== '0') {
-      content.previousSibling.previousSibling.disabled = false;
+      content.previousElementSibling.disabled = false;
     }
   }
 
 
   _min() {
-    let content = event.currentTarget.nextSibling.nextSibling;
+    let content = event.currentTarget.nextElementSibling;
     let text = String(parseInt(content.innerText) - 1);
     content.innerText = text;
     if (this.eventMin !== null)

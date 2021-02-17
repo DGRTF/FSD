@@ -26,7 +26,7 @@ class Counter {
   resetValues() {
     this.numberDivArr.forEach(element => {
       element.innerText = '0';
-      element.previousSibling.previousSibling.disabled = true;
+      element.previousElementSibling.disabled = true;
       this.dropdown__divText.value = 'Сколько гостей';
       this.count = 0;
       this.buttonCancel.innerText = '';
@@ -130,7 +130,7 @@ class Dropdown {
 
   show() {
     event.currentTarget.classList.toggle("dropdown__content-border");
-    event.currentTarget.nextSibling.nextSibling.classList.toggle("dropdown__items-display");
+    event.currentTarget.nextElementSibling.classList.toggle("dropdown__items-display");
   }
 }
 

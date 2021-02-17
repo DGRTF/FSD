@@ -149,7 +149,7 @@ class ComfortInit {
 
   show() {
     event.currentTarget.classList.toggle("comfort__content-border");
-    event.currentTarget.nextSibling.nextSibling.classList.toggle("comfort__items-display");
+    event.currentTarget.nextElementSibling.classList.toggle("comfort__items-display");
   }
 }
 
