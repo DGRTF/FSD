@@ -5,6 +5,10 @@
   align-items: flex-start;
   cursor: pointer;
 
+  &:hover &__label::before {
+    border-color: $color_purple;
+  }
+
   &__input {
     display: none;
   }
@@ -40,7 +44,7 @@
     color: $cobalt-blue25;
 
     &::before {
-      content:'';
+      content: '';
       display: inline-block;
       position: relative;
       height: 18px;
