@@ -9,16 +9,16 @@
 @mixin iteration-button {
   width: 30px;
   height: 30px;
-  border: 1px solid $cobalt-blue50;
+  border: 1px solid $quaternary;
   border-radius: 15px;
   @include iteration-font;
-  color: $cobalt-blue50;
+  color: $quaternary;
   background-color: transparent;
   cursor: pointer;
 
   &:disabled {
-    border-color: $cobalt-blue25;
-    color: $cobalt-blue25;
+    border-color: $tertiary;
+    color: $tertiary;
     cursor: auto;
   }
 }
@@ -41,7 +41,7 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
-    color: $color_dark-shade;
+    color: $primary-text;
   }
 
   &__div-name {
@@ -56,7 +56,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: $color_dark-shade;
+    color: $primary-text;
   }
 
   &__div-content {

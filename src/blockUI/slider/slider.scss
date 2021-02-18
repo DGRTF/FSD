@@ -13,7 +13,7 @@
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
-    color: $color_dark-shade;
+    color: $primary-text;
   }
 
   &__range-number {
@@ -30,7 +30,7 @@
 .irs--flat .irs-line {
   height: 4px;
   width: 100%;
-  border: 1px solid $cobalt-blue25;
+  border: 1px solid $tertiary;
   top: 25px;
   background-color: transparent;
   box-sizing: border-box;

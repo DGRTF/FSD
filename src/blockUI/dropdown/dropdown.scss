@@ -12,7 +12,7 @@
     font-size: 12px;
     text-transform: uppercase;
     margin-bottom: 5px;
-    color: $color_dark-shade;
+    color: $primary-text;
   }
 
   &__buttons {
@@ -29,28 +29,28 @@
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
-    color: $color_purple;
+    color: $primary;
     margin-left: 14px;
     cursor: pointer;
   }
 
   &__content {
     height: 42px;
-    border: 1px solid $cobalt-blue25;
+    border: 1px solid $tertiary;
     border-radius: 4px 4px 4px 4px;
     display: flex;
     justify-content: space-between;
-    background-color: $color_white;
+    background-color: $secondary;
     cursor: pointer;
   }
 
   &__content-border {
     border-radius: 4px 4px 0px 0px;
-    border-color: $cobalt-blue50;
+    border-color: $quaternary;
   }
 
   &__content:hover {
-    border-color: $cobalt-blue50;
+    border-color: $quaternary;
   }
 
   &__icon {
@@ -64,7 +64,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    color: $cobalt-blue75;
+    color: $secondary-text;
     cursor: pointer;
 
     -moz-osx-font-smoothing: grayscale;
@@ -75,11 +75,11 @@
 
   &__items {
     display: none;
-    border-left: 1px solid $cobalt-blue50;
-    border-right: 1px solid $cobalt-blue50;
-    border-bottom: 1px solid $cobalt-blue50;
+    border-left: 1px solid $quaternary;
+    border-right: 1px solid $quaternary;
+    border-bottom: 1px solid $quaternary;
     border-radius: 0px 0px 4px 4px;
-    background-color: $color-white;
+    background-color: $secondary;
     box-sizing: border-box;
     width: 100%;
   }
@@ -96,7 +96,7 @@
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
-    color: $cobalt-blue50;
+    color: $quaternary;
     margin-right: 6px;
     cursor: pointer;
   }
@@ -112,7 +112,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    color: $cobalt-blue75;
+    color: $secondary-text;
     margin-left: 14px;
   }
 }

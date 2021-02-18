@@ -11,7 +11,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  color: $cobalt-blue75;
+  color: $secondary-text;
 }
 
 .calculate-price {
@@ -23,7 +23,7 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: $color_white;
+  background-color: $secondary;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 
   &__form {
@@ -33,7 +33,7 @@
   &__header {
     display: flex;
     justify-content: space-between;
-    color: $color_dark-shade;
+    color: $primary-text;
     margin-bottom: 28px;
   }
 
@@ -52,7 +52,7 @@
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
-    color: $color_purple;
+    color: $primary;
   }
 
   &__header-right {
@@ -60,7 +60,7 @@
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    color: $cobalt-blue50;
+    color: $quaternary;
   }
 
   &__calendar {
@@ -91,7 +91,7 @@
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
-    color: $color_dark-shade;
+    color: $primary-text;
     margin-top: 44px;
     margin-bottom: 20px;
   }

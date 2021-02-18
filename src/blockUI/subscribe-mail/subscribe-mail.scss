@@ -1,12 +1,12 @@
 .subscribe-mail {
-  border: 1px solid $cobalt-blue50;
+  border: 1px solid $quaternary;
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 44px;
   box-sizing: border-box;
-  color: $cobalt-blue50;
+  color: $quaternary;
 
   &__text {
     font-family: Montserrat, OpenSans, sans-serif;
@@ -18,7 +18,7 @@
     border: 0;
     border-radius: 4px;
     margin-left: 0px;
-    color: $cobalt-blue75;
+    color: $secondary-text;
     padding-left: 14px;
     background-color: transparent;
     cursor: pointer;
@@ -33,7 +33,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    color: $color_purple;
+    color: $primary;
     width: 44px;
     height: 40px;
     border: 0;

@@ -3,23 +3,23 @@
   display: inline-flex;
   justify-content: flex-start;
   align-items: flex-start;
-  color: $cobalt-blue50;
+  color: $quaternary;
   cursor: pointer;
 
   &:hover {
-    color: $cobalt-blue75;
+    color: $secondary-text;
   }
 
   &:hover .checkbox__label_move::after {
-    background: $gradient-color;
+    background: $primary-gradient-color;
   }
 
   &:hover .checkbox__label_move {
-    border-color: $color_purple;
+    border-color: $primary;
   }
 
   &:hover .checkbox__label {
-    border-color: $color_purple;
+    border-color: $primary;
   }
 
   &__input {
@@ -36,7 +36,7 @@
     font-size: 14px;
 
     .checkbox__input:checked ~ & {
-      color: $cobalt-blue75;
+      color: $secondary-text;
     }
   }
 
@@ -48,7 +48,7 @@
     min-height: 18px;
     min-width: 38px;
     border-radius: 10px;
-    border: 1px solid $cobalt-blue25;
+    border: 1px solid $tertiary;
 
     &::after {
       content: '';
@@ -59,16 +59,16 @@
       height: 12px;
       width: 12px;
       border-radius: 50%;
-      background: $cobalt-blue25;
+      background: $tertiary;
       transition: 0.2s;
     }
 
     .checkbox__input:checked + &::after {
       left: 23px;
-      background: $gradient-color;
+      background: $primary-gradient-color;
     }
     .checkbox__input:checked + & {
-      border-color: $color_purple;
+      border-color: $primary;
     }
   }
 
@@ -80,7 +80,7 @@
     min-height: 18px;
     min-width: 18px;
     border-radius: 4px;
-    border: 1px solid $cobalt-blue25;
+    border: 1px solid $tertiary;
     cursor: pointer;
 
     &::after {
@@ -91,8 +91,8 @@
       top: 5px;
       height: 4px;
       width: 6px;
-      border-left: 2px solid $color_purple;
-      border-bottom: 2px solid $color_purple;
+      border-left: 2px solid $primary;
+      border-bottom: 2px solid $primary;
       transform: rotate(-45deg);
     }
 
@@ -101,7 +101,7 @@
     }
 
     .checkbox__input:checked + & {
-      border-color: $color_purple;
+      border-color: $primary;
     }
   }
 }

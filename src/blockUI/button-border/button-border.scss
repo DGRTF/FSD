@@ -5,7 +5,7 @@
   width: 100%;
   border-radius: 22px;
   border: 0;
-  background: $gradient-color;
+  background: $primary-gradient-color;
   cursor: pointer;
 
   &__span {
@@ -17,14 +17,14 @@
     border-radius: 22px;
     padding-left: 4px;
     padding-right: 4px;
-    background: $color_white;
+    background: $secondary;
 
     font-family: Montserrat, OpenSans, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
-    color: $color_purple;
+    color: $primary;
   }
 
   &:hover,

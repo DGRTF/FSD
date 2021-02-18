@@ -2,7 +2,7 @@
   &__text {
     width: 100%;
     height: 44px;
-    border: 1px solid $cobalt-blue25;
+    border: 1px solid $tertiary;
     border-radius: 4px;
     background: transparent;
     padding-left: 14px;
@@ -15,46 +15,46 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
-    color: $cobalt-blue75;
+    color: $secondary-text;
 
     &:focus {
-      border-color: $cobalt-blue50;
+      border-color: $quaternary;
     }
 
     &:hover {
-      border-color: $cobalt-blue50;
+      border-color: $quaternary;
     }
 
     &::-webkit-input-placeholder {
-      color: $cobalt-blue25;
+      color: $tertiary;
     }
 
     &::-moz-placeholder {
-      color: $cobalt-blue25;
+      color: $tertiary;
     }
 
     &:-moz-placeholder {
-      color: $cobalt-blue25;
+      color: $tertiary;
     }
 
     &:-ms-input-placeholder {
-      color: $cobalt-blue25;
+      color: $tertiary;
     }
 
     &:hover::-webkit-input-placeholder {
-      color: $cobalt-blue75;
+      color: $secondary-text;
     }
 
     &:hover::-moz-placeholder {
-      color: $cobalt-blue75;
+      color: $secondary-text;
     }
 
     &:hover:-moz-placeholder {
-      color: $cobalt-blue75;
+      color: $secondary-text;
     }
 
     &:hover:-ms-input-placeholder {
-      color: $cobalt-blue75;
+      color: $secondary-text;
     }
   }
 }

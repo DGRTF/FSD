@@ -3,11 +3,11 @@
   cursor: pointer;
 
   &:hover &__label {
-    border-color: $color_purple;
+    border-color: $primary;
   }
 
   &:hover &__span {
-    color: $cobalt-blue75;
+    color: $secondary-text;
   }
 
   &__input {
@@ -21,7 +21,7 @@
     width: 18px;
     min-height: 18px;
     min-width: 18px;
-    border: 1px solid $cobalt-blue25;
+    border: 1px solid $tertiary;
     border-radius: 50%;
 
     &::after {
@@ -36,23 +36,23 @@
       min-height: 12px;
       min-width: 12px;
       border-radius: 50%;
-      background: $gradient-color;
+      background: $primary-gradient-color;
     }
 
     .radio__input:checked + &::after {
       content: '';
     }
     .radio__input:checked + & {
-      border-color: $color_purple;
+      border-color: $primary;
     }
 
     &:hover + .radio__span {
-      color: $cobalt-blue75;
+      color: $secondary-text;
     }
   }
 
   .radio__input:checked ~ .radio__span {
-    color: $cobalt-blue75;
+    color: $secondary-text;
   }
 
   &__span {
@@ -62,7 +62,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    color: $cobalt-blue50;
+    color: $quaternary;
     margin-left: 10px;
 
   }

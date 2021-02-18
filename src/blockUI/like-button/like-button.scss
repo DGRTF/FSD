@@ -18,7 +18,7 @@
     min-height: 20px;
     width: 40px;
     min-width: 40px;
-    border: 1px solid $cobalt-blue25;
+    border: 1px solid $tertiary;
     border-radius: 10px;
     position: relative;
     margin-right: 3px;
@@ -26,7 +26,7 @@
     cursor: pointer;
 
     &::before {
-      color: $cobalt-blue25;
+      color: $tertiary;
       content: 'favorite_border';
       display: inline-block;
       position: absolute;
@@ -35,7 +35,7 @@
     }
 
     &-like::before {
-      color: $color_purple;
+      color: $primary;
       content: 'favorite';
       display: inline-block;
       position: absolute;
@@ -50,7 +50,7 @@
     font-weight: normal;
     font-size: 10px;
     line-height: 12px;
-    color: $cobalt-blue75;
+    color: $secondary-text;
     position: absolute;
     top: 4px;
     left: 22px;
