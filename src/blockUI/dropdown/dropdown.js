@@ -18,7 +18,7 @@ class Dropdown {
     this.iteration = new Iteration(element);
     const search = Dropdown._searchElement(element);
     this._addHandlers(search);
-    search.contentHeader.addEventListener('click', this.show);
+    search.contentHeader.addEventListener('click', Dropdown.show);
   }
 
   static _searchElement(element) {
