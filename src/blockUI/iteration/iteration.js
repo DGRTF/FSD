@@ -19,7 +19,7 @@ export default class Iteration {
     });
 
     buttonsMin.forEach((element, index) => {
-      element.addEventListener('click', this.eventIter[index].ninIteration.bind(this.eventIter[index]));
+      element.addEventListener('click', this.eventIter[index].minIteration.bind(this.eventIter[index]));
     });
   }
 }

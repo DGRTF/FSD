@@ -22,8 +22,8 @@ export default class Slider {
       to: this.to,
       hide_min_max: true,
       hide_from_to: true,
-      onChange: this._price.bind(this),
-      onStart: this._price.bind(this),
+      onChange: this._changeRange.bind(this),
+      onStart: this._changeRange.bind(this),
     });
   }
 
