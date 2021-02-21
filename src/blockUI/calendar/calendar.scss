@@ -1,5 +1,6 @@
-@import './datepicker.scss';
+@import '../../scss/plugins-styles/datepicker';
 
+//override
 .datepicker--cell.-selected-.-focus- {
   background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
 }
