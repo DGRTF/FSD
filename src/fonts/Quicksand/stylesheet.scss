@@ -2,10 +2,10 @@
   font-family: 'quicksand';
   src: url('quicksand-medium.eot');
   src: local('quicksand medium'), local('quicksand-medium'),
-    url('quicksand-medium.eot?#iefix') format('embedded-opentype'),
     url('quicksand-medium.woff2') format('woff2'),
     url('quicksand-medium.woff') format('woff'),
-    url('quicksand-medium.ttf') format('truetype');
+    url('quicksand-medium.ttf') format('truetype'),
+    url('quicksand-medium.eot?#iefix') format('embedded-opentype');
   font-weight: 500;
   font-style: normal;
 }
@@ -14,10 +14,10 @@
   font-family: 'quicksand';
   src: url('quicksand-light.eot');
   src: local('quicksand light'), local('quicksand-light'),
-    url('quicksand-light.eot?#iefix') format('embedded-opentype'),
     url('quicksand-light.woff2') format('woff2'),
     url('quicksand-light.woff') format('woff'),
-    url('quicksand-light.ttf') format('truetype');
+    url('quicksand-light.ttf') format('truetype'),
+    url('quicksand-light.eot?#iefix') format('embedded-opentype');
   font-weight: 300;
   font-style: normal;
 }
@@ -26,10 +26,10 @@
   font-family: 'quicksand';
   src: url('quicksand-regular.eot');
   src: local('quicksand regular'), local('quicksand-regular'),
-    url('quicksand-regular.eot?#iefix') format('embedded-opentype'),
     url('quicksand-regular.woff2') format('woff2'),
     url('quicksand-regular.woff') format('woff'),
-    url('quicksand-regular.ttf') format('truetype');
+    url('quicksand-regular.ttf') format('truetype'),
+    url('quicksand-regular.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -38,10 +38,10 @@
   font-family: 'quicksand';
   src: url('quicksand-bold.eot');
   src: local('quicksand bold'), local('quicksand-bold'),
-    url('quicksand-bold.eot?#iefix') format('embedded-opentype'),
     url('quicksand-bold.woff2') format('woff2'),
     url('quicksand-bold.woff') format('woff'),
-    url('quicksand-bold.ttf') format('truetype');
+    url('quicksand-bold.ttf') format('truetype'),
+    url('quicksand-bold.eot?#iefix') format('embedded-opentype');
   font-weight: bold;
   font-style: normal;
 }
