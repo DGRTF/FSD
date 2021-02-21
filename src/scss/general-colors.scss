@@ -1,8 +1,18 @@
-$color-dark-shade: #1f2041; $primary-text: $color-dark-shade;
-$color-purple: #bc9cff; $primary: $color-purple;
-$color-white: #ffffff; $secondary: $color-white;
-$cobalt-blue25: rgba(31, 32, 65, 0.25); $tertiary: $cobalt-blue25;
-$cobalt-blue50: rgba(31, 32, 65, 0.5); $quaternary: $cobalt-blue50;
-$cobalt-blue75: rgba(31, 32, 65, 0.75); $secondary-text: $cobalt-blue75;
-$cobalt-blue10: rgba(31, 32, 65, 0.1); $fivefold: $cobalt-blue10;
+$color-dark-shade: #1f2041;
+$color-white: #ffffff;
+$color-purple: rgb(188, 156, 255);
+$cobalt-blue10: rgba(31, 32, 65, 0.1);
+$cobalt-blue25: rgba(31, 32, 65, 0.25);
+$cobalt-blue50: rgba(31, 32, 65, 0.5);
+$cobalt-blue75: rgba(31, 32, 65, 0.75);
+
+$primary-text: $color-dark-shade;
+$primary: $color-purple;
+$secondary: $color-white;
+$tertiary: $cobalt-blue25;
+$quaternary: $cobalt-blue50;
+$secondary-text: $cobalt-blue75;
+$fivefold: $cobalt-blue10;
+
 $primary-gradient-color: linear-gradient(180deg, $color-purple 0%, #8ba4f9 100%);
+$secondary-gradient-color: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, #8ba4f9 100%);

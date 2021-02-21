@@ -29,7 +29,7 @@
 
   &:hover,
   &:focus {
-    opacity: 0.5;
-    cursor: auto;
+    background: $secondary-gradient-color;
+    cursor: pointer;
   }
 }
