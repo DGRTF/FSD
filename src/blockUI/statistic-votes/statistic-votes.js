@@ -9,12 +9,13 @@ export default class StatisticVotes {
   }
 
   _init() {
-    const ctx = this.statisticVotesElement.querySelector('.statistic-votes__canvas').getContext('2d');
+    const context = this.statisticVotesElement.querySelector('.statistic-votes__canvas').getContext('2d');
 
     // eslint-disable-next-line no-new
-    new Chart(ctx, {
+    new Chart(context, {
       type: 'doughnut',
       data: {
+        // labels: ['Red', 'Blue', 'Yellow', 'Green'],
         datasets: [{
           data:
             this.data,
@@ -29,6 +30,9 @@ export default class StatisticVotes {
       },
       options: {
         cutoutPercentage: 90,
+        tooltips: {
+          enabled: false,
+        },
       },
     });
   }
