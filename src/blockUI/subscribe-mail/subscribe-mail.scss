@@ -1,53 +1,53 @@
 .subscribe-mail {
-  border: 1px solid $quaternary;
-  border-radius: 4px;
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 44px;
-  box-sizing: border-box;
-  color: $quaternary;
-
-  &__text {
-    font-family: Montserrat, OpenSans, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    height: 40px;
-    width: 100%;
-    border: 0;
-    border-radius: 4px;
-    margin-left: 0px;
-    color: $secondary-text;
-    padding-left: 14px;
-    background-color: transparent;
-    cursor: pointer;
-
-    &:focus {
-      outline: none;
-    }
-  }
 
   &__button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
     font-family: 'Material Icons', OpenSans, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    color: $primary;
-    width: 44px;
-    height: 40px;
+    color: $tertiary;
+    width: 42px;
+    height: 42px;
     border: 0;
     border-radius: 4px;
     background: transparent;
     cursor: pointer;
 
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-
+    &:hover,
     &:focus {
-      outline: none;
+      color: #000;
+      color: $primary;
+      background: $fivefold;
+
+      & ~ .subscribe-mail__text {
+        border-color: $quaternary;
+      }
+    }
+  }
+
+  &__text {
+    border: 1px solid $tertiary;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+    color: $secondary-text;
+    padding-left: 14px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: $quaternary;
     }
   }
 }

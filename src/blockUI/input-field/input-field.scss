@@ -24,37 +24,5 @@
     &:hover {
       border-color: $quaternary;
     }
-
-    &::-webkit-input-placeholder {
-      color: $tertiary;
-    }
-
-    &::-moz-placeholder {
-      color: $tertiary;
-    }
-
-    &:-moz-placeholder {
-      color: $tertiary;
-    }
-
-    &:-ms-input-placeholder {
-      color: $tertiary;
-    }
-
-    &:hover::-webkit-input-placeholder {
-      color: $secondary-text;
-    }
-
-    &:hover::-moz-placeholder {
-      color: $secondary-text;
-    }
-
-    &:hover:-moz-placeholder {
-      color: $secondary-text;
-    }
-
-    &:hover:-ms-input-placeholder {
-      color: $secondary-text;
-    }
   }
 }

@@ -27,7 +27,7 @@ class Comfort {
   }
 
   static show(event) {
-    event.currentTarget.classList.toggle('comfort__content-border');
+    event.currentTarget.firstElementChild.classList.toggle('comfort__text_border');
     event.currentTarget.nextElementSibling.classList.toggle('comfort__items-display');
   }
 }

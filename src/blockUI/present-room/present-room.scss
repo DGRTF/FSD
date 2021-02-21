@@ -1,6 +1,6 @@
 @import './../rate-stars/rate-stars';
-@import './../../../node_modules/slick-carousel/slick/slick-theme.scss';
-@import './../../../node_modules/slick-carousel/slick/slick.scss';
+@import './../../../node_modules/slick-carousel/slick/slick-theme';
+@import './../../../node_modules/slick-carousel/slick/slick';
 
 .present-room {
   width: 270px;
@@ -53,16 +53,19 @@
     font-size: 24px;
     color: $secondary;
     border: none;
+    border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
 
     position: absolute;
-    top: 0px;
+    top: 57px;
     left: 235px;
-    height: 100%;
+    height: 35px;
+    width: 35px;
 
+    &:hover,
     &:focus {
-      outline: none;
+      background-color: $primary;
     }
   }
 
@@ -74,15 +77,18 @@
     color: $secondary;
     border: none;
     background-color: transparent;
+    border-radius: 50%;
     z-index: 1;
     cursor: pointer;
 
     position: absolute;
-    top: 0px;
-    height: 100%;
+    top: 57px;
+    height: 35px;
+    width: 35px;
 
+    &:hover,
     &:focus {
-      outline: none;
+      background-color: $primary;
     }
   }
 }

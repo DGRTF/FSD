@@ -35,30 +35,18 @@
   }
 
   &__content {
+    position: relative;
     height: 42px;
-    border: 1px solid $tertiary;
-    border-radius: 4px 4px 4px 4px;
     display: flex;
     justify-content: space-between;
     background-color: $secondary;
     cursor: pointer;
   }
 
-  &__content-border {
-    border-radius: 4px 4px 0px 0px;
-    border-color: $quaternary;
-  }
-
-  &__content:hover {
-    border-color: $quaternary;
-  }
-
   &__icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 44px;
+    position: absolute;
+    right: 10px;
+    top: 7px;
 
     font-family: 'Material Icons', OpenSans, sans-serif;
     font-style: normal;
@@ -66,11 +54,6 @@
     font-size: 24px;
     color: $secondary-text;
     cursor: pointer;
-
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
   }
 
   &__items {
@@ -102,10 +85,12 @@
   }
 
   &__text {
+    width: 100%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border: 0;
+    border: 1px solid $tertiary;
+    border-radius: 4px 4px 4px 4px;
     cursor: pointer;
 
     font-family: Montserrat, OpenSans, sans-serif;
@@ -113,6 +98,16 @@
     font-weight: normal;
     font-size: 14px;
     color: $secondary-text;
-    margin-left: 14px;
+    padding-left: 14px;
+
+    &:hover,
+    &:focus {
+      border-color: $quaternary;
+    }
+
+    &_border {
+      border-radius: 4px 4px 0px 0px;
+      border-color: $quaternary;
+    }
   }
 }

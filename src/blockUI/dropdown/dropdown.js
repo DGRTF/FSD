@@ -38,7 +38,7 @@ class Dropdown {
   }
 
   static show(event) {
-    event.currentTarget.classList.toggle('dropdown__content-border');
+    event.currentTarget.firstElementChild.classList.toggle('dropdown__text_border');
     event.currentTarget.nextElementSibling.classList.toggle('dropdown__items-display');
   }
 }

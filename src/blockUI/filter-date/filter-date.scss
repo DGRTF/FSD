@@ -1,6 +1,5 @@
 .filter-date {
-  border: 1px solid $quaternary;
-  border-radius: 4px;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,44 +7,45 @@
   box-sizing: border-box;
 
   &__text {
+    width: 100%;
+    border: 1px solid $tertiary;
+    border-radius: 4px;
     font-family: Montserrat, OpenSans, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     height: 40px;
     width: 100%;
-    border: 0;
     border-radius: 4px;
     color: $secondary-text;
     padding-left: 14px;
+    z-index: 1;
     background-color: transparent;
     cursor: pointer;
 
     &:focus {
-      outline: none;
+      border-color: $quaternary;
+    }
+
+    &:hover {
+      border-color: $quaternary;
     }
   }
 
   &__arrow {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    right: 10px;
+    background: transparent;
+    cursor: pointer;
+
     font-family: 'Material Icons', OpenSans, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    color: $quaternary;;
-    width: 44px;
-    height: 40px;
-    border: 0;
-    border-radius: 4px;
-    background: transparent;
-    cursor: pointer;
-
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-
-    &:focus {
-      outline: none;
-    }
+    color: $quaternary;
   }
 }
