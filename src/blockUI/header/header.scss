@@ -31,9 +31,7 @@
     text-transform: capitalize;
 
     @media (max-width: 500px) {
-      & {
-        display: none;
-      }
+      display: none;
     }
 
     @media (max-width: 940px) {
@@ -48,30 +46,28 @@
       text-align: center;
 
       @media (max-width: 940px) {
-        & {
-          display: block;
-          font-family: Montserrat, OpenSans, sans-serif;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 14px;
-          color: $quaternary;
-          text-transform: capitalize;
+        display: block;
+        font-family: Montserrat, OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: $quaternary;
+        text-transform: capitalize;
 
-          &-label {
-            cursor: pointer;
-          }
+        &-label {
+          cursor: pointer;
+        }
 
-          &-check {
-            display: none;
+        &-check {
+          display: none;
 
-            &:checked ~ .header__menu-dropdown {
-              position: absolute;
-              display: flex;
-              flex-direction: column;
-              background-color: $secondary;
-              left: 0;
-              top: 70px;
-            }
+          &:checked ~ .header__menu-dropdown {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color: $secondary;
+            left: 0;
+            top: 70px;
           }
         }
       }
@@ -82,12 +78,10 @@
     width: 79px;
 
     @media (max-width: 940px) {
-      & {
-        margin-right: 30px;
-      }
+      margin-right: 30px;
     }
   }
-  
+
   &__button-login > button {
     height: 34px;
     width: 79px;
@@ -105,9 +99,7 @@
     margin: 0;
 
     @media (max-width: 940px) {
-      & {
-        display: none;
-      }
+      display: none;
     }
   }
 
@@ -134,10 +126,8 @@
       }
 
       @media (max-width: 500px) {
-        & {
-          display: block;
-          width: 99px;
-        }
+        display: block;
+        width: 99px;
       }
     }
   }
@@ -152,9 +142,7 @@
     text-transform: capitalize;
 
     @media (max-width: 940px) {
-      & {
-        display: none;
-      }
+      display: none;
     }
   }
 
@@ -162,9 +150,7 @@
     display: none;
 
     @media (max-width: 500px) {
-      & {
-        display: block;
-      }
+      display: block;
     }
   }
 }

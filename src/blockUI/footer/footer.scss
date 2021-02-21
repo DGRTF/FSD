@@ -42,9 +42,7 @@
     line-height: 30px;
 
     @media (max-width: 950px) {
-      & {
-        display: none;
-      }
+      display: none;
     }
 
     &-label {
@@ -52,11 +50,9 @@
     }
   }
 
-  &__navigation{
+  &__navigation {
     @media (max-width: 1050px) {
-      & {
-        display: none;
-      }
+      display: none;
     }
   }
 
