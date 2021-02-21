@@ -22,22 +22,22 @@ export default class Calendar {
 
     this.calendarActionDate = this.calendar.data('datepicker');
     this.calendarElement.querySelector('.datepicker--buttons').innerHTML = "<div class='calendar__button calendar__button-clear js-calendar__button-clear'>Очистить</div><div class='calendar__button calendar__button-select js-calendar__button-select'>Применить</div>";
-    this.calendarElement.querySelector('.js-calendar__button-select').addEventListener('click', this.setValue.bind(this));
-    this.calendarElement.querySelector('.js-calendar__button-clear').addEventListener('click', this._clearDate.bind(this));
+    this.calendarElement.querySelector('.js-calendar__button-select').addEventListener('click', this._handleButtonSelectClick.bind(this));
+    this.calendarElement.querySelector('.js-calendar__button-clear').addEventListener('click', this._handleButtonClearClick.bind(this));
     this.jsCalendarFrom = this.calendarElement.querySelector('.js-calendar__from');
-    this.jsCalendarFrom.addEventListener('click', this._showCalendar.bind(this));
+    this.jsCalendarFrom.addEventListener('click', this._handleFomToClick.bind(this));
     this.jsCalendarTo = this.calendarElement.querySelector('.js-calendar__to');
-    this.jsCalendarTo.addEventListener('click', this._showCalendar.bind(this));
+    this.jsCalendarTo.addEventListener('click', this._handleFomToClick.bind(this));
 
     this.jsCalendarLabelFrom = this.calendarElement.querySelector('.js-calendar__label-from');
-    this.jsCalendarLabelFrom.addEventListener('click', this._showCalendar.bind(this));
+    this.jsCalendarLabelFrom.addEventListener('click', this._handleFomToClick.bind(this));
     this.jsCalendarLabelTo = this.calendarElement.querySelector('.js-calendar__label-to');
-    this.jsCalendarLabelTo.addEventListener('click', this._showCalendar.bind(this));
+    this.jsCalendarLabelTo.addEventListener('click', this._handleFomToClick.bind(this));
 
     this.calendar.hide();
   }
 
-  setValue() {
+  _handleButtonSelectClick() {
     if (!this.calendarActionDate.selectedDates[0]) {
       const todayDate = new Date();
       const currentDate = `${todayDate.getDate()}.${todayDate.getMonth() + 1}.${todayDate.getFullYear()}`;
@@ -57,14 +57,14 @@ export default class Calendar {
     this.calendar.hide();
   }
 
-  _clearDate() {
+  _handleButtonClearClick() {
     this.calendarActionDate.clear();
     this.jsCalendarFrom.value = 'ДД.ММ.ГГГГ';
     this.jsCalendarTo.value = 'ДД.ММ.ГГГГ';
     this.calendar.hide();
   }
 
-  _showCalendar() {
+  _handleFomToClick() {
     this.calendar.show();
   }
 }

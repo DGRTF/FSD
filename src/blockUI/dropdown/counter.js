@@ -25,7 +25,7 @@ export default class Counter {
     this._equal();
   }
 
-  resetValues() {
+  _handleCancelClick() {
     this.numberNodes.forEach((element) => {
       // eslint-disable-next-line no-param-reassign
       element.innerText = '0';
@@ -39,11 +39,11 @@ export default class Counter {
 
   _addHandler() {
     this.numberNodes = [].slice.call(this.numberNodes);
-    this.buttonCancel.addEventListener('click', this.resetValues.bind(this));
-    this.buttonEnter.addEventListener('click', this._hideBlock.bind(this));
+    this.buttonCancel.addEventListener('click', this._handleCancelClick.bind(this));
+    this.buttonEnter.addEventListener('click', this._handleReadyClick.bind(this));
   }
 
-  _hideBlock() {
+  _handleReadyClick() {
     this.dropdownItems.classList.toggle('dropdown__items-display');
   }
 

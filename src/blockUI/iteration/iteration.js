@@ -13,13 +13,13 @@ export default class Iteration {
 
     const parent = buttonsMin[0].parentNode.parentNode;
 
-    buttonsPlus.forEach((element, index) => {
+    buttonsPlus.forEach((button, index) => {
       this.eventIter[index] = new EventIter(parent);
-      element.addEventListener('click', this.eventIter[index].plusIteration.bind(this.eventIter[index]));
+      button.addEventListener('click', this.eventIter[index].iterationPlus.bind(this.eventIter[index]));
     });
 
-    buttonsMin.forEach((element, index) => {
-      element.addEventListener('click', this.eventIter[index].minIteration.bind(this.eventIter[index]));
+    buttonsMin.forEach((button, index) => {
+      button.addEventListener('click', this.eventIter[index].iterationMin.bind(this.eventIter[index]));
     });
   }
 }

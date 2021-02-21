@@ -12,7 +12,7 @@ export default class Comfort {
 
     // eslint-disable-next-line no-new
     new ComfortInit(search, this.iteration);
-    search.contentHeader.addEventListener('click', Comfort.show);
+    search.contentHeader.addEventListener('click', Comfort._handleContentClick);
   }
 
   static _searchElement(element) {
@@ -22,7 +22,7 @@ export default class Comfort {
     };
   }
 
-  static show(event) {
+  static _handleContentClick(event) {
     event.currentTarget.firstElementChild.classList.toggle('comfort__text_border');
     event.currentTarget.nextElementSibling.classList.toggle('comfort__items-display');
   }

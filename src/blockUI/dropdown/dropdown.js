@@ -10,7 +10,7 @@ export default class Dropdown {
     this.iteration = new Iteration(dropdownElement);
     const search = Dropdown._searchElement(dropdownElement);
     this._addHandlers(search);
-    search.contentHeader.addEventListener('click', Dropdown.show);
+    search.contentHeader.addEventListener('click', Dropdown._handleContentClick);
   }
 
   static _searchElement(element) {
@@ -32,7 +32,7 @@ export default class Dropdown {
     });
   }
 
-  static show(event) {
+  static _handleContentClick(event) {
     event.currentTarget.firstElementChild.classList.toggle('dropdown__text_border');
     event.currentTarget.nextElementSibling.classList.toggle('dropdown__items-display');
   }

@@ -5,7 +5,7 @@ export default class EventIter {
     this.eventMin = null;
   }
 
-  plusIteration(event) {
+  iterationPlus(event) {
     const content = event.currentTarget.previousElementSibling;
     const text = String(parseInt(content.innerText, 10) + 1);
     content.innerText = text;
@@ -15,7 +15,7 @@ export default class EventIter {
     }
   }
 
-  minIteration(event) {
+  iterationMin(event) {
     const content = event.currentTarget.nextElementSibling;
     const text = String(parseInt(content.innerText, 10) - 1);
     content.innerText = text;
