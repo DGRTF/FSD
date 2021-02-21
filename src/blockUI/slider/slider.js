@@ -2,9 +2,9 @@ import 'ion-rangeslider';
 
 export default class Slider {
   constructor({
-    element, from, to, max,
+    sliderElement, from = 5000, to = 10000, max = 16000,
   }) {
-    this.element = element;
+    this.sliderElement = sliderElement;
     this.from = from;
     this.to = to;
     this.max = max;
@@ -12,9 +12,9 @@ export default class Slider {
   }
 
   _initialize() {
-    this.sliderView = this.element.querySelector('.js-slider__range-number');
+    this.sliderView = this.sliderElement.querySelector('.js-slider__range-number');
     // eslint-disable-next-line no-undef
-    $(this.element).find('.js-range-slider').ionRangeSlider({
+    $(this.sliderElement).find('.js-range-slider').ionRangeSlider({
       type: 'double',
       min: 0,
       max: this.max,

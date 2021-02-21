@@ -1,15 +1,15 @@
 import 'chart.js';
 
 export default class StatisticVotes {
-  constructor(parentHTMLElement, data) {
-    this.parentHTMLElement = parentHTMLElement;
+  constructor(statisticVotesElement, data) {
+    this.statisticVotesElement = statisticVotesElement;
     this.data = data;
     this._init();
     this._setNumberVotes();
   }
 
   _init() {
-    const ctx = this.parentHTMLElement.querySelector('.statistic-votes__canvas').getContext('2d');
+    const ctx = this.statisticVotesElement.querySelector('.statistic-votes__canvas').getContext('2d');
 
     // eslint-disable-next-line no-new
     new Chart(ctx, {
@@ -34,7 +34,7 @@ export default class StatisticVotes {
   }
 
   _setNumberVotes() {
-    const countVotes = this.parentHTMLElement.querySelector('.statistic-votes__number');
+    const countVotes = this.statisticVotesElement.querySelector('.statistic-votes__number');
     let votes = 0;
 
     this.data.forEach((el) => {

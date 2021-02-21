@@ -1,21 +1,16 @@
 import Iteration from '../iteration/iteration';
 import Counter from './counter';
 
-class Dropdown {
-  constructor() {
-    this._initialize();
+export default class Dropdown {
+  constructor(dropdownElement) {
+    this._initialize(dropdownElement);
   }
 
-  _initialize() {
-    this.dropdown = document.querySelectorAll('.js-dropdown');
-    this.dropdown = [].slice.call(this.dropdown);
-
-    this.dropdown.forEach((element) => {
-      this.iteration = new Iteration(element);
-      const search = Dropdown._searchElement(element);
-      this._addHandlers(search);
-      search.contentHeader.addEventListener('click', Dropdown.show);
-    });
+  _initialize(dropdownElement) {
+    this.iteration = new Iteration(dropdownElement);
+    const search = Dropdown._searchElement(dropdownElement);
+    this._addHandlers(search);
+    search.contentHeader.addEventListener('click', Dropdown.show);
   }
 
   static _searchElement(element) {
@@ -42,6 +37,3 @@ class Dropdown {
     event.currentTarget.nextElementSibling.classList.toggle('dropdown__items-display');
   }
 }
-
-// eslint-disable-next-line no-new
-new Dropdown();

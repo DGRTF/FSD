@@ -1,22 +1,18 @@
 import Iteration from '../iteration/iteration';
 import ComfortInit from './comfortInit';
 
-class Comfort {
-  constructor() {
-    this._initialize();
+export default class Comfort {
+  constructor(comfortElement) {
+    this._initialize(comfortElement);
   }
 
-  _initialize() {
-    this.dropdowns = document.querySelectorAll('.js-comfort');
+  _initialize(comfortElement) {
+    this.iteration = new Iteration(comfortElement);
+    const search = Comfort._searchElement(comfortElement);
 
-    this.dropdowns.forEach((element) => {
-      this.iteration = new Iteration(element);
-      const search = Comfort._searchElement(element);
-
-      // eslint-disable-next-line no-new
-      new ComfortInit(search, this.iteration);
-      search.contentHeader.addEventListener('click', Comfort.show);
-    });
+    // eslint-disable-next-line no-new
+    new ComfortInit(search, this.iteration);
+    search.contentHeader.addEventListener('click', Comfort.show);
   }
 
   static _searchElement(element) {
@@ -31,6 +27,3 @@ class Comfort {
     event.currentTarget.nextElementSibling.classList.toggle('comfort__items-display');
   }
 }
-
-// eslint-disable-next-line no-new
-new Comfort();

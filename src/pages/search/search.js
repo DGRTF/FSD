@@ -1,9 +1,26 @@
 import './search.scss';
-import '../../blockUI/calendar/calendar';
-import '../../blockUI/dropdown/dropdown';
-import SliderInit from '../../blockUI/slider/sliderInit';
-import '../../blockUI/comfort/comfort';
-import '../../blockUI/present-room/present-room';
+import Dropdown from '../../blockUI/dropdown/dropdown';
+import Slider from '../../blockUI/slider/slider';
+import Comfort from '../../blockUI/comfort/comfort';
+import PresentRoom from '../../blockUI/present-room/present-room';
 
-// eslint-disable-next-line no-new
-new SliderInit({});
+(function initSearch() {
+  const dropdown = document.querySelector('.dropdown');
+  // eslint-disable-next-line no-new
+  new Dropdown(dropdown);
+
+  const sliderElement = document.querySelector('.slider');
+  // eslint-disable-next-line no-new
+  new Slider({ sliderElement });
+
+  const parentComfortContainer = document.querySelector('.search__drop-list');
+  // eslint-disable-next-line no-new
+  new Comfort(parentComfortContainer);
+
+  const presentRooms = document.querySelectorAll('.present-room');
+
+  presentRooms.forEach((presentRoom) => {
+    // eslint-disable-next-line no-new
+    new PresentRoom(presentRoom);
+  });
+}());
