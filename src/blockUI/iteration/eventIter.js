@@ -5,7 +5,7 @@ export default class EventIter {
     this.eventMin = null;
   }
 
-  _plus(event) {
+  plusIteration(event) {
     const content = event.currentTarget.previousElementSibling;
     const text = String(parseInt(content.innerText, 10) + 1);
     content.innerText = text;
@@ -15,7 +15,7 @@ export default class EventIter {
     }
   }
 
-  _min(event) {
+  minIteration(event) {
     const content = event.currentTarget.nextElementSibling;
     const text = String(parseInt(content.innerText, 10) - 1);
     content.innerText = text;
@@ -28,13 +28,13 @@ export default class EventIter {
     }
   }
 
-  _handlerPlus(func, a) {
-    this.parameter = a;
-    this.eventPlus = func;
+  addHandlerPlus(funcPlusIteration, parameter) {
+    this.parameter = parameter;
+    this.eventPlus = funcPlusIteration;
   }
 
-  _handlerMin(func, a) {
-    this.parameter = a;
-    this.eventMin = func;
+  addHandlerMin(funcLessIteration, parameter) {
+    this.parameter = parameter;
+    this.eventMin = funcLessIteration;
   }
 }

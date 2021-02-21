@@ -1,16 +1,16 @@
 export default class ComfortItems {
-  constructor(nameArr) {
-    this.nameArr = nameArr;
+  constructor(names) {
+    this.names = names;
     this.count = 0;
     this.resultStr = '';
   }
 
-  counterPlus() {
+  countPlus() {
     this.count += 1;
     this._equal();
   }
 
-  counterMin() {
+  countMin() {
     this.count -= 1;
     this._equal();
   }
@@ -23,24 +23,24 @@ export default class ComfortItems {
             if (this.count % 10 > 0) {
               if (this.count % 10 > 1) {
                 if (this.count % 10 > 4) {
-                  this.resultStr = ` ${String(this.count)}${this.nameArr[2]}`;
+                  this.resultStr = ` ${String(this.count)}${this.names[2]}`;
                 } else {
-                  this.resultStr = ` ${String(this.count)}${this.nameArr[1]}`;
+                  this.resultStr = ` ${String(this.count)}${this.names[1]}`;
                 }
               } else {
-                this.resultStr = ` ${String(this.count)}${this.nameArr[0]}`;
+                this.resultStr = ` ${String(this.count)}${this.names[0]}`;
               }
             } else {
-              this.resultStr = ` ${String(this.count)}${this.nameArr[2]}`;
+              this.resultStr = ` ${String(this.count)}${this.names[2]}`;
             }
           } else {
-            this.resultStr = ` ${String(this.count)}${this.nameArr[2]}`;
+            this.resultStr = ` ${String(this.count)}${this.names[2]}`;
           }
         } else {
-          this.resultStr = ` ${String(this.count)}${this.nameArr[1]}`;
+          this.resultStr = ` ${String(this.count)}${this.names[1]}`;
         }
       } else {
-        this.resultStr = ` ${String(this.count)}${this.nameArr[0]}`;
+        this.resultStr = ` ${String(this.count)}${this.names[0]}`;
       }
     } else {
       this.resultStr = '';

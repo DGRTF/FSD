@@ -12,10 +12,10 @@ class LikeButton {
 
   static _changeContent(event) {
     event.preventDefault();
-    const number = parseInt(event.currentTarget.querySelector('.like-button__number').innerText, 10) + 1;
-    const numberElement = event.currentTarget.querySelector('.like-button__number');
-    numberElement.parentElement.classList.toggle('like-button__button-like');
-    numberElement.innerText = String(number);
+    const likeCount = parseInt(event.currentTarget.querySelector('.like-button__number').innerText, 10) + 1;
+    const likeCountElement = event.currentTarget.querySelector('.like-button__number');
+    likeCountElement.parentElement.classList.toggle('like-button__button-like');
+    likeCountElement.innerText = String(likeCount);
   }
 }
 

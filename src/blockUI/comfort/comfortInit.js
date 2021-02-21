@@ -1,52 +1,59 @@
 import ComfortItems from './comfortItem';
 
 export default class ComfortInit {
-  constructor({ dropdown__divText: dropdownText }, iteration) {
-    this.dropdown__divText = dropdownText;
+  constructor({ dropdownText }, iteration) {
+    this.dropdownText = dropdownText;
     this.iteration = iteration;
-    this.nameArr2 = [
+    this.names = [
       [' спальня', ' спальни', ' спален'],
       [' кровать', ' кровати', ' кроватей'],
       [' ванная комната', ' ванные комнаты', ' ванныx комнат'],
     ];
     this.count = 0;
-    this.comfortItemsArr = [];
+    this.comforts = [];
     this.commonStr = '';
     this._init();
   }
 
   _init() {
-    this.nameArr2.forEach((item, index) => {
+    this.names.forEach((item, index) => {
       const comfortItems = new ComfortItems(item);
-      this.comfortItemsArr.push(comfortItems);
-      this.iteration.eventIter[index]._handlerPlus(this.pushPlus.bind(this), index);
-      this.iteration.eventIter[index]._handlerMin(this.pushMin.bind(this), index);
+      this.comforts.push(comfortItems);
+      this.iteration.eventIter[index].addHandlerPlus(this.pushPlus.bind(this), index);
+      this.iteration.eventIter[index].addHandlerMin(this.pushMin.bind(this), index);
     });
   }
 
   pushPlus(count) {
-    this.comfortItemsArr[count].counterPlus();
+    this.comforts[count].countPlus();
     this.commonStr = '';
 
-    this.comfortItemsArr.forEach((item) => {
+    this.comforts.forEach((item) => {
       this.commonStr += item.resultStr;
     });
 
-    if (this.commonStr.length > 20) this.dropdown__divText.value = `${this.commonStr.substring(0, 20)}...`;
-    else this.dropdown__divText.value = this.commonStr;
+    if (this.commonStr.length > 20) this.dropdownText.value = `${this.commonStr.substring(0, 20)}...`;
+    else this.dropdownText.value = this.commonStr;
   }
 
   pushMin(count) {
-    this.comfortItemsArr[count].counterMin();
+    this.comforts[count].countMin();
     this.commonStr = '';
 
-    this.comfortItemsArr.forEach((item) => {
+    this.comforts.forEach((item) => {
       this.commonStr += item.resultStr;
     });
 
-    if (this.commonStr === '') this.dropdown__divText.value = 'Удобства';
-    else
-    if (this.commonStr.length > 20) this.dropdown__divText.value = `${this.commonStr.substring(0, 20)}...`;
-    else this.dropdown__divText.value = this.commonStr;
+    if (this.commonStr === '') {
+      this.dropdownText.value = 'Удобства';
+      return;
+    }
+
+    if (this.commonStr.length > 20) {
+      this.dropdownText.value = `${this.commonStr.substring(0, 20)}...`;
+      return;
+    }
+
+    this.dropdownText.value = this.commonStr;
   }
 }

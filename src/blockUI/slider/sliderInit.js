@@ -10,8 +10,8 @@ export default class SliderInit {
 
   _initialize() {
     // eslint-disable-next-line no-undef
-    const calendarArr = $('.js-slider');
-    calendarArr.each((index, element1) => {
+    const calendars = $('.js-slider');
+    calendars.each((index, element1) => {
       // eslint-disable-next-line no-new
       new Slider({
         element: element1, from: this.from, to: this.to, max: this.max,

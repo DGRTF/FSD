@@ -1,50 +1,50 @@
 export default class Counter {
   constructor({
-    dropdown__divText: dropdownText,
+    dropdownText,
     buttonCancel,
     buttonEnter,
-    numberDivArr,
-    dropdown__divItems: dropdownItems,
+    numberNodes,
+    dropdownItems,
   }) {
-    this.dropdown__divText = dropdownText;
-    this.numberDivArr = numberDivArr;
-    this.dropdown__divItems = dropdownItems;
+    this.dropdownText = dropdownText;
+    this.numberNodes = numberNodes;
+    this.dropdownItems = dropdownItems;
     this.buttonCancel = buttonCancel;
     this.buttonEnter = buttonEnter;
     this.count = 0;
     this._addHandler();
   }
 
-  counterPlus() {
+  countPlus() {
     this.count += 1;
     this._equal();
   }
 
-  counterMin() {
+  countMin() {
     this.count -= 1;
     this._equal();
   }
 
   resetValues() {
-    this.numberDivArr.forEach((element) => {
+    this.numberNodes.forEach((element) => {
       // eslint-disable-next-line no-param-reassign
       element.innerText = '0';
       // eslint-disable-next-line no-param-reassign
       element.previousElementSibling.disabled = true;
-      this.dropdown__divText.value = 'Сколько гостей';
+      this.dropdownText.value = 'Сколько гостей';
       this.count = 0;
       this.buttonCancel.innerText = '';
     });
   }
 
   _addHandler() {
-    this.numberDivArr = [].slice.call(this.numberDivArr);
+    this.numberNodes = [].slice.call(this.numberNodes);
     this.buttonCancel.addEventListener('click', this.resetValues.bind(this));
     this.buttonEnter.addEventListener('click', this._hideBlock.bind(this));
   }
 
   _hideBlock() {
-    this.dropdown__divItems.classList.toggle('dropdown__items-display');
+    this.dropdownItems.classList.toggle('dropdown__items-display');
   }
 
   _equal() {
@@ -56,27 +56,27 @@ export default class Counter {
             if (this.count % 10 > 0) {
               if (this.count % 10 > 1) {
                 if (this.count % 10 > 4) {
-                  this.dropdown__divText.value = `${String(this.count)} гостей`;
+                  this.dropdownText.value = `${String(this.count)} гостей`;
                 } else {
-                  this.dropdown__divText.value = `${String(this.count)} гостя`;
+                  this.dropdownText.value = `${String(this.count)} гостя`;
                 }
               } else {
-                this.dropdown__divText.value = `${String(this.count)} гость`;
+                this.dropdownText.value = `${String(this.count)} гость`;
               }
             } else {
-              this.dropdown__divText.value = `${String(this.count)} гостей`;
+              this.dropdownText.value = `${String(this.count)} гостей`;
             }
           } else {
-            this.dropdown__divText.value = `${String(this.count)} гостей`;
+            this.dropdownText.value = `${String(this.count)} гостей`;
           }
         } else {
-          this.dropdown__divText.value = `${String(this.count)} гостя`;
+          this.dropdownText.value = `${String(this.count)} гостя`;
         }
       } else {
-        this.dropdown__divText.value = `${String(this.count)} гость`;
+        this.dropdownText.value = `${String(this.count)} гость`;
       }
     } else {
-      this.dropdown__divText.value = 'Сколько гостей';
+      this.dropdownText.value = 'Сколько гостей';
       this.buttonCancel.value = '';
     }
   }

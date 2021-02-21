@@ -12,7 +12,7 @@ export default class Slider {
   }
 
   _initialize() {
-    this.slider = this.element.querySelector('.js-slider__range-number');
+    this.sliderView = this.element.querySelector('.js-slider__range-number');
     // eslint-disable-next-line no-undef
     $(this.element).find('.js-range-slider').ionRangeSlider({
       type: 'double',
@@ -27,7 +27,7 @@ export default class Slider {
     });
   }
 
-  _price(data) {
-    this.slider.innerText = `${data.from_pretty}₽ - ${data.to_pretty}₽`;
+  _changeRange(data) {
+    this.sliderView.innerText = `${data.from_pretty}₽ - ${data.to_pretty}₽`;
   }
 }

@@ -34,13 +34,13 @@ export default class StatisticVotes {
   }
 
   _setNumberVotes() {
-    const numberVotes = this.parentHTMLElement.querySelector('.statistic-votes__number');
+    const countVotes = this.parentHTMLElement.querySelector('.statistic-votes__number');
     let votes = 0;
 
     this.data.forEach((el) => {
       votes += el;
     });
 
-    numberVotes.innerText = votes;
+    countVotes.innerText = votes;
   }
 }
