@@ -2,7 +2,7 @@
   display: flex;
 
   &__item {
-    font-family: 'Material Icons', OpenSans, sans-serif;
+    font-family: $primary-icon-font;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;

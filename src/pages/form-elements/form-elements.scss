@@ -1,6 +1,7 @@
 @import './../../scss/general-colors.scss';
 @import './../../scss/normalize.scss';
 @import './../../scss/custom-set.scss';
+@import './../../scss/general-fonts.scss';
 //fonts
 @import './../../fonts/Montserrat/stylesheet.scss';
 @import './../../fonts/Material-icons/material-icons.scss';
@@ -34,7 +35,7 @@ body {
 
 .form-elements {
   &__div-buttons {
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -94,7 +95,7 @@ body {
   }
 
   &__div-checkbox {
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -140,7 +141,7 @@ body {
     left: 587px;
     top: 313px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -172,7 +173,7 @@ body {
     left: 587px;
     top: 404.56px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -204,7 +205,7 @@ body {
     left: 587px;
     top: 534px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -236,7 +237,7 @@ body {
     left: 587px;
     top: 625px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -284,7 +285,7 @@ body {
     left: 141px;
     top: 143px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -306,7 +307,7 @@ body {
     left: 141px;
     top: 227.44px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -328,7 +329,7 @@ body {
     left: 141px;
     top: 712px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -351,7 +352,7 @@ body {
     left: 141px;
     top: 398px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -429,7 +430,7 @@ body {
     left: 979px;
     top: 1196px;
 
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -451,7 +452,7 @@ body {
     left: 587px;
     top: 1196px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -489,7 +490,7 @@ body {
     left: 980px;
     top: 540px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -510,7 +511,7 @@ body {
     left: 979px;
     top: 143.44px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -561,7 +562,7 @@ body {
     left: 141px;
     top: 606px;
 
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;

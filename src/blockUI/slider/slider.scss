@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
 
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -17,7 +17,7 @@
   }
 
   &__range-number {
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;

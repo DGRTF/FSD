@@ -8,7 +8,7 @@
   &__colors {
     display: inline-block;
     min-width: 50px;
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -57,7 +57,7 @@
   }
 
   &__number {
-    font-family: Quicksand, OpenSans, sans-serif;
+    font-family: $secondary-font;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -66,7 +66,7 @@
   }
 
   &__text {
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: 700;
     font-size: 12px;

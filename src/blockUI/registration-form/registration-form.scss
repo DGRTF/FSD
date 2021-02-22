@@ -5,7 +5,7 @@
 @import './../checkbox/checkbox.scss';
 
 @mixin registration-form-font {
-  font-family: Montserrat, OpenSans, sans-serif;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -27,7 +27,7 @@
   }
 
   &__header {
-    font-family: Quicksand, OpenSans, sans-serif;
+    font-family: $secondary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -72,7 +72,7 @@
 
   &__create-account {
     width: 320px;
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

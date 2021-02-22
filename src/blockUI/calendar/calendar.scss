@@ -104,7 +104,7 @@
   height: 24px;
   width: 24px;
   margin: 20px;
-  font-family: 'Material Icons', OpenSans, sans-serif;
+  font-family: $primary-icon-font;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -112,7 +112,7 @@
 }
 
 .datepicker--nav-title {
-  font-family: Quicksand, OpenSans, sans-serif;
+  font-family: $secondary-font;
   font-style: normal;
   font-weight: bold;
   font-size: 19px;
@@ -122,7 +122,7 @@
   width: 318px;
   border-radius: 4px;
   border: 1px solid $tertiary;
-  font-family: Montserrat, OpenSans, sans-serif;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -141,7 +141,7 @@
 
 //Custom HTML
 @mixin calendar-font {
-  font-family: Montserrat, OpenSans, sans-serif;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -217,7 +217,7 @@
   }
 
   &__label {
-    font-family: 'Material Icons', OpenSans, sans-serif;
+    font-family: $primary-icon-font;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;

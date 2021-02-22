@@ -6,7 +6,7 @@
   position: relative;
 
   &__header {
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -29,7 +29,7 @@
     right: 10px;
     top: 7px;
 
-    font-family: 'Material Icons', OpenSans, sans-serif;
+    font-family: $primary-icon-font;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -55,7 +55,7 @@
   }
 
   &__ready {
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -73,7 +73,7 @@
     border-radius: 4px 4px 4px 4px;
     cursor: pointer;
 
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

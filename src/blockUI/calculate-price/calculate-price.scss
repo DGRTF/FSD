@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  font-family: Montserrat, OpenSans, sans-serif;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -38,7 +38,7 @@
   }
 
   &__number {
-    font-family: Quicksand, OpenSans, sans-serif;
+    font-family: $secondary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -47,7 +47,7 @@
   }
 
   &__lux {
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -56,7 +56,7 @@
   }
 
   &__header-right {
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -86,7 +86,7 @@
   &__result {
     display: flex;
     justify-content: space-between;
-    font-family: Quicksand, OpenSans, sans-serif;
+    font-family: $secondary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 19px;

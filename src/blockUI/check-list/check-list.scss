@@ -17,7 +17,7 @@
   }
 
   &__label {
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -30,7 +30,7 @@
       position: absolute;
       content: 'keyboard_arrow_down';
       display: inline-block;
-      font-family: 'Material Icons', OpenSans, sans-serif;
+      font-family: $primary-icon-font;
       font-style: normal;
       font-weight: normal;
       font-size: 24px;

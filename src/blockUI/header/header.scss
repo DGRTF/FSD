@@ -36,7 +36,7 @@
     width: 700px;
     align-items: center;
     justify-content: space-between;
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -81,7 +81,7 @@
         &-min {
           display: flex;
           & > span {
-            font-family: 'Material Icons', OpenSans, sans-serif;
+            font-family: $primary-icon-font;
             font-style: normal;
             font-weight: normal;
             font-size: 24px;
@@ -93,7 +93,7 @@
 
       @media (max-width: 940px) {
         display: block;
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: $primary-font;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -142,7 +142,7 @@
 
     &-item {
       text-decoration: none;
-      font-family: Montserrat, OpenSans, sans-serif;
+      font-family: $primary-font;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
@@ -167,7 +167,7 @@
 
   &__item {
     text-decoration: none;
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

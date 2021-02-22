@@ -1,5 +1,5 @@
 @mixin iteration-font {
-  font-family: Montserrat, OpenSans, sans-serif;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -42,7 +42,7 @@
     align-items: center;
     height: 30px;
     width: 30px;
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -56,7 +56,7 @@
     height: 30px;
     margin-left: 14px;
 
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
