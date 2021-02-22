@@ -2,7 +2,6 @@ include ./../button/button.pug
 include ./../button-border/button-border.pug
 
 mixin header({profile = "no"})
-  -let items = ["home", "about", "services", "careers", "news", "documentation"]
   header.header
     nav.header__nav-bar
       a.header__label(href="/mock-address/change-me")
@@ -22,12 +21,30 @@ mixin header({profile = "no"})
                 .header__menu-dropdown-register
                   +button({content: "register"})
 
-            each item in items
-              a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-"+item)=item
+            a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-home")="home"
+            a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-about")="about"
+            a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-services")="services"
+            a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-careers")="careers"
+            a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-news")="news"
+            a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-documentation")="documentation"
 
       .header__menu
-        each item in items
-          a(href="/mock-address/change-me" class="header__item header-login__"+item)=item
+        a(href="/mock-address/change-me" class="header__item header-login__home")="home"
+        label.header__menu-compact-label.header__menu-compact-label-min="about"
+          input.header__menu-compact-check(type="checkbox")
+          .header__menu-dropdown
+            a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-news")="Item"
+            a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-documentation")="Item"
+          span.header__label-bottom="expand_more"
+        a(href="/mock-address/change-me" class="header__item header-login__services")="services"
+        a(href="/mock-address/change-me" class="header__item header-login__careers")="careers"
+        a(href="/mock-address/change-me" class="header__item header-login__news")="news"
+        label.header__menu-compact-label.header__menu-compact-label-min="documentation"
+          input.header__menu-compact-check(type="checkbox")
+          .header__menu-dropdown
+            a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-news")="Item"
+            a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-documentation")="Item"
+          span.header__label-bottom="expand_more"
 
         if profile=="yes"
           hr.header__line

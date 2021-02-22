@@ -3,6 +3,15 @@
 @import './../../scss/label.scss';
 
 .header {
+  & a:hover,
+  & a:focus {
+    color: $secondary-text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
   &__nav-bar {
     position: relative;
     display: flex;
@@ -16,6 +25,10 @@
 
   &__label {
     @include label-text;
+
+    &:focus {
+      background-color: $fivefold;
+    }
   }
 
   &__menu {
@@ -45,6 +58,39 @@
       display: none;
       text-align: center;
 
+      &-check {
+        display: none;
+
+        &:checked ~ .header__menu-dropdown {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          background-color: $secondary;
+          left: 10%;
+          top: 100%;
+        }
+      }
+
+      &-label {
+        position: relative;
+        // display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        &-min {
+          display: flex;
+          & > span {
+            font-family: 'Material Icons', OpenSans, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 20px;
+            text-transform: none;
+          }
+        }
+      }
+
       @media (max-width: 940px) {
         display: block;
         font-family: Montserrat, OpenSans, sans-serif;
@@ -54,21 +100,8 @@
         color: $quaternary;
         text-transform: capitalize;
 
-        &-label {
-          cursor: pointer;
-        }
-
-        &-check {
+        &-label-min {
           display: none;
-
-          &:checked ~ .header__menu-dropdown {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            background-color: $secondary;
-            left: 0;
-            top: 70px;
-          }
         }
       }
     }
