@@ -21,6 +21,12 @@
     color: $tertiary;
     cursor: auto;
   }
+
+  &:focus {
+    color: #000;
+    color: $primary;
+    background: $fivefold;
+  }
 }
 
 .iteration {
