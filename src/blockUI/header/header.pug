@@ -1,7 +1,7 @@
 include ./../button/button.pug
 include ./../button-border/button-border.pug
 
-mixin header({profile = "no"})
+mixin header({profile = false})
   header.header
     nav.header__nav-bar
       a.header__label(href="/mock-address/change-me")
@@ -11,7 +11,7 @@ mixin header({profile = "no"})
           input.header__menu-compact-check(type="checkbox")
 
           .header__menu-dropdown
-            if profile=="yes"
+            if profile
               .header__name-profile="Gena Petukhov"
 
             else
@@ -46,7 +46,7 @@ mixin header({profile = "no"})
             a(href="/mock-address/change-me" class="header__menu-dropdown-item header__dropdown-documentation")="Item"
           span.header__label-bottom="expand_more"
 
-        if profile=="yes"
+        if profile
           hr.header__line
           .header__name-top="Gena Petukhov"
 
