@@ -29,16 +29,9 @@ block content
         +check-list({name: "Дополнительные удобства", items:["Завтрак","Письменный стол","Стул для кормления","Кроватка","Кроватка","Шампунь","Кроватка","Шампунь"]})
     .search__content-wrapper
       .search__content
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
-        +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
+        - var count = 0
+        while count < 12
+          +present-room({img: ["1","2","3","4"], price: "9990", number: "880", comment: "65", countStar: 5})
+          - count++
       +pagination()
+  hr.search__end-line
