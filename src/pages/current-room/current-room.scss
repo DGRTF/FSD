@@ -10,25 +10,17 @@
   &__photo {
     display: flex;
 
-    &-big {
-      &-img {
-        width: 100%;
-        vertical-align: bottom;
-      }
+    & > &-mini {
+      width: calc(100% * (459 / (981 + 459)));
+    }
+    
+    & > &-big {
+      width: calc(100% * (981 / (981 + 459)));
     }
 
-    &-top {
-      &-img {
-        width: 100%;
-        vertical-align: bottom;
-      }
-    }
-
-    &-bottom {
-      &-img {
-        width: 100%;
-        vertical-align: bottom;
-      }
+    & img {
+      width: 100%;
+      vertical-align: bottom;
     }
   }
 
